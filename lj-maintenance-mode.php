@@ -103,4 +103,4 @@ class ljMaintenanceMode {
 
 }
 
-$AusPost = new ljMaintenanceMode();
+$ljMaintenanceMode = new ljMaintenanceMode();

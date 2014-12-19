@@ -11,6 +11,13 @@ Very simple maintenance plugin for your website using wordpress's wp_die() funct
 
 There are more features planned in near future.
 
+Bugs and pull requests are welcomed.
+
+## Wordpress Info
+
+* Requires at least: 3.8.0
+* Tested up to: 4.1.0
+
 ## Installation
 
 1. Upload `lj-maintenance-mode` to the `/wp-content/plugins/` directory

@@ -13,7 +13,7 @@
 /*  Copyright 2014  Lukas Juhas  (email : hello@lukasjuhas.com)
 
     This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License, version 2, as 
+    it under the terms of the GNU General Public License, version 2, as
     published by the Free Software Foundation.
 
     This program is distributed in the hope that it will be useful,
@@ -43,7 +43,7 @@ class ljMaintenanceMode {
 		if($is_enabled) :
 			add_action('get_header', array($this, 'maintenance'));
 		endif;
-		
+
 		add_action( 'admin_bar_menu', array( $this, 'indicator' ), 100 );
 		add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), array($this, 'action_links') );
 
@@ -64,7 +64,12 @@ class ljMaintenanceMode {
 		$default = get_option( 'ljmm-content-default');
 		if(empty($default)) :
 			$content = '<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>';
-			add_option( 'ljmm-content-default', $content);
+			/**
+			 * f you are trying to ensure that a given option is created,
+			 * use update_option() instead, which bypasses the option name check
+			 * and updates the option with the desired value whether or not it exists.
+			 */
+			update_option( 'ljmm-content-default', $content);
 		endif;
 	}
 
@@ -75,7 +80,7 @@ class ljMaintenanceMode {
 			<form method="post" action="options.php">
 			    <?php settings_fields( 'ljmm' ); ?>
 			    <?php do_settings_sections( 'ljmm' ); ?>
-			    
+
 			    <table class="form-table">
 			        <tr valign="top">
 				        <th scope="row">Enabled</th>
@@ -96,7 +101,7 @@ class ljMaintenanceMode {
 			        	</td>
 			        </tr>
 			    </table>
-			    
+
 			    <?php submit_button(); ?>
 
 			</form>

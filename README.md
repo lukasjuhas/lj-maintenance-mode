@@ -16,7 +16,7 @@ Bugs and pull requests are welcomed.
 ## Wordpress Info
 
 * Requires at least: 3.8.0
-* Tested up to: 4.1.1
+* Tested up to: 4.3
 
 ## Installation
 
@@ -37,8 +37,3 @@ Bugs and pull requests are welcomed.
 
 ### 1.0
 * First release
-
-## Upgrade Notice
-
-### 1.1
-* New Features and Bug Fixes

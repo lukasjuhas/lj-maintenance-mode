@@ -26,7 +26,7 @@ Bugs and pull requests are welcomed.
 
 ## Changelog
 
-### 2.0
+### 1.2
 * Improvement: Improved Multisite Support
 * Improvement: Show default maintenance message in the settings
 * Improvement: Uninstalling will now clean up database

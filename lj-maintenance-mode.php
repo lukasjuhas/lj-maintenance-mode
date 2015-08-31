@@ -66,7 +66,7 @@ class ljMaintenanceMode {
 
 	 $is_enabled = get_option('ljmm-enabled');
 
-	 if($is_enabled) :
+	 if($is_enabled || isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview') :
 		 add_action('get_header', array($this, 'maintenance'));
 	 endif;
 

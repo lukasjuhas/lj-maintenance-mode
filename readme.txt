@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: maintenance, conming soon, coming soon page, mode, wordpress maintenance mode, site maintenance, site offline, offline mode admin, unavailable, administration, construction, offline, lukas juhas
 Requires at least: 3.8.0
 Tested up to: 4.3
-Stable tag: 1.1.1
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,19 @@ None yet.
 3. wp-admin settings page
 
 == Changelog ==
+
+= 2.0 =
+* Improvement: Improved Multisite Support
+* Improvement: Show default maintenance message in the settings
+* Improvement: Uninstalling will now clean up database
+* Improvement: Added support link to the settings page
+* Improvement: Translatable strings
+* Improvement: Changed default site title while MM is active
+* Improvement: Added preview button
+* Improvement: Added support button
+* Improvement: Added support for WP Super Cache
+* Improvement: Added support for W3 Total Cache
+* Bug Fixes
 
 = 1.1.1 =
 * Bug Fixes

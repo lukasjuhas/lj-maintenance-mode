@@ -26,6 +26,19 @@ Bugs and pull requests are welcomed.
 
 ## Changelog
 
+### 2.0
+* Improvement: Improved Multisite Support
+* Improvement: Show default maintenance message in the settings
+* Improvement: Uninstalling will now clean up database
+* Improvement: Added support link to the settings page
+* Improvement: Translatable strings
+* Improvement: Changed default site title while MM is active
+* Improvement: Added preview button
+* Improvement: Added support button
+* Improvement: Added support for WP Super Cache
+* Improvement: Added support for W3 Total Cache
+* Bug Fixes
+
 ### 1.1.1
 * Bug Fixes
 

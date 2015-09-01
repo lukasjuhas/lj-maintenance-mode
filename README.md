@@ -9,8 +9,6 @@ Maintenance Mode
 
 Very simple maintenance plugin for your website using wordpress's wp_die() function, there is settings page under "Settings" where you can enable maintenance mode or set your custom message. There is also a default message. When activated and logged as admin, you can see website normaly, just rest of the users / visitors can see maintenance mode. There is also indicator in admin bar that changes colour to red if maintenance mode is enabled.
 
-There are more features planned in near future.
-
 Bugs and pull requests are welcomed.
 
 ## Wordpress Info
@@ -25,6 +23,9 @@ Bugs and pull requests are welcomed.
 1. Navigate to Settings -> Maintenance Mode for settings or to enable maintenance mode.
 
 ## Changelog
+
+### 1.2.1
+* Removed clear cache functionality as it caused errors to some users. From now on, plugin shows simple reminder to flush cache after enabling or disabling Maintenance Mode.
 
 ### 1.2
 * Improvement: Improved Multisite Support

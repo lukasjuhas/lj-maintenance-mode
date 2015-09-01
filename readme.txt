@@ -4,11 +4,11 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: maintenance, conming soon, coming soon page, mode, wordpress maintenance mode, site maintenance, site offline, offline mode admin, unavailable, administration, construction, offline, lukas juhas
 Requires at least: 3.8.0
 Tested up to: 4.3
-Stable tag: 1.2
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Very simple maintenance mode plugin using wp_die() wp function.
+Very simple Maintenance Mode. No adds, no paid upgrades.
 
 == Description ==
 
@@ -16,8 +16,6 @@ Very simple maintenance plugin for your website using wordpress's wp_die() funct
 
 > <strong>Development on GitHub</strong><br>
 > The development of Maintenance Mode [takes place on GitHub](https://github.com/lukasjuhas/lj-maintenance-mode). Bugs and pull requests are welcomed there.
-
-There are more features planned in near future.
 
 == Installation ==
 
@@ -36,6 +34,9 @@ None yet.
 3. wp-admin settings page
 
 == Changelog ==
+
+= 1.2.1 =
+* Removed clear cache functionality as it caused errors to some users. From now on, plugin shows simple reminder to flush cache after enabling or disabling Maintenance Mode.
 
 = 1.2 =
 * Improvement: Improved Multisite Support

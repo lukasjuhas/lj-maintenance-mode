@@ -3,7 +3,7 @@
 * Plugin Name: Maintenance Mode
 * Plugin URI: https://github.com/lukasjuhas/lj-maintenance-mode
 * Description: Very simple Maintenance Mode. No adds, no paid upgrades.
-* Version: 1.2
+* Version: 1.2.1
 * Author: Lukas Juhas
 * Author URI: http://lukasjuhas.com
 * Text Domain: lj-maintenance-mode
@@ -26,7 +26,7 @@
 	 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-define( 'LJMM_VERSION', '1.2' );
+define( 'LJMM_VERSION', '1.2.1' );
 define( 'LJMM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'LJMM_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'LJMM_PLUGIN_BASENAME', plugin_basename( __FILE__ ));
@@ -72,6 +72,8 @@ class ljMaintenanceMode {
 
 	 add_action( 'admin_bar_menu', array( $this, 'indicator' ), 100 );
 	 add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), array($this, 'action_links') );
+
+   add_action( 'admin_notices', array( $this, 'notify' ) );
 
  }
 
@@ -163,9 +165,7 @@ class ljMaintenanceMode {
  }
 
  function maintenance() {
-	 //clear cache based on supported plugins
-	 $this->clear_cache();
-
+   
 	 if ( !(current_user_can( 'administrator' ) ||  current_user_can( 'super admin' )) || ( isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview')) {
 		 $content = get_option('ljmm-content');
 		 if(empty($content)) {
@@ -180,21 +180,32 @@ class ljMaintenanceMode {
  }
 
  /**
-  * if any supported plugin exists, clear cache
+  * notify if cache plugin detected
   */
- function clear_cache() {
+ function notify() {
+    if(!empty($this->cache_plugin())) {
+        $class = "error";
+        $message = $this->cache_plugin();
+        echo "<div class=\"$class\"> <p>$message</p></div>";
+    }
+ }
+
+ /**
+  * detext cache plugins
+  */
+ function cache_plugin() {
+   $message = '';
 	 	// add wp super cache support
 		if ( in_array( 'wp-super-cache/wp-cache.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-				global $cache_path;
-		    prune_super_cache( $cache_path . 'supercache/', true );
-		    prune_super_cache( $cache_path, true );
+			$message = "Important: Don't forget to flush your cache using WP Super Cache when enabling or disabling Maintenance Mode.";
 		}
 
 		// add w3 total cache support
 		if ( in_array( 'w3-total-cache/w3-total-cache.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-			global $w3_plugin_totalcache;
-			$w3_plugin_totalcache->flush_all();
+			$message = "Important: Don't forget to flush your cache using W3 Total Cache when enabling or disabling Maintenance Mode.";
 		}
+
+    return $message;
  }
 
 }

@@ -182,12 +182,13 @@ class ljMaintenanceMode {
   * notify if cache plugin detected
   */
  function notify() {
-      if(!empty($this->cache_plugin())) {
+      $cache_plugin_enabled = $this->cache_plugin();
+      if(!empty($cahce_plugin_enabled)) {
           $class = "error";
           $message = $this->cache_plugin(); ?>
-          <?php if( isset($_GET['settings-updated']) ) { ?>
-              <?php echo "<div class=\"$class\"> <p>$message</p></div>"; ?>
-          <?php } ?>
+          <?php if( isset($_GET['settings-updated']) ) {
+            echo '<div class="'.$class.'"><p>'.$message.'</p></div>';
+          } ?>
     <?php }
  }
 

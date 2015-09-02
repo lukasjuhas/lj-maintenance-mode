@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Maintenance Mode
 * Plugin URI: https://github.com/lukasjuhas/lj-maintenance-mode
-* Description: Very simple Maintenance Mode. No adds, no paid upgrades.
+* Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No adds, no paid upgrades.
 * Version: 1.2.1
 * Author: Lukas Juhas
 * Author URI: http://lukasjuhas.com
@@ -72,9 +72,6 @@ class ljMaintenanceMode {
 
 	 add_action( 'admin_bar_menu', array( $this, 'indicator' ), 100 );
 	 add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), array($this, 'action_links') );
-
-   add_action( 'admin_notices', array( $this, 'notify' ) );
-
  }
 
  function ui() {
@@ -107,6 +104,8 @@ class ljMaintenanceMode {
 			 <form method="post" action="options.php">
 					 <?php settings_fields( 'ljmm' ); ?>
 					 <?php do_settings_sections( 'ljmm' ); ?>
+
+           <?php $this->notify(); ?>
 
 					 <table class="form-table">
 							 <tr valign="top">
@@ -183,11 +182,13 @@ class ljMaintenanceMode {
   * notify if cache plugin detected
   */
  function notify() {
-    if(!empty($this->cache_plugin())) {
-        $class = "error";
-        $message = $this->cache_plugin();
-        echo "<div class=\"$class\"> <p>$message</p></div>";
-    }
+      if(!empty($this->cache_plugin())) {
+          $class = "error";
+          $message = $this->cache_plugin(); ?>
+          <?php if( isset($_GET['settings-updated']) ) { ?>
+              <?php echo "<div class=\"$class\"> <p>$message</p></div>"; ?>
+          <?php } ?>
+    <?php }
  }
 
  /**

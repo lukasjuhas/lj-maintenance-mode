@@ -8,7 +8,7 @@ Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Very simple Maintenance Mode / Coming soon. Simple, using default Wordpress markup, No adds, no paid upgrades.
+Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No adds, no paid upgrades.
 
 == Description ==
 

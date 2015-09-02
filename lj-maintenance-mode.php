@@ -165,7 +165,7 @@ class ljMaintenanceMode {
  }
 
  function maintenance() {
-   
+
 	 if ( !(current_user_can( 'administrator' ) ||  current_user_can( 'super admin' )) || ( isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview')) {
 		 $content = get_option('ljmm-content');
 		 if(empty($content)) {

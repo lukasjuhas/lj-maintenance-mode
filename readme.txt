@@ -14,6 +14,17 @@ Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup,
 
 Very simple maintenance plugin for your website using Wordpress's wp_die() function, there is settings page under "Settings" where you can enable maintenance mode or set your custom message. There is also a default message. When activated and logged as admin, you can see website as usual, just rest of the users / visitors can see maintenance mode. You can see the maintenance mode as admin using preview button or simply opening your website in private mode. There is also indicator in admin bar that changes colour to red when maintenance mode is enabled.
 
+**Features:**
+
+* **Simplicity** - Built to be as simple as possible. Easy to use.
+* **Customisable** - WYSIWYG available in full glory. You can add images and other media including links and pretty much everything you can do with WYSIWYG. Text / Code tab is available too for custom markup.
+* **Works on nobile** - Because of it's simplicity, maintenance mode works very well on mobile devices.
+* **NO ADS** - No adds. Really.
+* **NO PAID UPGRADES** - No paid upgrades. Really.
+* **Support** - Support button available.
+* **Preview** - Preview button available.
+* **Compact** - It's developed to be as compact as possible.
+
 > <strong>Important! Users that are using Cache plugins, please read below:</strong><br>
 > <strong>When enabling or disabling Maintenance Mode, don't forget to flush your cache!</strong>
 
@@ -34,7 +45,7 @@ Having trouble? Please read FAQ first, if you need any assistance, you can use s
 
 Yes.
 
-= Can I change colours? =
+= Can I change background colour? =
 
 Not by default. Unless you are developer and you "inject" your own styles in to the wp_die() page.
 
@@ -44,9 +55,11 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 == Screenshots ==
 
-1. Example
+1. Example with default message.
 2. Admin Bar Indicator (Red when active)
-3. wp-admin settings page
+3. Settings page in admin view with default message.
+4. Example with image and link.
+5. Insert Media available for WYSIWYG.
 
 == Changelog ==
 

@@ -10,7 +10,7 @@
 * License: GPL2
 */
 
-/*  Copyright 2014  Lukas Juhas  (email : hello@lukasjuhas.com)
+/*  Copyright 2014-2015  Lukas Juhas  (email : hello@lukasjuhas.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as

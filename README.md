@@ -9,6 +9,16 @@ Maintenance Mode
 
 Very simple maintenance plugin for your website using Wordpress's wp_die() function, there is settings page under "Settings" where you can enable maintenance mode or set your custom message. There is also a default message. When activated and logged as admin, you can see website as usual, just rest of the users / visitors can see maintenance mode. You can see the maintenance mode as admin using preview button or simply opening your website in private mode. There is also indicator in admin bar that changes colour to red when maintenance mode is enabled.
 
+### Features: ###
+* **Simplicity** - Built to be as simple as possible. Easy to use.
+* **Customisable** - WYSIWYG available in full glory. You can add images and other media including links and pretty much everything you can do with WYSIWYG. Text / Code tab is available too for custom markup.
+* **Works on nobile** - Because of it's simplicity, maintenance mode works very well on mobile devices.
+* **NO ADS** - No adds. Really.
+* **NO PAID UPGRADES** - No paid upgrades. Really.
+* **Support** - Support button available.
+* **Preview** - Preview button available.
+* **Compact** - It's developed to be as compact as possible.
+
 Bugs and pull requests are welcomed.
 
 ## Wordpress Info

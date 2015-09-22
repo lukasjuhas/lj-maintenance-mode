@@ -13,7 +13,7 @@ Very simple maintenance plugin for your website using Wordpress's wp_die() funct
 * **Simplicity** - Built to be as simple as possible. Easy to use.
 * **Customisable** - WYSIWYG available in full glory. You can add images and other media including links and pretty much everything you can do with WYSIWYG. Text / Code tab is available too for custom markup.
 * **Works on nobile** - Because of it's simplicity, maintenance mode works very well on mobile devices.
-* **NO ADS** - No adds. Really.
+* **NO ADS** - No ads. Really.
 * **NO PAID UPGRADES** - No paid upgrades. Really.
 * **Support** - Support button available.
 * **Preview** - Preview button available.

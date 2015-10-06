@@ -2,13 +2,13 @@
 Contributors: LukasNeptun
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2XPA4CKT836FJ
 Tags: maintenance, maintenance mode, coming soon, coming soon page, mode, wordpress maintenance mode, site maintenance, site offline, offline mode admin, unavailable, administration, construction, offline, offline mode, maintenance plugin, plugin, wordpress maintenance plugin, lukas juhas, under construction, unavailable, landing page, landing,
-Requires at least: 3.8.0
+Requires at least: 3.5
 Tested up to: 4.3.1
 Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
+Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No adds, no paid upgrades.
 
 == Description ==
 
@@ -19,8 +19,9 @@ Very simple maintenance plugin for your website using Wordpress's wp_die() funct
 * **Simplicity** - Built to be as simple as possible. Easy to use.
 * **Customisable** - WYSIWYG available in full glory. You can add images and other media including links and pretty much everything you can do with WYSIWYG. Text / Code tab is available too for custom markup.
 * **Works on nobile** - Because of it's simplicity, maintenance mode works very well on mobile devices.
-* **NO ADS** - No ads. Really.
+* **NO ADS** - No adds. Really.
 * **NO PAID UPGRADES** - No paid upgrades. Really.
+* **Updates** - Regular updates and maintenance.
 * **Support** - Support button available.
 * **Preview** - Preview button available.
 * **Compact** - It's developed to be as compact as possible.

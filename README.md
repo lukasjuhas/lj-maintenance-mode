@@ -15,6 +15,7 @@ Very simple maintenance plugin for your website using Wordpress's wp_die() funct
 * **Works on nobile** - Because of it's simplicity, maintenance mode works very well on mobile devices.
 * **NO ADS** - No ads. Really.
 * **NO PAID UPGRADES** - No paid upgrades. Really.
+* **Updates** - Regular updates and maintenance.
 * **Support** - Support button available.
 * **Preview** - Preview button available.
 * **Compact** - It's developed to be as compact as possible.
@@ -23,7 +24,7 @@ Bugs and pull requests are welcomed.
 
 ## Wordpress Info
 
-* Requires at least: 3.8.0
+* Requires at least: 3.5.0
 * Tested up to: 4.3.1
 
 ## Installation

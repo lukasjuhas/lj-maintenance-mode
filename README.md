@@ -11,12 +11,14 @@ As a web developer working with Wordpress almost every day, very often I came ac
 
 Maintenance Mode is very simple and it's using Wordpress's wp_die() function which is core function of Wordpress, which makes this plugin feel and work as a part of Wordpress core. There is settings page under "Settings" in the main wp-admin menu where you can enable maintenance mode or change content using WYSIWYG editor so you can also add pictures, links etc. When activated and logged in as admin, you can see website as usual, rest of the users / visitors can see maintenance mode. You can see the maintenance mode as admin in preview mode using preview link on the settings page or simply open website in private mode or different browser to double check if it's enabled and working. There is also indicator in admin bar that changes colour to red when maintenance mode is enabled.
 
+Help support and translate this plugin!
+
 ### Features: ###
 * **Simplicity** - Built to be as simple as possible. Easy to use.
 * **Customisable** - WYSIWYG available in full glory. You can add images and other media including links and pretty much everything you can do with WYSIWYG. Text / Code tab is available too for custom markup.
-* **Works on nobile** - Because of it's simplicity, maintenance mode works very well on mobile devices.
-* **NO ADS** - No ads. Really.
-* **NO PAID UPGRADES** - No paid upgrades. Really.
+* **Works on mobile** - Because of it's simplicity, maintenance mode works very well on mobile devices.
+* **NO ADS** - No ads. Seriously.
+* **NO PAID UPGRADES** - No paid upgrades. Seriously.
 * **Updates** - Regular updates and maintenance.
 * **Support** - Support button available.
 * **Preview** - Preview button available.
@@ -47,6 +49,11 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 
 ## Changelog
+
+### 1.3
+* Improvement: Translations adjustments and corrections. Plugin is now fully translatable.
+* Improvement: Small code refactor and tidy up.
+* Improvement: Correct various typo issues.
 
 ### 1.2.1
 * Bug fixes

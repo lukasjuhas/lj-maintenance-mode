@@ -1,0 +1,70 @@
+# Copyright (C) 2015 Maintenance Mode
+# This file is distributed under the same license as the Maintenance Mode package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode 1.2.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
+"mode\n"
+"POT-Creation-Date: 2015-10-07 13:34:58+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#. #-#-#-#-#  plugin.pot (Maintenance Mode 1.2.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: lj-maintenance-mode.php:78 lj-maintenance-mode.php:103
+msgid "Maintenance Mode"
+msgstr ""
+
+#: lj-maintenance-mode.php:112
+msgid "Enabled"
+msgstr ""
+
+#: lj-maintenance-mode.php:117
+msgid "Content"
+msgstr ""
+
+#: lj-maintenance-mode.php:131
+msgid "Preview"
+msgstr ""
+
+#: lj-maintenance-mode.php:132
+msgid "Support"
+msgstr ""
+
+#: lj-maintenance-mode.php:176
+msgid "Website Under Maintenance"
+msgstr ""
+
+#: lj-maintenance-mode.php:202
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+
+#: lj-maintenance-mode.php:207
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/lukasjuhas/lj-maintenance-mode"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Very simple Maintenance Mode & Coming soon page. Using default Wordpress "
+"markup, No adds, no paid upgrades."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Lukas Juhas"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://lukasjuhas.com"
+msgstr ""

@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Maintenance Mode
 * Plugin URI: https://github.com/lukasjuhas/lj-maintenance-mode
-* Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No adds, no paid upgrades.
+* Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
 * Version: 1.3
 * Author: Lukas Juhas
 * Author URI: http://lukasjuhas.com

@@ -227,7 +227,7 @@ class ljMaintenanceMode {
             }
             $content = apply_filters('the_content', $content);
 
-            wp_die($content, get_bloginfo( 'name' ) . ' - ' . __('Website Under Maintenance', LJMM_PLUGIN_DOMAIN));
+            wp_die($content, get_bloginfo( 'name' ) . ' - ' . __('Website Under Maintenance', LJMM_PLUGIN_DOMAIN), array('response' => '503'));
         }
     }
 

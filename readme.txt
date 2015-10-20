@@ -4,11 +4,11 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: maintenance, maintenance mode, website maintenance, coming soon, coming soon page, mode, wordpress maintenance mode, site maintenance, site offline, offline mode admin, unavailable, administration, construction, offline, offline mode, maintenance plugin, plugin, wordpress maintenance plugin, lukas juhas, under construction, unavailable, landing page, landing,
 Requires at least: 3.5
 Tested up to: 4.3.1
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No adds, no paid upgrades.
+Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
 
 == Description ==
 
@@ -67,6 +67,11 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 5. Insert Media available for WYSIWYG.
 
 == Changelog ==
+
+= 1.3.1 =
+* Google is being notified right way from now on.
+* Typo corrections
+* General code tidy up
 
 = 1.3 =
 * Translations adjustments and corrections. Plugin is now fully translatable.

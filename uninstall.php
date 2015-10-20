@@ -1,5 +1,5 @@
 <?php
-# make sure uninstallation is triggered
+// make sure uninstallation is triggered
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) )
 	exit();
 

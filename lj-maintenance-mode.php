@@ -1,41 +1,44 @@
 <?php
 /**
-* Plugin Name: Maintenance Mode
-* Plugin URI: https://github.com/lukasjuhas/lj-maintenance-mode
-* Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
-* Version: 1.3
-* Author: Lukas Juhas
-* Author URI: http://lukasjuhas.com
-* Text Domain: lj-maintenance-mode
-* License: GPL2
-* Domain Path: /languages/
-*/
+ * Plugin Name: Maintenance Mode
+ * Plugin URI: https://github.com/lukasjuhas/lj-maintenance-mode
+ * Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
+ * Version: 1.3.1
+ * Author: Lukas Juhas
+ * Author URI: http://lukasjuhas.com
+ * Text Domain: lj-maintenance-mode
+ * License: GPL2
+ * Domain Path: /languages/
+ *
+ * Copyright 2014-2015  Lukas Juhas  (email : hello@lukasjuhas.com)
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License, version 2, as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ *
+ * @package lj-maintenance-mode
+ * @author Lukas Juhas
+ * @version 1.3.1
+ *
+ */
 
-/*  Copyright 2014-2015  Lukas Juhas  (email : hello@lukasjuhas.com)
-
-	 This program is free software; you can redistribute it and/or modify
-	 it under the terms of the GNU General Public License, version 2, as
-	 published by the Free Software Foundation.
-
-	 This program is distributed in the hope that it will be useful,
-	 but WITHOUT ANY WARRANTY; without even the implied warranty of
-	 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	 GNU General Public License for more details.
-
-	 You should have received a copy of the GNU General Public License
-	 along with this program; if not, write to the Free Software
-	 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-*/
-
-# define stuff
-define( 'LJMM_VERSION', '1.3' );
+// define stuff
+define( 'LJMM_VERSION', '1.3.1' );
 define( 'LJMM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'LJMM_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'LJMM_PLUGIN_BASENAME', plugin_basename( __FILE__ ));
 define( 'LJMM_PLUGIN_DOMAIN', 'lj-maintenance-mode' );
 define( 'LJMM_CONTACT_EMAIL', 'hello@lukasjuhas.com' );
 
-# activation hook
+// activation hook
 add_action( 'activate_' . LJMM_PLUGIN_BASENAME, 'ljmm_install' );
 
 /**
@@ -44,10 +47,10 @@ add_action( 'activate_' . LJMM_PLUGIN_BASENAME, 'ljmm_install' );
  * @since 1.0
 */
 function ljmm_install() {
-    # remove old settings. This has been deprecated in 1.2
+    // remove old settings. This has been deprecated in 1.2
     delete_option( 'ljmm-content-default' );
 
-    # If content is not set, set the default content.
+    // If content is not set, set the default content.
     $content = get_option( 'ljmm-content');
     if(empty($content)) :
         $content = '<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>';
@@ -63,7 +66,7 @@ function ljmm_install() {
 /**
  * Load plugin textdomain.
  *
- * @since 1.3
+ * @since 1.3.1
 */
 function ljmm_load_textdomain() {
     load_plugin_textdomain( LJMM_PLUGIN_DOMAIN, false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
@@ -82,7 +85,7 @@ class ljMaintenanceMode {
         add_action( 'admin_head', array( $this, 'style' ) );
         add_action( 'admin_init', array( $this, 'settings' ) );
 
-        # remove old settings. This has been deprecated in 1.2
+        // remove old settings. This has been deprecated in 1.2
         delete_option( 'ljmm-content-default' );
 
         $is_enabled = get_option('ljmm-enabled');
@@ -108,7 +111,7 @@ class ljMaintenanceMode {
      * Inject styling
      *
      * @since 1.1
-     */
+    */
     function style() {
         echo '<style type="text/css">#wp-admin-bar-ljmm-indicator.Enabled { background: rgba(159, 0, 0, 1) }</style>';
     }
@@ -268,7 +271,7 @@ class ljMaintenanceMode {
     }
 }
 /**
- * initialize plugin.
+ * initialise plugin.
  *
  * @since 1.0
 */

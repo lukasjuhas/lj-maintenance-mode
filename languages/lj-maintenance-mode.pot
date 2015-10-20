@@ -58,7 +58,7 @@ msgstr ""
 #. Description of the plugin/theme
 msgid ""
 "Very simple Maintenance Mode & Coming soon page. Using default Wordpress "
-"markup, No adds, no paid upgrades."
+"markup, No ads, no paid upgrades."
 msgstr ""
 
 #. Author of the plugin/theme

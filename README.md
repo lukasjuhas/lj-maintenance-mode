@@ -50,6 +50,11 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 ## Changelog
 
+### 1.3.1
+* Google is being notified right way from now on.
+* Typo corrections
+* General code tidy up
+
 ### 1.3
 * Improvement: Translations adjustments and corrections. Plugin is now fully translatable.
 * Improvement: Small code refactor and tidy up.

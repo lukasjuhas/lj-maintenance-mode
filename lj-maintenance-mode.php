@@ -3,7 +3,7 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://github.com/lukasjuhas/lj-maintenance-mode
  * Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
- * Version: 1.3.1
+ * Version: 1.3.2
  * Author: Lukas Juhas
  * Author URI: http://lukasjuhas.com
  * Text Domain: lj-maintenance-mode
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 1.3.1
+ * @version 1.3.2
  *
  */
 
 // define stuff
-define( 'LJMM_VERSION', '1.3.1' );
+define( 'LJMM_VERSION', '1.3.2' );
 define( 'LJMM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'LJMM_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'LJMM_PLUGIN_BASENAME', plugin_basename( __FILE__ ));
@@ -187,6 +187,9 @@ class ljMaintenanceMode {
      * @since 1.1
     */
     function indicator($wp_admin_bar) {
+        if ( !current_user_can( 'delete_plugins' ) )
+            return false;
+
         $is_enabled = get_option('ljmm-enabled');
         $status = _x('Disabled', LJMM_PLUGIN_DOMAIN);
 

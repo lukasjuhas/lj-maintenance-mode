@@ -125,7 +125,7 @@ class ljMaintenanceMode {
         register_setting('ljmm', 'ljmm-enabled');
         register_setting('ljmm', 'ljmm-content');
 
-        do_action('ljmm_register_settings')
+        do_action('ljmm_register_settings');
 
         $content = get_option( 'ljmm-content');
         if(empty($content)) :

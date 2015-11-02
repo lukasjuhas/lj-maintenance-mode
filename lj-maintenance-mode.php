@@ -125,6 +125,8 @@ class ljMaintenanceMode {
         register_setting('ljmm', 'ljmm-enabled');
         register_setting('ljmm', 'ljmm-content');
 
+        do_action('ljmm_register_settings')
+
         $content = get_option( 'ljmm-content');
         if(empty($content)) :
             $content = '<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>';
@@ -175,6 +177,9 @@ class ljMaintenanceMode {
                             <a class="button support" href="mailto:<?php echo LJMM_CONTACT_EMAIL; ?>?subject=[lj-maintenance-mode] Hi, I need support"><?php _e('Support', LJMM_PLUGIN_DOMAIN); ?></a>
                         </td>
                     </tr>
+
+                    <?php do_action('ljmm_advanced_settings') ?>
+
                 </table>
                 <?php submit_button(); ?>
             </form>

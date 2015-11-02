@@ -50,6 +50,9 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 ## Changelog
 
+### 1.4
+* Add hooks for add-ons
+
 ### 1.3.2
 * Fixed: Issue where non admin users could see admin bar indicator.
 

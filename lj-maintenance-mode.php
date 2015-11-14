@@ -178,7 +178,7 @@ class ljMaintenanceMode {
                         </td>
                     </tr>
 
-                    <?php do_action('ljmm_advanced_settings') ?>
+                    <?php do_action('ljmm_advanced_settings'); ?>
 
                 </table>
                 <?php submit_button(); ?>

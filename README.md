@@ -1,5 +1,5 @@
-Maintenance Mode
-================
+Maintenance Mode (1.3.3)
+=======================
 
 * Contributors: Lukas Juhas
 * Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2XPA4CKT836FJ
@@ -49,6 +49,11 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 
 ## Changelog
+
+### 1.3.3
+* Improvement: If MM is enabled, added message describing how to check if the maintenance mode is enabled as this was causing lot of confusion and unnecessary support tickets.
+* Improvement: Move preview and support buttons to a more convenient place, also highlight the preview button.
+* Languages: Add Canadian (100%), Hungarian(83%) languages.
 
 ### 1.3.2
 * Fixed: Issue where non admin users could see admin bar indicator.

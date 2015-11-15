@@ -1,0 +1,61 @@
+# Translation of Development (trunk) in Hungarian
+# This file is distributed under the same license as the Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2015-10-21 18:55:30+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/1.0-alpha-1100\n"
+"Project-Id-Version: Development (trunk)\n"
+
+#: lj-maintenance-mode.php:262
+msgid "Important: Don't forget to flush your cache using WP Super Cache when enabling or disabling Maintenance Mode."
+msgstr ""
+
+#: lj-maintenance-mode.php:267
+msgid "Important: Don't forget to flush your cache using W3 Total Cache when enabling or disabling Maintenance Mode."
+msgstr ""
+
+#. #-#-#-#-#  tmp-lj-maintenance-mode.pot (Maintenance Mode 1.3.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: lj-maintenance-mode.php:107 lj-maintenance-mode.php:147
+msgid "Maintenance Mode"
+msgstr "Maintenance Mode"
+
+#: lj-maintenance-mode.php:156
+msgid "Enabled"
+msgstr "Bekapcsolva"
+
+#: lj-maintenance-mode.php:161
+msgid "Content"
+msgstr "Tartalom"
+
+#: lj-maintenance-mode.php:174
+msgid "Preview"
+msgstr "Előnézet"
+
+#: lj-maintenance-mode.php:175
+msgid "Support"
+msgstr "Segítség"
+
+#: lj-maintenance-mode.php:233
+msgid "Website Under Maintenance"
+msgstr "A weboldal jelenleg karbantartás alatt áll"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/lukasjuhas/lj-maintenance-mode"
+msgstr "https://github.com/lukasjuhas/lj-maintenance-mode"
+
+#. Description of the plugin/theme
+msgid "Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades."
+msgstr "Rendkívül egyszerű \"Karbantartás alatt\" és \"Hamarosan\" oldal. Az alapértelmezett WordPress funkciót használja, hírdetések és fizetős frissítések nélkül."
+
+#. Author of the plugin/theme
+msgid "Lukas Juhas"
+msgstr "Lukas Juhas"
+
+#. Author URI of the plugin/theme
+msgid "http://lukasjuhas.com"
+msgstr "http://lukasjuhas.com"

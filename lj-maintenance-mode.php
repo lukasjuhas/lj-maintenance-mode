@@ -3,7 +3,7 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://github.com/lukasjuhas/lj-maintenance-mode
  * Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
- * Version: 1.3.2
+ * Version: 1.3.3
  * Author: Lukas Juhas
  * Author URI: http://lukasjuhas.com
  * Text Domain: lj-maintenance-mode
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 1.3.2
+ * @version 1.3.3
  *
  */
 
 // define stuff
-define( 'LJMM_VERSION', '1.3.2' );
+define( 'LJMM_VERSION', '1.3.3' );
 define( 'LJMM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'LJMM_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'LJMM_PLUGIN_BASENAME', plugin_basename( __FILE__ ));
@@ -154,11 +154,23 @@ class ljMaintenanceMode {
                 <table class="form-table">
                     <tr valign="top">
                         <th scope="row"><?php _e('Enabled', LJMM_PLUGIN_DOMAIN ); ?></th>
-                          <td><input type="checkbox" name="ljmm-enabled" value="1" <?php checked( esc_attr( get_option('ljmm-enabled') ), 1 ); ?>></td>
+                        <td>
+                            <?php $ljmm_enabled = esc_attr( get_option('ljmm-enabled') ); ?>
+                            <input type="checkbox" name="ljmm-enabled" value="1" <?php checked( $ljmm_enabled, 1 ); ?>>
+                            <?php if($ljmm_enabled) : ?>
+                                <p class="description">Maintenance Mode is currently active. To make sure that it works, open your web page in either private / incognito mode, different browser or simply log out. Logged in users are not affected by the Maintenance Mode.</p>
+                            <?php endif; ?>
+                        </td>
                     </tr>
 
                     <tr valign="top">
                         <th scope="row" colspan="2"><?php _e('Content', LJMM_PLUGIN_DOMAIN ); ?></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="<?php echo esc_url( add_query_arg( 'ljmm', 'preview', bloginfo('url') ) ); ?>" target="_blank" class="button button-primary"><?php _e('Preview', LJMM_PLUGIN_DOMAIN); ?></a>
+                            <a class="button support" href="http://lukasjuhas.github.io/maintenance-mode/" target="_blank"><?php _e('Support', LJMM_PLUGIN_DOMAIN); ?></a>
+                        </td>
                     </tr>
                     <tr>
                         <td colspan="2">
@@ -167,12 +179,6 @@ class ljMaintenanceMode {
                               $editor_id = 'ljmm-content';
                               wp_editor( $content, $editor_id );
                             ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="<?php echo esc_url( add_query_arg( 'ljmm', 'preview', bloginfo('url') ) ); ?>" target="_blank" class="button"><?php _e('Preview', LJMM_PLUGIN_DOMAIN); ?></a>
-                            <a class="button support" href="mailto:<?php echo LJMM_CONTACT_EMAIL; ?>?subject=[lj-maintenance-mode] Hi, I need support"><?php _e('Support', LJMM_PLUGIN_DOMAIN); ?></a>
                         </td>
                     </tr>
                 </table>

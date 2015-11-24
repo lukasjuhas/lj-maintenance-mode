@@ -29,7 +29,7 @@ Bugs and pull requests are welcomed.
 ## Wordpress Info
 
 * Requires at least: 3.5.0
-* Tested up to: 4.3.1
+* Tested up to: 4.4
 
 ## Installation
 

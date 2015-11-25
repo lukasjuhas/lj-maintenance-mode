@@ -104,7 +104,7 @@ class ljMaintenanceMode {
      * @since 1.0
     */
     function ui() {
-        add_submenu_page( 'options-general.php', __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), 'delete_plugins', 'wp-maintenance-mode', array($this, 'settingsPage') );
+        add_submenu_page( 'options-general.php', __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), 'delete_plugins', 'lj-maintenance-mode', array($this, 'settingsPage') );
     }
 
     /**
@@ -127,7 +127,7 @@ class ljMaintenanceMode {
 
         $content = get_option( 'ljmm-content');
         if(empty($content)) :
-            $content = '<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>';
+            $content = __('<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>', LJMM_PLUGIN_DOMAIN );
             /**
             * f you are trying to ensure that a given option is created,
             * use update_option() instead, which bypasses the option name check
@@ -158,7 +158,7 @@ class ljMaintenanceMode {
                             <?php $ljmm_enabled = esc_attr( get_option('ljmm-enabled') ); ?>
                             <input type="checkbox" name="ljmm-enabled" value="1" <?php checked( $ljmm_enabled, 1 ); ?>>
                             <?php if($ljmm_enabled) : ?>
-                                <p class="description">Maintenance Mode is currently active. To make sure that it works, open your web page in either private / incognito mode, different browser or simply log out. Logged in users are not affected by the Maintenance Mode.</p>
+                                <p class="description"><?php _e('Maintenance Mode is currently active. To make sure that it works, open your web page in either private / incognito mode, different browser or simply log out. Logged in users are not affected by the Maintenance Mode.', LJMM_PLUGIN_DOMAIN); ?></p>
                             <?php endif; ?>
                         </td>
                     </tr>
@@ -197,18 +197,18 @@ class ljMaintenanceMode {
             return false;
 
         $is_enabled = get_option('ljmm-enabled');
-        $status = _x('Disabled', LJMM_PLUGIN_DOMAIN);
+        $status = _x('Disabled', 'Admin bar indicator', LJMM_PLUGIN_DOMAIN);
 
         if($is_enabled)
-            $status = _x('Enabled', LJMM_PLUGIN_DOMAIN);
+            $status = _x('Enabled', 'Admin bar indicator', LJMM_PLUGIN_DOMAIN);
 
         $indicator = array(
             'id' => 'ljmm-indicator',
-            'title' => _x('Maintenance Mode', LJMM_PLUGIN_DOMAIN).': '.$status,
+            'title' => _x('Maintenance Mode', 'Admin bar indicator', LJMM_PLUGIN_DOMAIN).': '.$status,
             'parent' => false,
-            'href' => get_admin_url(null, 'options-general.php?page=wp-maintenance-mode'),
+            'href' => get_admin_url(null, 'options-general.php?page=lj-maintenance-mode'),
             'meta' => array(
-                'title' => _x('Maintenance Mode', LJMM_PLUGIN_DOMAIN),
+                'title' => _x('Maintenance Mode', 'Admin bar indicator', LJMM_PLUGIN_DOMAIN),
                 'class' => $status,
             )
         );
@@ -221,7 +221,7 @@ class ljMaintenanceMode {
      * @since 1.1
     */
     function action_links( $links ) {
-        $links[] = '<a href="'. get_admin_url(null, 'options-general.php?page=wp-maintenance-mode') .'">'._x('Settings', LJMM_PLUGIN_DOMAIN).'</a>';
+        $links[] = '<a href="'. get_admin_url(null, 'options-general.php?page=lj-maintenance-mode') .'">'._x('Settings','Plugin Settings link', LJMM_PLUGIN_DOMAIN).'</a>';
         return $links;
     }
 
@@ -235,7 +235,7 @@ class ljMaintenanceMode {
             $content = get_option('ljmm-content');
             if(empty($content)) {
                 // fallback
-                $content = '<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>';
+                $content = __('<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>', LJMM_PLUGIN_DOMAIN );
             }
             $content = apply_filters('the_content', $content);
 

@@ -3,7 +3,7 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://github.com/lukasjuhas/lj-maintenance-mode
  * Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
- * Version: 1.4
+ * Version: 2.0
  * Author: Lukas Juhas
  * Author URI: http://lukasjuhas.com
  * Text Domain: lj-maintenance-mode
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 1.4
+ * @version 2.0
  *
  */
 
 // define stuff
-define( 'LJMM_VERSION', '1.4' );
+define( 'LJMM_VERSION', '2.0' );
 define( 'LJMM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'LJMM_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'LJMM_PLUGIN_BASENAME', plugin_basename( __FILE__ ));
@@ -50,17 +50,54 @@ function ljmm_install() {
     // remove old settings. This has been deprecated in 1.2
     delete_option( 'ljmm-content-default' );
 
-    // If content is not set, set the default content.
-    $content = get_option( 'ljmm-content');
-    if(empty($content)) :
-        $content = '<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>';
-        /**
-        * if you are trying to ensure that a given option is created,
-        * use update_option() instead, which bypasses the option name check
-        * and updates the option with the desired value whether or not it exists.
-        */
-        update_option( 'ljmm-content', $content);
-    endif;
+    // set default content
+    ljmm_set_content();
+}
+
+/**
+ * Default hardcoded settings
+ *
+ * @since 1.4
+ */
+function ljmm_get_defaults($type) {
+    switch($type) {
+        case 'maintenance_message':
+            $default = __("<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>", LJMM_PLUGIN_DOMAIN );
+            break;
+        case 'warning_wp_super_cache' :
+            $default = __("Important: Don't forget to flush your cache using WP Super Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            break;
+        case 'warning_w3_total_cache' :
+            $default = __("Important: Don't forget to flush your cache using WP Super Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            break;
+        case 'ljmm_enabled' :
+            $default = __("Maintenance Mode is currently active. To make sure that it works, open your web page in either private / incognito mode, different browser or simply log out. Logged in users are not affected by the Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            break;
+        default:
+            $default = false;
+            break;
+    }
+
+    return $default;
+}
+
+/**
+ * Set the default content
+ * Avoid duplicate function.
+ * @since 1.4
+ */
+function ljmm_set_content() {
+  // If content is not set, set the default content.
+  $content = get_option( 'ljmm-content');
+  if(empty($content)) :
+      $content = ljmm_get_defaults('maintenance_message');
+      /**
+      * f you are trying to ensure that a given option is created,
+      * use update_option() instead, which bypasses the option name check
+      * and updates the option with the desired value whether or not it exists.
+      */
+      update_option( 'ljmm-content', stripslashes($content));
+  endif;
 }
 
 /**
@@ -104,7 +141,7 @@ class ljMaintenanceMode {
      * @since 1.0
     */
     function ui() {
-        add_submenu_page( 'options-general.php', __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), 'delete_plugins', 'wp-maintenance-mode', array($this, 'settingsPage') );
+        add_submenu_page( 'options-general.php', __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), 'delete_plugins', 'lj-maintenance-mode', array($this, 'settingsPage') );
     }
 
     /**
@@ -127,16 +164,8 @@ class ljMaintenanceMode {
 
         do_action('ljmm_register_settings');
 
-        $content = get_option( 'ljmm-content');
-        if(empty($content)) :
-            $content = '<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>';
-            /**
-            * f you are trying to ensure that a given option is created,
-            * use update_option() instead, which bypasses the option name check
-            * and updates the option with the desired value whether or not it exists.
-            */
-            update_option( 'ljmm-content', stripslashes($content));
-        endif;
+        //set the content
+        ljmm_set_content();
     }
 
     /**
@@ -156,11 +185,23 @@ class ljMaintenanceMode {
                 <table class="form-table">
                     <tr valign="top">
                         <th scope="row"><?php _e('Enabled', LJMM_PLUGIN_DOMAIN ); ?></th>
-                          <td><input type="checkbox" name="ljmm-enabled" value="1" <?php checked( esc_attr( get_option('ljmm-enabled') ), 1 ); ?>></td>
+                        <td>
+                            <?php $ljmm_enabled = esc_attr( get_option('ljmm-enabled') ); ?>
+                            <input type="checkbox" name="ljmm-enabled" value="1" <?php checked( $ljmm_enabled, 1 ); ?>>
+                            <?php if($ljmm_enabled) : ?>
+                                <p class="description"><?php echo ljmm_get_defaults('ljmm_enabled'); ?></p>
+                            <?php endif; ?>
+                        </td>
                     </tr>
 
                     <tr valign="top">
                         <th scope="row" colspan="2"><?php _e('Content', LJMM_PLUGIN_DOMAIN ); ?></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="<?php echo esc_url( add_query_arg( 'ljmm', 'preview', bloginfo('url') ) ); ?>" target="_blank" class="button button-primary"><?php _e('Preview', LJMM_PLUGIN_DOMAIN); ?></a>
+                            <a class="button support" href="http://lukasjuhas.github.io/maintenance-mode/" target="_blank"><?php _e('Support', LJMM_PLUGIN_DOMAIN); ?></a>
+                        </td>
                     </tr>
                     <tr>
                         <td colspan="2">
@@ -171,15 +212,7 @@ class ljMaintenanceMode {
                             ?>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <a href="<?php echo esc_url( add_query_arg( 'ljmm', 'preview', bloginfo('url') ) ); ?>" target="_blank" class="button"><?php _e('Preview', LJMM_PLUGIN_DOMAIN); ?></a>
-                            <a class="button support" href="mailto:<?php echo LJMM_CONTACT_EMAIL; ?>?subject=[lj-maintenance-mode] Hi, I need support"><?php _e('Support', LJMM_PLUGIN_DOMAIN); ?></a>
-                        </td>
-                    </tr>
-
                     <?php do_action('ljmm_advanced_settings'); ?>
-
                 </table>
                 <?php submit_button(); ?>
             </form>
@@ -196,18 +229,18 @@ class ljMaintenanceMode {
             return false;
 
         $is_enabled = get_option('ljmm-enabled');
-        $status = _x('Disabled', LJMM_PLUGIN_DOMAIN);
+        $status = _x('Disabled', 'Admin bar indicator', LJMM_PLUGIN_DOMAIN);
 
         if($is_enabled)
-            $status = _x('Enabled', LJMM_PLUGIN_DOMAIN);
+            $status = _x('Enabled', 'Admin bar indicator', LJMM_PLUGIN_DOMAIN);
 
         $indicator = array(
             'id' => 'ljmm-indicator',
-            'title' => _x('Maintenance Mode', LJMM_PLUGIN_DOMAIN).': '.$status,
+            'title' => _x('Maintenance Mode', 'Admin bar indicator', LJMM_PLUGIN_DOMAIN).': '.$status,
             'parent' => false,
-            'href' => get_admin_url(null, 'options-general.php?page=wp-maintenance-mode'),
+            'href' => get_admin_url(null, 'options-general.php?page=lj-maintenance-mode'),
             'meta' => array(
-                'title' => _x('Maintenance Mode', LJMM_PLUGIN_DOMAIN),
+                'title' => _x('Maintenance Mode', 'Admin bar indicator', LJMM_PLUGIN_DOMAIN),
                 'class' => $status,
             )
         );
@@ -220,7 +253,7 @@ class ljMaintenanceMode {
      * @since 1.1
     */
     function action_links( $links ) {
-        $links[] = '<a href="'. get_admin_url(null, 'options-general.php?page=wp-maintenance-mode') .'">'._x('Settings', LJMM_PLUGIN_DOMAIN).'</a>';
+        $links[] = '<a href="'. get_admin_url(null, 'options-general.php?page=lj-maintenance-mode') .'">'._x('Settings','Plugin Settings link', LJMM_PLUGIN_DOMAIN).'</a>';
         return $links;
     }
 
@@ -234,7 +267,7 @@ class ljMaintenanceMode {
             $content = get_option('ljmm-content');
             if(empty($content)) {
                 // fallback
-                $content = '<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>';
+                $content = ljmm_get_defaults('maintenance_message');
             }
             $content = apply_filters('the_content', $content);
 
@@ -267,12 +300,12 @@ class ljMaintenanceMode {
         $message = '';
         // add wp super cache support
         if ( in_array( 'wp-super-cache/wp-cache.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-            $message = __("Important: Don't forget to flush your cache using WP Super Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            $message = ljmm_get_defaults('warning_wp_super_cache');
         }
 
         // add w3 total cache support
         if ( in_array( 'w3-total-cache/w3-total-cache.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-            $message = __("Important: Don't forget to flush your cache using W3 Total Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            $message = ljmm_get_defaults('warning_w3_total_cache');
         }
 
         return $message;

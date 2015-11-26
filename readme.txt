@@ -3,8 +3,8 @@ Contributors: LukasNeptun
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2XPA4CKT836FJ
 Tags: maintenance, maintenance mode, website maintenance, coming soon, coming soon page, mode, wordpress maintenance mode, site maintenance, site offline, offline mode admin, unavailable, administration, construction, offline, offline mode, maintenance plugin, plugin, wordpress maintenance plugin, lukas juhas, under construction, unavailable, landing page, landing,
 Requires at least: 3.5
-Tested up to: 4.3.1
-Stable tag: 1.4
+Tested up to: 4.4
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -67,9 +67,21 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 5. Insert Media available for WYSIWYG.
 
 == Changelog ==
+= 2.0 =
+* Add hooks for add-ons
 
 = 1.4 =
-* Add hooks for add-ons
+* Bug fixes (Thanks to [@gablau](https://github.com/gablau))
+* Security fixes - saving content more safely (Thanks to [@gablau](https://github.com/gablau))
+* Languages: Add Italian (100%) (Thanks to [@gablau](https://github.com/gablau))
+* Add compatibility while installed along with wp-maintenance-mode [@gablau](https://github.com/gablau))
+* Code: Avoid duplicating same code and use it as method instead.
+* Code: Tidy up default messages and group them together within method to avoid repeating yourself and also searching all across code in order to change the messages in the future.
+
+= 1.3.3 =
+* Improvement: If MM is enabled, added message describing how to check if the maintenance mode is enabled as this was causing lot of confusion and unnecessary support tickets.
+* Improvement: Move preview and support buttons to a more convenient place, also highlight the preview button.
+* Languages: Add Canadian (100%), Hungarian(83%) languages.
 
 = 1.3.2 =
 * Fixed: Issue where non admin users could see admin bar indicator.

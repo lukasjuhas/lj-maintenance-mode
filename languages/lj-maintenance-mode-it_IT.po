@@ -1,0 +1,122 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode\n"
+"POT-Creation-Date: 2015-11-26 00:27+0100\n"
+"PO-Revision-Date: 2015-11-26 00:28+0100\n"
+"Last-Translator: Gabriele Lauricella <gab.lau@gmail.com>\n"
+"Language-Team: Gabriele Lauricella <gab.lau@gmail.com>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: lj-maintenance-mode.php\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#. Plugin Name of the plugin/theme
+#: lj-maintenance-mode.php:107 lj-maintenance-mode.php:147
+#: trunk/lj-maintenance-mode.php:107 trunk/lj-maintenance-mode.php:147
+msgid "Maintenance Mode"
+msgstr "Modalità di Manutenzione"
+
+#: lj-maintenance-mode.php:130 lj-maintenance-mode.php:238
+msgid ""
+"<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing "
+"scheduled maintenance. Please check back soon.</p>"
+msgstr ""
+"<h1>Sito in Manutenzione</h1><p>Il nostro sito è attualmente in fase di "
+"manutenzione pianificata. Si prega di riprovare a breve.</p>"
+
+#: lj-maintenance-mode.php:156 trunk/lj-maintenance-mode.php:156
+msgid "Enabled"
+msgstr "Abilitata"
+
+#: lj-maintenance-mode.php:161
+msgid ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+"La modalità di manutenzione è attualmente attiva. Per assicurarsi che "
+"funzioni, aprire il sito web in modalità incognito / privato, da un'altro "
+"browser o fare il logout. Gli utenti loggati non sono influenzati dalla "
+"modalità di manutenzione."
+
+#: lj-maintenance-mode.php:167 trunk/lj-maintenance-mode.php:167
+msgid "Content"
+msgstr "Contenuto"
+
+#: lj-maintenance-mode.php:171 trunk/lj-maintenance-mode.php:171
+msgid "Preview"
+msgstr "Anteprima"
+
+#: lj-maintenance-mode.php:172 trunk/lj-maintenance-mode.php:172
+msgid "Support"
+msgstr "Supporto"
+
+#: lj-maintenance-mode.php:200
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "Disabilitata"
+
+#: lj-maintenance-mode.php:203
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "Abilitata"
+
+#: lj-maintenance-mode.php:207 lj-maintenance-mode.php:211
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "Modalità di Manutenzione"
+
+#: lj-maintenance-mode.php:224
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: lj-maintenance-mode.php:242 trunk/lj-maintenance-mode.php:242
+msgid "Website Under Maintenance"
+msgstr "Sito in Manutenzione"
+
+#: lj-maintenance-mode.php:271 trunk/lj-maintenance-mode.php:271
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Importante: Non dimenticare di svuotare la cache usando WP Super Cache "
+"quando attivi o disattivi la modalità di manutenzione."
+
+#: lj-maintenance-mode.php:276 trunk/lj-maintenance-mode.php:276
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Importante: Non dimenticare di svuotare la cache usando W3 Total Cache "
+"quando attivi o disatti la modalità di manutenzione."
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/lukasjuhas/lj-maintenance-mode"
+msgstr "https://github.com/lukasjuhas/lj-maintenance-mode"
+
+#. Description of the plugin/theme
+msgid ""
+"Very simple Maintenance Mode & Coming soon page. Using default Wordpress "
+"markup, No ads, no paid upgrades."
+msgstr ""
+"Semplice Pagina \"Modalità di Manutenzione & In Arrivo\". Utilizza il markup "
+"Wordpress predefinito, Nessuna pubblicità, nessun aggiornamento a pagamento."
+
+#. Author of the plugin/theme
+msgid "Lukas Juhas"
+msgstr "Lukas Juhas"
+
+#. Author URI of the plugin/theme
+msgid "http://lukasjuhas.com"
+msgstr "http://lukasjuhas.com"

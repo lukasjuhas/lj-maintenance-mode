@@ -3,7 +3,7 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://github.com/lukasjuhas/lj-maintenance-mode
  * Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
- * Version: 1.3.3
+ * Version: 1.4
  * Author: Lukas Juhas
  * Author URI: http://lukasjuhas.com
  * Text Domain: lj-maintenance-mode
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 1.3.3
+ * @version 1.4
  *
  */
 
 // define stuff
-define( 'LJMM_VERSION', '1.3.3' );
+define( 'LJMM_VERSION', '1.4' );
 define( 'LJMM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'LJMM_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'LJMM_PLUGIN_BASENAME', plugin_basename( __FILE__ ));
@@ -50,17 +50,54 @@ function ljmm_install() {
     // remove old settings. This has been deprecated in 1.2
     delete_option( 'ljmm-content-default' );
 
-    // If content is not set, set the default content.
-    $content = get_option( 'ljmm-content');
-    if(empty($content)) :
-        $content = '<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>';
-        /**
-        * if you are trying to ensure that a given option is created,
-        * use update_option() instead, which bypasses the option name check
-        * and updates the option with the desired value whether or not it exists.
-        */
-        update_option( 'ljmm-content', $content);
-    endif;
+    // set default content
+    ljmm_set_content();
+}
+
+/**
+ * Default hardcoded settings
+ *
+ * @since 1.4
+ */
+function ljmm_get_defaults($type) {
+    switch($type) {
+        case 'maintenance_message':
+            $default = __("<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>", LJMM_PLUGIN_DOMAIN );
+            break;
+        case 'warning_wp_super_cache' :
+            $default = __("Important: Don't forget to flush your cache using WP Super Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            break;
+        case 'warning_w3_total_cache' :
+            $default = __("Important: Don't forget to flush your cache using WP Super Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            break;
+        case 'ljmm_enabled' :
+            $default = __("Maintenance Mode is currently active. To make sure that it works, open your web page in either private / incognito mode, different browser or simply log out. Logged in users are not affected by the Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            break;
+        default:
+            $default = false;
+            break;
+    }
+
+    return $default;
+}
+
+/**
+ * Set the default content
+ * Avoid duplicate function.
+ * @since 1.4
+ */
+function ljmm_set_content() {
+  // If content is not set, set the default content.
+  $content = get_option( 'ljmm-content');
+  if(empty($content)) :
+      $content = ljmm_get_defaults('maintenance_message');
+      /**
+      * f you are trying to ensure that a given option is created,
+      * use update_option() instead, which bypasses the option name check
+      * and updates the option with the desired value whether or not it exists.
+      */
+      update_option( 'ljmm-content', stripslashes($content));
+  endif;
 }
 
 /**
@@ -125,16 +162,8 @@ class ljMaintenanceMode {
         register_setting('ljmm', 'ljmm-enabled');
         register_setting('ljmm', 'ljmm-content');
 
-        $content = get_option( 'ljmm-content');
-        if(empty($content)) :
-            $content = __('<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>', LJMM_PLUGIN_DOMAIN );
-            /**
-            * f you are trying to ensure that a given option is created,
-            * use update_option() instead, which bypasses the option name check
-            * and updates the option with the desired value whether or not it exists.
-            */
-            update_option( 'ljmm-content', stripslashes($content));
-        endif;
+        //set the content
+        ljmm_set_content();
     }
 
     /**
@@ -158,7 +187,7 @@ class ljMaintenanceMode {
                             <?php $ljmm_enabled = esc_attr( get_option('ljmm-enabled') ); ?>
                             <input type="checkbox" name="ljmm-enabled" value="1" <?php checked( $ljmm_enabled, 1 ); ?>>
                             <?php if($ljmm_enabled) : ?>
-                                <p class="description"><?php _e('Maintenance Mode is currently active. To make sure that it works, open your web page in either private / incognito mode, different browser or simply log out. Logged in users are not affected by the Maintenance Mode.', LJMM_PLUGIN_DOMAIN); ?></p>
+                                <p class="description"><?php echo ljmm_get_defaults('ljmm_enabled'); ?></p>
                             <?php endif; ?>
                         </td>
                     </tr>
@@ -235,7 +264,7 @@ class ljMaintenanceMode {
             $content = get_option('ljmm-content');
             if(empty($content)) {
                 // fallback
-                $content = __('<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>', LJMM_PLUGIN_DOMAIN );
+                $content = ljmm_get_defaults('maintenance_message');
             }
             $content = apply_filters('the_content', $content);
 
@@ -268,12 +297,12 @@ class ljMaintenanceMode {
         $message = '';
         // add wp super cache support
         if ( in_array( 'wp-super-cache/wp-cache.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-            $message = __("Important: Don't forget to flush your cache using WP Super Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            $message = ljmm_get_defaults('warning_wp_super_cache');
         }
 
         // add w3 total cache support
         if ( in_array( 'w3-total-cache/w3-total-cache.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-            $message = __("Important: Don't forget to flush your cache using W3 Total Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            $message = ljmm_get_defaults('warning_w3_total_cache');
         }
 
         return $message;

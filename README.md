@@ -1,4 +1,4 @@
-Maintenance Mode (1.3.3)
+Maintenance Mode (1.4)
 =======================
 
 * Contributors: Lukas Juhas
@@ -49,6 +49,14 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 
 ## Changelog
+
+### 1.4
+* Bug fixes (Thanks to [@gablau](https://github.com/gablau))
+* Security fixes - saving content more safely (Thanks to [@gablau](https://github.com/gablau))
+* Languages: Add Italian (100%) (Thanks to [@gablau](https://github.com/gablau))
+* Add compatibility while installed along wp-maintenance-mode [@gablau](https://github.com/gablau))
+* Code: Avoid duplicating same code and use it as method instead.
+* Code: Tidy up default messages and group them together within method to avoid repeating yourself and also searching all across code in order to change the messages in the future.
 
 ### 1.3.3
 * Improvement: If MM is enabled, added message describing how to check if the maintenance mode is enabled as this was causing lot of confusion and unnecessary support tickets.

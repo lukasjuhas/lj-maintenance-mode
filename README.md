@@ -1,5 +1,5 @@
-Maintenance Mode (1.4)
-=======================
+Maintenance Mode (1.4.1)
+========================
 
 * Contributors: Lukas Juhas
 * Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2XPA4CKT836FJ
@@ -49,6 +49,9 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 
 ## Changelog
+
+### 1.4.1
+* Bug fixes
 
 ### 1.4
 * Bug fixes (Thanks to [@gablau](https://github.com/gablau))

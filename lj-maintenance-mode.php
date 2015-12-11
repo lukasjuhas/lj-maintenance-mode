@@ -262,7 +262,7 @@ class ljMaintenanceMode {
                     <tr valign="top">
                         <th scope="row"><?php _e('Background Color', LJMM_PLUGIN_DOMAIN ); ?></th>
                         <td>
-                            <?php $ljmm_bgcolor = esc_attr( get_option('ljmm-bgcolor') ); echo $ljmm_bgcolor; ?>
+                            <?php $ljmm_bgcolor = esc_attr( get_option('ljmm-bgcolor') ); ?>
                             <input id="ljmm-bgcolor" name="ljmm-bgcolor" type="text" value="<?php echo $ljmm_bgcolor; ?>" class="lj-color-field" data-default-color="#f1f1f1" />
                                 <p class="description"><?php echo ljmm_get_defaults('ljmm_bgcolor'); ?></p>
                         </td>

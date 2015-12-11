@@ -1,10 +1,10 @@
 === Maintenance Mode ===
 Contributors: LukasNeptun
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2XPA4CKT836FJ
-Tags: maintenance, maintenance mode, website maintenance, coming soon, coming soon page, mode, wordpress maintenance mode, site maintenance, site offline, offline mode admin, unavailable, administration, construction, offline, offline mode, maintenance plugin, plugin, wordpress maintenance plugin, lukas juhas, under construction, unavailable, landing page, landing,
+Tags: maintenance, maintenance mode, website maintenance, coming soon, wordpress under construction, construction, offline, coming soon page, mode, wordpress maintenance mode, site maintenance, site offline, offline mode admin, unavailable, administration, construction, offline, offline mode, maintenance plugin, plugin, wordpress maintenance plugin, lukas juhas, under construction, unavailable, landing page, landing, underconstruction, 
 Requires at least: 3.5
 Tested up to: 4.4
-Stable tag: 1.3.3
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -67,6 +67,17 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 5. Insert Media available for WYSIWYG.
 
 == Changelog ==
+= 1.4.1 =
+* Bug fixes
+
+= 1.4 =
+* Bug fixes (Thanks to [@gablau](https://github.com/gablau))
+* Security fixes - saving content more safely (Thanks to [@gablau](https://github.com/gablau))
+* Languages: Add Italian (100%) (Thanks to [@gablau](https://github.com/gablau))
+* Add compatibility while installed along with wp-maintenance-mode [@gablau](https://github.com/gablau))
+* Code: Avoid duplicating same code and use it as method instead.
+* Code: Tidy up default messages and group them together within method to avoid repeating yourself and also searching all across code in order to change the messages in the future.
+
 = 1.3.3 =
 * Improvement: If MM is enabled, added message describing how to check if the maintenance mode is enabled as this was causing lot of confusion and unnecessary support tickets.
 * Improvement: Move preview and support buttons to a more convenient place, also highlight the preview button.

@@ -1,4 +1,4 @@
-Maintenance Mode (1.4.1)
+Maintenance Mode (1.4.2)
 ========================
 
 * Contributors: Lukas Juhas
@@ -49,6 +49,10 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 
 ## Changelog
+
+### 1.4.2
+* Update Pot file
+* Small adjustments
 
 ### 1.4.1
 * Bug fixes

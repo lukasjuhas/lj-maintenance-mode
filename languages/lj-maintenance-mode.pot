@@ -1,54 +1,81 @@
-# Copyright (C) 2015 Maintenance Mode
+# Copyright (C) 2016 Maintenance Mode
 # This file is distributed under the same license as the Maintenance Mode package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Maintenance Mode 1.2.1\n"
+"Project-Id-Version: Maintenance Mode 1.4.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
 "mode\n"
-"POT-Creation-Date: 2015-10-07 13:34:58+00:00\n"
+"POT-Creation-Date: 2016-01-02 13:33:47+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#. #-#-#-#-#  plugin.pot (Maintenance Mode 1.2.1)  #-#-#-#-#
-#. Plugin Name of the plugin/theme
-#: lj-maintenance-mode.php:78 lj-maintenance-mode.php:103
-msgid "Maintenance Mode"
+#: lj-maintenance-mode.php:65
+msgid ""
+"<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing "
+"scheduled maintenance. Please check back soon.</p>"
 msgstr ""
 
-#: lj-maintenance-mode.php:112
-msgid "Enabled"
-msgstr ""
-
-#: lj-maintenance-mode.php:117
-msgid "Content"
-msgstr ""
-
-#: lj-maintenance-mode.php:131
-msgid "Preview"
-msgstr ""
-
-#: lj-maintenance-mode.php:132
-msgid "Support"
-msgstr ""
-
-#: lj-maintenance-mode.php:176
-msgid "Website Under Maintenance"
-msgstr ""
-
-#: lj-maintenance-mode.php:202
+#: lj-maintenance-mode.php:68 lj-maintenance-mode.php:71
 msgid ""
 "Important: Don't forget to flush your cache using WP Super Cache when "
 "enabling or disabling Maintenance Mode."
 msgstr ""
 
-#: lj-maintenance-mode.php:207
+#: lj-maintenance-mode.php:74
 msgid ""
-"Important: Don't forget to flush your cache using W3 Total Cache when "
-"enabling or disabling Maintenance Mode."
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+
+#. #-#-#-#-#  plugin.pot (Maintenance Mode 1.4.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: lj-maintenance-mode.php:144 lj-maintenance-mode.php:176
+msgid "Maintenance Mode"
+msgstr ""
+
+#: lj-maintenance-mode.php:185
+msgid "Enabled"
+msgstr ""
+
+#: lj-maintenance-mode.php:196
+msgid "Content"
+msgstr ""
+
+#: lj-maintenance-mode.php:200
+msgid "Preview"
+msgstr ""
+
+#: lj-maintenance-mode.php:201
+msgid "Support"
+msgstr ""
+
+#: lj-maintenance-mode.php:229
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr ""
+
+#: lj-maintenance-mode.php:232
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr ""
+
+#: lj-maintenance-mode.php:236 lj-maintenance-mode.php:240
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr ""
+
+#: lj-maintenance-mode.php:253
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr ""
+
+#: lj-maintenance-mode.php:271
+msgid "Website Under Maintenance"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

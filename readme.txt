@@ -3,7 +3,7 @@ Contributors: LukasNeptun
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2XPA4CKT836FJ
 Tags: maintenance, maintenance mode, website maintenance, coming soon, wordpress under construction, construction, offline, coming soon page, mode, wordpress maintenance mode, site maintenance, site offline, offline mode admin, unavailable, administration, construction, offline, offline mode, maintenance plugin, plugin, wordpress maintenance plugin, lukas juhas, under construction, unavailable, landing page, landing, underconstruction,
 Requires at least: 3.5
-Tested up to: 4.4
+Tested up to: 4.4.1
 Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html

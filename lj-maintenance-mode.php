@@ -3,7 +3,7 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://github.com/lukasjuhas/lj-maintenance-mode
  * Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
- * Version: 2.0
+ * Version: 2.0.1
  * Author: Lukas Juhas
  * Author URI: http://lukasjuhas.com
  * Text Domain: lj-maintenance-mode
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 2.0
+ * @version 2.0.1
  *
  */
 
 // define stuff
-define('LJMM_VERSION', '2.0');
+define('LJMM_VERSION', '2.0.1');
 define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -120,12 +120,17 @@ add_action('plugins_loaded', 'ljmm_load_textdomain');
 */
 class ljMaintenanceMode
 {
+    /**
+     * constructor
+     *
+     * @since 1.0
+     */
     public function __construct()
     {
         add_action('admin_menu', array( $this, 'ui' ));
         add_action('admin_head', array( $this, 'style' ));
         add_action('admin_init', array( $this, 'settings' ));
-        add_action('admin_init', array( $this, 'add_capabilities'));
+        add_action('admin_init', array( $this, 'manage_capabilities'));
 
         // remove old settings. This has been deprecated in 1.2
         delete_option('ljmm-content-default');
@@ -327,16 +332,26 @@ class ljMaintenanceMode
         return get_bloginfo('name') . ' - ' . __('Website Under Maintenance', LJMM_PLUGIN_DOMAIN);
     }
 
-    function add_capabilities()
+    /**
+     * manage capabilities
+     *
+     * @since 2.0
+     */
+    public function manage_capabilities()
     {
+        $wp_roles = get_option( 'wp_user_roles' );
         $all_roles = get_option( 'ljmm-roles' );
-        foreach(get_option('wp_user_roles') as $role => $role_details) {
-            $get_role = get_role($role);
-            if(is_array($all_roles) && array_key_exists($role, $all_roles)) {
-                $get_role->add_cap( 'ljmm_view_site' );
-            } else {
-                $get_role->remove_cap( 'ljmm_view_site' );
-            }
+
+        // as of user complain, add some extra checks
+        if($wp_roles && is_array($wp_roles)) {
+          foreach($wp_roles as $role => $role_details) {
+              $get_role = get_role($role);
+              if(is_array($all_roles) && array_key_exists($role, $all_roles)) {
+                  $get_role->add_cap( 'ljmm_view_site' );
+              } else {
+                  $get_role->remove_cap( 'ljmm_view_site' );
+              }
+          }
         }
 
         // administrator by default
@@ -403,9 +418,6 @@ class ljMaintenanceMode
         return $message;
     }
 }
-/**
- * initialise plugin.
- *
- * @since 1.0
-*/
+
+// initialise plugin.
 $ljMaintenanceMode = new ljMaintenanceMode();

@@ -1,4 +1,4 @@
-Maintenance Mode (2.0)
+Maintenance Mode (2.0.1)
 ========================
 
 * Contributors: Lukas Juhas
@@ -50,6 +50,9 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 
 ## Changelog
+### 2.0.1
+* Improved checks regarding problems caused by latest update for some users
+
 ### 2.0
 * Advanced settings
 * Role Control

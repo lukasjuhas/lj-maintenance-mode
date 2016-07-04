@@ -11,7 +11,9 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) )
 function ljmm_delete_plugin() {
 		delete_option( 'ljmm-content-default' );
 		delete_option( 'ljmm-content' );
-		delete_option( 'ljmm-enabled' );
+    delete_option( 'ljmm-enabled' );
+		delete_option( 'ljmm-site-title' );
+    delete_option( 'ljmm-roles' );
 }
 
 ljmm_delete_plugin();

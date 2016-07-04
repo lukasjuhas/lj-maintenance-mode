@@ -1,4 +1,4 @@
-Maintenance Mode (1.4.3)
+Maintenance Mode (2.0)
 ========================
 
 * Contributors: Lukas Juhas
@@ -23,13 +23,14 @@ Help support and translate this plugin!
 * **Support** - Support button available.
 * **Preview** - Preview button available.
 * **Compact** - It's developed to be as compact as possible.
+* **Role Control** - User Role control is available since 2.0
 
 Bugs and pull requests are welcomed.
 
 ## Wordpress Info
 
 * Requires at least: 3.5.0
-* Tested up to: 4.5
+* Tested up to: 4.5.3
 
 ## Installation
 
@@ -49,6 +50,13 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 
 ## Changelog
+### 2.0
+* Advanced settings
+* Role Control
+* You can now change title of the site while Maintenance Mode is enabled (in advanced settings)
+* General tidy up of code
+* Fix issue where Jetpack share was appearing in maintenance mode
+* Settings page tidy up and corrections to formatting.
 
 ### 1.4.3
 * Added German (DE) translations. (Thanks to Hoellenwesen)

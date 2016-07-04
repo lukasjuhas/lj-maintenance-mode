@@ -3,8 +3,8 @@ Contributors: LukasNeptun
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2XPA4CKT836FJ
 Tags: maintenance, maintenance mode, website maintenance, coming soon, under construction, offline, site maintenance,
 Requires at least: 3.5
-Tested up to: 4.5
-Stable tag: 1.4.3
+Tested up to: 4.5.3
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,7 @@ Help support and translate this plugin!
 * **Support** - Support button available.
 * **Preview** - Preview button available.
 * **Compact** - It's developed to be as compact as possible.
+* **Role Control** - User Role control is available since 2.0
 
 > <strong>Important! Users that are using Cache plugins, please read below:</strong><br>
 > <strong>When enabling or disabling Maintenance Mode, don't forget to flush your cache!</strong>
@@ -63,10 +64,19 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 1. Example with default message.
 2. Admin Bar Indicator (Red when active)
 3. Settings page in admin view with default message.
-4. Example with image and link.
-5. Insert Media available for WYSIWYG.
+4. Settings page in admin view with advanced settings.
+5. Example with image and link.
+6. Insert Media available for WYSIWYG.
 
 == Changelog ==
+= 2.0 =
+* Advanced settings
+* Role Control
+* You can now change title of the site while Maintenance Mode is enabled (in advanced settings)
+* General tidy up of code
+* Fix issue where Jetpack share was appearing in maintenance mode
+* Settings page tidy up and corrections to formatting.
+
 = 1.4.3 =
 * Added German (DE) translations. (Thanks to Hoellenwesen)
 

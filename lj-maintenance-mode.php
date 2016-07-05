@@ -3,7 +3,7 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://github.com/lukasjuhas/lj-maintenance-mode
  * Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
- * Version: 2.0.1
+ * Version: 2.0.2
  * Author: Lukas Juhas
  * Author URI: http://lukasjuhas.com
  * Text Domain: lj-maintenance-mode
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 2.0.1
+ * @version 2.0.2
  *
  */
 
 // define stuff
-define('LJMM_VERSION', '2.0.1');
+define('LJMM_VERSION', '2.0.2');
 define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -224,36 +224,46 @@ class ljMaintenanceMode
                     </tr>
                 </table>
 
-                <a href="#" class="ljmm-advanced-settings">Advanced Settings</a>
+                <a href="#" class="ljmm-advanced-settings"><?php _e('Advanced Settings', LJMM_PLUGIN_DOMAIN); ?></a>
                 <table class="form-table form--ljmm-advanced-settings" style="display: none">
                     <tr valign="middle">
                         <th scope="row"><?php _e('Site Title', LJMM_PLUGIN_DOMAIN); ?></th>
                         <td>
                             <?php $ljmm_site_title = esc_attr(get_option('ljmm-site-title')); ?>
                             <input name="ljmm-site-title" type="text" id="ljmm-site-title" placeholder="<?php echo $this->site_title(); ?>" value="<?php echo $ljmm_site_title; ?>" class="regular-text">
-                            <p class="description">Overrides default site meta title.</p>
+                            <p class="description"><?php _e('Overrides default site meta title.', LJMM_PLUGIN_DOMAIN); ?></p>
                         </td>
                     </tr>
-                    <tr valign="top">
-                        <th scope="row">User Roles
-                          <p class="description">Tick the ones that can access front-end of your website if maintenance mode is enabled.</p>
-                          <p class="description">Please note that this does NOT apply to admin area.</p>
-                          <p><a href="#" class="ljmm-toggle-all">Toggle all</a></p>
-                        </th>
-                        <td>
-                            <?php $options = get_option( 'ljmm-roles' ); ?>
-                            <?php foreach(get_option('wp_user_roles') as $role => $role_details) :  ?>
-                                <?php if($role !== 'administrator') : ?>
-                                    <fieldset>
-                                        <legend class="screen-reader-text"><span><?php if(isset($options[$role])) echo $options[$role]; ?></span></legend>
-                                        <label>
-                                            <input type="checkbox" class="ljmm-roles" name="ljmm-roles[<?php echo $role; ?>]" value="1" <?php checked( isset($options[$role]), 1 ); ?> /> <?php echo $role_details['name']; ?>
-                                        </label>
-                                    </fieldset>
-                                <?php endif; ?>
-                            <?php endforeach; ?>
-                        </td>
-                    </tr>
+                    <?php global $wpdb; ?>
+                    <?php $options = get_option( 'ljmm-roles' );  ?>
+                    <?php $wp_roles = get_option( $wpdb->prefix . 'user_roles' ); ?>
+                    <?php if($wp_roles && is_array($wp_roles)) : ?>
+                        <tr valign="top">
+                            <th scope="row">User Roles
+                              <p class="description"><?php _e('Tick the ones that can access front-end of your website if maintenance mode is enabled', LJMM_PLUGIN_DOMAIN); ?>.</p>
+                              <p class="description"><?php _e('Please note that this does NOT apply to admin area', LJMM_PLUGIN_DOMAIN); ?>.</p>
+                              <p><a href="#" class="ljmm-toggle-all"><?php _e('Toggle all', LJMM_PLUGIN_DOMAIN); ?></a></p>
+                            </th>
+                            <td>
+                                <?php foreach($wp_roles as $role => $role_details) :  ?>
+                                    <?php if($role !== 'administrator') : ?>
+                                        <fieldset>
+                                            <legend class="screen-reader-text"><span><?php if(isset($options[$role])) echo $options[$role]; ?></span></legend>
+                                            <label>
+                                                <input type="checkbox" class="ljmm-roles" name="ljmm-roles[<?php echo $role; ?>]" value="1" <?php checked( isset($options[$role]), 1 ); ?> /> <?php echo $role_details['name']; ?>
+                                            </label>
+                                        </fieldset>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            </td>
+                        </tr>
+                    <?php else: ?>
+                        <tr valign="top">
+                            <th scope="row" colspan="2">
+                                <p class="description"><?php _e('User Role control is currently not avialable on your website. Sorry!', LJMM_PLUGIN_DOMAIN); ?></p>
+                            </td>
+                        </tr>
+                    <?php endif; ?>
                 </table>
                 <?php submit_button(); ?>
             </form>
@@ -339,7 +349,8 @@ class ljMaintenanceMode
      */
     public function manage_capabilities()
     {
-        $wp_roles = get_option( 'wp_user_roles' );
+        global $wpdb;
+        $wp_roles = get_option( $wpdb->prefix . 'user_roles' );
         $all_roles = get_option( 'ljmm-roles' );
 
         // as of user complain, add some extra checks

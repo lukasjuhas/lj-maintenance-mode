@@ -1,4 +1,4 @@
-Maintenance Mode (2.0.1)
+Maintenance Mode (2.0.2)
 ========================
 
 * Contributors: Lukas Juhas
@@ -50,6 +50,11 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 
 ## Changelog
+### 2.0.2
+* Fix db prefixing while getting roles. thanks @gablau
+* Further checks improvements regarding problems caused by latest update for some users
+* Add missing function wrapper for translations
+
 ### 2.0.1
 * Improved checks regarding problems caused by latest update for some users
 

@@ -3,7 +3,7 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://github.com/lukasjuhas/lj-maintenance-mode
  * Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
- * Version: 2.0.2
+ * Version: 2.0.3
  * Author: Lukas Juhas
  * Author URI: http://lukasjuhas.com
  * Text Domain: lj-maintenance-mode
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 2.0.2
+ * @version 2.0.3
  *
  */
 
 // define stuff
-define('LJMM_VERSION', '2.0.2');
+define('LJMM_VERSION', '2.0.3');
 define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -162,7 +162,7 @@ class ljMaintenanceMode
     */
     public function style()
     {
-        echo '<style type="text/css">#wp-admin-bar-ljmm-indicator.Enabled { background: rgba(159, 0, 0, 1) }</style>';
+        echo '<style type="text/css">#wp-admin-bar-ljmm-indicator.ljmm-indicator--enabled { background: rgba(159, 0, 0, 1) }</style>';
     }
 
     /**
@@ -307,6 +307,8 @@ class ljMaintenanceMode
             $status = _x('Enabled', 'Admin bar indicator', LJMM_PLUGIN_DOMAIN);
         }
 
+        $indicatorClasses = $is_enabled ? 'ljmm-indicator ljmm-indicator--enabled' : 'ljmm-indicator';
+
         $indicator = array(
             'id' => 'ljmm-indicator',
             'title' => _x('Maintenance Mode', 'Admin bar indicator', LJMM_PLUGIN_DOMAIN).': '.$status,
@@ -314,7 +316,7 @@ class ljMaintenanceMode
             'href' => get_admin_url(null, 'options-general.php?page=lj-maintenance-mode'),
             'meta' => array(
                 'title' => _x('Maintenance Mode', 'Admin bar indicator', LJMM_PLUGIN_DOMAIN),
-                'class' => $status,
+                'class' => $indicatorClasses,
             )
         );
         $wp_admin_bar->add_node($indicator);

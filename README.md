@@ -1,4 +1,4 @@
-Maintenance Mode (2.0.2)
+Maintenance Mode (2.0.3)
 ========================
 
 * Contributors: Lukas Juhas
@@ -50,6 +50,10 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 
 ## Changelog
+### 2.0.3
+* Added Spanish Translations. (Thanks to [@bcien](https://github.com/bcien))
+* Fixed issue where on non English sites admin bar indicator was broken.
+
 ### 2.0.2
 * Fix db prefixing while getting roles. thanks @gablau
 * Further checks improvements regarding problems caused by latest update for some users

@@ -3,8 +3,8 @@ Contributors: LukasNeptun
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2XPA4CKT836FJ
 Tags: maintenance, maintenance mode, website maintenance, coming soon, under construction, offline, site maintenance,
 Requires at least: 3.5
-Tested up to: 4.5.3
-Stable tag: 2.0.2
+Tested up to: 4.6
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -69,6 +69,10 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 6. Insert Media available for WYSIWYG.
 
 == Changelog ==
+= 2.0.3 =
+* Added Spanish Translations. (Thanks to [@bcien](https://github.com/bcien))
+* Fixed issue where on non English sites admin bar indicator was broken.
+
 = 2.0.2 =
 * Fix db prefixing while getting roles. thanks @gablau
 * Further checks improvements regarding problems caused by latest update for some users
@@ -152,5 +156,6 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 == Upgrade Notice ==
 
-= 1.3 =
-* This updates includes new features and changes regarding translations and various bug fixes.
+= 2.0.3 =
+* Added Spanish Translations. (Thanks to [@bcien](https://github.com/bcien))
+* Fixed issue where on non English sites admin bar indicator was broken.

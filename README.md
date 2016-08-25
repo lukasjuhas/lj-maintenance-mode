@@ -1,4 +1,4 @@
-Maintenance Mode (2.0.3)
+Maintenance Mode (2.0.4)
 ========================
 
 * Contributors: Lukas Juhas
@@ -30,7 +30,7 @@ Bugs and pull requests are welcomed.
 ## Wordpress Info
 
 * Requires at least: 3.5.0
-* Tested up to: 4.5.3
+* Tested up to: 4.6
 
 ## Installation
 
@@ -50,6 +50,9 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 
 ## Changelog
+### 2.0.4
+* Added Lithuanian translation (Thanks to [@gedeminas](https://github.com/gedeminas))
+
 ### 2.0.3
 * Added Spanish Translations. (Thanks to [@bcien](https://github.com/bcien))
 * Fixed issue where on non English sites admin bar indicator was broken.

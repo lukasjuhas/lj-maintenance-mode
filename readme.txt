@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: maintenance, maintenance mode, website maintenance, coming soon, under construction, offline, site maintenance,
 Requires at least: 3.5
 Tested up to: 4.6
-Stable tag: 2.0.3
+Stable tag: 2.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -69,6 +69,9 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 6. Insert Media available for WYSIWYG.
 
 == Changelog ==
+= 2.0.4 =
+* Added Lithuanian translation (Thanks to [@gedeminas](https://github.com/gedeminas))
+
 = 2.0.3 =
 * Added Spanish Translations. (Thanks to [@bcien](https://github.com/bcien))
 * Fixed issue where on non English sites admin bar indicator was broken.
@@ -156,6 +159,5 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 == Upgrade Notice ==
 
-= 2.0.3 =
-* Added Spanish Translations. (Thanks to [@bcien](https://github.com/bcien))
-* Fixed issue where on non English sites admin bar indicator was broken.
+= 2.0.4 =
+* Added Lithuanian translation (Thanks to [@gedeminas](https://github.com/gedeminas))

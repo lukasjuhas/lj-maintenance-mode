@@ -1,4 +1,4 @@
-Maintenance Mode (2.0.4)
+Maintenance Mode (2.1)
 ========================
 
 * Contributors: Lukas Juhas
@@ -24,6 +24,7 @@ Help support and translate this plugin!
 * **Preview** - Preview button available.
 * **Compact** - It's developed to be as compact as possible.
 * **Role Control** - User Role control is available since 2.0
+* **WPML Compatible** - Plugin is compatible with WPML plugin
 
 Bugs and pull requests are welcomed.
 
@@ -50,6 +51,11 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 
 ## Changelog
+### 2.1
+* Added wpml-config.xml file as part of WPML compatibility
+* Fixed issue where plugin capabilities were not being removed on uninstall
+* Minor code tidy up
+
 ### 2.0.4
 * Added Lithuanian translation (Thanks to [@gedeminas](https://github.com/gedeminas))
 

@@ -3,14 +3,14 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://github.com/lukasjuhas/lj-maintenance-mode
  * Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
- * Version: 2.0.4
+ * Version: 2.1
  * Author: Lukas Juhas
- * Author URI: http://lukasjuhas.com
+ * Author URI: http://itsluk.as
  * Text Domain: lj-maintenance-mode
  * License: GPL2
  * Domain Path: /languages/
  *
- * Copyright 2014-2016  Lukas Juhas  (email : hello@lukasjuhas.com)
+ * Copyright 2014-2016  Lukas Juhas
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2, as
  * published by the Free Software Foundation.
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 2.0.4
+ * @version 2.1
  *
  */
 
 // define stuff
-define('LJMM_VERSION', '2.0.4');
+define('LJMM_VERSION', '2.1');
 define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -355,16 +355,17 @@ class ljMaintenanceMode
         $wp_roles = get_option( $wpdb->prefix . 'user_roles' );
         $all_roles = get_option( 'ljmm-roles' );
 
-        // as of user complain, add some extra checks
+        // extra checks
         if($wp_roles && is_array($wp_roles)) {
-          foreach($wp_roles as $role => $role_details) {
-              $get_role = get_role($role);
-              if(is_array($all_roles) && array_key_exists($role, $all_roles)) {
-                  $get_role->add_cap( 'ljmm_view_site' );
-              } else {
-                  $get_role->remove_cap( 'ljmm_view_site' );
-              }
-          }
+            foreach($wp_roles as $role => $role_details) {
+                $get_role = get_role($role);
+
+                if(is_array($all_roles) && array_key_exists($role, $all_roles)) {
+                    $get_role->add_cap( 'ljmm_view_site' );
+                } else {
+                    $get_role->remove_cap( 'ljmm_view_site' );
+                }
+            }
         }
 
         // administrator by default

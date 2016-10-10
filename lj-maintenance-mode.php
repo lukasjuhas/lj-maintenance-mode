@@ -218,8 +218,9 @@ class ljMaintenanceMode
                     <tr>
                         <th colspan="2">
                             <?php $content = get_option('ljmm-content');
-                            $editor_id = 'ljmm-content';
-                            wp_editor($content, $editor_id); ?>
+                                $editor_id = 'ljmm-content';
+                                wp_editor($content, $editor_id);
+                            ?>
                         </th>
                     </tr>
                 </table>
@@ -235,22 +236,22 @@ class ljMaintenanceMode
                         </td>
                     </tr>
                     <?php global $wpdb; ?>
-                    <?php $options = get_option( 'ljmm-roles' );  ?>
-                    <?php $wp_roles = get_option( $wpdb->prefix . 'user_roles' ); ?>
-                    <?php if($wp_roles && is_array($wp_roles)) : ?>
+                    <?php $options = get_option('ljmm-roles'); ?>
+                    <?php $wp_roles = get_option($wpdb->prefix . 'user_roles'); ?>
+                    <?php if ($wp_roles && is_array($wp_roles)) : ?>
                         <tr valign="top">
                             <th scope="row">User Roles
-                              <p class="description"><?php _e('Tick the ones that can access front-end of your website if maintenance mode is enabled', LJMM_PLUGIN_DOMAIN); ?>.</p>
-                              <p class="description"><?php _e('Please note that this does NOT apply to admin area', LJMM_PLUGIN_DOMAIN); ?>.</p>
-                              <p><a href="#" class="ljmm-toggle-all"><?php _e('Toggle all', LJMM_PLUGIN_DOMAIN); ?></a></p>
+                                <p class="description"><?php _e('Tick the ones that can access front-end of your website if maintenance mode is enabled', LJMM_PLUGIN_DOMAIN); ?>.</p>
+                                <p class="description"><?php _e('Please note that this does NOT apply to admin area', LJMM_PLUGIN_DOMAIN); ?>.</p>
+                                <p><a href="#" class="ljmm-toggle-all"><?php _e('Toggle all', LJMM_PLUGIN_DOMAIN); ?></a></p>
                             </th>
                             <td>
-                                <?php foreach($wp_roles as $role => $role_details) :  ?>
-                                    <?php if($role !== 'administrator') : ?>
+                                <?php foreach ($wp_roles as $role => $role_details) :  ?>
+                                    <?php if ($role !== 'administrator') : ?>
                                         <fieldset>
-                                            <legend class="screen-reader-text"><span><?php if(isset($options[$role])) echo $options[$role]; ?></span></legend>
+                                            <legend class="screen-reader-text"><span><?php if (isset($options[$role])) { echo $options[$role]; } ?></span></legend>
                                             <label>
-                                                <input type="checkbox" class="ljmm-roles" name="ljmm-roles[<?php echo $role; ?>]" value="1" <?php checked( isset($options[$role]), 1 ); ?> /> <?php echo $role_details['name']; ?>
+                                                <input type="checkbox" class="ljmm-roles" name="ljmm-roles[<?php echo $role; ?>]" value="1" <?php checked(isset($options[$role]), 1); ?> /> <?php echo $role_details['name']; ?>
                                             </label>
                                         </fieldset>
                                     <?php endif; ?>
@@ -270,24 +271,23 @@ class ljMaintenanceMode
         </div>
         <script>
           jQuery(document).ready(function() {
-              jQuery('.ljmm-advanced-settings').on('click', function(event) {
-                event.preventDefault();
-                jQuery('.form--ljmm-advanced-settings').toggle();
-                if (jQuery('.form--ljmm-advanced-settings').is(':visible')) {
-                     jQuery(this).text('Hide Advanced Settings');
-                } else {
-                     jQuery(this).text('Advanced Settings');
-                }
-              });
-              jQuery('.ljmm-toggle-all').on('click', function(event) {
-                event.preventDefault();
-                var checkBoxes = jQuery("input.ljmm-roles");
-                checkBoxes.prop("checked", !checkBoxes.prop("checked"));
-              });
+            jQuery('.ljmm-advanced-settings').on('click', function(event) {
+              event.preventDefault();
+              jQuery('.form--ljmm-advanced-settings').toggle();
+              if (jQuery('.form--ljmm-advanced-settings').is(':visible')) {
+                   jQuery(this).text('Hide Advanced Settings');
+              } else {
+                   jQuery(this).text('Advanced Settings');
+              }
+            });
+            jQuery('.ljmm-toggle-all').on('click', function(event) {
+              event.preventDefault();
+              var checkBoxes = jQuery("input.ljmm-roles");
+              checkBoxes.prop("checked", !checkBoxes.prop("checked"));
+            });
           });
         </script>
-    <?php
-    }
+    <?php }
 
     /**
      * admin bar indicator
@@ -352,25 +352,25 @@ class ljMaintenanceMode
     public function manage_capabilities()
     {
         global $wpdb;
-        $wp_roles = get_option( $wpdb->prefix . 'user_roles' );
-        $all_roles = get_option( 'ljmm-roles' );
+        $wp_roles = get_option($wpdb->prefix . 'user_roles');
+        $all_roles = get_option('ljmm-roles');
 
         // extra checks
-        if($wp_roles && is_array($wp_roles)) {
-            foreach($wp_roles as $role => $role_details) {
+        if ($wp_roles && is_array($wp_roles)) {
+            foreach ($wp_roles as $role => $role_details) {
                 $get_role = get_role($role);
 
-                if(is_array($all_roles) && array_key_exists($role, $all_roles)) {
-                    $get_role->add_cap( 'ljmm_view_site' );
+                if (is_array($all_roles) && array_key_exists($role, $all_roles)) {
+                    $get_role->add_cap('ljmm_view_site');
                 } else {
-                    $get_role->remove_cap( 'ljmm_view_site' );
+                    $get_role->remove_cap('ljmm_view_site');
                 }
             }
         }
 
         // administrator by default
-        $admin_role = get_role( 'administrator' );
-        $admin_role->add_cap( 'ljmm_view_site' );
+        $admin_role = get_role('administrator');
+        $admin_role->add_cap('ljmm_view_site');
     }
 
     /**
@@ -388,7 +388,7 @@ class ljMaintenanceMode
             $title = $site_title ? $site_title : $this->site_title();
 
             // remove jetpack sharing
-            remove_filter( 'the_content', 'sharing_display', 19 );
+            remove_filter('the_content', 'sharing_display', 19);
 
             wp_die($content, $title, array('response' => '503'));
         }

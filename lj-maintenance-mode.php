@@ -311,7 +311,7 @@ class ljMaintenanceMode
 
         $indicator = array(
             'id' => 'ljmm-indicator',
-            'title' => _x('Maintenance Mode', 'Admin bar indicator', LJMM_PLUGIN_DOMAIN).': '.$status,
+            'title' => '<span class="ab-icon dashicon-before dashicons-hammer"></span> ' . $status,
             'parent' => false,
             'href' => get_admin_url(null, 'options-general.php?page=lj-maintenance-mode'),
             'meta' => array(

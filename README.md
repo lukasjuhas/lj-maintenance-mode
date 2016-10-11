@@ -31,6 +31,7 @@ Bugs and pull requests are welcomed.
 ## Filters ##
 
 `ljmm_site_title` - Filter page title while in maintenance mode
+
 `ljmm_admin_bar_indicator_enabled` - Control visibility of admin bar indicator
 
 ## Actions ##

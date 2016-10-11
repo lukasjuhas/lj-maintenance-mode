@@ -28,6 +28,13 @@ Help support and translate this plugin!
 
 Bugs and pull requests are welcomed.
 
+## Actions ##
+`ljmm_before_mm` - Runs at the beginning of core maintenance method
+
+## Filters ##
+
+`ljmm_site_title` - Filter page title while in maintenance mode
+
 ## Wordpress Info
 
 * Requires at least: 3.5.0
@@ -52,7 +59,8 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 ## Changelog
 ### 2.1
-* WPML compatibility
+* added WPML compatibility
+* added TML (Theme My Login) compatibility
 * Fixed issue where plugin capabilities were not being removed on uninstall
 * Shorten admin bar indicator text, added icon
 * Minor code tidy up

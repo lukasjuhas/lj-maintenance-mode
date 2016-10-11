@@ -34,6 +34,13 @@ Help support and translate this plugin!
 > <strong>Important! Users that are using Cache plugins, please read below:</strong><br>
 > <strong>When enabling or disabling Maintenance Mode, don't forget to flush your cache!</strong>
 
+**Filters**
+`ljmm_site_title` - Filter page title while in maintenance mode
+
+**Actions**
+`ljmm_before_mm` - Runs at the beginning of core maintenance method
+
+
 Having trouble? Please read FAQ first, if you need any assistance, you can use support button on the settings page of the Maintenance Mode.
 
 > <strong>Development on GitHub</strong><br>
@@ -70,7 +77,8 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 == Changelog ==
 = 2.1 =
-* WPML compatibility
+* added WPML compatibility
+* added TML (Theme My Login) compatibility
 * Fixed issue where plugin capabilities were not being removed on uninstall
 * Shorten admin bar indicator text, added icon
 * Minor code tidy up

@@ -341,7 +341,7 @@ class ljMaintenanceMode
      */
     public function site_title()
     {
-        return get_bloginfo('name') . ' - ' . __('Website Under Maintenance', LJMM_PLUGIN_DOMAIN);
+        return apply_filters('ljmm_site_title', get_bloginfo('name') . ' - ' . __('Website Under Maintenance', LJMM_PLUGIN_DOMAIN));
     }
 
     /**
@@ -380,6 +380,15 @@ class ljMaintenanceMode
     */
     public function maintenance()
     {
+        do_action('ljmm_before_mm');
+
+        // TML Compatibility
+        if(class_exists('Theme_My_Login')) {
+            if(Theme_My_Login::is_tml_page()) {
+                return;
+            }
+        }
+
         if (!(current_user_can('ljmm_view_site') || current_user_can('super admin')) || (isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview')) {
             $get_content = get_option('ljmm-content');
             $site_title = get_option('ljmm-site-title');
@@ -389,7 +398,6 @@ class ljMaintenanceMode
 
             // remove jetpack sharing
             remove_filter('the_content', 'sharing_display', 19);
-
             wp_die($content, $title, array('response' => '503'));
         }
     }

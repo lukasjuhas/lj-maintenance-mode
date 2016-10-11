@@ -9,7 +9,7 @@ Maintenance Mode (2.1)
 
 As a web developer working with Wordpress almost every day, very often I came across problem that If I wanted simple maintenance plugin to do some updates on my or client's website, I came across all these useless and overcomplicated plugins until I decided that I'll make one myself which will be the one I'll be confident and happy to use with ease.
 
-Maintenance Mode is very simple and it's using Wordpress's wp_die() function which is core function of Wordpress, which makes this plugin feel and work as a part of Wordpress core. There is settings page under "Settings" in the main wp-admin menu where you can enable maintenance mode or change content using WYSIWYG editor so you can also add pictures, links etc. When activated and logged in as admin, you can see website as usual, rest of the users / visitors can see maintenance mode. You can see the maintenance mode as admin in preview mode using preview link on the settings page or simply open website in private mode or different browser to double check if it's enabled and working. There is also indicator in admin bar that changes colour to red when maintenance mode is enabled.
+[Maintenance Mode](https://plugins.itsluk.as/maintenance-mode/) is very simple and it's using Wordpress's wp_die() function which is core function of Wordpress, which makes this plugin feel and work as a part of Wordpress core. There is settings page under "Settings" in the main wp-admin menu where you can enable maintenance mode or change content using WYSIWYG editor so you can also add pictures, links etc. When activated and logged in as admin, you can see website as usual, rest of the users / visitors can see maintenance mode. You can see the maintenance mode as admin in preview mode using preview link on the settings page or simply open website in private mode or different browser to double check if it's enabled and working. There is also indicator in admin bar that changes colour to red when maintenance mode is enabled.
 
 Help support and translate this plugin!
 
@@ -28,12 +28,13 @@ Help support and translate this plugin!
 
 Bugs and pull requests are welcomed.
 
-## Actions ##
-`ljmm_before_mm` - Runs at the beginning of core maintenance method
-
 ## Filters ##
 
 `ljmm_site_title` - Filter page title while in maintenance mode
+`ljmm_admin_bar_indicator_enabled` - Control visibility of admin bar indicator
+
+## Actions ##
+`ljmm_before_mm` - Runs at the beginning of core maintenance method
 
 ## Wordpress Info
 

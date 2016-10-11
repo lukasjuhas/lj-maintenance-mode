@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Maintenance Mode
- * Plugin URI: https://github.com/lukasjuhas/lj-maintenance-mode
+ * Plugin URI: https://plugins.itsluk.as/maintenance-mode/
  * Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
  * Version: 2.1
  * Author: Lukas Juhas
- * Author URI: http://itsluk.as
+ * Author URI: https://plugins.itsluk.as/
  * Text Domain: lj-maintenance-mode
  * License: GPL2
  * Domain Path: /languages/
@@ -296,7 +296,13 @@ class ljMaintenanceMode
     */
     public function indicator($wp_admin_bar)
     {
+        $enabled = apply_filters('ljmm_admin_bar_indicator_enabled', $enabled = true);
+
         if (!current_user_can('delete_plugins')) {
+            return false;
+        }
+
+        if(!$enabled) {
             return false;
         }
 
@@ -330,6 +336,7 @@ class ljMaintenanceMode
     public function action_links($links)
     {
         $links[] = '<a href="'. get_admin_url(null, 'options-general.php?page=lj-maintenance-mode') .'">'._x('Settings', 'Plugin Settings link', LJMM_PLUGIN_DOMAIN).'</a>';
+        $links[] = '<a target="_blank" href="https://plugins.itsluk.as/maintenance-mode/support/">'._x('Support', 'Plugin Support link', LJMM_PLUGIN_DOMAIN).'</a>';
         return $links;
     }
 

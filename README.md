@@ -63,6 +63,7 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 * added TML (Theme My Login) compatibility
 * Fixed issue where plugin capabilities were not being removed on uninstall
 * Shorten admin bar indicator text, added icon
+* Add support link to the plugins page
 * Minor code tidy up
 
 ### 2.0.4

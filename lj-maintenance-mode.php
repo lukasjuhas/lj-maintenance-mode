@@ -3,7 +3,7 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://plugins.itsluk.as/maintenance-mode/
  * Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
- * Version: 2.1
+ * Version: 2.1.1
  * Author: Lukas Juhas
  * Author URI: https://plugins.itsluk.as/
  * Text Domain: lj-maintenance-mode
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 2.1
+ * @version 2.1.1
  *
  */
 
 // define stuff
-define('LJMM_VERSION', '2.1');
+define('LJMM_VERSION', '2.1.1');
 define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -212,7 +212,7 @@ class ljMaintenanceMode
                     <tr>
                         <th>
                             <a href="<?php echo esc_url(add_query_arg('ljmm', 'preview', bloginfo('url'))); ?>" target="_blank" class="button button-secondary"><?php _e('Preview', LJMM_PLUGIN_DOMAIN); ?></a>
-                            <a class="button button-secondary support" href="http://lukasjuhas.github.io/maintenance-mode/" target="_blank"><?php _e('Support', LJMM_PLUGIN_DOMAIN); ?></a>
+                            <a class="button button-secondary support" href="https://plugins.itsluk.as/maintenance-mode/support/" target="_blank"><?php _e('Support', LJMM_PLUGIN_DOMAIN); ?></a>
                         </th>
                     </tr>
                     <tr>
@@ -233,6 +233,21 @@ class ljMaintenanceMode
                             <?php $ljmm_site_title = esc_attr(get_option('ljmm-site-title')); ?>
                             <input name="ljmm-site-title" type="text" id="ljmm-site-title" placeholder="<?php echo $this->site_title(); ?>" value="<?php echo $ljmm_site_title; ?>" class="regular-text">
                             <p class="description"><?php _e('Overrides default site meta title.', LJMM_PLUGIN_DOMAIN); ?></p>
+                        </td>
+                    </tr>
+                    <tr valign="middle">
+                        <th scope="row"><?php _e('Mode', LJMM_PLUGIN_DOMAIN); ?></th>
+                        <td>
+                            <?php $ljmm_site_title = esc_attr(get_option('ljmm-mode')); ?>
+                            <label>
+                                <input name="ljmm-mode" type="radio" value="default">
+                                Default
+                            </label>
+                            <label>
+                                <input name="ljmm-mode" type="radio" value="cs">
+                                Coming Soon Page
+                            </label>
+                            <p class="description"><?php _e('Default sets HTTP to 503, coming soon will set HTTP to 200.', LJMM_PLUGIN_DOMAIN); ?></p>
                         </td>
                     </tr>
                     <?php global $wpdb; ?>

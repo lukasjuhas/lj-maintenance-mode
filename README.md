@@ -1,4 +1,4 @@
-Maintenance Mode (2.1)
+Maintenance Mode (2.1.1)
 ========================
 
 * Contributors: Lukas Juhas
@@ -60,6 +60,10 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 
 ## Changelog
+### 2.1.1
+* Correct support url
+* From now on, you can change status code being used while using maintenance mode between 503 (default) or 200 (for "coming soon" page)
+
 ### 2.1
 * added WPML compatibility
 * added TML (Theme My Login) compatibility

@@ -3,7 +3,7 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://plugins.itsluk.as/maintenance-mode/
  * Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
- * Version: 2.1.1
+ * Version: 2.2
  * Author: Lukas Juhas
  * Author URI: https://plugins.itsluk.as/
  * Text Domain: lj-maintenance-mode
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 2.1.1
+ * @version 2.2
  *
  */
 
 // define stuff
-define('LJMM_VERSION', '2.1.1');
+define('LJMM_VERSION', '2.2');
 define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -90,15 +90,21 @@ function ljmm_get_defaults($type)
 function ljmm_set_content()
 {
     // If content is not set, set the default content.
-  $content = get_option('ljmm-content');
+    $content = get_option('ljmm-content');
     if (empty($content)) :
-      $content = ljmm_get_defaults('maintenance_message');
-      /**
-      * f you are trying to ensure that a given option is created,
-      * use update_option() instead, which bypasses the option name check
-      * and updates the option with the desired value whether or not it exists.
-      */
-      update_option('ljmm-content', stripslashes($content));
+        $content = ljmm_get_defaults('maintenance_message');
+        /**
+        * f you are trying to ensure that a given option is created,
+        * use update_option() instead, which bypasses the option name check
+        * and updates the option with the desired value whether or not it exists.
+        */
+        update_option('ljmm-content', stripslashes($content));
+    endif;
+
+    // If content is not set, set the default content.
+    $mode = get_option('ljmm-mode');
+    if (empty($mode)) :
+        update_option('ljmm-mode', 'default');
     endif;
 }
 
@@ -176,6 +182,7 @@ class ljMaintenanceMode
         register_setting('ljmm', 'ljmm-content');
         register_setting('ljmm', 'ljmm-site-title');
         register_setting('ljmm', 'ljmm-roles');
+        register_setting('ljmm', 'ljmm-mode');
 
         //set the content
         ljmm_set_content();
@@ -218,9 +225,8 @@ class ljMaintenanceMode
                     <tr>
                         <th colspan="2">
                             <?php $content = get_option('ljmm-content');
-                                $editor_id = 'ljmm-content';
-                                wp_editor($content, $editor_id);
-                            ?>
+                                  $editor_id = 'ljmm-content';
+                                  wp_editor($content, $editor_id); ?>
                         </th>
                     </tr>
                 </table>
@@ -238,16 +244,18 @@ class ljMaintenanceMode
                     <tr valign="middle">
                         <th scope="row"><?php _e('Mode', LJMM_PLUGIN_DOMAIN); ?></th>
                         <td>
-                            <?php $ljmm_site_title = esc_attr(get_option('ljmm-mode')); ?>
+                            <?php $ljmm_mode = esc_attr(get_option('ljmm-mode')); ?>
+                            <?php $mode_default = $ljmm_mode == 'default' ? true: false; ?>
+                            <?php $mode_cs = $ljmm_mode == 'cs' ? true: false; ?>
                             <label>
-                                <input name="ljmm-mode" type="radio" value="default">
-                                Default
+                                <input name="ljmm-mode" type="radio" value="default" <?php checked($mode_default, 1); ?>>
+                                Maintenance Mode (Default)
                             </label>
                             <label>
-                                <input name="ljmm-mode" type="radio" value="cs">
+                                <input name="ljmm-mode" type="radio" value="cs" <?php checked($mode_cs, 1); ?>>
                                 Coming Soon Page
                             </label>
-                            <p class="description"><?php _e('Default sets HTTP to 503, coming soon will set HTTP to 200.', LJMM_PLUGIN_DOMAIN); ?></p>
+                            <p class="description"><?php _e('Default sets HTTP to 503, coming soon will set HTTP to 200.', LJMM_PLUGIN_DOMAIN); ?> <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="blank"><?php _e('Learn more.', LJMM_PLUGIN_DOMAIN); ?></a></p>
                         </td>
                     </tr>
                     <?php global $wpdb; ?>
@@ -264,7 +272,9 @@ class ljMaintenanceMode
                                 <?php foreach ($wp_roles as $role => $role_details) :  ?>
                                     <?php if ($role !== 'administrator') : ?>
                                         <fieldset>
-                                            <legend class="screen-reader-text"><span><?php if (isset($options[$role])) { echo $options[$role]; } ?></span></legend>
+                                            <legend class="screen-reader-text"><span><?php if (isset($options[$role])) {
+                                                echo $options[$role];
+                                            } ?></span></legend>
                                             <label>
                                                 <input type="checkbox" class="ljmm-roles" name="ljmm-roles[<?php echo $role; ?>]" value="1" <?php checked(isset($options[$role]), 1); ?> /> <?php echo $role_details['name']; ?>
                                             </label>
@@ -302,7 +312,9 @@ class ljMaintenanceMode
             });
           });
         </script>
-    <?php }
+    <?php
+
+    }
 
     /**
      * admin bar indicator
@@ -317,7 +329,7 @@ class ljMaintenanceMode
             return false;
         }
 
-        if(!$enabled) {
+        if (!$enabled) {
             return false;
         }
 
@@ -396,6 +408,23 @@ class ljMaintenanceMode
     }
 
     /**
+     * get mode
+     *
+     * @since 2.2
+     */
+    public function get_mode()
+    {
+        $mode = get_option('ljmm-mode');
+        if ($mode == 'cs') {
+            // coming soon page
+            return 200;
+        }
+
+        // maintenance mode
+        return 503;
+    }
+
+    /**
      * Maintenance Mode
      *
      * @since 1.0
@@ -405,8 +434,8 @@ class ljMaintenanceMode
         do_action('ljmm_before_mm');
 
         // TML Compatibility
-        if(class_exists('Theme_My_Login')) {
-            if(Theme_My_Login::is_tml_page()) {
+        if (class_exists('Theme_My_Login')) {
+            if (Theme_My_Login::is_tml_page()) {
                 return;
             }
         }
@@ -414,13 +443,14 @@ class ljMaintenanceMode
         if (!(current_user_can('ljmm_view_site') || current_user_can('super admin')) || (isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview')) {
             $get_content = get_option('ljmm-content');
             $site_title = get_option('ljmm-site-title');
+            $mode = $this->get_mode();
             $content = (!empty($get_content)) ? $get_content : ljmm_get_defaults('maintenance_message');
             $content = apply_filters('the_content', $content);
             $title = $site_title ? $site_title : $this->site_title();
 
             // remove jetpack sharing
             remove_filter('the_content', 'sharing_display', 19);
-            wp_die($content, $title, array('response' => '503'));
+            wp_die($content, $title, array('response' => $mode));
         }
     }
 

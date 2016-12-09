@@ -3,8 +3,8 @@ Contributors: LukasNeptun
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2XPA4CKT836FJ
 Tags: maintenance, maintenance mode, website maintenance, coming soon, under construction, offline, site maintenance,
 Requires at least: 3.5
-Tested up to: 4.6
-Stable tag: 2.2
+Tested up to: 4.7
+Stable tag: 2.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,6 +78,9 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 6. Insert Media available for WYSIWYG.
 
 == Changelog ==
+= 2.2.1 =
+* Added Dutch translation (Thanks to [@edwarddekker](https://github.com/edwarddekker))
+
 = 2.2 =
 * From now on, you can change status code being used while using maintenance mode between 503 (maintenance mode) or 200 (for "coming soon" page)
 * Correct support url

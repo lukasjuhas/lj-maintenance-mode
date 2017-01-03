@@ -1,4 +1,4 @@
-Maintenance Mode (2.2.1)
+Maintenance Mode (2.2.2)
 ========================
 
 * Contributors: Lukas Juhas
@@ -60,6 +60,9 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 
 ## Changelog
+### 2.2.2
+* Fixed typo in variable ($cache_plugin_enabled). (Thanks to [@doume](https://wordpress.org/support/users/doume/))
+
 ### 2.2.1
 * Added Dutch translation (Thanks to [@edwarddekker](https://github.com/edwarddekker))
 

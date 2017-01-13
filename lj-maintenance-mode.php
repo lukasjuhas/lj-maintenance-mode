@@ -3,7 +3,7 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://plugins.itsluk.as/maintenance-mode/
  * Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
- * Version: 2.2.2
+ * Version: 2.2.3
  * Author: Lukas Juhas
  * Author URI: https://plugins.itsluk.as/
  * Text Domain: lj-maintenance-mode
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 2.2.2
+ * @version 2.2.3
  *
  */
 
 // define stuff
-define('LJMM_VERSION', '2.2.2');
+define('LJMM_VERSION', '2.2.3');
 define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -69,7 +69,7 @@ function ljmm_get_defaults($type)
             $default = __("Important: Don't forget to flush your cache using WP Super Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
             break;
         case 'warning_w3_total_cache' :
-            $default = __("Important: Don't forget to flush your cache using WP Super Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            $default = __("Important: Don't forget to flush your cache using W3 Total Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
             break;
         case 'ljmm_enabled' :
             $default = __("Maintenance Mode is currently active. To make sure that it works, open your web page in either private / incognito mode, different browser or simply log out. Logged in users are not affected by the Maintenance Mode.", LJMM_PLUGIN_DOMAIN);

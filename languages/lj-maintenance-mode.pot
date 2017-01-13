@@ -1,85 +1,134 @@
-# Copyright (C) 2016 Maintenance Mode
+# Copyright (C) 2017 Maintenance Mode
 # This file is distributed under the same license as the Maintenance Mode package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Maintenance Mode 1.4.1\n"
+"Project-Id-Version: Maintenance Mode 2.2.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
 "mode\n"
-"POT-Creation-Date: 2016-01-02 13:33:47+00:00\n"
+"POT-Creation-Date: 2017-01-13 10:47:53+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Lukas Juhas <plugins@itsluk.as>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lj-maintenance-mode.php:65
+#: lj-maintenance-mode.php:66
 msgid ""
 "<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing "
 "scheduled maintenance. Please check back soon.</p>"
 msgstr ""
 
-#: lj-maintenance-mode.php:68 lj-maintenance-mode.php:71
+#: lj-maintenance-mode.php:69 lj-maintenance-mode.php:69
 msgid ""
 "Important: Don't forget to flush your cache using WP Super Cache when "
 "enabling or disabling Maintenance Mode."
 msgstr ""
 
-#: lj-maintenance-mode.php:74
+#: lj-maintenance-mode.php:69 lj-maintenance-mode.php:72
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+
+#: lj-maintenance-mode.php:75
 msgid ""
 "Maintenance Mode is currently active. To make sure that it works, open your "
 "web page in either private / incognito mode, different browser or simply log "
 "out. Logged in users are not affected by the Maintenance Mode."
 msgstr ""
 
-#. #-#-#-#-#  plugin.pot (Maintenance Mode 1.4.1)  #-#-#-#-#
+#. #-#-#-#-#  plugin.pot (Maintenance Mode 2.2.2)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
-#: lj-maintenance-mode.php:144 lj-maintenance-mode.php:176
+#: lj-maintenance-mode.php:161 lj-maintenance-mode.php:199
 msgid "Maintenance Mode"
 msgstr ""
 
-#: lj-maintenance-mode.php:185
+#: lj-maintenance-mode.php:209
 msgid "Enabled"
 msgstr ""
 
-#: lj-maintenance-mode.php:196
-msgid "Content"
-msgstr ""
-
-#: lj-maintenance-mode.php:200
+#: lj-maintenance-mode.php:221
 msgid "Preview"
 msgstr ""
 
-#: lj-maintenance-mode.php:201
+#: lj-maintenance-mode.php:222
 msgid "Support"
 msgstr ""
 
-#: lj-maintenance-mode.php:229
+#: lj-maintenance-mode.php:234
+msgid "Advanced Settings"
+msgstr ""
+
+#: lj-maintenance-mode.php:237
+msgid "Site Title"
+msgstr ""
+
+#: lj-maintenance-mode.php:241
+msgid "Overrides default site meta title."
+msgstr ""
+
+#: lj-maintenance-mode.php:245
+msgid "Mode"
+msgstr ""
+
+#: lj-maintenance-mode.php:258
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr ""
+
+#: lj-maintenance-mode.php:258
+msgid "Learn more."
+msgstr ""
+
+#: lj-maintenance-mode.php:267
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr ""
+
+#: lj-maintenance-mode.php:268
+msgid "Please note that this does NOT apply to admin area"
+msgstr ""
+
+#: lj-maintenance-mode.php:269
+msgid "Toggle all"
+msgstr ""
+
+#: lj-maintenance-mode.php:289
+msgid "User Role control is currently not avialable on your website. Sorry!"
+msgstr ""
+
+#: lj-maintenance-mode.php:337
 msgctxt "Admin bar indicator"
 msgid "Disabled"
 msgstr ""
 
-#: lj-maintenance-mode.php:232
+#: lj-maintenance-mode.php:340
 msgctxt "Admin bar indicator"
 msgid "Enabled"
 msgstr ""
 
-#: lj-maintenance-mode.php:236 lj-maintenance-mode.php:240
+#: lj-maintenance-mode.php:351
 msgctxt "Admin bar indicator"
 msgid "Maintenance Mode"
 msgstr ""
 
-#: lj-maintenance-mode.php:253
+#: lj-maintenance-mode.php:365
 msgctxt "Plugin Settings link"
 msgid "Settings"
 msgstr ""
 
-#: lj-maintenance-mode.php:271
+#: lj-maintenance-mode.php:366
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr ""
+
+#: lj-maintenance-mode.php:378
 msgid "Website Under Maintenance"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://github.com/lukasjuhas/lj-maintenance-mode"
+msgid "https://plugins.itsluk.as/maintenance-mode/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -93,5 +142,5 @@ msgid "Lukas Juhas"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://lukasjuhas.com"
+msgid "https://plugins.itsluk.as/"
 msgstr ""

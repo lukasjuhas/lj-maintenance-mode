@@ -3,7 +3,7 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://plugins.itsluk.as/maintenance-mode/
  * Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
- * Version: 2.2.3
+ * Version: 2.2.4
  * Author: Lukas Juhas
  * Author URI: https://plugins.itsluk.as/
  * Text Domain: lj-maintenance-mode
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 2.2.3
+ * @version 2.2.4
  *
  */
 
 // define stuff
-define('LJMM_VERSION', '2.2.3');
+define('LJMM_VERSION', '2.2.4');
 define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -231,7 +231,14 @@ class ljMaintenanceMode
                     </tr>
                 </table>
 
-                <a href="#" class="ljmm-advanced-settings"><?php _e('Advanced Settings', LJMM_PLUGIN_DOMAIN); ?></a>
+                <a href="#" class="ljmm-advanced-settings">
+                    <span class="ljmm-advanced-settings__label-advanced">
+                        <?php _e('Advanced Settings', LJMM_PLUGIN_DOMAIN); ?>
+                    </span>
+                    <span class="ljmm-advanced-settings__label-hide-advanced" style="display: none;">
+                        <?php _e('Hide Advanced Settings', LJMM_PLUGIN_DOMAIN); ?>
+                    </span>
+                </a>
                 <table class="form-table form--ljmm-advanced-settings" style="display: none">
                     <tr valign="middle">
                         <th scope="row"><?php _e('Site Title', LJMM_PLUGIN_DOMAIN); ?></th>
@@ -249,11 +256,11 @@ class ljMaintenanceMode
                             <?php $mode_cs = $ljmm_mode == 'cs' ? true: false; ?>
                             <label>
                                 <input name="ljmm-mode" type="radio" value="default" <?php checked($mode_default, 1); ?>>
-                                Maintenance Mode (Default)
+                                <?php _e('Maintenance Mode', LJMM_PLUGIN_DOMAIN); ?> (<?php _e('Default', LJMM_PLUGIN_DOMAIN); ?>)
                             </label>
                             <label>
                                 <input name="ljmm-mode" type="radio" value="cs" <?php checked($mode_cs, 1); ?>>
-                                Coming Soon Page
+                                <?php _e('Coming Soon Page', LJMM_PLUGIN_DOMAIN); ?>
                             </label>
                             <p class="description"><?php _e('Default sets HTTP to 503, coming soon will set HTTP to 200.', LJMM_PLUGIN_DOMAIN); ?> <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="blank"><?php _e('Learn more.', LJMM_PLUGIN_DOMAIN); ?></a></p>
                         </td>
@@ -263,7 +270,7 @@ class ljMaintenanceMode
                     <?php $wp_roles = get_option($wpdb->prefix . 'user_roles'); ?>
                     <?php if ($wp_roles && is_array($wp_roles)) : ?>
                         <tr valign="top">
-                            <th scope="row">User Roles
+                            <th scope="row"><?php _e('User Roles', LJMM_PLUGIN_DOMAIN); ?>
                                 <p class="description"><?php _e('Tick the ones that can access front-end of your website if maintenance mode is enabled', LJMM_PLUGIN_DOMAIN); ?>.</p>
                                 <p class="description"><?php _e('Please note that this does NOT apply to admin area', LJMM_PLUGIN_DOMAIN); ?>.</p>
                                 <p><a href="#" class="ljmm-toggle-all"><?php _e('Toggle all', LJMM_PLUGIN_DOMAIN); ?></a></p>
@@ -300,9 +307,11 @@ class ljMaintenanceMode
               event.preventDefault();
               jQuery('.form--ljmm-advanced-settings').toggle();
               if (jQuery('.form--ljmm-advanced-settings').is(':visible')) {
-                   jQuery(this).text('Hide Advanced Settings');
+                jQuery(this).find('.ljmm-advanced-settings__label-advanced').hide();
+                jQuery(this).find('.ljmm-advanced-settings__label-hide-advanced').show();
               } else {
-                   jQuery(this).text('Advanced Settings');
+                jQuery(this).find('.ljmm-advanced-settings__label-advanced').show();
+                jQuery(this).find('.ljmm-advanced-settings__label-hide-advanced').hide();
               }
             });
             jQuery('.ljmm-toggle-all').on('click', function(event) {

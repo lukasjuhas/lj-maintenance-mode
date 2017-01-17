@@ -1,4 +1,4 @@
-Maintenance Mode (2.2.3)
+Maintenance Mode (2.2.4)
 ========================
 
 * Contributors: Lukas Juhas
@@ -60,6 +60,10 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 
 ## Changelog
+### 2.2.4
+* Added missing translation strings
+* Updated advanced settings toggle
+
 ### 2.2.3
 * Updated POT file.
 * Corrected typo for w3 total cache warning message.

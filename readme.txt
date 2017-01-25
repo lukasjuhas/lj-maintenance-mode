@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: maintenance, maintenance mode, website maintenance, coming soon, under construction, offline, site maintenance,
 Requires at least: 3.5
 Tested up to: 4.7.1
-Stable tag: 2.2.4
+Stable tag: 2.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,16 +78,19 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 6. Insert Media available for WYSIWYG.
 
 == Changelog ==
+= 2.2.5 =
+* Add French translation (Thanks to [@doume](https://wordpress.org/support/users/doume/))
+
 = 2.2.4 =
-* Added missing translation strings
-* Updated advanced settings toggle
+* Added missing translation strings (Thanks to [@doume](https://wordpress.org/support/users/doume/) for reporting this issue)
+* Updated advanced settings toggle (Thanks to [@doume](https://wordpress.org/support/users/doume/) for reporting this issue)
 
 = 2.2.3 =
-* Updated POT file.
-* Corrected typo for w3 total cache warning message.
+* Updated POT file.(Thanks to [@doume](https://wordpress.org/support/users/doume/) for reporting this issue)
+* Corrected typo for w3 total cache warning message. (Thanks to [@doume](https://wordpress.org/support/users/doume/) for reporting this issue)
 
 = 2.2.2 =
-* Fixed typo in variable ($cache_plugin_enabled). (Thanks to [@doume](https://wordpress.org/support/users/doume/))
+* Fixed typo in variable ($cache_plugin_enabled). (Thanks to [@doume](https://wordpress.org/support/users/doume/) for reporting this issue)
 
 = 2.2.1 =
 * Added Dutch translation (Thanks to [@edwarddekker](https://github.com/edwarddekker))

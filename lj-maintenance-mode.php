@@ -365,7 +365,7 @@ class ljMaintenanceMode
                 'class' => $indicatorClasses,
             )
         );
-        
+
         $wp_admin_bar->add_node($indicator);
     }
 
@@ -453,6 +453,7 @@ class ljMaintenanceMode
         $get_content = get_option('ljmm-content');
         $content = (!empty($get_content)) ? $get_content : ljmm_get_defaults('maintenance_message');
         $content = apply_filters('the_content', $content);
+        $content = apply_filters('ljmm_content', $content);
 
         return $content;
     }

@@ -80,6 +80,7 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 == Changelog ==
 = 2.3 =
 * Small refactor, extract some of the parts to it's own method to make everything a bit cleaner
+* Added 'ljmm_content' filter
 
 = 2.2.5 =
 * Add French translation (Thanks to [@doume](https://wordpress.org/support/users/doume/))

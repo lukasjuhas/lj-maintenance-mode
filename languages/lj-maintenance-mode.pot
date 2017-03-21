@@ -33,6 +33,11 @@ msgid ""
 "enabling or disabling Maintenance Mode."
 msgstr ""
 
+#: lj-maintenance-mode.php:69 lj-maintenance-mode.php:72
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling or disabling Maintenance Mode."
+msgstr ""
+
 #: lj-maintenance-mode.php:75
 msgid ""
 "Maintenance Mode is currently active. To make sure that it works, open your "

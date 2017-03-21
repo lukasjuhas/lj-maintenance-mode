@@ -71,6 +71,9 @@ function ljmm_get_defaults($type)
         case 'warning_w3_total_cache':
             $default = __("Important: Don't forget to flush your cache using W3 Total Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
             break;
+        case 'warning_comet_cache':
+            $default = __("Important: Don't forget to flush your cache using Comet Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            break;
         case 'ljmm_enabled':
             $default = __("Maintenance Mode is currently active. To make sure that it works, open your web page in either private / incognito mode, different browser or simply log out. Logged in users are not affected by the Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
             break;
@@ -282,9 +285,7 @@ class ljMaintenanceMode
                                 <?php foreach ($wp_roles as $role => $role_details) :  ?>
                                     <?php if ($role !== 'administrator') : ?>
                                         <fieldset>
-                                            <legend class="screen-reader-text"><span><?php if (isset($options[$role])) {
-                                                    echo $options[$role];
-                                                } ?></span>
+                                            <legend class="screen-reader-text"><span><?php if (isset($options[$role])) { echo $options[$role]; } ?></span>
                                             </legend>
                                             <label>
                                                 <input type="checkbox" class="ljmm-roles" name="ljmm-roles[<?php echo $role; ?>]" value="1" <?php checked(isset($options[$role]), 1); ?> /> <?php echo $role_details['name']; ?>
@@ -534,6 +535,11 @@ class ljMaintenanceMode
         // add w3 total cache support
         if (in_array('w3-total-cache/w3-total-cache.php', apply_filters('active_plugins', get_option('active_plugins')))) {
             $message = ljmm_get_defaults('warning_w3_total_cache');
+        }
+
+        // add comet cache support
+        if (in_array('comet-cache/comet-cache.php', apply_filters('active_plugins', get_option('active_plugins')))) {
+            $message = ljmm_get_defaults('warning_comet_cache');
         }
 
         return $message;

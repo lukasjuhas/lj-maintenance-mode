@@ -56,17 +56,13 @@ Having trouble? Please read FAQ first, if you need any assistance, you can use s
 
 == Frequently Asked Questions ==
 
-= Is this plugin really ad free ? =
+= Plugin doesn't seem to work. What should I do ? =
 
-Yes.
+First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, flush all your cache. Secondly, disable all other plugins and try enabling just Maintenance Mode and see if problem persist. This should solve most common problems. If not, don't hesitate to contact me via Support button from Settings page
 
 = Can I change background colour? =
 
 Not by default. Unless you are developer and you "inject" your own styles in to the wp_die() page.
-
-Plugin doesn't seem to work. What should I do ?
-
-First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, flush all your cache. Secondly, disable all other plugins and try enabling just Maintenance Mode and see if problem persist. This should solve most common problems. If not, don't hesitate to contact me via Support button from Settings page
 
 == Screenshots ==
 
@@ -83,6 +79,7 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 * Added 'ljmm_content' filter
 * Added Comet Cache support. (Thanks to [@doume](https://wordpress.org/support/users/doume/))
 * Update translation files
+* Update readme
 
 = 2.2.5 =
 * Add French translation (Thanks to [@doume](https://wordpress.org/support/users/doume/))

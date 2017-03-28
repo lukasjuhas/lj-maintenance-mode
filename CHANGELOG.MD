@@ -5,6 +5,7 @@
 * Added 'ljmm_content' filter
 * Added Comet Cache support. (Thanks to [@doume](https://wordpress.org/support/users/doume/))
 * Update translation files
+* Update readme
 
 ## 2.2.5
 * Add French translation (Thanks to [@doume](https://wordpress.org/support/users/doume/))

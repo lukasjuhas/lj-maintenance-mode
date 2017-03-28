@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://plugins.itsluk.as/maintenance-mode/
- * Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
+ * Description: Very simple Maintenance Mode & Coming soon page using default Wordpress markup with no ads or paid upgrades.
  * Version: 2.3
  * Author: Lukas Juhas
  * Author URI: https://plugins.itsluk.as/
@@ -236,7 +236,10 @@ class ljMaintenanceMode
                                 <input name="ljmm-mode" type="radio" value="cs" <?php checked($mode_cs, 1); ?>>
                                 <?php _e('Coming Soon Page', LJMM_PLUGIN_DOMAIN); ?>
                             </label>
-                            <p class="description"><?php _e('Default sets HTTP to 503, coming soon will set HTTP to 200.', LJMM_PLUGIN_DOMAIN); ?> <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="blank"><?php _e('Learn more.', LJMM_PLUGIN_DOMAIN); ?></a></p>
+                            <p class="description">
+                                <?php _e('If you are putting your site into maintenance mode for a longer period of time, you should set this to "Coming Soon Page". Otherwise use "Maintenance Mode".', LJMM_PLUGIN_DOMAIN); ?><br />
+                                <?php _e('Default sets HTTP to 503, coming soon will set HTTP to 200.', LJMM_PLUGIN_DOMAIN); ?> <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="blank"><?php _e('Learn more.', LJMM_PLUGIN_DOMAIN); ?></a>
+                            </p>
                         </td>
                     </tr>
                     <tr>

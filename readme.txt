@@ -8,7 +8,7 @@ Stable tag: 2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
+Very simple Maintenance Mode & Coming soon page using default Wordpress markup with no ads or paid upgrades.
 
 == Description ==
 
@@ -80,6 +80,7 @@ Not by default. Unless you are developer and you "inject" your own styles in to 
 * Added Comet Cache support. (Thanks to [@doume](https://wordpress.org/support/users/doume/))
 * Update translation files
 * Update readme
+* Move mode up to the "main" setting area instead of advanced settings
 
 = 2.2.5 =
 * Add French translation (Thanks to [@doume](https://wordpress.org/support/users/doume/))

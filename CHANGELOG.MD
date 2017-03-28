@@ -6,6 +6,7 @@
 * Added Comet Cache support. (Thanks to [@doume](https://wordpress.org/support/users/doume/))
 * Update translation files
 * Update readme
+* Move mode up to the "main" setting area instead of advanced settings
 
 ## 2.2.5
 * Add French translation (Thanks to [@doume](https://wordpress.org/support/users/doume/))

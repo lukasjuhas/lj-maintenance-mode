@@ -223,6 +223,23 @@ class ljMaintenanceMode
                         </td>
                     </tr>
                     <tr>
+                        <th scope="row"><?php _e('Mode', LJMM_PLUGIN_DOMAIN); ?></th>
+                        <td>
+                            <?php $ljmm_mode = esc_attr(get_option('ljmm-mode')); ?>
+                            <?php $mode_default = $ljmm_mode == 'default' ? true: false; ?>
+                            <?php $mode_cs = $ljmm_mode == 'cs' ? true : false; ?>
+                            <label>
+                                <input name="ljmm-mode" type="radio" value="default" <?php checked($mode_default, 1); ?>>
+                                <?php _e('Maintenance Mode', LJMM_PLUGIN_DOMAIN); ?> (<?php _e('Default', LJMM_PLUGIN_DOMAIN); ?>)
+                            </label>
+                            <label>
+                                <input name="ljmm-mode" type="radio" value="cs" <?php checked($mode_cs, 1); ?>>
+                                <?php _e('Coming Soon Page', LJMM_PLUGIN_DOMAIN); ?>
+                            </label>
+                            <p class="description"><?php _e('Default sets HTTP to 503, coming soon will set HTTP to 200.', LJMM_PLUGIN_DOMAIN); ?> <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="blank"><?php _e('Learn more.', LJMM_PLUGIN_DOMAIN); ?></a></p>
+                        </td>
+                    </tr>
+                    <tr>
                         <th>
                             <a href="<?php echo esc_url(add_query_arg('ljmm', 'preview', bloginfo('url'))); ?>" target="_blank" class="button button-secondary"><?php _e('Preview', LJMM_PLUGIN_DOMAIN); ?></a>
                             <a class="button button-secondary support" href="https://plugins.itsluk.as/maintenance-mode/support/" target="_blank"><?php _e('Support', LJMM_PLUGIN_DOMAIN); ?></a>
@@ -252,23 +269,6 @@ class ljMaintenanceMode
                             <?php $ljmm_site_title = esc_attr(get_option('ljmm-site-title')); ?>
                             <input name="ljmm-site-title" type="text" id="ljmm-site-title" placeholder="<?php echo $this->site_title(); ?>" value="<?php echo $ljmm_site_title; ?>" class="regular-text">
                             <p class="description"><?php _e('Overrides default site meta title.', LJMM_PLUGIN_DOMAIN); ?></p>
-                        </td>
-                    </tr>
-                    <tr valign="middle">
-                        <th scope="row"><?php _e('Mode', LJMM_PLUGIN_DOMAIN); ?></th>
-                        <td>
-                            <?php $ljmm_mode = esc_attr(get_option('ljmm-mode')); ?>
-                            <?php $mode_default = $ljmm_mode == 'default' ? true: false; ?>
-                            <?php $mode_cs = $ljmm_mode == 'cs' ? true: false; ?>
-                            <label>
-                                <input name="ljmm-mode" type="radio" value="default" <?php checked($mode_default, 1); ?>>
-                                <?php _e('Maintenance Mode', LJMM_PLUGIN_DOMAIN); ?> (<?php _e('Default', LJMM_PLUGIN_DOMAIN); ?>)
-                            </label>
-                            <label>
-                                <input name="ljmm-mode" type="radio" value="cs" <?php checked($mode_cs, 1); ?>>
-                                <?php _e('Coming Soon Page', LJMM_PLUGIN_DOMAIN); ?>
-                            </label>
-                            <p class="description"><?php _e('Default sets HTTP to 503, coming soon will set HTTP to 200.', LJMM_PLUGIN_DOMAIN); ?> <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="blank"><?php _e('Learn more.', LJMM_PLUGIN_DOMAIN); ?></a></p>
                         </td>
                     </tr>
                     <?php global $wpdb; ?>

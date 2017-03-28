@@ -3,12 +3,12 @@ Contributors: LukasNeptun
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2XPA4CKT836FJ
 Tags: maintenance, maintenance mode, website maintenance, coming soon, under construction, offline, site maintenance,
 Requires at least: 3.5
-Tested up to: 4.7.1
-Stable tag: 2.2.5
+Tested up to: 4.7.3
+Stable tag: 2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
+Very simple Maintenance Mode & Coming soon page using default Wordpress markup with no ads or paid upgrades.
 
 == Description ==
 
@@ -56,17 +56,13 @@ Having trouble? Please read FAQ first, if you need any assistance, you can use s
 
 == Frequently Asked Questions ==
 
-= Is this plugin really ad free ? =
+= Plugin doesn't seem to work. What should I do ? =
 
-Yes.
+First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, flush all your cache. Secondly, disable all other plugins and try enabling just Maintenance Mode and see if problem persist. This should solve most common problems. If not, don't hesitate to contact me via Support button from Settings page
 
 = Can I change background colour? =
 
 Not by default. Unless you are developer and you "inject" your own styles in to the wp_die() page.
-
-Plugin doesn't seem to work. What should I do ?
-
-First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, flush all your cache. Secondly, disable all other plugins and try enabling just Maintenance Mode and see if problem persist. This should solve most common problems. If not, don't hesitate to contact me via Support button from Settings page
 
 == Screenshots ==
 
@@ -78,6 +74,14 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 6. Insert Media available for WYSIWYG.
 
 == Changelog ==
+= 2.3 =
+* Small refactor, extract some of the parts to it's own method to make everything a bit cleaner
+* Added 'ljmm_content' filter
+* Added Comet Cache support. (Thanks to [@doume](https://wordpress.org/support/users/doume/))
+* Update translation files
+* Update readme
+* Move mode up to the "main" setting area instead of advanced settings
+
 = 2.2.5 =
 * Add French translation (Thanks to [@doume](https://wordpress.org/support/users/doume/))
 

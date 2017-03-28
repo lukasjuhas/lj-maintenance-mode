@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://plugins.itsluk.as/maintenance-mode/
- * Description: Very simple Maintenance Mode & Coming soon page. Using default Wordpress markup, No ads, no paid upgrades.
- * Version: 2.2.5
+ * Description: Very simple Maintenance Mode & Coming soon page using default Wordpress markup with no ads or paid upgrades.
+ * Version: 2.3
  * Author: Lukas Juhas
  * Author URI: https://plugins.itsluk.as/
  * Text Domain: lj-maintenance-mode
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 2.2.5
+ * @version 2.3
  *
  */
 
 // define stuff
-define('LJMM_VERSION', '2.2.5');
+define('LJMM_VERSION', '2.3');
 define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -65,13 +65,16 @@ function ljmm_get_defaults($type)
         case 'maintenance_message':
             $default = __("<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>", LJMM_PLUGIN_DOMAIN);
             break;
-        case 'warning_wp_super_cache' :
+        case 'warning_wp_super_cache':
             $default = __("Important: Don't forget to flush your cache using WP Super Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
             break;
-        case 'warning_w3_total_cache' :
+        case 'warning_w3_total_cache':
             $default = __("Important: Don't forget to flush your cache using W3 Total Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
             break;
-        case 'ljmm_enabled' :
+        case 'warning_comet_cache':
+            $default = __("Important: Don't forget to flush your cache using Comet Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            break;
+        case 'ljmm_enabled':
             $default = __("Maintenance Mode is currently active. To make sure that it works, open your web page in either private / incognito mode, different browser or simply log out. Logged in users are not affected by the Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
             break;
         default:
@@ -144,11 +147,13 @@ class ljMaintenanceMode
         $is_enabled = get_option('ljmm-enabled');
 
         if ($is_enabled || isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview') :
-            add_action('get_header', array($this, 'maintenance'));
+            add_action('get_header', array( $this, 'maintenance' ));
         endif;
 
         add_action('admin_bar_menu', array( $this, 'indicator' ), 100);
         add_filter('plugin_action_links_' . plugin_basename(__FILE__), array($this, 'action_links'));
+
+        add_action('ljmm_before_mm', array( $this, 'before_maintenance_mode' ));
     }
 
     /**
@@ -194,7 +199,8 @@ class ljMaintenanceMode
      * @since 1.0
     */
     public function settingsPage()
-    { ?>
+    {
+        ?>
         <div class="wrap">
             <h2><?php _e('Maintenance Mode', LJMM_PLUGIN_DOMAIN); ?></h2>
             <form method="post" action="options.php">
@@ -217,6 +223,26 @@ class ljMaintenanceMode
                         </td>
                     </tr>
                     <tr>
+                        <th scope="row"><?php _e('Mode', LJMM_PLUGIN_DOMAIN); ?></th>
+                        <td>
+                            <?php $ljmm_mode = esc_attr(get_option('ljmm-mode')); ?>
+                            <?php $mode_default = $ljmm_mode == 'default' ? true: false; ?>
+                            <?php $mode_cs = $ljmm_mode == 'cs' ? true : false; ?>
+                            <label>
+                                <input name="ljmm-mode" type="radio" value="default" <?php checked($mode_default, 1); ?>>
+                                <?php _e('Maintenance Mode', LJMM_PLUGIN_DOMAIN); ?> (<?php _e('Default', LJMM_PLUGIN_DOMAIN); ?>)
+                            </label>
+                            <label>
+                                <input name="ljmm-mode" type="radio" value="cs" <?php checked($mode_cs, 1); ?>>
+                                <?php _e('Coming Soon Page', LJMM_PLUGIN_DOMAIN); ?>
+                            </label>
+                            <p class="description">
+                                <?php _e('If you are putting your site into maintenance mode for a longer period of time, you should set this to "Coming Soon Page". Otherwise use "Maintenance Mode".', LJMM_PLUGIN_DOMAIN); ?><br />
+                                <?php _e('Default sets HTTP to 503, coming soon will set HTTP to 200.', LJMM_PLUGIN_DOMAIN); ?> <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="blank"><?php _e('Learn more.', LJMM_PLUGIN_DOMAIN); ?></a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
                         <th>
                             <a href="<?php echo esc_url(add_query_arg('ljmm', 'preview', bloginfo('url'))); ?>" target="_blank" class="button button-secondary"><?php _e('Preview', LJMM_PLUGIN_DOMAIN); ?></a>
                             <a class="button button-secondary support" href="https://plugins.itsluk.as/maintenance-mode/support/" target="_blank"><?php _e('Support', LJMM_PLUGIN_DOMAIN); ?></a>
@@ -225,8 +251,8 @@ class ljMaintenanceMode
                     <tr>
                         <th colspan="2">
                             <?php $content = get_option('ljmm-content');
-                                  $editor_id = 'ljmm-content';
-                                  wp_editor($content, $editor_id); ?>
+                            $editor_id = 'ljmm-content';
+                            wp_editor($content, $editor_id); ?>
                         </th>
                     </tr>
                 </table>
@@ -248,23 +274,6 @@ class ljMaintenanceMode
                             <p class="description"><?php _e('Overrides default site meta title.', LJMM_PLUGIN_DOMAIN); ?></p>
                         </td>
                     </tr>
-                    <tr valign="middle">
-                        <th scope="row"><?php _e('Mode', LJMM_PLUGIN_DOMAIN); ?></th>
-                        <td>
-                            <?php $ljmm_mode = esc_attr(get_option('ljmm-mode')); ?>
-                            <?php $mode_default = $ljmm_mode == 'default' ? true: false; ?>
-                            <?php $mode_cs = $ljmm_mode == 'cs' ? true: false; ?>
-                            <label>
-                                <input name="ljmm-mode" type="radio" value="default" <?php checked($mode_default, 1); ?>>
-                                <?php _e('Maintenance Mode', LJMM_PLUGIN_DOMAIN); ?> (<?php _e('Default', LJMM_PLUGIN_DOMAIN); ?>)
-                            </label>
-                            <label>
-                                <input name="ljmm-mode" type="radio" value="cs" <?php checked($mode_cs, 1); ?>>
-                                <?php _e('Coming Soon Page', LJMM_PLUGIN_DOMAIN); ?>
-                            </label>
-                            <p class="description"><?php _e('Default sets HTTP to 503, coming soon will set HTTP to 200.', LJMM_PLUGIN_DOMAIN); ?> <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="blank"><?php _e('Learn more.', LJMM_PLUGIN_DOMAIN); ?></a></p>
-                        </td>
-                    </tr>
                     <?php global $wpdb; ?>
                     <?php $options = get_option('ljmm-roles'); ?>
                     <?php $wp_roles = get_option($wpdb->prefix . 'user_roles'); ?>
@@ -279,9 +288,8 @@ class ljMaintenanceMode
                                 <?php foreach ($wp_roles as $role => $role_details) :  ?>
                                     <?php if ($role !== 'administrator') : ?>
                                         <fieldset>
-                                            <legend class="screen-reader-text"><span><?php if (isset($options[$role])) {
-                                                echo $options[$role];
-                                            } ?></span></legend>
+                                            <legend class="screen-reader-text"><span><?php if (isset($options[$role])) { echo $options[$role]; } ?></span>
+                                            </legend>
                                             <label>
                                                 <input type="checkbox" class="ljmm-roles" name="ljmm-roles[<?php echo $role; ?>]" value="1" <?php checked(isset($options[$role]), 1); ?> /> <?php echo $role_details['name']; ?>
                                             </label>
@@ -361,6 +369,7 @@ class ljMaintenanceMode
                 'class' => $indicatorClasses,
             )
         );
+
         $wp_admin_bar->add_node($indicator);
     }
 
@@ -368,19 +377,21 @@ class ljMaintenanceMode
      * plugin action links
      *
      * @since 1.1
+     * @return mixed
     */
     public function action_links($links)
     {
         $links[] = '<a href="'. get_admin_url(null, 'options-general.php?page=lj-maintenance-mode') .'">'._x('Settings', 'Plugin Settings link', LJMM_PLUGIN_DOMAIN).'</a>';
         $links[] = '<a target="_blank" href="https://plugins.itsluk.as/maintenance-mode/support/">'._x('Support', 'Plugin Support link', LJMM_PLUGIN_DOMAIN).'</a>';
+
         return $links;
     }
 
     /**
      * default site title for maintenance mode
-     * @return string
      *
      * @since 2.0
+     * @return string
      */
     public function site_title()
     {
@@ -395,6 +406,7 @@ class ljMaintenanceMode
     public function manage_capabilities()
     {
         global $wpdb;
+
         $wp_roles = get_option($wpdb->prefix . 'user_roles');
         $all_roles = get_option('ljmm-roles');
 
@@ -420,6 +432,7 @@ class ljMaintenanceMode
      * get mode
      *
      * @since 2.2
+     * @return int
      */
     public function get_mode()
     {
@@ -431,6 +444,43 @@ class ljMaintenanceMode
 
         // maintenance mode
         return 503;
+    }
+
+    /**
+     * get content
+     *
+     * @since 2.3
+     * @return mixed
+     */
+    public function get_content()
+    {
+        $get_content = get_option('ljmm-content');
+        $content = (!empty($get_content)) ? $get_content : ljmm_get_defaults('maintenance_message');
+        $content = apply_filters('the_content', $content);
+        $content = apply_filters('ljmm_content', $content);
+
+        return $content;
+    }
+
+    /**
+     * get title
+     *
+     * @since 2.3
+     * @return string
+     */
+    public function get_title()
+    {
+        $site_title = get_option('ljmm-site-title');
+        return $site_title ? $site_title : $this->site_title();
+    }
+
+    /**
+     * before maintenance mode
+     */
+    public function before_maintenance_mode()
+    {
+        // remove jetpack sharing
+        remove_filter('the_content', 'sharing_display', 19);
     }
 
     /**
@@ -450,16 +500,7 @@ class ljMaintenanceMode
         }
 
         if (!(current_user_can('ljmm_view_site') || current_user_can('super admin')) || (isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview')) {
-            $get_content = get_option('ljmm-content');
-            $site_title = get_option('ljmm-site-title');
-            $mode = $this->get_mode();
-            $content = (!empty($get_content)) ? $get_content : ljmm_get_defaults('maintenance_message');
-            $content = apply_filters('the_content', $content);
-            $title = $site_title ? $site_title : $this->site_title();
-
-            // remove jetpack sharing
-            remove_filter('the_content', 'sharing_display', 19);
-            wp_die($content, $title, array('response' => $mode));
+            wp_die($this->get_content(), $this->get_title(), array('response' => $this->get_mode()));
         }
     }
 
@@ -484,6 +525,7 @@ class ljMaintenanceMode
      * detect cache plugins
      *
      * @since 1.2
+     * @return string
     */
     public function cache_plugin()
     {
@@ -496,6 +538,11 @@ class ljMaintenanceMode
         // add w3 total cache support
         if (in_array('w3-total-cache/w3-total-cache.php', apply_filters('active_plugins', get_option('active_plugins')))) {
             $message = ljmm_get_defaults('warning_w3_total_cache');
+        }
+
+        // add comet cache support
+        if (in_array('comet-cache/comet-cache.php', apply_filters('active_plugins', get_option('active_plugins')))) {
+            $message = ljmm_get_defaults('warning_comet_cache');
         }
 
         return $message;

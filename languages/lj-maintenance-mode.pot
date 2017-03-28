@@ -33,6 +33,11 @@ msgid ""
 "enabling or disabling Maintenance Mode."
 msgstr ""
 
+#: lj-maintenance-mode.php:69 lj-maintenance-mode.php:72
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling or disabling Maintenance Mode."
+msgstr ""
+
 #: lj-maintenance-mode.php:75
 msgid ""
 "Maintenance Mode is currently active. To make sure that it works, open your "
@@ -83,6 +88,10 @@ msgstr ""
 
 #: lj-maintenance-mode.php:265
 msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr ""
+
+#: lj-maintenance-mode.php
+msgid "If you are putting your site into maintenance mode for a longer period of time, you should set this to "Coming Soon Page". Otherwise use "Maintenance Mode"."
 msgstr ""
 
 #: lj-maintenance-mode.php:265
@@ -146,8 +155,7 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Very simple Maintenance Mode & Coming soon page. Using default Wordpress "
-"markup, No ads, no paid upgrades."
+"Very simple Maintenance Mode & Coming soon page using default Wordpress markup with no ads or paid upgrades."
 msgstr ""
 
 #. Author of the plugin/theme

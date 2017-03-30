@@ -81,6 +81,8 @@ Not by default. Unless you are developer and you "inject" your own styles in to 
 * Update translation files
 * Update readme
 * Move mode up to the "main" setting area instead of advanced settings
+* Improve current_user_can checks. From codex: current_user_can( $capability ) will aways return true if user is Super Admin, unless specifically denied - see [inline source code](https://developer.wordpress.org/reference/classes/wp_user/has_cap/)
+* Preview mode will now perform capabilities check. (Thanks to [@esemlabel](https://wordpress.org/support/users/esemlabel/))
 
 = 2.2.5 =
 * Add French translation (Thanks to [@doume](https://wordpress.org/support/users/doume/))

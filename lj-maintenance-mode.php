@@ -146,7 +146,7 @@ class ljMaintenanceMode
 
         $is_enabled = get_option('ljmm-enabled');
 
-        if ($is_enabled || isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview') :
+        if ($is_enabled || ((isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview') && current_user_can('ljmm_view_site'))) :
             add_action('get_header', array( $this, 'maintenance' ));
         endif;
 
@@ -499,7 +499,7 @@ class ljMaintenanceMode
             }
         }
 
-        if (!(current_user_can('ljmm_view_site') || current_user_can('super admin')) || (isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview')) {
+        if (!current_user_can('ljmm_view_site') || (isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview')) {
             wp_die($this->get_content(), $this->get_title(), array('response' => $this->get_mode()));
         }
     }

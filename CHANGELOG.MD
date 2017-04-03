@@ -3,13 +3,15 @@
 ## 2.3
 * Small refactor, extract some of the parts to it's own method to make everything a bit cleaner
 * Added 'ljmm_content' filter
+* Move mode up to the "main" setting area instead of advanced settings
+* From now on, `init` hook instead of `get_header` is used for maintenance mode
+* Dedicated method to check if maintenance mode is enabled to make things cleaner
+* Improve current_user_can checks. From codex: current_user_can( $capability ) will aways return true if user is Super Admin, unless specifically denied - see [inline source code](https://developer.wordpress.org/reference/classes/wp_user/has_cap/)
+* Update readme
+* Preview mode will now perform capabilities check. (Thanks to [@esemlabel](https://wordpress.org/support/users/esemlabel/))
 * Added Comet Cache support. (Thanks to [@doume](https://wordpress.org/support/users/doume/))
 * Update translation files
-* Update readme
-* Move mode up to the "main" setting area instead of advanced settings
-* Improve current_user_can checks. From codex: current_user_can( $capability ) will aways return true if user is Super Admin, unless specifically denied - see [inline source code](https://developer.wordpress.org/reference/classes/wp_user/has_cap/)
-* Preview mode will now perform capabilities check. (Thanks to [@esemlabel](https://wordpress.org/support/users/esemlabel/))
-* updated French translation (Thanks to [@doume](https://wordpress.org/support/users/doume/))
+* Updated French translation (Thanks to [@doume](https://wordpress.org/support/users/doume/))
 
 ## 2.2.5
 * Add French translation (Thanks to [@doume](https://wordpress.org/support/users/doume/))

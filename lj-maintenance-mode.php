@@ -144,11 +144,8 @@ class ljMaintenanceMode
         // remove old settings. This has been deprecated in 1.2
         delete_option('ljmm-content-default');
 
-        $is_enabled = get_option('ljmm-enabled');
-
-        if ($is_enabled || ((isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview') && current_user_can('ljmm_view_site'))) :
-            add_action('get_header', array( $this, 'maintenance' ));
-        endif;
+        // maintenance mode
+        add_action('init', array( $this, 'maintenance' ));
 
         add_action('admin_bar_menu', array( $this, 'indicator' ), 100);
         add_filter('plugin_action_links_' . plugin_basename(__FILE__), array($this, 'action_links'));
@@ -288,7 +285,8 @@ class ljMaintenanceMode
                                 <?php foreach ($wp_roles as $role => $role_details) :  ?>
                                     <?php if ($role !== 'administrator') : ?>
                                         <fieldset>
-                                            <legend class="screen-reader-text"><span><?php if (isset($options[$role])) { echo $options[$role]; } ?></span>
+                                            <legend class="screen-reader-text">
+                                                <span><?php if (isset($options[$role])) { echo $options[$role]; } ?></span>
                                             </legend>
                                             <label>
                                                 <input type="checkbox" class="ljmm-roles" name="ljmm-roles[<?php echo $role; ?>]" value="1" <?php checked(isset($options[$role]), 1); ?> /> <?php echo $role_details['name']; ?>
@@ -484,12 +482,33 @@ class ljMaintenanceMode
     }
 
     /**
+     * is maintenance enabled?
+     *
+     * @since 2.3
+     * @return boolean
+     */
+    public function enabled()
+    {
+        // enabled
+        if (get_option('ljmm-enabled') || ((isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview') && current_user_can('ljmm_view_site'))) :
+            return true;
+        endif;
+
+        // disabled
+        return false;
+    }
+
+    /**
      * Maintenance Mode
      *
      * @since 1.0
     */
     public function maintenance()
     {
+        if (!$this->enabled()) {
+            return;
+        }
+
         do_action('ljmm_before_mm');
 
         // TML Compatibility

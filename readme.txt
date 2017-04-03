@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: maintenance, maintenance mode, website maintenance, coming soon, under construction, offline, site maintenance,
 Requires at least: 3.5
 Tested up to: 4.7.3
-Stable tag: 2.3
+Stable tag: 2.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,9 @@ Not by default. Unless you are developer and you "inject" your own styles in to 
 6. Insert Media available for WYSIWYG.
 
 == Changelog ==
+= 2.3.1 =
+* Hot Fix issue where user got locked out of admin area in maitenanice mode.
+
 = 2.3 =
 * Small refactor, extract some of the parts to it's own method to make everything a bit cleaner
 * Added 'ljmm_content' filter

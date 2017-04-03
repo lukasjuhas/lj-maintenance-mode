@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.3.1
+* Hot Fix issue where user got locked out of admin area in maitenanice mode.
+
 ## 2.3
 * Small refactor, extract some of the parts to it's own method to make everything a bit cleaner
 * Added 'ljmm_content' filter

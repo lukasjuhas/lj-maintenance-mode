@@ -1,4 +1,4 @@
-Maintenance Mode (2.3)
+Maintenance Mode (2.3.1)
 ========================
 
 * Contributors: Lukas Juhas

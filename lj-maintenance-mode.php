@@ -3,7 +3,7 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://plugins.itsluk.as/maintenance-mode/
  * Description: Very simple Maintenance Mode & Coming soon page using default Wordpress markup with no ads or paid upgrades.
- * Version: 2.3
+ * Version: 2.3.1
  * Author: Lukas Juhas
  * Author URI: https://plugins.itsluk.as/
  * Text Domain: lj-maintenance-mode
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 2.3
+ * @version 2.3.1
  *
  */
 
 // define stuff
-define('LJMM_VERSION', '2.3');
+define('LJMM_VERSION', '2.3.1');
 define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -145,7 +145,7 @@ class ljMaintenanceMode
         delete_option('ljmm-content-default');
 
         // maintenance mode
-        add_action('init', array( $this, 'maintenance' ));
+        add_action('get_header', array( $this, 'maintenance' ));
 
         add_action('admin_bar_menu', array( $this, 'indicator' ), 100);
         add_filter('plugin_action_links_' . plugin_basename(__FILE__), array($this, 'action_links'));
@@ -490,7 +490,7 @@ class ljMaintenanceMode
     public function enabled()
     {
         // enabled
-        if (get_option('ljmm-enabled') || ((isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview') && current_user_can('ljmm_view_site'))) :
+        if (get_option('ljmm-enabled') || isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview') :
             return true;
         endif;
 
@@ -506,7 +506,7 @@ class ljMaintenanceMode
     public function maintenance()
     {
         if (!$this->enabled()) {
-            return;
+            return false;
         }
 
         do_action('ljmm_before_mm');
@@ -518,7 +518,7 @@ class ljMaintenanceMode
             }
         }
 
-        if (!current_user_can('ljmm_view_site') || (isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview')) {
+        if (!(current_user_can('ljmm_view_site') || current_user_can('super admin')) || (isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview')) {
             wp_die($this->get_content(), $this->get_title(), array('response' => $this->get_mode()));
         }
     }

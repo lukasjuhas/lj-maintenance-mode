@@ -454,7 +454,12 @@ class ljMaintenanceMode
     {
         $get_content = get_option('ljmm-content');
         $content = (!empty($get_content)) ? $get_content : ljmm_get_defaults('maintenance_message');
-        $content = apply_filters('the_content', $content);
+        $content = apply_filters('wptexturize', $content);
+        $content = apply_filters('wpautop', $content);
+        $content = apply_filters('shortcode_unautop', $content);
+        $content = apply_filters('prepend_attachment', $content);
+        $content = apply_filters('wp_make_content_images_responsive', $content);
+        $content = apply_filters('convert_smilies', $content);
         $content = apply_filters('ljmm_content', $content);
 
         return $content;

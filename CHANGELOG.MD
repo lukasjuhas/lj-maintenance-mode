@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.3.2
+* Added SiteOrigin Page Builder compatibilty (Thanks to [@relgit](https://github.com/relgit))
+
 ## 2.3.1
 * Hot Fix issue where user got locked out of admin area in maitenanice mode.
 

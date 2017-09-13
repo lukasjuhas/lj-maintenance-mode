@@ -204,6 +204,7 @@ class ljMaintenanceMode
         register_setting('ljmm', 'ljmm-enabled');
         register_setting('ljmm', 'ljmm-content');
         register_setting('ljmm', 'ljmm_add_widget_areas');
+	    register_setting('ljmm', 'limm_code');
         register_setting('ljmm', 'ljmm-site-title');
         register_setting('ljmm', 'ljmm-roles');
         register_setting('ljmm', 'ljmm-mode');
@@ -337,6 +338,17 @@ class ljMaintenanceMode
                             </td>
                         </tr>
                     <?php endif; ?>
+                    <tr valign="top">
+                        <th scope="row">
+                            <label for="limm_code"><?php _e('Inject code snippet', LJMM_PLUGIN_DOMAIN); ?></label>
+                        </th>
+                        <td>
+                            <textarea id="limm_code" name="limm_code" style="width:100%;height:150px"><?php echo esc_attr(get_option('limm_code')); ?></textarea>
+                            <p class="description">
+				                <?php _e('This is useful to add a Javascript snippet to the page&mdash;for example, Google Analytics tracking code.', LJMM_PLUGIN_DOMAIN); ?>
+                            </p>
+                        </td>
+                    </tr>
                 </table>
                 <?php submit_button(); ?>
             </form>
@@ -497,6 +509,10 @@ class ljMaintenanceMode
         $content = apply_filters('ljmm_content', $content);
 
 
+        // do we have any code to inject?
+        $code = get_option('limm_code');
+
+
         // do we have any widget areas to include?
         $widget1 = $widget2 = '';
 
@@ -526,7 +542,7 @@ class ljMaintenanceMode
 		    }
 	    }
 
-	    return $stylesheet.$widget1.$content.$widget2;
+	    return $code.$stylesheet.$widget1.$content.$widget2;
     }
 
     /**

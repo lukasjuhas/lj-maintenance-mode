@@ -32,6 +32,7 @@ Help support and translate this plugin!
 * **Role Control** - User Role control is available since 2.0
 * **Optional widgets** - Optionally add widgets above and/or below the content
 * **Optional style sheet** - Optionally add a custom style sheet
+* **Optional ability to add code snippet** - Optionally add a code snippet to the page-- for example, Google Analytics tracking code.
 
 > <strong>Important! Users that are using Cache plugins, please read below:</strong><br>
 > <strong>When enabling or disabling Maintenance Mode, don't forget to flush your cache!</strong>
@@ -88,7 +89,7 @@ Click "Advanced Settings" and mark the checkbox to add widget areas. Then you wi
 == Changelog ==
 
 = 2.4 =
-* Added support for stylesheet and widgets (Thanks to Eric Mueller at [@switchplus](https://github.com/switchplus))
+* Added support for stylesheet, widgets and code snippet injection (Thanks to Eric Mueller at [@switchplus](https://github.com/switchplus))
 
 = 2.3.2 =
 * Added SiteOrigin Page Builder compatibilty (Thanks to [@relgit](https://github.com/relgit))

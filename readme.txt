@@ -41,7 +41,7 @@ Help support and translate this plugin!
 
 `ljmm_admin_bar_indicator_enabled` - Control visibility of admin bar indicator
 
-`limm_css_filename` - The filename of the CSS style sheet (as found in the theme's stylesheet directory) - just the filename, for example: 'maintenance.css.min'. (Note: you do not need to use this filter for a stylesheet; see FAQs below.)
+`limm_css_filename` - The filename of the CSS style sheet (as found in the theme's stylesheet directory) - just the filename, for example: `maintenance.css.min`. (Note: you do not need to use this filter for a stylesheet; see FAQs below.)
 
 **Actions**
 `ljmm_before_mm` - Runs at the beginning of core maintenance method

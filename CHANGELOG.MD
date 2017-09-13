@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.4
+* Added support for stylesheet and widgets (Thanks to Eric Mueller at [@switchplus](https://github.com/switchplus))
+
 ## 2.3.2
 * Added SiteOrigin Page Builder compatibilty (Thanks to [@relgit](https://github.com/relgit))
 

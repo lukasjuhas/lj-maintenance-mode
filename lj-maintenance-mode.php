@@ -31,7 +31,7 @@
  */
 
 // define stuff
-define('LJMM_VERSION', '2.3.2');
+define('LJMM_VERSION', '2.4');
 define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -151,6 +151,27 @@ class ljMaintenanceMode
         add_filter('plugin_action_links_' . plugin_basename(__FILE__), array($this, 'action_links'));
 
         add_action('ljmm_before_mm', array( $this, 'before_maintenance_mode' ));
+
+
+	    // add widget areas if enabled
+	    if (get_option('ljmm_add_widget_areas') ) :
+		    register_sidebar( array(
+			    'id'          => 'limm-before',
+			    'name'        => __( 'Maintenance mode - before content', LJMM_PLUGIN_DOMAIN ),
+			    'description' => __( '', LJMM_PLUGIN_DOMAIN ),
+			    'before_widget' => "\n".'<div id="%1$s" class="widget %2$s">',
+			    'after_widget'  => '</div>'."\n",
+		    ) );
+
+		    register_sidebar( array(
+			    'id'          => 'limm-after',
+			    'name'        => __( 'Maintenance mode - after content', LJMM_PLUGIN_DOMAIN ),
+			    'description' => __( '', LJMM_PLUGIN_DOMAIN ),
+			    'before_widget' => "\n".'<div id="%1$s" class="widget %2$s">',
+			    'after_widget'  => '</div>'."\n",
+		    ) );
+	    endif;
+
     }
 
     /**
@@ -164,7 +185,7 @@ class ljMaintenanceMode
     }
 
     /**
-     * Inject styling
+     * Inject styling for admin bar indicator
      *
      * @since 1.1
     */
@@ -182,11 +203,12 @@ class ljMaintenanceMode
     {
         register_setting('ljmm', 'ljmm-enabled');
         register_setting('ljmm', 'ljmm-content');
+        register_setting('ljmm', 'ljmm_add_widget_areas');
         register_setting('ljmm', 'ljmm-site-title');
         register_setting('ljmm', 'ljmm-roles');
         register_setting('ljmm', 'ljmm-mode');
 
-        //set the content
+        // set the content
         ljmm_set_content();
     }
 
@@ -263,6 +285,18 @@ class ljMaintenanceMode
                     </span>
                 </a>
                 <table class="form-table form--ljmm-advanced-settings" style="display: none">
+                    <tr valign="top">
+                        <th scope="row">
+                            <label for="ljmm_add_widget_areas"><?php _e('Add widget areas above and below content', LJMM_PLUGIN_DOMAIN); ?></label>
+                        </th>
+                        <td>
+			                <?php $ljmm_add_widget_areas = esc_attr(get_option('ljmm_add_widget_areas')); ?>
+                            <input type="checkbox" id="ljmm_add_widget_areas" name="ljmm_add_widget_areas" value="1" <?php checked($ljmm_add_widget_areas, 1); ?>>
+			                <?php if ($ljmm_add_widget_areas) : ?>
+                                <p class="description"><?php echo ljmm_get_defaults('ljmm_add_widget_areas'); ?></p>
+			                <?php endif; ?>
+                        </td>
+                    </tr>
                     <tr valign="middle">
                         <th scope="row"><?php _e('Site Title', LJMM_PLUGIN_DOMAIN); ?></th>
                         <td>
@@ -462,7 +496,37 @@ class ljMaintenanceMode
         $content = apply_filters('convert_smilies', $content);
         $content = apply_filters('ljmm_content', $content);
 
-        return $content;
+
+        // do we have any widget areas to include?
+        $widget1 = $widget2 = '';
+
+	    if (get_option('ljmm_add_widget_areas') ) :
+		    ob_start();
+            dynamic_sidebar('limm-before');
+            $widget1 = ob_get_clean();
+
+		    ob_start();
+		    dynamic_sidebar('limm-after');
+		    $widget2 = ob_get_clean();
+        endif;
+
+
+	    // do we have a custom style sheet to include?
+        $stylesheet = '';
+
+        // we use a filter so user can change the filename of the maintenance page stylesheet
+	    $url_filename = apply_filters( 'limm_css_filename', "maintenance.css.min");
+
+	    // note that if validate_file returns FALSE then it means the we have a valid relative path
+	    if ( ! validate_file( $url_filename ) ) {
+		    $url = get_stylesheet_directory() . "/" . $url_filename;
+
+		    if ( file_exists( $url ) ) {
+			    $stylesheet = '<style type="text/css">'.file_get_contents( $url ).'</style>';
+		    }
+	    }
+
+	    return $stylesheet.$widget1.$content.$widget2;
     }
 
     /**

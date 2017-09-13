@@ -30,6 +30,8 @@ Help support and translate this plugin!
 * **Preview** - Preview button available.
 * **Compact** - It's developed to be as compact as possible.
 * **Role Control** - User Role control is available since 2.0
+* **Optional widgets** - Optionally add widgets above and/or below the content
+* **Optional style sheet** - Optionally add a custom style sheet
 
 > <strong>Important! Users that are using Cache plugins, please read below:</strong><br>
 > <strong>When enabling or disabling Maintenance Mode, don't forget to flush your cache!</strong>
@@ -38,6 +40,8 @@ Help support and translate this plugin!
 `ljmm_site_title` - Filter page title while in maintenance mode
 
 `ljmm_admin_bar_indicator_enabled` - Control visibility of admin bar indicator
+
+`limm_css_filename` - The filename of the CSS style sheet (as found in the theme's stylesheet directory) - just the filename, for example: 'maintenance.css.min'. (Note: you do not need to use this filter for a stylesheet; see FAQs below.)
 
 **Actions**
 `ljmm_before_mm` - Runs at the beginning of core maintenance method
@@ -52,7 +56,7 @@ Having trouble? Please read FAQ first, if you need any assistance, you can use s
 
 1. Upload `lj-maintenance-mode` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Navigate to Settings -> Maintenance Mode  or simply click on Admin Bar indicator for settings to enable maintenance mode.
+1. Navigate to Settings -> Maintenance Mode, or simply click on Admin Bar indicator for settings to enable maintenance mode.
 
 == Frequently Asked Questions ==
 
@@ -62,7 +66,15 @@ First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, f
 
 = Can I change background colour? =
 
-Not by default. Unless you are developer and you "inject" your own styles in to the wp_die() page.
+Not through the admin interface. You can use a custom stylesheet (see next FAQ) to do this, however.
+
+= What is the default stylesheet? =
+
+By default, the plugin will use a stylesheet named `maintenance.css.min` in the theme's stylesheet folder. You can specify a different filename by using a Filter (above).
+
+= How do I add widgets? =
+
+Click "Advanced Settings" and mark the checkbox to add widget areas. Then you will find two new widget areas in WordPress's Widgets page, for above and below the content.
 
 == Screenshots ==
 
@@ -74,11 +86,15 @@ Not by default. Unless you are developer and you "inject" your own styles in to 
 6. Insert Media available for WYSIWYG.
 
 == Changelog ==
+
+= 2.4 =
+* Added support for stylesheet and widgets (Thanks to Eric Mueller at [@switchplus](https://github.com/switchplus))
+
 = 2.3.2 =
 * Added SiteOrigin Page Builder compatibilty (Thanks to [@relgit](https://github.com/relgit))
 
 = 2.3.1 =
-* Hot Fix issue where user got locked out of admin area in maitenanice mode.
+* Hot Fix issue where user got locked out of admin area in maintenance mode.
 
 = 2.3 =
 * Small refactor, extract some of the parts to it's own method to make everything a bit cleaner

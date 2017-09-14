@@ -27,7 +27,8 @@ Help support and translate this plugin!
 * **WPML Compatible** - Plugin is compatible with WPML plugin
 * **Optional widgets** - Optionally add widgets above and/or below the content
 * **Optional style sheet** - Optionally add a custom style sheet
-* **Optional ability to add code snippet** - Optionally add a code snippet to the page-- for example, Google Analytics tracking code.
+* **Optional ability to add code snippet** - Optionally add a code snippet to the page.
+* **Support for Analytify plugin** - If you use the Analytify plugin, you can automatically insert the Google Analytics tracking code.
 
 Bugs and pull requests are welcomed.
 

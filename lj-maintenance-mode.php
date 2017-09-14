@@ -156,7 +156,7 @@ class ljMaintenanceMode
 	    // add widget areas if enabled
 	    if (get_option('ljmm_add_widget_areas') ) :
 		    register_sidebar( array(
-			    'id'          => 'limm-before',
+			    'id'          => 'ljmm-before',
 			    'name'        => __( 'Maintenance mode - before content', LJMM_PLUGIN_DOMAIN ),
 			    'description' => __( '', LJMM_PLUGIN_DOMAIN ),
 			    'before_widget' => "\n".'<div id="%1$s" class="widget %2$s">',
@@ -164,7 +164,7 @@ class ljMaintenanceMode
 		    ) );
 
 		    register_sidebar( array(
-			    'id'          => 'limm-after',
+			    'id'          => 'ljmm-after',
 			    'name'        => __( 'Maintenance mode - after content', LJMM_PLUGIN_DOMAIN ),
 			    'description' => __( '', LJMM_PLUGIN_DOMAIN ),
 			    'before_widget' => "\n".'<div id="%1$s" class="widget %2$s">',
@@ -204,7 +204,7 @@ class ljMaintenanceMode
         register_setting('ljmm', 'ljmm-enabled');
         register_setting('ljmm', 'ljmm-content');
         register_setting('ljmm', 'ljmm_add_widget_areas');
-	    register_setting('ljmm', 'limm_code');
+	    register_setting('ljmm', 'ljmm_code');
         register_setting('ljmm', 'ljmm-site-title');
         register_setting('ljmm', 'ljmm-roles');
         register_setting('ljmm', 'ljmm-mode');
@@ -340,10 +340,10 @@ class ljMaintenanceMode
                     <?php endif; ?>
                     <tr valign="top">
                         <th scope="row">
-                            <label for="limm_code"><?php _e('Inject code snippet', LJMM_PLUGIN_DOMAIN); ?></label>
+                            <label for="ljmm_code"><?php _e('Inject code snippet', LJMM_PLUGIN_DOMAIN); ?></label>
                         </th>
                         <td>
-                            <textarea id="limm_code" name="limm_code" style="width:100%;height:150px"><?php echo esc_attr(get_option('limm_code')); ?></textarea>
+                            <textarea id="ljmm_code" name="ljmm_code" style="width:100%;height:150px"><?php echo esc_attr(get_option('ljmm_code')); ?></textarea>
                             <p class="description">
 				                <?php _e('This is useful to add a Javascript snippet to the page&mdash;for example, Google Analytics tracking code.', LJMM_PLUGIN_DOMAIN); ?>
                             </p>
@@ -509,8 +509,8 @@ class ljMaintenanceMode
         $content = apply_filters('ljmm_content', $content);
 
 
-        // do we have any code to inject?
-        $code = get_option('limm_code');
+            // do we have a code snippet to inject?
+        $code = get_option('ljmm_code');
 
 
         // do we have any widget areas to include?
@@ -518,11 +518,11 @@ class ljMaintenanceMode
 
 	    if (get_option('ljmm_add_widget_areas') ) :
 		    ob_start();
-            dynamic_sidebar('limm-before');
+            dynamic_sidebar('ljmm-before');
             $widget1 = ob_get_clean();
 
 		    ob_start();
-		    dynamic_sidebar('limm-after');
+		    dynamic_sidebar('ljmm-after');
 		    $widget2 = ob_get_clean();
         endif;
 
@@ -531,7 +531,7 @@ class ljMaintenanceMode
         $stylesheet = '';
 
         // we use a filter so user can change the filename of the maintenance page stylesheet
-	    $url_filename = apply_filters( 'limm_css_filename', "maintenance.css.min");
+	    $url_filename = apply_filters( 'ljmm_css_filename', "maintenance.css.min");
 
 	    // note that if validate_file returns FALSE then it means the we have a valid relative path
 	    if ( ! validate_file( $url_filename ) ) {

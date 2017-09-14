@@ -204,6 +204,7 @@ class ljMaintenanceMode
         register_setting('ljmm', 'ljmm-enabled');
         register_setting('ljmm', 'ljmm-content');
         register_setting('ljmm', 'ljmm_add_widget_areas');
+	    register_setting('ljmm', 'ljmm_analytify');
 	    register_setting('ljmm', 'ljmm_code');
         register_setting('ljmm', 'ljmm-site-title');
         register_setting('ljmm', 'ljmm-roles');
@@ -242,6 +243,7 @@ class ljMaintenanceMode
                             <?php endif; ?>
                         </td>
                     </tr>
+
                     <tr>
                         <th scope="row"><?php _e('Mode', LJMM_PLUGIN_DOMAIN); ?></th>
                         <td>
@@ -262,12 +264,14 @@ class ljMaintenanceMode
                             </p>
                         </td>
                     </tr>
+
                     <tr>
                         <th>
                             <a href="<?php echo esc_url(add_query_arg('ljmm', 'preview', bloginfo('url'))); ?>" target="_blank" class="button button-secondary"><?php _e('Preview', LJMM_PLUGIN_DOMAIN); ?></a>
                             <a class="button button-secondary support" href="https://plugins.itsluk.as/maintenance-mode/support/" target="_blank"><?php _e('Support', LJMM_PLUGIN_DOMAIN); ?></a>
                         </th>
                     </tr>
+
                     <tr>
                         <th colspan="2">
                             <?php $content = get_option('ljmm-content');
@@ -285,7 +289,9 @@ class ljMaintenanceMode
                         <?php _e('Hide Advanced Settings', LJMM_PLUGIN_DOMAIN); ?>
                     </span>
                 </a>
+
                 <table class="form-table form--ljmm-advanced-settings" style="display: none">
+
                     <tr valign="top">
                         <th scope="row">
                             <label for="ljmm_add_widget_areas"><?php _e('Add widget areas above and below content', LJMM_PLUGIN_DOMAIN); ?></label>
@@ -298,6 +304,7 @@ class ljMaintenanceMode
 			                <?php endif; ?>
                         </td>
                     </tr>
+
                     <tr valign="middle">
                         <th scope="row"><?php _e('Site Title', LJMM_PLUGIN_DOMAIN); ?></th>
                         <td>
@@ -306,6 +313,7 @@ class ljMaintenanceMode
                             <p class="description"><?php _e('Overrides default site meta title.', LJMM_PLUGIN_DOMAIN); ?></p>
                         </td>
                     </tr>
+
                     <?php global $wpdb; ?>
                     <?php $options = get_option('ljmm-roles'); ?>
                     <?php $wp_roles = get_option($wpdb->prefix . 'user_roles'); ?>
@@ -338,6 +346,31 @@ class ljMaintenanceMode
                             </td>
                         </tr>
                     <?php endif; ?>
+
+                    <?php
+                        // do we have Analytify installed and linked to google?
+
+                        wp_cache_delete('analytify_ua_code', 'options');        // see https://wordpress.stackexchange.com/questions/100040/can-i-force-get-option-to-go-back-to-the-db-instead-of-cache
+                        $ua_code = get_option( 'analytify_ua_code' );
+                        if($ua_code) {
+	                        $ljmm_analytify = esc_attr(get_option('ljmm_analytify'));
+                            ?>
+                            <tr valign="top">
+                                <th scope="row">
+                                    <label for="ljmm_analytify"><?php echo sprintf( __( 'Add Google Analytics code', LJMM_PLUGIN_DOMAIN ) ); ?></label>
+                                </th>
+                                <td>
+                                    <input type="checkbox" id="ljmm_analytify" name="ljmm_analytify" value="1" <?php checked($ljmm_analytify, 1); ?>>
+                                    <?php echo sprintf(__('for Analytics profile <b>%s</b> (<a href="/wp-admin/admin.php?page=analytify-settings">configured in Analytify</a>)', LJMM_PLUGIN_DOMAIN), $ua_code); ?>
+                                    <p class="description">
+				                        <?php _e( 'Since you have the Analytify plugin installed, this will add Google Analytics tracking code to the maintenance page.', LJMM_PLUGIN_DOMAIN ); ?>
+                                    </p>
+                                </td>
+                            </tr>
+	                        <?php
+                        }
+                    ?>
+
                     <tr valign="top">
                         <th scope="row">
                             <label for="ljmm_code"><?php _e('Inject code snippet', LJMM_PLUGIN_DOMAIN); ?></label>
@@ -345,11 +378,16 @@ class ljMaintenanceMode
                         <td>
                             <textarea id="ljmm_code" name="ljmm_code" style="width:100%;height:150px"><?php echo esc_attr(get_option('ljmm_code')); ?></textarea>
                             <p class="description">
-				                <?php _e('This is useful to add a Javascript snippet to the page&mdash;for example, Google Analytics tracking code.', LJMM_PLUGIN_DOMAIN); ?>
+				                <?php _e('This is useful to add a Javascript snippet to the maintenance page.', LJMM_PLUGIN_DOMAIN); ?>
+				                <?php
+                                if($ua_code) {
+                                    _e('NOTE: if you are using the option above to add Google Analytics code, do NOT paste GA tracking code here.', LJMM_PLUGIN_DOMAIN);
+                                } ?>
                             </p>
                         </td>
                     </tr>
                 </table>
+
                 <?php submit_button(); ?>
             </form>
         </div>
@@ -509,6 +547,25 @@ class ljMaintenanceMode
         $content = apply_filters('ljmm_content', $content);
 
 
+	    // do we have a UA code from Analytify plugin?
+	    $ga_code = '';
+	    if ( get_option( 'ljmm_analytify' ) && $ua_code = get_option( 'analytify_ua_code' ) ) {
+		    // yes, so we can generate the code to inject
+		    $ga_code = <<<EOD
+                <script>
+                  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+                
+                  ga('create', '{$ua_code}', 'auto');
+                  ga('send', 'pageview');
+                
+                </script>
+EOD;
+	    }
+
+
             // do we have a code snippet to inject?
         $code = get_option('ljmm_code');
 
@@ -542,7 +599,7 @@ class ljMaintenanceMode
 		    }
 	    }
 
-	    return $code.$stylesheet.$widget1.$content.$widget2;
+	    return $ga_code.$code.$stylesheet.$widget1.$content.$widget2;
     }
 
     /**

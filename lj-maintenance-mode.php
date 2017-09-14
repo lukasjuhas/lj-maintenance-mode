@@ -342,7 +342,7 @@ class ljMaintenanceMode
                     <?php else: ?>
                         <tr valign="top">
                             <th scope="row" colspan="2">
-                                <p class="description"><?php _e('User Role control is currently not avialable on your website. Sorry!', LJMM_PLUGIN_DOMAIN); ?></p>
+                                <p class="description"><?php _e('User Role control is currently not available on your website. Sorry!', LJMM_PLUGIN_DOMAIN); ?></p>
                             </td>
                         </tr>
                     <?php endif; ?>

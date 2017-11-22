@@ -2,7 +2,9 @@
 
 ## 2.4
 * Added support for stylesheet, widgets, code snippet injection and Analytify/Google Analytics tracking code (Thanks to Eric Mueller at [@switchplus](https://github.com/switchplus))
-* Overall tidy up of code
+* Custom capability (Thanks to [@gabrielbijleveld](https://github.com/gabrielbijleveld))
+* Code refactor and improvements
+* Overall tidy up of the code
 
 ## 2.3.2
 * Added SiteOrigin Page Builder compatibility (Thanks to [@relgit](https://github.com/relgit))

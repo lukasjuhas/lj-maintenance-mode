@@ -36,16 +36,13 @@ define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
 define('LJMM_PLUGIN_DOMAIN', 'lj-maintenance-mode');
-
-// activation hook
-add_action('activate_' . LJMM_PLUGIN_BASENAME, 'ljmm_install');
-add_action( 'admin_init', 'ljmm_admin_init');
+define('LJMM_PLUGIN_CAP', 'ljmm_control');
 
 /**
  * Installation
  *
  * @since 1.0
-*/
+ */
 function ljmm_install()
 {
     // remove old settings. This has been deprecated in 1.2
@@ -54,22 +51,29 @@ function ljmm_install()
     // set default content
     ljmm_set_content();
 }
+add_action('activate_' . LJMM_PLUGIN_BASENAME, 'ljmm_install');
 
-function ljmm_admin_init() {
-	$custom_cap = 'ljmm_control';
-    $grant      = false; 
-	$roles = get_editable_roles();
-	
-	foreach ($GLOBALS['wp_roles']->role_objects as $key => $role) {
-		if($key == 'administrator') {
-			$role->add_cap($custom_cap, true);
-		}
-		if (isset($roles[$key]) && !$role->has_cap($custom_cap)) {
-			$role->add_cap($custom_cap, $grant);
-		}
-	}
+/**
+ * Admin init
+ *
+ * @since 2.4
+ * @return void
+ */
+function ljmm_admin_init()
+{
+    $grant = false;
+    $roles = get_editable_roles();
+
+    foreach ($GLOBALS['wp_roles']->role_objects as $key => $role) {
+        if ($key == 'administrator') {
+            $role->add_cap(LJMM_PLUGIN_CAP, true);
+        }
+        if (isset($roles[$key]) && !$role->has_cap(LJMM_PLUGIN_CAP)) {
+            $role->add_cap(LJMM_PLUGIN_CAP, $grant);
+        }
+    }
 }
-
+add_action('admin_init', 'ljmm_admin_init');
 
 /**
  * Default hardcoded settings
@@ -105,6 +109,7 @@ function ljmm_get_defaults($type)
 /**
  * Set the default content
  * Avoid duplicate function.
+ *
  * @since 1.0
  */
 function ljmm_set_content()
@@ -192,7 +197,7 @@ class ljMaintenanceMode
     */
     public function ui()
     {
-        add_submenu_page('options-general.php', __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), 'ljmm_control', 'lj-maintenance-mode', array($this, 'settingsPage'));
+        add_submenu_page('options-general.php', __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), LJMM_PLUGIN_CAP, 'lj-maintenance-mode', [$this, 'settingsPage']);
     }
 
     /**
@@ -438,7 +443,7 @@ class ljMaintenanceMode
     {
         $enabled = apply_filters('ljmm_admin_bar_indicator_enabled', $enabled = true);
 
-        if (!current_user_can('ljmm_control')) {
+        if (!current_user_can(LJMM_PLUGIN_CAP)) {
             return false;
         }
 

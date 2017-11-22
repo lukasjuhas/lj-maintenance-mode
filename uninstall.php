@@ -35,8 +35,11 @@ function ljmm_delete_plugin()
     delete_option('ljmm-site-title');
     delete_option('ljmm-roles');
     delete_option('ljmm-mode');
+	delete_option('ljmm_add_widget_areas');
+	delete_option('ljmm_analytify');
+	delete_option('ljmm_code');
 
-    // remove capabilities
+	// remove capabilities
     ljmm_remove_capabilities();
 }
 

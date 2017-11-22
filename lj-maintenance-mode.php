@@ -3,7 +3,7 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://plugins.itsluk.as/maintenance-mode/
  * Description: Very simple Maintenance Mode & Coming soon page using default Wordpress markup with no ads or paid upgrades.
- * Version: 2.3.1
+ * Version: 2.4
  * Author: Lukas Juhas
  * Author URI: https://plugins.itsluk.as/
  * Text Domain: lj-maintenance-mode
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 2.3.1
+ * @version 2.4
  *
  */
 
 // define stuff
-define('LJMM_VERSION', '2.3.1');
+define('LJMM_VERSION', '2.4');
 define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -80,7 +80,7 @@ function ljmm_get_defaults($type)
 {
     switch ($type) {
         case 'maintenance_message':
-            $default = __("<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>", LJMM_PLUGIN_DOMAIN);
+            $default = __('<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>', LJMM_PLUGIN_DOMAIN);
             break;
         case 'warning_wp_super_cache':
             $default = __("Important: Don't forget to flush your cache using WP Super Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
@@ -92,7 +92,7 @@ function ljmm_get_defaults($type)
             $default = __("Important: Don't forget to flush your cache using Comet Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
             break;
         case 'ljmm_enabled':
-            $default = __("Maintenance Mode is currently active. To make sure that it works, open your web page in either private / incognito mode, different browser or simply log out. Logged in users are not affected by the Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            $default = __('Maintenance Mode is currently active. To make sure that it works, open your web page in either private / incognito mode, different browser or simply log out. Logged in users are not affected by the Maintenance Mode.', LJMM_PLUGIN_DOMAIN);
             break;
         default:
             $default = false;
@@ -111,21 +111,17 @@ function ljmm_set_content()
 {
     // If content is not set, set the default content.
     $content = get_option('ljmm-content');
-    if (empty($content)) :
+
+    if (empty($content)) {
         $content = ljmm_get_defaults('maintenance_message');
-        /**
-        * f you are trying to ensure that a given option is created,
-        * use update_option() instead, which bypasses the option name check
-        * and updates the option with the desired value whether or not it exists.
-        */
         update_option('ljmm-content', stripslashes($content));
-    endif;
+    }
 
     // If content is not set, set the default content.
     $mode = get_option('ljmm-mode');
-    if (empty($mode)) :
+    if (empty($mode)) {
         update_option('ljmm-mode', 'default');
-    endif;
+    }
 }
 
 /**
@@ -140,34 +136,53 @@ function ljmm_load_textdomain()
 add_action('plugins_loaded', 'ljmm_load_textdomain');
 
 /**
- * main class
+ * Main class
  *
  * @since 1.0
 */
 class ljMaintenanceMode
 {
     /**
-     * constructor
+     * Constructor
      *
      * @since 1.0
      */
     public function __construct()
     {
-        add_action('admin_menu', array( $this, 'ui' ));
-        add_action('admin_head', array( $this, 'style' ));
-        add_action('admin_init', array( $this, 'settings' ));
-        add_action('admin_init', array( $this, 'manage_capabilities'));
+        add_action('admin_menu', [$this, 'ui']);
+        add_action('admin_head', [$this, 'style']);
+        add_action('admin_init', [$this, 'settings']);
+        add_action('admin_init', [$this, 'manage_capabilities']);
 
         // remove old settings. This has been deprecated in 1.2
         delete_option('ljmm-content-default');
 
         // maintenance mode
-        add_action('get_header', array( $this, 'maintenance' ));
+        add_action('get_header', [$this, 'maintenance']);
 
-        add_action('admin_bar_menu', array( $this, 'indicator' ), 100);
-        add_filter('plugin_action_links_' . plugin_basename(__FILE__), array($this, 'action_links'));
+        add_action('admin_bar_menu', [$this, 'indicator'], 100);
+        add_filter('plugin_action_links_' . plugin_basename(__FILE__), [$this, 'action_links']);
 
-        add_action('ljmm_before_mm', array( $this, 'before_maintenance_mode' ));
+        add_action('ljmm_before_mm', [$this, 'before_maintenance_mode']);
+
+        // add widget areas if enabled
+        if (get_option('ljmm_add_widget_areas')) {
+            register_sidebar([
+                'id' => 'ljmm-before',
+                'name' => __('Maintenance mode - before content', LJMM_PLUGIN_DOMAIN),
+                'description' => __('', LJMM_PLUGIN_DOMAIN),
+                'before_widget' => "\n" . '<div id="%1$s" class="widget %2$s">',
+                'after_widget' => '</div>' . "\n",
+            ]);
+
+            register_sidebar([
+                'id' => 'ljmm-after',
+                'name' => __('Maintenance mode - after content', LJMM_PLUGIN_DOMAIN),
+                'description' => __('', LJMM_PLUGIN_DOMAIN),
+                'before_widget' => "\n" . '<div id="%1$s" class="widget %2$s">',
+                'after_widget' => '</div>' . "\n",
+            ]);
+        }
     }
 
     /**
@@ -181,7 +196,7 @@ class ljMaintenanceMode
     }
 
     /**
-     * Inject styling
+     * Inject styling for admin bar indicator
      *
      * @since 1.1
     */
@@ -199,11 +214,14 @@ class ljMaintenanceMode
     {
         register_setting('ljmm', 'ljmm-enabled');
         register_setting('ljmm', 'ljmm-content');
+        register_setting('ljmm', 'ljmm_add_widget_areas');
+        register_setting('ljmm', 'ljmm_analytify');
+        register_setting('ljmm', 'ljmm_code_snippet');
         register_setting('ljmm', 'ljmm-site-title');
         register_setting('ljmm', 'ljmm-roles');
         register_setting('ljmm', 'ljmm-mode');
 
-        //set the content
+        // set the content
         ljmm_set_content();
     }
 
@@ -236,11 +254,12 @@ class ljMaintenanceMode
                             <?php endif; ?>
                         </td>
                     </tr>
+
                     <tr>
                         <th scope="row"><?php _e('Mode', LJMM_PLUGIN_DOMAIN); ?></th>
                         <td>
                             <?php $ljmm_mode = esc_attr(get_option('ljmm-mode')); ?>
-                            <?php $mode_default = $ljmm_mode == 'default' ? true: false; ?>
+                            <?php $mode_default = $ljmm_mode == 'default' ? true : false; ?>
                             <?php $mode_cs = $ljmm_mode == 'cs' ? true : false; ?>
                             <label>
                                 <input name="ljmm-mode" type="radio" value="default" <?php checked($mode_default, 1); ?>>
@@ -256,17 +275,17 @@ class ljMaintenanceMode
                             </p>
                         </td>
                     </tr>
+
                     <tr>
                         <th>
                             <a href="<?php echo esc_url(add_query_arg('ljmm', 'preview', bloginfo('url'))); ?>" target="_blank" class="button button-secondary"><?php _e('Preview', LJMM_PLUGIN_DOMAIN); ?></a>
                             <a class="button button-secondary support" href="https://plugins.itsluk.as/maintenance-mode/support/" target="_blank"><?php _e('Support', LJMM_PLUGIN_DOMAIN); ?></a>
                         </th>
                     </tr>
+
                     <tr>
                         <th colspan="2">
-                            <?php $content = get_option('ljmm-content');
-                            $editor_id = 'ljmm-content';
-                            wp_editor($content, $editor_id); ?>
+                            <?php $this->editor_content(); ?>
                         </th>
                     </tr>
                 </table>
@@ -279,7 +298,22 @@ class ljMaintenanceMode
                         <?php _e('Hide Advanced Settings', LJMM_PLUGIN_DOMAIN); ?>
                     </span>
                 </a>
+
                 <table class="form-table form--ljmm-advanced-settings" style="display: none">
+
+                    <tr valign="top">
+                        <th scope="row">
+                            <label for="ljmm_add_widget_areas"><?php _e('Add widget areas above and below content', LJMM_PLUGIN_DOMAIN); ?></label>
+                        </th>
+                        <td>
+			                <?php $ljmm_add_widget_areas = esc_attr(get_option('ljmm_add_widget_areas')); ?>
+                            <input type="checkbox" id="ljmm_add_widget_areas" name="ljmm_add_widget_areas" value="1" <?php checked($ljmm_add_widget_areas, 1); ?>>
+			                <?php if ($ljmm_add_widget_areas) : ?>
+                                <p class="description"><?php echo ljmm_get_defaults('ljmm_add_widget_areas'); ?></p>
+			                <?php endif; ?>
+                        </td>
+                    </tr>
+
                     <tr valign="middle">
                         <th scope="row"><?php _e('Site Title', LJMM_PLUGIN_DOMAIN); ?></th>
                         <td>
@@ -288,6 +322,7 @@ class ljMaintenanceMode
                             <p class="description"><?php _e('Overrides default site meta title.', LJMM_PLUGIN_DOMAIN); ?></p>
                         </td>
                     </tr>
+
                     <?php global $wpdb; ?>
                     <?php $options = get_option('ljmm-roles'); ?>
                     <?php $wp_roles = get_option($wpdb->prefix . 'user_roles'); ?>
@@ -303,7 +338,7 @@ class ljMaintenanceMode
                                     <?php if ($role !== 'administrator') : ?>
                                         <fieldset>
                                             <legend class="screen-reader-text">
-                                                <span><?php if (isset($options[$role])) { echo $options[$role]; } ?></span>
+                                                <span><?php echo (isset($options[$role])) ? $options[$role] : ''; ?></span>
                                             </legend>
                                             <label>
                                                 <input type="checkbox" class="ljmm-roles" name="ljmm-roles[<?php echo $role; ?>]" value="1" <?php checked(isset($options[$role]), 1); ?> /> <?php echo $role_details['name']; ?>
@@ -316,11 +351,58 @@ class ljMaintenanceMode
                     <?php else: ?>
                         <tr valign="top">
                             <th scope="row" colspan="2">
-                                <p class="description"><?php _e('User Role control is currently not avialable on your website. Sorry!', LJMM_PLUGIN_DOMAIN); ?></p>
+                                <p class="description"><?php _e('User Role control is currently not available on your website. Sorry!', LJMM_PLUGIN_DOMAIN); ?></p>
                             </td>
                         </tr>
                     <?php endif; ?>
+
+                    <?php
+                        // do we have Analytify installed and linked to google?
+                        wp_cache_delete('analytify_ua_code', 'options'); // see https://wordpress.stackexchange.com/questions/100040/can-i-force-get-option-to-go-back-to-the-db-instead-of-cache
+                        $ua_code = get_option('analytify_ua_code'); ?>
+                        <?php if ($ua_code) {
+                            $ljmm_analytify = esc_attr(get_option('ljmm_analytify')); ?>
+                            <tr valign="top">
+                                <th scope="row">
+                                    <label for="ljmm_analytify"><?php echo sprintf(__('Add Google Analytics code', LJMM_PLUGIN_DOMAIN)); ?></label>
+                                </th>
+                                <td>
+                                    <input type="checkbox" id="ljmm_analytify" name="ljmm_analytify" value="1" <?php checked($ljmm_analytify, 1); ?>>
+                                    <?php echo sprintf(__('for Analytics profile <b>%s</b> (<a href="/wp-admin/admin.php?page=analytify-settings">configured in Analytify</a>)', LJMM_PLUGIN_DOMAIN), $ua_code); ?>
+                                    <p class="description">
+				                        <?php _e('Since you have the Analytify plugin installed, this will add Google Analytics tracking code to the maintenance page.', LJMM_PLUGIN_DOMAIN); ?>
+                                    </p>
+                                </td>
+                            </tr>
+                        <?php
+                        } ?>
+
+                    <tr valign="top">
+                        <th scope="row">
+                            <label for="ljmm_code_snippet"><?php _e('Inject code snippet', LJMM_PLUGIN_DOMAIN); ?></label>
+                        </th>
+                        <td>
+                            <textarea id="ljmm_code_snippet" name="ljmm_code_snippet" style="width:100%;height:150px"><?php echo esc_attr(get_option('ljmm_code_snippet')); ?></textarea>
+                            <p class="description">
+				                <?php _e('This is useful to add a Javascript snippet to the maintenance page.', LJMM_PLUGIN_DOMAIN); ?>
+				                <?php
+                                if ($ua_code) {
+                                    _e('NOTE: if you are using the option above to add Google Analytics code, do NOT paste GA tracking code here.', LJMM_PLUGIN_DOMAIN);
+                                } ?>
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr valign="middle">
+                        <th scope="row"><?php _e('Custom Stylesheet', LJMM_PLUGIN_DOMAIN); ?></th>
+                        <td>
+                            <?php $ljmm_site_title = esc_attr(get_option('ljmm-site-title')); ?>
+                            <?php $ljmm_stlylesheet_filename = $this->get_css_filename(); ?>
+                            <p class="description"><?php _e("For custom stylesheet, add '$ljmm_stlylesheet_filename' file to your theme folder. If your custom stylesheet file is picked up by the Maintenance Mode, it will be indicated here.", LJMM_PLUGIN_DOMAIN); ?></p>
+                        </td>
+                    </tr>
                 </table>
+
                 <?php submit_button(); ?>
             </form>
         </div>
@@ -345,7 +427,6 @@ class ljMaintenanceMode
           });
         </script>
     <?php
-
     }
 
     /**
@@ -374,36 +455,36 @@ class ljMaintenanceMode
 
         $indicatorClasses = $is_enabled ? 'ljmm-indicator ljmm-indicator--enabled' : 'ljmm-indicator';
 
-        $indicator = array(
+        $indicator = [
             'id' => 'ljmm-indicator',
             'title' => '<span class="ab-icon dashicon-before dashicons-hammer"></span> ' . $status,
             'parent' => false,
             'href' => get_admin_url(null, 'options-general.php?page=lj-maintenance-mode'),
-            'meta' => array(
+            'meta' => [
                 'title' => _x('Maintenance Mode', 'Admin bar indicator', LJMM_PLUGIN_DOMAIN),
                 'class' => $indicatorClasses,
-            )
-        );
+            ]
+        ];
 
         $wp_admin_bar->add_node($indicator);
     }
 
     /**
-     * plugin action links
+     * Plugin action links
      *
      * @since 1.1
      * @return mixed
     */
     public function action_links($links)
     {
-        $links[] = '<a href="'. get_admin_url(null, 'options-general.php?page=lj-maintenance-mode') .'">'._x('Settings', 'Plugin Settings link', LJMM_PLUGIN_DOMAIN).'</a>';
-        $links[] = '<a target="_blank" href="https://plugins.itsluk.as/maintenance-mode/support/">'._x('Support', 'Plugin Support link', LJMM_PLUGIN_DOMAIN).'</a>';
+        $links[] = '<a href="' . get_admin_url(null, 'options-general.php?page=lj-maintenance-mode') . '">' . _x('Settings', 'Plugin Settings link', LJMM_PLUGIN_DOMAIN) . '</a>';
+        $links[] = '<a target="_blank" href="https://plugins.itsluk.as/maintenance-mode/support/">' . _x('Support', 'Plugin Support link', LJMM_PLUGIN_DOMAIN) . '</a>';
 
         return $links;
     }
 
     /**
-     * default site title for maintenance mode
+     * Default site title for maintenance mode
      *
      * @since 2.0
      * @return string
@@ -414,7 +495,7 @@ class ljMaintenanceMode
     }
 
     /**
-     * manage capabilities
+     * Manage capabilities
      *
      * @since 2.0
      */
@@ -444,7 +525,7 @@ class ljMaintenanceMode
     }
 
     /**
-     * get mode
+     * Get mode
      *
      * @since 2.2
      * @return int
@@ -462,7 +543,7 @@ class ljMaintenanceMode
     }
 
     /**
-     * get content
+     * Get content
      *
      * @since 2.3
      * @return mixed
@@ -471,14 +552,32 @@ class ljMaintenanceMode
     {
         $get_content = get_option('ljmm-content');
         $content = (!empty($get_content)) ? $get_content : ljmm_get_defaults('maintenance_message');
-        $content = apply_filters('the_content', $content);
+        $content = apply_filters('wptexturize', $content);
+        $content = apply_filters('wpautop', $content);
+        $content = apply_filters('shortcode_unautop', $content);
+        $content = apply_filters('prepend_attachment', $content);
+        $content = apply_filters('wp_make_content_images_responsive', $content);
+        $content = apply_filters('convert_smilies', $content);
         $content = apply_filters('ljmm_content', $content);
 
-        return $content;
+        // analytify support
+        $analytify = $this->analytify_support();
+
+        // custom code snippets
+        $code = get_option('ljmm_code_snippet');
+
+        // add widgets
+        $widget_before = $this->widget_before();
+        $widget_after = $this->widget_after();
+
+        // Do we have a custom style sheet to include?
+        $stylesheet = $this->custom_stylesheet();
+
+        return $analytify . $code . $stylesheet . $widget_before . $content . $widget_after;
     }
 
     /**
-     * get title
+     * Get title
      *
      * @since 2.3
      * @return string
@@ -490,7 +589,55 @@ class ljMaintenanceMode
     }
 
     /**
-     * before maintenance mode
+     * Get CSS file name
+     *
+     * @since 2.4
+     * @return string
+     */
+    public function get_css_filename()
+    {
+        return apply_filters('ljmm_css_filename', 'maintenance.min.css');
+    }
+
+    /**
+     * Custom stylsheet
+     *
+     * @since 2.4
+     * @return void
+     */
+    public function custom_stylesheet()
+    {
+        $stylesheet = '';
+
+        $url_filename = $this->get_css_filename();
+
+        // Note that if validate_file returns FALSE then it means the we have a valid relative path
+        if (!validate_file($url_filename)) {
+            $url = apply_filters('ljmm_css_url', get_stylesheet_directory() . '/' . $url_filename);
+
+            if (file_exists($url)) {
+                $stylesheet = '<style type="text/css">' . file_get_contents($url) . '</style>';
+            }
+        }
+
+        return $stylesheet;
+    }
+
+    /**
+     * Editor content
+     *
+     * @since 2.4
+     * @return void
+     */
+    public function editor_content()
+    {
+        $content = get_option('ljmm-content');
+        $editor_id = 'ljmm-content';
+        wp_editor($content, $editor_id);
+    }
+
+    /**
+     * Before maintenance mode
      */
     public function before_maintenance_mode()
     {
@@ -499,7 +646,7 @@ class ljMaintenanceMode
     }
 
     /**
-     * is maintenance enabled?
+     * Is maintenance enabled?
      *
      * @since 2.3
      * @return boolean
@@ -536,29 +683,97 @@ class ljMaintenanceMode
         }
 
         if (!(current_user_can('ljmm_view_site') || current_user_can('super admin')) || (isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview')) {
-            wp_die($this->get_content(), $this->get_title(), array('response' => $this->get_mode()));
+            wp_die($this->get_content(), $this->get_title(), ['response' => $this->get_mode()]);
         }
     }
 
-   /**
-    * notify if cache plugin detected
-    *
-    * @since 1.2
-   */
+    /**
+     * Notify if cache plugin detected
+     *
+     * @since 1.2
+    */
     public function notify()
     {
         $cache_plugin_enabled = $this->cache_plugin();
         if (!empty($cache_plugin_enabled)) {
-            $class = "error";
+            $class = 'error';
             $message = $this->cache_plugin();
             if (isset($_GET['settings-updated'])) {
-                echo '<div class="'.$class.'"><p>'.$message.'</p></div>';
+                echo '<div class="' . $class . '"><p>' . $message . '</p></div>';
             }
         }
     }
 
     /**
-     * detect cache plugins
+     * Widget
+     *
+     * @param string $id
+     * @return void
+     */
+    public function widget($id)
+    {
+        $widget = '';
+
+        if (get_option('ljmm_add_widget_areas')) {
+            ob_start();
+            dynamic_sidebar(sprintf('ljmm-%s', $id));
+            $widget = ob_get_clean();
+        }
+
+        return $widget;
+    }
+
+    /**
+     * Widget before
+     *
+     * @return void
+     */
+    public function widget_before()
+    {
+        return $this->widget('before');
+    }
+
+    /**
+     * Widget after
+     *
+     * @return void
+     */
+    public function widget_after()
+    {
+        return $this->widget('after');
+    }
+
+    /**
+     * Analytify plugin support
+     *
+     * @since 2.4
+     * @return void
+     */
+    public function analytify_support()
+    {
+        // Do we have a UA code from Analytify plugin?
+        $analytify = '';
+        if (get_option('ljmm_analytify') && $ua_code = get_option('analytify_ua_code')) {
+            // Yes, so we can generate the code to inject
+            $analytify = <<<EOD
+                <script>
+                  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                  ga('create', '{$ua_code}', 'auto');
+                  ga('send', 'pageview');
+
+                </script>
+EOD;
+        }
+
+        return $analytify;
+    }
+
+    /**
+     * Detect cache plugins
      *
      * @since 1.2
      * @return string

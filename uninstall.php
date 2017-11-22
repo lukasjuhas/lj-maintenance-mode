@@ -1,11 +1,11 @@
 <?php
-// make sure uninstallation is triggered
-if (! defined('WP_UNINSTALL_PLUGIN')) {
+// Make sure uninstallation is triggered
+if (!defined('WP_UNINSTALL_PLUGIN')) {
     exit();
 }
 
 /**
- * remove capabilities
+ * Remove capabilities
  *
  * @since 2.1
  */
@@ -24,7 +24,7 @@ function ljmm_remove_capabilities()
 }
 
 /**
- * uninstall - clean up database removing plugin options
+ * Uninstall - clean up database removing plugin options
  *
  * @since 1.0
 */
@@ -36,6 +36,9 @@ function ljmm_delete_plugin()
     delete_option('ljmm-site-title');
     delete_option('ljmm-roles');
     delete_option('ljmm-mode');
+    delete_option('ljmm_add_widget_areas');
+    delete_option('ljmm_analytify');
+    delete_option('ljmm_code_snippet');
 
     // remove capabilities
     ljmm_remove_capabilities();

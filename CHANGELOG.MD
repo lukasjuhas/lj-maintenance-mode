@@ -1,7 +1,14 @@
 # Changelog
 
+## 2.4
+* Added support for stylesheet, widgets, code snippet injection and Analytify/Google Analytics tracking code (Thanks to Eric Mueller at [@switchplus](https://github.com/switchplus))
+* Overall tidy up of code
+
+## 2.3.2
+* Added SiteOrigin Page Builder compatibility (Thanks to [@relgit](https://github.com/relgit))
+
 ## 2.3.1
-* Hot Fix issue where user got locked out of admin area in maitenanice mode.
+* Hot Fix issue where user got locked out of admin area in maintenance mode.
 
 ## 2.3
 * Small refactor, extract some of the parts to it's own method to make everything a bit cleaner

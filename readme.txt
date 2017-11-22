@@ -43,7 +43,9 @@ Help support and translate this plugin!
 
 `ljmm_admin_bar_indicator_enabled` - Control visibility of admin bar indicator
 
-`limm_css_filename` - The filename of the CSS style sheet (as found in the theme's stylesheet directory) - just the filename, for example: `maintenance.css.min`. (Note: you do not need to use this filter for a stylesheet; see FAQs below.)
+`limm_css_filename` - The filename of the CSS style sheet (as found in the theme's stylesheet directory) - just the filename, for example: `maintenance.min.css`. (Note: you do not need to use this filter for a stylesheet; see FAQs below.)
+
+`ljmm_css_url` - The url of the css file.
 
 **Actions**
 `ljmm_before_mm` - Runs at the beginning of core maintenance method
@@ -72,7 +74,7 @@ Not through the admin interface. You can use a custom stylesheet (see next FAQ) 
 
 = What is the default stylesheet? =
 
-By default, the plugin will use a stylesheet named `maintenance.css.min` in the theme's stylesheet folder. You can specify a different filename by using a Filter (above).
+By default, the plugin will use a stylesheet named `maintenance.min.css` in the theme's stylesheet folder. You can specify a different filename by using a Filter (above).
 
 = How do I add widgets? =
 

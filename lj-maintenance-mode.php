@@ -39,6 +39,7 @@ define('LJMM_PLUGIN_DOMAIN', 'lj-maintenance-mode');
 
 // activation hook
 add_action('activate_' . LJMM_PLUGIN_BASENAME, 'ljmm_install');
+add_action( 'admin_init', 'ljmm_admin_init');
 
 /**
  * Installation
@@ -53,6 +54,22 @@ function ljmm_install()
     // set default content
     ljmm_set_content();
 }
+
+function ljmm_admin_init() {
+	$custom_cap = 'ljmm_control';
+    $grant      = false; 
+	$roles = get_editable_roles();
+	
+	foreach ($GLOBALS['wp_roles']->role_objects as $key => $role) {
+		if($key == 'administrator') {
+			$role->add_cap($custom_cap, true);
+		}
+		if (isset($roles[$key]) && !$role->has_cap($custom_cap)) {
+			$role->add_cap($custom_cap, $grant);
+		}
+	}
+}
+
 
 /**
  * Default hardcoded settings
@@ -175,7 +192,7 @@ class ljMaintenanceMode
     */
     public function ui()
     {
-        add_submenu_page('options-general.php', __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), 'delete_plugins', 'lj-maintenance-mode', [$this, 'settingsPage']);
+        add_submenu_page('options-general.php', __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), 'ljmm_control', 'lj-maintenance-mode', array($this, 'settingsPage'));
     }
 
     /**
@@ -421,7 +438,7 @@ class ljMaintenanceMode
     {
         $enabled = apply_filters('ljmm_admin_bar_indicator_enabled', $enabled = true);
 
-        if (!current_user_can('delete_plugins')) {
+        if (!current_user_can('ljmm_control')) {
             return false;
         }
 

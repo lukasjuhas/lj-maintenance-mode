@@ -18,6 +18,7 @@ function ljmm_remove_capabilities()
         foreach ($wp_roles as $role => $role_details) {
             $get_role = get_role($role);
             $get_role->remove_cap('ljmm_view_site');
+            $get_role->remove_cap('ljmm_control');
         }
     }
 }

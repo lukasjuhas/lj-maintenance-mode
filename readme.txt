@@ -85,7 +85,11 @@ Click "Advanced Settings" and mark the checkbox to add widget areas. Then you wi
 3. Settings page in admin view with default message.
 4. Settings page in admin view with advanced settings.
 5. Example with image and link.
-6. Insert Media available for WYSIWYG.
+6. Custom stylesheet
+7. Example: Custom stylesheet in root theme folder with sample styling
+8. Example using widgets (meta)
+9. Widgets area with two maintenance mode widget areas (before and after)
+
 
 == Changelog ==
 

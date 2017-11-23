@@ -98,6 +98,9 @@ function ljmm_get_defaults($type)
         case 'ljmm_enabled':
             $default = __('Maintenance Mode is currently active. To make sure that it works, open your web page in either private / incognito mode, different browser or simply log out. Logged in users are not affected by the Maintenance Mode.', LJMM_PLUGIN_DOMAIN);
             break;
+        case 'ljmm_add_widget_areas':
+            $default = __('You can add widgets in <strong>Appearance -> Widgets</strong>.', LJMM_PLUGIN_DOMAIN);
+            break;
         default:
             $default = false;
             break;
@@ -382,6 +385,23 @@ class ljMaintenanceMode
                         <?php
                         } ?>
 
+                    <tr valign="middle">
+                        <th scope="row"><?php _e('Custom Stylesheet', LJMM_PLUGIN_DOMAIN); ?></th>
+                        <td>
+                            <?php $ljmm_site_title = esc_attr(get_option('ljmm-site-title')); ?>
+                            <?php $ljmm_stlylesheet_filename = $this->get_css_filename(); ?>
+                            <?php $ljmm_has_custom_stylsheet = (bool) $this->get_custom_stylesheet_url(); ?>
+                            <?php if ($ljmm_has_custom_stylsheet) : ?>
+                                <p>
+                                    <span style="line-height: 1.3; font-weight: 600; color: green;">You are currently using custom stylesheet.</span>
+                                    <span class="description">(<?php _e("'$ljmm_stlylesheet_filename' file in your theme folder", LJMM_PLUGIN_DOMAIN); ?>)</span>
+                                </p>
+                            <?php else : ?>
+                                <p class="description"><?php _e("For custom stylesheet, add '$ljmm_stlylesheet_filename' file to your theme folder. If your custom stylesheet file is picked up by the Maintenance Mode, it will be indicated here.", LJMM_PLUGIN_DOMAIN); ?></p>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+
                     <tr valign="top">
                         <th scope="row">
                             <label for="ljmm_code_snippet"><?php _e('Inject code snippet', LJMM_PLUGIN_DOMAIN); ?></label>
@@ -395,15 +415,6 @@ class ljMaintenanceMode
                                     _e('NOTE: if you are using the option above to add Google Analytics code, do NOT paste GA tracking code here.', LJMM_PLUGIN_DOMAIN);
                                 } ?>
                             </p>
-                        </td>
-                    </tr>
-
-                    <tr valign="middle">
-                        <th scope="row"><?php _e('Custom Stylesheet', LJMM_PLUGIN_DOMAIN); ?></th>
-                        <td>
-                            <?php $ljmm_site_title = esc_attr(get_option('ljmm-site-title')); ?>
-                            <?php $ljmm_stlylesheet_filename = $this->get_css_filename(); ?>
-                            <p class="description"><?php _e("For custom stylesheet, add '$ljmm_stlylesheet_filename' file to your theme folder. If your custom stylesheet file is picked up by the Maintenance Mode, it will be indicated here.", LJMM_PLUGIN_DOMAIN); ?></p>
                         </td>
                     </tr>
                 </table>
@@ -613,19 +624,36 @@ class ljMaintenanceMode
     public function custom_stylesheet()
     {
         $stylesheet = '';
+        $url = $this->get_custom_stylesheet_url();
+
+        if ($url) {
+            $stylesheet = '<style type="text/css">' . file_get_contents($url) . '</style>';
+        }
+
+        return $stylesheet;
+    }
+
+    /**
+     * Check for custom stylesheet
+     *
+     * @since 2.4
+     * @return boolean
+     */
+    public function get_custom_stylesheet_url()
+    {
+        $stylesheet_url = false;
 
         $url_filename = $this->get_css_filename();
 
-        // Note that if validate_file returns FALSE then it means the we have a valid relative path
         if (!validate_file($url_filename)) {
             $url = apply_filters('ljmm_css_url', get_stylesheet_directory() . '/' . $url_filename);
 
             if (file_exists($url)) {
-                $stylesheet = '<style type="text/css">' . file_get_contents($url) . '</style>';
+                $stylesheet_url = $url;
             }
         }
 
-        return $stylesheet;
+        return $stylesheet_url;
     }
 
     /**

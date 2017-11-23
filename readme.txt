@@ -16,8 +16,6 @@ As a web developer working with Wordpress almost every day, very often I came ac
 
 [Maintenance Mode](https://plugins.itsluk.as/maintenance-mode/) is very simple and it's using Wordpress's wp_die() function which is core function of Wordpress, which makes this plugin feel and work as a part of Wordpress core. There is settings page under "Settings" in the main wp-admin menu where you can enable maintenance mode or change content using WYSIWYG editor so you can also add pictures, links etc. When activated and logged in as admin, you can see website as usual, rest of the users / visitors can see maintenance mode. You can see the maintenance mode as admin in preview mode using preview link on the settings page or simply open website in private mode or different browser to double check if it's enabled and working. There is also indicator in admin bar that changes colour to red when maintenance mode is enabled.
 
-Help support and translate this plugin!
-
 **Features:**
 
 * **Simplicity** - Built to be as simple as possible. Easy to use.
@@ -92,10 +90,12 @@ Click "Advanced Settings" and mark the checkbox to add widget areas. Then you wi
 == Changelog ==
 
 = 2.4 =
+* More customisable than ever!
 * Added support for stylesheet, widgets and code snippet injection (Thanks to Eric Mueller at [@switchplus](https://github.com/switchplus))
 * Custom capability (Thanks to [@gabrielbijleveld](https://github.com/gabrielbijleveld))
 * Code refactor and improvements
 * Overall tidy up of the code
+* Update broken support link
 
 = 2.3.2 =
 * Added SiteOrigin Page Builder compatibilty (Thanks to [@relgit](https://github.com/relgit))
@@ -236,5 +236,5 @@ Click "Advanced Settings" and mark the checkbox to add widget areas. Then you wi
 
 == Upgrade Notice ==
 
-= 2.0.4 =
-* Added Lithuanian translation (Thanks to [@gedeminas](https://github.com/gedeminas))
+= 2.4 =
+* More customisable than ever!

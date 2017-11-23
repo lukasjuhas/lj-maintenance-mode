@@ -37,6 +37,7 @@ define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
 define('LJMM_PLUGIN_DOMAIN', 'lj-maintenance-mode');
 define('LJMM_PLUGIN_CAP', 'ljmm_control');
+define('LJMM_SUPPORT_LINK', 'https://wordpress.org/support/plugin/lj-maintenance-mode');
 
 /**
  * Installation
@@ -287,7 +288,7 @@ class ljMaintenanceMode
                     <tr>
                         <th>
                             <a href="<?php echo esc_url(add_query_arg('ljmm', 'preview', bloginfo('url'))); ?>" target="_blank" class="button button-secondary"><?php _e('Preview', LJMM_PLUGIN_DOMAIN); ?></a>
-                            <a class="button button-secondary support" href="https://plugins.itsluk.as/maintenance-mode/support/" target="_blank"><?php _e('Support', LJMM_PLUGIN_DOMAIN); ?></a>
+                            <a class="button button-secondary support" href="<?php echo LJMM_SUPPORT_LINK ?>" target="_blank"><?php _e('Support', LJMM_PLUGIN_DOMAIN); ?></a>
                         </th>
                     </tr>
 
@@ -446,7 +447,7 @@ class ljMaintenanceMode
     }
 
     /**
-     * admin bar indicator
+     * Admin bar indicator
      *
      * @since 1.1
     */
@@ -494,7 +495,7 @@ class ljMaintenanceMode
     public function action_links($links)
     {
         $links[] = '<a href="' . get_admin_url(null, 'options-general.php?page=lj-maintenance-mode') . '">' . _x('Settings', 'Plugin Settings link', LJMM_PLUGIN_DOMAIN) . '</a>';
-        $links[] = '<a target="_blank" href="https://plugins.itsluk.as/maintenance-mode/support/">' . _x('Support', 'Plugin Support link', LJMM_PLUGIN_DOMAIN) . '</a>';
+        $links[] = '<a target="_blank" href="' . LJMM_SUPPORT_LINK . '">' . _x('Support', 'Plugin Support link', LJMM_PLUGIN_DOMAIN) . '</a>';
 
         return $links;
     }
@@ -575,6 +576,7 @@ class ljMaintenanceMode
         $content = apply_filters('wp_make_content_images_responsive', $content);
         $content = apply_filters('convert_smilies', $content);
         $content = apply_filters('ljmm_content', $content);
+        $content = do_shortcode($content);
 
         // analytify support
         $analytify = $this->analytify_support();
@@ -586,7 +588,7 @@ class ljMaintenanceMode
         $widget_before = $this->widget_before();
         $widget_after = $this->widget_after();
 
-        // Do we have a custom style sheet to include?
+        // add custom stylesheet
         $stylesheet = $this->custom_stylesheet();
 
         return $analytify . $code . $stylesheet . $widget_before . $content . $widget_after;

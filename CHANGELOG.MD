@@ -7,6 +7,7 @@
 * Code refactor and improvements
 * Overall tidy up of the code
 * Update broken support link
+* Added shortcode support (Plugins like Contact Form 7 will work from now on)
 
 ## 2.3.2
 * Added SiteOrigin Page Builder compatibility (Thanks to [@relgit](https://github.com/relgit))

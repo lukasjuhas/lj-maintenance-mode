@@ -174,23 +174,12 @@ class ljMaintenanceMode
 
         add_action('ljmm_before_mm', [$this, 'before_maintenance_mode']);
 
+        // add shortcode support
+        add_filter('ljmm_content', 'do_shortcode', 11);
+
         // add widget areas if enabled
         if (get_option('ljmm_add_widget_areas')) {
-            register_sidebar([
-                'id' => 'ljmm-before',
-                'name' => __('Maintenance mode - before content', LJMM_PLUGIN_DOMAIN),
-                'description' => __('', LJMM_PLUGIN_DOMAIN),
-                'before_widget' => "\n" . '<div id="%1$s" class="widget %2$s">',
-                'after_widget' => '</div>' . "\n",
-            ]);
-
-            register_sidebar([
-                'id' => 'ljmm-after',
-                'name' => __('Maintenance mode - after content', LJMM_PLUGIN_DOMAIN),
-                'description' => __('', LJMM_PLUGIN_DOMAIN),
-                'before_widget' => "\n" . '<div id="%1$s" class="widget %2$s">',
-                'after_widget' => '</div>' . "\n",
-            ]);
+            $this->register_widget_sidebars();
         }
     }
 
@@ -576,7 +565,6 @@ class ljMaintenanceMode
         $content = apply_filters('wp_make_content_images_responsive', $content);
         $content = apply_filters('convert_smilies', $content);
         $content = apply_filters('ljmm_content', $content);
-        $content = do_shortcode($content);
 
         // analytify support
         $analytify = $this->analytify_support();
@@ -736,6 +724,32 @@ class ljMaintenanceMode
             if (isset($_GET['settings-updated'])) {
                 echo '<div class="' . $class . '"><p>' . $message . '</p></div>';
             }
+        }
+    }
+
+    /**
+     * Register widget sidebars
+     *
+     * @return void
+     */
+    public function register_widget_sidebars()
+    {
+        if (function_exists('register_sidebar')) {
+            register_sidebar([
+                'id' => 'ljmm-before',
+                'name' => __('Maintenance mode - before content', LJMM_PLUGIN_DOMAIN),
+                'description' => __('', LJMM_PLUGIN_DOMAIN),
+                'before_widget' => "\n" . '<div id="%1$s" class="widget %2$s">',
+                'after_widget' => '</div>' . "\n",
+            ]);
+
+            register_sidebar([
+                'id' => 'ljmm-after',
+                'name' => __('Maintenance mode - after content', LJMM_PLUGIN_DOMAIN),
+                'description' => __('', LJMM_PLUGIN_DOMAIN),
+                'before_widget' => "\n" . '<div id="%1$s" class="widget %2$s">',
+                'after_widget' => '</div>' . "\n",
+            ]);
         }
     }
 

@@ -97,6 +97,7 @@ Click "Advanced Settings" and mark the checkbox to add widget areas. Then you wi
 * Overall tidy up of the code
 * Update broken support link
 * Added shortcode support (Plugins like Contact Form 7 will work from now on)
+* New icons and banners
 
 = 2.3.2 =
 * Added SiteOrigin Page Builder compatibilty (Thanks to [@relgit](https://github.com/relgit))

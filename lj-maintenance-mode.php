@@ -3,7 +3,7 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://plugins.itsluk.as/maintenance-mode/
  * Description: Very simple Maintenance Mode & Coming soon page using default Wordpress markup with no ads or paid upgrades.
- * Version: 2.4
+ * Version: 2.4.1
  * Author: Lukas Juhas
  * Author URI: https://plugins.itsluk.as/
  * Text Domain: lj-maintenance-mode
@@ -26,16 +26,17 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 2.4
+ * @version 2.4.1
  *
  */
 
 // define stuff
-define('LJMM_VERSION', '2.4');
+define('LJMM_VERSION', '2.4.1');
 define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
 define('LJMM_PLUGIN_DOMAIN', 'lj-maintenance-mode');
+define('LJMM_VIEW_SITE_CAP', 'ljmm_view_site');
 define('LJMM_PLUGIN_CAP', 'ljmm_control');
 define('LJMM_SUPPORT_LINK', 'https://wordpress.org/support/plugin/lj-maintenance-mode');
 
@@ -53,28 +54,6 @@ function ljmm_install()
     ljmm_set_content();
 }
 add_action('activate_' . LJMM_PLUGIN_BASENAME, 'ljmm_install');
-
-/**
- * Admin init
- *
- * @since 2.4
- * @return void
- */
-function ljmm_admin_init()
-{
-    $grant = false;
-    $roles = get_editable_roles();
-
-    foreach ($GLOBALS['wp_roles']->role_objects as $key => $role) {
-        if ($key == 'administrator') {
-            $role->add_cap(LJMM_PLUGIN_CAP, true);
-        }
-        if (isset($roles[$key]) && !$role->has_cap(LJMM_PLUGIN_CAP)) {
-            $role->add_cap(LJMM_PLUGIN_CAP, $grant);
-        }
-    }
-}
-add_action('admin_init', 'ljmm_admin_init');
 
 /**
  * Default hardcoded settings
@@ -321,9 +300,8 @@ class ljMaintenanceMode
                         </td>
                     </tr>
 
-                    <?php global $wpdb; ?>
                     <?php $options = get_option('ljmm-roles'); ?>
-                    <?php $wp_roles = get_option($wpdb->prefix . 'user_roles'); ?>
+                    <?php $wp_roles = get_editable_roles(); ?>
                     <?php if ($wp_roles && is_array($wp_roles)) : ?>
                         <tr valign="top">
                             <th scope="row"><?php _e('User Roles', LJMM_PLUGIN_DOMAIN); ?>
@@ -507,9 +485,7 @@ class ljMaintenanceMode
      */
     public function manage_capabilities()
     {
-        global $wpdb;
-
-        $wp_roles = get_option($wpdb->prefix . 'user_roles');
+        $wp_roles = get_editable_roles();
         $all_roles = get_option('ljmm-roles');
 
         // extra checks
@@ -518,16 +494,17 @@ class ljMaintenanceMode
                 $get_role = get_role($role);
 
                 if (is_array($all_roles) && array_key_exists($role, $all_roles)) {
-                    $get_role->add_cap('ljmm_view_site');
+                    $get_role->add_cap(LJMM_VIEW_SITE_CAP);
                 } else {
-                    $get_role->remove_cap('ljmm_view_site');
+                    $get_role->remove_cap(LJMM_VIEW_SITE_CAP);
                 }
             }
         }
 
         // administrator by default
         $admin_role = get_role('administrator');
-        $admin_role->add_cap('ljmm_view_site');
+        $admin_role->add_cap(LJMM_VIEW_SITE_CAP);
+        $admin_role->add_cap(LJMM_PLUGIN_CAP);
     }
 
     /**
@@ -705,7 +682,7 @@ class ljMaintenanceMode
             }
         }
 
-        if (!(current_user_can('ljmm_view_site') || current_user_can('super admin')) || (isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview')) {
+        if (!(current_user_can(LJMM_VIEW_SITE_CAP) || current_user_can('super admin')) || (isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview')) {
             wp_die($this->get_content(), $this->get_title(), ['response' => $this->get_mode()]);
         }
     }

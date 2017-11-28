@@ -1,4 +1,6 @@
 # Changelog
+## 2.4.1
+* Merge capabilities handling, tidy up and potentially fix capabilities issues some of the users have experienced
 
 ## 2.4
 * More customisable than ever!

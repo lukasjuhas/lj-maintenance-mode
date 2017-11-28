@@ -3,7 +3,7 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://plugins.itsluk.as/maintenance-mode/
  * Description: Very simple Maintenance Mode & Coming soon page using default Wordpress markup with no ads or paid upgrades.
- * Version: 2.4.1
+ * Version: 2.4.2
  * Author: Lukas Juhas
  * Author URI: https://plugins.itsluk.as/
  * Text Domain: lj-maintenance-mode
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 2.4.1
+ * @version 2.4.2
  *
  */
 
 // define stuff
-define('LJMM_VERSION', '2.4.1');
+define('LJMM_VERSION', '2.4.2');
 define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -169,7 +169,7 @@ class ljMaintenanceMode
     */
     public function ui()
     {
-        add_submenu_page('options-general.php', __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), LJMM_PLUGIN_CAP, 'lj-maintenance-mode', [$this, 'settingsPage']);
+        add_submenu_page('options-general.php', __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), $this->get_relevant_cap(), 'lj-maintenance-mode', [$this, 'settingsPage']);
     }
 
     /**
@@ -422,7 +422,7 @@ class ljMaintenanceMode
     {
         $enabled = apply_filters('ljmm_admin_bar_indicator_enabled', $enabled = true);
 
-        if (!current_user_can(LJMM_PLUGIN_CAP)) {
+        if (!current_user_can($this->get_relevant_cap())) {
             return false;
         }
 
@@ -685,6 +685,22 @@ class ljMaintenanceMode
         if (!(current_user_can(LJMM_VIEW_SITE_CAP) || current_user_can('super admin')) || (isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview')) {
             wp_die($this->get_content(), $this->get_title(), ['response' => $this->get_mode()]);
         }
+    }
+
+    /**
+     * Get releavant cap
+     *
+     * This has been implementend due to lack of compatiblity with user role
+     * and capabilities plugins that caused some users problems viewing the settings
+     * page. So if user is a super admin, plugin will use 'delete_plugins' cap, otherwise
+     * plugins' cap 'ljmm_control'
+     *
+     * @return void
+     * @since 2.4.2
+     */
+    public function get_relevant_cap()
+    {
+        return is_super_admin() ? 'delete_plugins' : LJMM_PLUGIN_CAP;
     }
 
     /**

@@ -1,4 +1,7 @@
 # Changelog
+## 2.4.2
+* Add workaround capability management to support user role and capabilities plugins by using `delete_plugins` capability for super admins and `ljmm_control` for rest of the users
+
 ## 2.4.1
 * Merge capabilities handling, tidy up and potentially fix capabilities issues some of the users have experienced
 

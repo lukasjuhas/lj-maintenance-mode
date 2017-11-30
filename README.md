@@ -1,4 +1,4 @@
-Maintenance Mode (2.4.2)
+Maintenance Mode (2.4.3)
 ======================
 
 ## Description

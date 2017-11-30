@@ -1,4 +1,7 @@
 # Changelog
+## 2.4.3
+* Added support for older PHP versions as per pre-2.4
+
 ## 2.4.2
 * Add workaround capability management to support user role and capabilities plugins by using `delete_plugins` capability for super admins and `ljmm_control` for rest of the users
 

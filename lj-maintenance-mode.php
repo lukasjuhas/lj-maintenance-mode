@@ -3,7 +3,7 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://plugins.itsluk.as/maintenance-mode/
  * Description: Very simple Maintenance Mode & Coming soon page using default Wordpress markup with no ads or paid upgrades.
- * Version: 2.4.2
+ * Version: 2.4.3
  * Author: Lukas Juhas
  * Author URI: https://plugins.itsluk.as/
  * Text Domain: lj-maintenance-mode
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 2.4.2
+ * @version 2.4.3
  *
  */
 
 // define stuff
-define('LJMM_VERSION', '2.4.2');
+define('LJMM_VERSION', '2.4.3');
 define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -137,21 +137,21 @@ class ljMaintenanceMode
      */
     public function __construct()
     {
-        add_action('admin_menu', [$this, 'ui']);
-        add_action('admin_head', [$this, 'style']);
-        add_action('admin_init', [$this, 'settings']);
-        add_action('admin_init', [$this, 'manage_capabilities']);
+        add_action('admin_menu', array($this, 'ui'));
+        add_action('admin_head', array($this, 'style'));
+        add_action('admin_init', array($this, 'settings'));
+        add_action('admin_init', array($this, 'manage_capabilities'));
 
         // remove old settings. This has been deprecated in 1.2
         delete_option('ljmm-content-default');
 
         // maintenance mode
-        add_action('get_header', [$this, 'maintenance']);
+        add_action('get_header', array($this, 'maintenance'));
 
-        add_action('admin_bar_menu', [$this, 'indicator'], 100);
-        add_filter('plugin_action_links_' . plugin_basename(__FILE__), [$this, 'action_links']);
+        add_action('admin_bar_menu', array($this, 'indicator'), 100);
+        add_filter('plugin_action_links_' . plugin_basename(__FILE__), array($this, 'action_links'));
 
-        add_action('ljmm_before_mm', [$this, 'before_maintenance_mode']);
+        add_action('ljmm_before_mm', array($this, 'before_maintenance_mode'));
 
         // add shortcode support
         add_filter('ljmm_content', 'do_shortcode', 11);
@@ -169,7 +169,7 @@ class ljMaintenanceMode
     */
     public function ui()
     {
-        add_submenu_page('options-general.php', __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), $this->get_relevant_cap(), 'lj-maintenance-mode', [$this, 'settingsPage']);
+        add_submenu_page('options-general.php', __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), $this->get_relevant_cap(), 'lj-maintenance-mode', array($this, 'settingsPage'));
     }
 
     /**
@@ -654,9 +654,9 @@ class ljMaintenanceMode
     public function enabled()
     {
         // enabled
-        if (get_option('ljmm-enabled') || isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview') :
+        if (get_option('ljmm-enabled') || isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview') {
             return true;
-        endif;
+        }
 
         // disabled
         return false;

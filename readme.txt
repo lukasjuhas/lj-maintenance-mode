@@ -1,10 +1,10 @@
 === Maintenance Mode ===
 Contributors: LukasNeptun
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2XPA4CKT836FJ
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LL6TN86CDPYQN
 Tags: maintenance, maintenance mode, website maintenance, coming soon, under construction, offline, site maintenance,
 Requires at least: 3.5
-Tested up to: 4.9
-Stable tag: 2.4.2
+Tested up to: 4.9.1
+Stable tag: 2.4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -92,6 +92,9 @@ Click "Advanced Settings" and mark the checkbox to add widget areas. Then you wi
 
 
 == Changelog ==
+= 2.4.3 =
+* Added support for older PHP versions as per pre-2.4
+
 = 2.4.2 =
 * Add workaround capability management to support user role and capabilities plugins by using `delete_plugins` capability for super admins and `ljmm_control` for rest of the users
 
@@ -247,5 +250,5 @@ Click "Advanced Settings" and mark the checkbox to add widget areas. Then you wi
 
 == Upgrade Notice ==
 
-= 2.4.2 =
-* 2.4 - More customisable than ever! 2.4.2 - Fixed issues around roles and capabilities
+= 2.4.3 =
+* 2.4 - More customisable than ever! 2.4.3 - Added support for older PHP versions as per pre-2.4

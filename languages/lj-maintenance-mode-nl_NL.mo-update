@@ -1,0 +1,32 @@
+Þ•    )      d      ¬      ¬  {   ­  (   )     R     o  $   ‹     °     Â     Ó     å  ;   í     )  «   1     Ý  œ   ô  j   ‘  m   ü  m   j     Ø     ì     ø       ×        í  "   ò  2        H     f     ‚  
+   Š     •  C     V   á  
+   8	  D   C	  
+   ˆ	  l   “	      
+  >   
+     Y
+  +   t
+  Ö   
+  z   w  3   ò     &
+     *
+     .
+     >
+     X
+     n
+  	   …
+  u   
+       ž   	  !   ¨  ”   Ê  t   _  w   Ô  w   L     Ä     â     î     ú  í   
+     ø  "   þ  +   !     M     Z  	   _     i  
+   v  O   „  V   Ô  
+   +  .   9     h  r   y     ì  F        H  +   c   <h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p> Add widget areas above and below content Admin bar indicatorDisabled Admin bar indicatorEnabled Admin bar indicatorMaintenance Mode Advanced Settings Coming Soon Page Custom Stylesheet Default Default sets HTTP to 503, coming soon will set HTTP to 200. Enabled For custom stylesheet, add 'maintenance.min.css' file to your theme folder. If your custom stylesheet file is picked up by the Maintenance Mode, it will be indicated here. Hide Advanced Settings If you are putting your site into maintenance mode for a longer period of time, you should set this to "Coming Soon Page". Otherwise use "Maintenance Mode". Important: Don't forget to flush your cache using Comet Cache when enabling or disabling Maintenance Mode. Important: Don't forget to flush your cache using W3 Total Cache when enabling or disabling Maintenance Mode. Important: Don't forget to flush your cache using WP Super Cache when enabling or disabling Maintenance Mode. Inject code snippet Learn more. Lukas Juhas Maintenance Mode Maintenance Mode is currently active. To make sure that it works, open your web page in either private / incognito mode, different browser or simply log out. Logged in users are not affected by the Maintenance Mode. Mode Overrides default site meta title. Please note that this does NOT apply to admin area Plugin Settings linkSettings Plugin Support linkSupport Preview Site Title Support This is useful to add a Javascript snippet to the maintenance page. Tick the ones that can access front-end of your website if maintenance mode is enabled Toggle all User Role control is currently not avialable on your website. Sorry! User Roles Very simple Maintenance Mode & Coming soon page using default Wordpress markup with no ads or paid upgrades. Website Under Maintenance You can add widgets in <strong>Appearance -> Widgets</strong>. https://plugins.itsluk.as/ https://plugins.itsluk.as/maintenance-mode/ Project-Id-Version: Maintenance Mode 2.2.3
+Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-mode
+POT-Creation-Date: 2018-04-01 11:25+0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+PO-Revision-Date: 2018-04-01 11:34+0000
+Last-Translator: Edward Dekker <sitemaster@edwarddekker.nl>
+Language-Team: Dutch
+X-Generator: Loco https://localise.biz/
+Language: nl_NL
+Plural-Forms: nplurals=2; plural=n != 1; <h1>Website in Onderhoud</h1><p>Onze Website ondergaat momenteel een "
+"geplande onderhoudsbeurt. Kom snel weer terug.</p> Voeg een widgetruimte toe boven en onder uw inhoud. Uit Aan Onderhoudsmodus Geavanceerde instellingen Kom snel terug pagina Aangepaste Stijlpagina Standaard Standaard staat de instelling op HTTP code 503. En geeft HTTP code 200 door als je een "kom snel terug pagina" maakt. Aan Voor een aangepaste stijlpagina kunt u een 'maintenance.min.css' bestand toevoegen in de root van uw themafolder. Onderhoudsmodus zal dit vinden en gebruiken. Verberg geavanceerde instellingen Als je je site voor langere tijd in Onderhoudsmodus plaatst, gebruik de "Kom snel terug pagina". In overige gevallen, gebruik dan "Onderhoudsmodus"" Belangrijk: Vergeet niet de cache op te schonen als je onderhoudsmodus aan of uit zet in combinatie met Comet Cache. Belangrijk: Vergeet niet de cache op te schonen als je onderhoudsmodus aan of uit zet in combinatie met W3 Total Cache. Belangrijk: Vergeet niet de cache op te schonen als je onderhoudsmodus aan of uit zet in combinatie met WP Super Cache. Injecteer een aangepaste code Lees verder Lukas Juhas Onderhoudsmodus Onderhoudsmodus is momenteel actief, Om te controleren of het ook werkt moet je webpagina in privÃ©- of incognitomodus zetten, gebruik een andere webbrowser of log simpelweg uit. Ingelogde gebruikers merken niets van de "Onderhoudsmodus" Staat Overschrijf de normale websitenaam Dit heeft geen toepassing op het admin-menu Instellingen Help Voorbeeld Websitetitel Ondersteuning Dit is handig als je een JavaScript code wilt gebruiken in de onderhoudspagina. Selecteer gebruikers die de site kunnen bezoeken als de onderhoudsmodus is geactiveerd Alles aan/uit Gebruikersrol is nu niet beschikbaar, excuses! Gebruikersrollen Het is een heel eenvoudige onderhoudsmodus dat voor iedereen geschikt is en gemakkelijk in gebruik zonder reclame. Website in onderhoud Je kunt widgets toevoegen in <strong>Instellingen -> Widgets</strong>. https://plugins.itsluk.as/ https://plugins.itsluk.as/maintenance-mode/ 

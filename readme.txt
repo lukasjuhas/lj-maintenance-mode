@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: maintenance, maintenance mode, website maintenance, coming soon, under construction, offline, site maintenance,
 Requires at least: 3.5
 Tested up to: 5.8
-Stable tag: 2.4.3
+Stable tag: 2.4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -92,6 +92,9 @@ Click "Advanced Settings" and mark the checkbox to add widget areas. Then you wi
 
 
 == Changelog ==
+= 2.4.4 =
+* Bumped up "Tested up to"
+
 = 2.4.3 =
 * Added support for older PHP versions as per pre-2.4
 

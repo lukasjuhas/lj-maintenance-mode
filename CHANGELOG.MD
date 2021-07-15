@@ -1,4 +1,8 @@
 # Changelog
+
+## 2.4.4
+* Bumped up "Tested up to"
+
 ## 2.4.3
 * Added support for older PHP versions as per pre-2.4
 

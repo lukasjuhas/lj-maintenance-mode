@@ -20,7 +20,8 @@ As a web developer working with Wordpress almost every day, very often I came ac
 * **Role Control** - User Role control is available since 2.0
 * **WPML Compatible** - Plugin is compatible with WPML plugin
 * **Optional widgets** - Optionally add widgets above and/or below the content
-* **Optional style sheet** - Optionally add a custom style sheet
+* **Optional style sheet** - Optionally add a custom style sheet for the maintenance page.
+* **Optional frontend style sheet** - Optionally add a custom style sheet for the frontend pages; for the allowed pages.
 * **Optional ability to add code snippet** - Optionally add a code snippet to the page.
 * **Support for Analytify plugin** - If you use the Analytify plugin, you can automatically insert the Google Analytics tracking code.
 
@@ -36,6 +37,9 @@ Bugs and pull requests are welcomed.
 
 `ljmm_css_url` - The url of the css file.
 
+`limm_css_frontend_filename` - The filename of the CSS style sheet (as found in the theme's stylesheet directory) - just the filename, for example: `maintenance.min.frontend.css`. (Note: you do not need to use this filter for a stylesheet; see FAQs below.)
+
+`ljmm_css_frontend_url` - The url of the css frontend file.
 
 ## Actions ##
 `ljmm_before_mm` - Runs at the beginning of core maintenance method
@@ -43,7 +47,7 @@ Bugs and pull requests are welcomed.
 ## Wordpress Info
 
 * Requires at least: 3.5.0
-* Tested up to: 4.9
+* Tested up to: 5.8.2
 
 ## Installation
 
@@ -60,11 +64,16 @@ Not through the admin interface. You can use a custom stylesheet (see next FAQ) 
 
 3. What is the default stylesheet?<br>
 By default, the plugin will use a stylesheet named `maintenance.min.css` in the theme's stylesheet folder. You can specify a different filename by using a Filter (above).
+It is loaded in the maintenance mode page.
 
-4. How do I add widgets?<br>
+4. What is the frontend stylesheet?<br>
+By default, the plugin will use a stylesheet named `maintenance.min.frontend.css` in the theme's stylesheet folder. You can specify a different filename by using a Filter (above).
+It is loaded as part of the frontend (logged in) user experience, not the maintenance mode page.
+
+5. How do I add widgets?<br>
 Click "Advanced Settings" and mark the checkbox to add widget areas. Then you will find two new widget areas in WordPress's Widgets page, for above and below the content.
 
-5. Plugin doesn't seem to work. What should I do ?<br>
+6. Plugin doesn't seem to work. What should I do ?<br>
 First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, flush all your cache. Secondly, disable all other plugins and try enabling just Maintenance Mode and see if problem persist. This should solve most common problems. If not, don't hesitate to contact me via Support button from Settings page
 
 ## Changelog

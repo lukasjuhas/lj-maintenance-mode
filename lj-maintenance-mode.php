@@ -3,7 +3,7 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://plugins.itsluk.as/maintenance-mode/
  * Description: Very simple Maintenance Mode & Coming soon page using default Wordpress markup with no ads or paid upgrades.
- * Version: 2.4.4
+ * Version: 2.5
  * Author: Lukas Juhas
  * Author URI: https://plugins.itsluk.as/
  * Text Domain: lj-maintenance-mode
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 2.4.4
+ * @version 2.5
  *
  */
 
 // define stuff
-define('LJMM_VERSION', '2.4.4');
+define('LJMM_VERSION', '2.5');
 define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -74,6 +74,9 @@ function ljmm_get_defaults($type)
             break;
         case 'warning_comet_cache':
             $default = __("Important: Don't forget to flush your cache using Comet Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            break;
+        case 'warning_wp_rocket_cache':
+            $default = __("Important: Don't forget to flush your cache using WP Rocket when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
             break;
         case 'ljmm_enabled':
             $default = __('Maintenance Mode is currently active. To make sure that it works, open your web page in either private / incognito mode, different browser or simply log out. Logged in users are not affected by the Maintenance Mode.', LJMM_PLUGIN_DOMAIN);
@@ -122,6 +125,22 @@ function ljmm_load_textdomain()
     load_plugin_textdomain(LJMM_PLUGIN_DOMAIN, false, dirname(plugin_basename(__FILE__)) . '/languages/');
 }
 add_action('plugins_loaded', 'ljmm_load_textdomain');
+
+/**
+ * Enqueue custom frontend stylesheet ... for logged in users (not the maintenance page).
+ *
+ * @since 2.5
+ */
+function ljmm_enqueue_custom_frontend_stylesheet()
+{
+    $ljmm_enabled = esc_attr( get_option('ljmm-enabled') );
+    if ( ! empty( $ljmm_enabled ) ) {
+        if ( file_exists( get_stylesheet_directory().'/maintenance.min.frontend.css' ) ) {
+            wp_enqueue_style( 'ljmm_maintenance-mode-frontend-style', get_stylesheet_directory_uri().'/maintenance.min.frontend.css' );
+        }
+    }
+}
+add_action( 'wp_enqueue_scripts', 'ljmm_enqueue_custom_frontend_stylesheet' );
 
 /**
  * Main class
@@ -328,7 +347,7 @@ class ljMaintenanceMode
                         <tr valign="top">
                             <th scope="row" colspan="2">
                                 <p class="description"><?php _e('User Role control is currently not available on your website. Sorry!', LJMM_PLUGIN_DOMAIN); ?></p>
-                            </td>
+                            </th>
                         </tr>
                     <?php endif; ?>
 
@@ -356,7 +375,7 @@ class ljMaintenanceMode
                     <tr valign="middle">
                         <th scope="row"><?php _e('Custom Stylesheet', LJMM_PLUGIN_DOMAIN); ?></th>
                         <td>
-                            <?php $ljmm_site_title = esc_attr(get_option('ljmm-site-title')); ?>
+                            <?php /* $ljmm_site_title = esc_attr(get_option('ljmm-site-title')); // Variable not used. */ ?>
                             <?php $ljmm_stlylesheet_filename = $this->get_css_filename(); ?>
                             <?php $ljmm_has_custom_stylsheet = (bool) $this->get_custom_stylesheet_url(); ?>
                             <?php if ($ljmm_has_custom_stylsheet) : ?>
@@ -366,6 +385,22 @@ class ljMaintenanceMode
                                 </p>
                             <?php else : ?>
                                 <p class="description"><?php _e("For custom stylesheet, add '$ljmm_stlylesheet_filename' file to your theme folder. If your custom stylesheet file is picked up by the Maintenance Mode, it will be indicated here.", LJMM_PLUGIN_DOMAIN); ?></p>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+
+                    <tr valign="middle">
+                        <th scope="row"><?php _e('Custom Stylesheet', LJMM_PLUGIN_DOMAIN); ?></th>
+                        <td>
+                            <?php $ljmm_stlylesheet_frontend_filename = $this->get_css_frontend_filename(); ?>
+                            <?php $ljmm_has_custom_frontend_stylsheet = (bool) $this->get_custom_frontend_stylesheet_url(); ?>
+                            <?php if ($ljmm_has_custom_frontend_stylsheet) : ?>
+                                <p>
+                                <span style="line-height: 1.3; font-weight: 600; color: green;">You are currently using custom frontend stylesheet.</span>
+                                <span class="description">(<?php _e("'$ljmm_stlylesheet_frontend_filename' file in your theme folder", LJMM_PLUGIN_DOMAIN); ?>)</span>
+                                </p>
+                            <?php else : ?>
+                                <p class="description"><?php _e("For custom stylesheet, add '$ljmm_stlylesheet_frontend_filename' file to your theme folder. If your custom stylesheet file is picked up by the Maintenance Mode, it will be indicated here.", LJMM_PLUGIN_DOMAIN); ?></p>
                             <?php endif; ?>
                         </td>
                     </tr>
@@ -451,6 +486,7 @@ class ljMaintenanceMode
         ];
 
         $wp_admin_bar->add_node($indicator);
+        return true;
     }
 
     /**
@@ -529,7 +565,7 @@ class ljMaintenanceMode
      * Get content
      *
      * @since 2.3
-     * @return mixed
+     * @return string
      */
     public function get_content()
     {
@@ -583,10 +619,21 @@ class ljMaintenanceMode
     }
 
     /**
+     * Get CSS front-end file name
+     *
+     * @since 2.5
+     * @return string
+     */
+    public function get_css_frontend_filename()
+    {
+        return apply_filters('ljmm_css_frontend_filename', 'maintenance.min.frontend.css');
+    }
+
+    /**
      * Custom stylsheet
      *
      * @since 2.4
-     * @return void
+     * @return string
      */
     public function custom_stylesheet()
     {
@@ -614,6 +661,47 @@ class ljMaintenanceMode
 
         if (!validate_file($url_filename)) {
             $url = apply_filters('ljmm_css_url', get_stylesheet_directory() . '/' . $url_filename);
+
+            if (file_exists($url)) {
+                $stylesheet_url = $url;
+            }
+        }
+
+        return $stylesheet_url;
+    }
+
+    /**
+     * Custom frontend stylsheet
+     *
+     * @since 2.5
+     * @return string
+     */
+    public function custom_frontend_stylesheet()
+    {
+        $stylesheet = '';
+        $url = $this->get_custom_frontend_stylesheet_url();
+
+        if ($url) {
+            $stylesheet = '<style type="text/css">' . file_get_contents($url) . '</style>';
+        }
+
+        return $stylesheet;
+    }
+
+    /**
+     * Check for custom frontend stylesheet
+     *
+     * @since 2.5
+     * @return boolean
+     */
+    public function get_custom_frontend_stylesheet_url()
+    {
+        $stylesheet_url = false;
+
+        $url_filename = $this->get_css_frontend_filename();
+
+        if (!validate_file($url_filename)) {
+            $url = apply_filters('ljmm_css_frontend_url', get_stylesheet_directory() . '/' . $url_filename);
 
             if (file_exists($url)) {
                 $stylesheet_url = $url;
@@ -678,24 +766,107 @@ class ljMaintenanceMode
         // TML Compatibility
         if (class_exists('Theme_My_Login')) {
             if (Theme_My_Login::is_tml_page()) {
-                return;
+                return false;
             }
         }
 
         if (!(current_user_can(LJMM_VIEW_SITE_CAP) || current_user_can('super admin')) || (isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview')) {
+
+            // Reference: https://www.php.net/manual/en/reserved.variables.server.php
+            $remote_ip = isset( $_SERVER['REMOTE_ADDR'] ) ? $_SERVER['REMOTE_ADDR'] : '';
+            $request_uri = isset( $_SERVER['REQUEST_URI'] ) ? rawurldecode( $_SERVER['REQUEST_URI'] ) : '';
+            $request_uri = ltrim($request_uri);  // [REQUEST_URI] always starts with '/'.
+            $request_uri = rtrim($request_uri);
+            $request_uri = rtrim($request_uri, '/');
+            $request_referer = isset( $_SERVER['REQUEST_REFERER'] ) ? $_SERVER['REQUEST_REFERER'] : '';
+
+            // $_SERVER['REMOTE_ADDR'] will always be only IPv6 or IPv4; it all depends upon how the connection to the server was made.
+            // $allow_remote_ip_txt = '192.168.0.10
+            //                         127.0.0.1
+            //                         2001:8004:5110:1d97:61e6:4c30:1a0c:7ecc
+            //                         203.214.74.111';
+            // $allow_request_uri_strictly_txt = 'products
+            //                                    member/
+            //                                    /about
+            //                                    /courses/
+            //                                    /wp-admin';
+            // $allow_request_uri_contains_txt = 'blog
+            //                                    /tags
+            //                                    /categories/';
+            // $allow_request_referer_txt = 'camo
+            //                               go-camo
+            //                               github-camo';
+            $allow_remote_ip_txt = '';
+            $allow_request_uri_strictly_txt = '/wp-admin/';  // Handy default rule for alternative login.
+            $allow_request_uri_contains_txt = '';
+            $allow_request_referer_txt = '';
+
+            // Convert from multi-line string to an array of strings.
+            $allow_remote_ip_list = preg_split("/[\f\r\n]+/", $allow_remote_ip_txt);
+            $allow_request_uri_strictly_list = preg_split("/[\f\r\n]+/", $allow_request_uri_strictly_txt);
+            $allow_request_uri_contains_list = preg_split("/[\f\r\n]+/", $allow_request_uri_contains_txt);
+            $allow_request_referer_list = preg_split("/[\f\r\n]+/", $allow_request_referer_txt);
+
+            // Validate current request against list of allowed IPs.
+            if (!empty($remote_ip) && is_array($allow_remote_ip_list) === true) {
+                foreach ($allow_remote_ip_list as $needle) {
+                    $needle = trim($needle);
+                    if (!empty($needle) && !stristr($remote_ip, $needle) === false) {
+                        // Could add a filter for 'Yes, it is allowed' here.
+                        return false;
+                    }
+                }
+            }
+
+            // Validate current request against list of URIs (strict matching) ... blocking access to child pages.
+            if (!empty($request_uri) && is_array($allow_request_uri_strictly_list) === true) {
+                foreach ($allow_request_uri_strictly_list as $needle) {
+                    $needle = ltrim($needle);
+                    $needle = '/'.ltrim($needle, '/'); // Ensure prefix is '/', always.
+                    $needle = rtrim($needle);
+                    $needle = rtrim($needle, '/');     // Remove suffix of '/'.
+                    if (!empty($needle) && $request_uri === $needle) {
+                        // Could add a filter for 'Yes, it is allowed' here.
+                        return false;
+                    }
+                }
+            }
+
+            // Validate current request against list of URIs (contains/sloppy matching) ... allowing child pages to show.
+            if (!empty($request_uri) && is_array($allow_request_uri_contains_list) === true) {
+                foreach ($allow_request_uri_contains_list as $needle) {
+                    $needle = trim($needle);
+                    if (!empty($needle) && !stristr($request_uri, $needle) === false) {
+                        // Could add a filter for 'Yes, it is allowed' here.
+                        return false;
+                    }
+                }
+            }
+
+            // Validate current request against list of referers (contains/sloppy matching) ... allowing child pages to show.
+            if (!empty($request_referer) && is_array($allow_request_referer_list) === true) {
+                foreach ($allow_request_referer_list as $needle) {
+                    $needle = trim($needle);
+                    if (!empty($needle) && !stristr($request_referer, $needle) === false) {
+                        // Could add a filter for 'Yes, it is allowed' here.
+                        return false;
+                    }
+                }
+            }
+
             wp_die($this->get_content(), $this->get_title(), ['response' => $this->get_mode()]);
         }
     }
 
     /**
-     * Get releavant cap
+     * Get relevant cap
      *
-     * This has been implementend due to lack of compatiblity with user role
+     * This has been implemented due to lack of compatibility with user role
      * and capabilities plugins that caused some users problems viewing the settings
      * page. So if user is a super admin, plugin will use 'delete_plugins' cap, otherwise
      * plugins' cap 'ljmm_control'
      *
-     * @return void
+     * @return string
      * @since 2.4.2
      */
     public function get_relevant_cap()
@@ -750,7 +921,7 @@ class ljMaintenanceMode
      * Widget
      *
      * @param string $id
-     * @return void
+     * @return string|false
      */
     public function widget($id)
     {
@@ -768,7 +939,7 @@ class ljMaintenanceMode
     /**
      * Widget before
      *
-     * @return void
+     * @return false|string
      */
     public function widget_before()
     {
@@ -778,7 +949,7 @@ class ljMaintenanceMode
     /**
      * Widget after
      *
-     * @return void
+     * @return false|string
      */
     public function widget_after()
     {
@@ -789,7 +960,7 @@ class ljMaintenanceMode
      * Analytify plugin support
      *
      * @since 2.4
-     * @return void
+     * @return string
      */
     public function analytify_support()
     {
@@ -836,6 +1007,11 @@ EOD;
         // add comet cache support
         if (in_array('comet-cache/comet-cache.php', apply_filters('active_plugins', get_option('active_plugins')))) {
             $message = ljmm_get_defaults('warning_comet_cache');
+        }
+
+        // add WP Rocket support
+        if (in_array('wp-rocket/wp-rocket.php', apply_filters('active_plugins', get_option('active_plugins')))) {
+            $message = ljmm_get_defaults('warning_wp_rocket_cache');
         }
 
         return $message;

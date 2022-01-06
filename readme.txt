@@ -92,6 +92,14 @@ Click "Advanced Settings" and mark the checkbox to add widget areas. Then you wi
 
 
 == Changelog ==
+= 2.5 =
+* Added WP Rocket support. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Added "maintenance.min.frontend.css" feature. When detected in theme directory, this CSS file will be loaded in the frontend to show logged in users that maintenance mode is active. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Added filter "ljmm_css_frontend_filename".  (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Added filter "ljmm_css_frontend_url".  (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Commit contains unit tested (functional) core for 'an exception allow list for non-logged in access to resources' for REMOTE_ADDR, REQUEST_URI (Strict Match), REQUEST_URI (Contains/Sloppy Match) and HTTP_REFERER; but still needs a settings page implementation.
+* Missing language translations for new strings in settings page.
+
 = 2.4.4 =
 * Bumped up "Tested up to"
 
@@ -115,7 +123,7 @@ Click "Advanced Settings" and mark the checkbox to add widget areas. Then you wi
 * New icons and banners
 
 = 2.3.2 =
-* Added SiteOrigin Page Builder compatibilty (Thanks to [@relgit](https://github.com/relgit))
+* Added SiteOrigin Page Builder compatibility (Thanks to [@relgit](https://github.com/relgit))
 
 = 2.3.1 =
 * Hot Fix issue where user got locked out of admin area in maintenance mode.
@@ -126,7 +134,7 @@ Click "Advanced Settings" and mark the checkbox to add widget areas. Then you wi
 * Move mode up to the "main" setting area instead of advanced settings
 * From now on, `init` hook instead of `get_header` is used for maintenance mode
 * Dedicated method to check if maintenance mode is enabled to make things cleaner
-* Improve current_user_can checks. From codex: current_user_can( $capability ) will aways return true if user is Super Admin, unless specifically denied - see [inline source code](https://developer.wordpress.org/reference/classes/wp_user/has_cap/)
+* Improve current_user_can checks. From codex: current_user_can( $capability ) will always return true if user is Super Admin, unless specifically denied - see [inline source code](https://developer.wordpress.org/reference/classes/wp_user/has_cap/)
 * Update readme
 * Preview mode will now perform capabilities check. (Thanks to [@esemlabel](https://wordpress.org/support/users/esemlabel/))
 * Added Comet Cache support. (Thanks to [@doume](https://wordpress.org/support/users/doume/))

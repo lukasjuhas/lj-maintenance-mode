@@ -3,14 +3,14 @@
  * Plugin Name: Maintenance Mode
  * Plugin URI: https://plugins.itsluk.as/maintenance-mode/
  * Description: Very simple Maintenance Mode & Coming soon page using default Wordpress markup with no ads or paid upgrades.
- * Version: 2.5
+ * Version: 2.5.1
  * Author: Lukas Juhas
  * Author URI: https://plugins.itsluk.as/
  * Text Domain: lj-maintenance-mode
  * License: GPL2
  * Domain Path: /languages/
  *
- * Copyright 2014-2017  Lukas Juhas
+ * Copyright 2014-2022  Lukas Juhas
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2, as
  * published by the Free Software Foundation.
@@ -26,12 +26,12 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 2.5
+ * @version 2.5.1
  *
  */
 
 // define stuff
-define('LJMM_VERSION', '2.5');
+define('LJMM_VERSION', '2.5.1');
 define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -77,6 +77,9 @@ function ljmm_get_defaults($type)
             break;
         case 'warning_wp_rocket_cache':
             $default = __("Important: Don't forget to flush your cache using WP Rocket when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            break;
+        case 'warning_autoptimize_cache':
+            $default = __("Important: Don't forget to flush your cache using Autoptimize when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
             break;
         case 'ljmm_enabled':
             $default = __('Maintenance Mode is currently active. To make sure that it works, open your web page in either private / incognito mode, different browser or simply log out. Logged in users are not affected by the Maintenance Mode.', LJMM_PLUGIN_DOMAIN);
@@ -135,12 +138,28 @@ function ljmm_enqueue_custom_frontend_stylesheet()
 {
     $ljmm_enabled = esc_attr( get_option('ljmm-enabled') );
     if ( ! empty( $ljmm_enabled ) ) {
-        if ( file_exists( get_stylesheet_directory().'/maintenance.min.frontend.css' ) ) {
+       if ( file_exists( get_stylesheet_directory().'/maintenance.min.frontend.css' ) ) {
             wp_enqueue_style( 'ljmm_maintenance-mode-frontend-style', get_stylesheet_directory_uri().'/maintenance.min.frontend.css' );
         }
     }
 }
 add_action( 'wp_enqueue_scripts', 'ljmm_enqueue_custom_frontend_stylesheet' );
+
+/**
+ * Enqueue custom login stylesheet ... for the standard login page (not the maintenance page).
+ *
+ * @since 2.5.1
+ */
+function ljmm_enqueue_custom_login_stylesheet()
+{
+    $ljmm_enabled = esc_attr( get_option('ljmm-enabled') );
+    if ( ! empty( $ljmm_enabled ) ) {
+        if ( file_exists( get_stylesheet_directory().'/maintenance.min.login.css' ) ) {
+            wp_enqueue_style( 'ljmm_maintenance-mode-login-style', get_stylesheet_directory_uri().'/maintenance.min.login.css' );
+        }
+    }
+}
+add_action( 'login_enqueue_scripts', 'ljmm_enqueue_custom_login_stylesheet' );
 
 /**
  * Main class
@@ -165,7 +184,10 @@ class ljMaintenanceMode
         delete_option('ljmm-content-default');
 
         // maintenance mode
-        add_action('get_header', array($this, 'maintenance'));
+        add_action('wp_loaded', array($this, 'maintenance'));
+        // add_action('wp', array($this, 'maintenance'));
+        // add_action('template_redirect', array($this, 'maintenance'));
+        // add_action('get_header', array($this, 'maintenance'));
 
         add_action('admin_bar_menu', array($this, 'indicator'), 100);
         add_filter('plugin_action_links_' . plugin_basename(__FILE__), array($this, 'action_links'));
@@ -216,6 +238,12 @@ class ljMaintenanceMode
         register_setting('ljmm', 'ljmm-site-title');
         register_setting('ljmm', 'ljmm-roles');
         register_setting('ljmm', 'ljmm-mode');
+        register_setting('ljmm', 'ljmm-allow_remote_ip');
+        register_setting('ljmm', 'ljmm-allow_request_uri_strictly');
+        register_setting('ljmm', 'ljmm-allow_request_uri_contains');
+        register_setting('ljmm', 'ljmm-allow_request_referer');
+        register_setting('ljmm', 'ljmm-allow_request_user_agent');
+        register_setting('ljmm', 'ljmm-allow_request_query_string');
 
         // set the content
         ljmm_set_content();
@@ -351,7 +379,131 @@ class ljMaintenanceMode
                         </tr>
                     <?php endif; ?>
 
-                    <?php
+                    <tr valign="middle">
+                        <th scope="row"><?php _e('Allowed IPs (Contains)', LJMM_PLUGIN_DOMAIN); ?></th>
+                        <td>
+                            <textarea name="ljmm-allow_remote_ip" id="ljmm-allow_remote_ip" placeholder="<?php echo "192.168.0.10\n127.0.0.1\n2001:8004:5110:1d97:61e6:4c30:1a0c:7ecc\n203.214.74.\n2001:8004:5110:1d97:61e6:"; ?>" style="width:100%;height:150px;"><?php echo esc_attr(get_option('ljmm-allow_remote_ip')); ?></textarea>
+                            <p class="description">
+                                <?php
+                                _e('Enter IPv4 or IPv6 values, one per line.', LJMM_PLUGIN_DOMAIN);
+                                echo '<br>'.__('Which IP specification gets used? That all depends upon how the remote caller established the connection.', LJMM_PLUGIN_DOMAIN);
+                                echo '<br>'.__('Partial IP values are ok; especially, when you want to identify a whole subnet.', LJMM_PLUGIN_DOMAIN);
+                                $remote_ip = isset( $_SERVER['REMOTE_ADDR'] ) ? $_SERVER['REMOTE_ADDR'] : '';
+                                if (!empty($remote_ip)) {
+                                    echo '<br>'.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[REMOTE_ADDR]</a> '.__('which identifies the current Remote IP:', LJMM_PLUGIN_DOMAIN).' <strong>'.$remote_ip.'</strong>';
+                                }
+                                $server_ip = isset( $_SERVER['SERVER_ADDR'] ) ? $_SERVER['SERVER_ADDR'] : '';
+                                if (!empty($server_ip)) {
+                                    echo '<br><strong>'.__('Tip:', LJMM_PLUGIN_DOMAIN).'</strong> <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[SERVER_ADDR]</a> '.__('identifies this server is at Server IP:', LJMM_PLUGIN_DOMAIN).' <strong>'.$server_ip.'</strong>';
+                                }
+                                ?>
+                            </p>
+                        </td>
+                    </tr>
+
+                  <tr valign="middle">
+                    <th scope="row"><?php _e('Allowed URIs (Strict)', LJMM_PLUGIN_DOMAIN); ?></th>
+                    <td>
+                      <textarea name="ljmm-allow_request_uri_strictly" id="ljmm-allow_request_uri_strictly" placeholder="<?php echo "/products\n/resources/free/\n/wp-admin/admin-ajax.php\n/wp-cron.php\n/wp-mail.php\n/xmlrpc.php"; ?>" style="width:100%;height:150px;"><?php echo esc_attr(get_option('ljmm-allow_request_uri_strictly')); ?></textarea>
+                      <p class="description">
+                          <?php
+                          echo __('The full relative path, starting with (/) when doing a strict match.', LJMM_PLUGIN_DOMAIN);
+                          echo '<br>'.__('Ignores the trailing slash (/) when doing a strict match.', LJMM_PLUGIN_DOMAIN);
+                          echo '<br>'.__('Ignores the entire query string (?) when doing a strict match.', LJMM_PLUGIN_DOMAIN);
+                          echo '<br>'.__('Never include the protocol, domain or port prefixes of the full URL.', LJMM_PLUGIN_DOMAIN);
+                          echo '<br>'.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[REQUEST_URI]</a>';
+                          $request_uri = isset( $_SERVER['REQUEST_URI'] ) ? $_SERVER['REQUEST_URI'] : '';
+                          $request_uri_question_offset = strpos($request_uri, '?');
+                          if ($request_uri_question_offset !== false) {
+                              $request_uri = substr($request_uri, 0, $request_uri_question_offset);
+                          }
+                          if (!empty($request_uri)) {
+                              echo ' '.__('and the value for this loaded page is:', LJMM_PLUGIN_DOMAIN).' <strong>'.$request_uri.'</strong>';
+                          }
+                          echo '<br><strong>Tip: /wp-login.php</strong> '.__('will always by-pass the maintenance mode page.', LJMM_PLUGIN_DOMAIN);
+                          ?>
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr valign="middle">
+                    <th scope="row"><?php _e('Allowed URIs (Contains)', LJMM_PLUGIN_DOMAIN); ?></th>
+                    <td>
+                      <textarea name="ljmm-allow_request_uri_contains" id="ljmm-allow_request_uri_contains" placeholder="<?php echo "/blog/\n/tags/\n/categories/\n/wp-content/uploads/logo-\n/wp-admin/"; ?>" style="width:100%;height:150px;"><?php echo esc_attr(get_option('ljmm-allow_request_uri_contains')); ?></textarea>
+                      <p class="description">
+                          <?php
+                          echo __('Can be any sub-string contained within the URI, when doing a contains match.', LJMM_PLUGIN_DOMAIN);
+                          echo '<br>'.__('Ignores the trailing slash (/) when doing a contains match.', LJMM_PLUGIN_DOMAIN);
+                          echo '<br>'.__('Ignores the entire query string (?) when doing a contains match.', LJMM_PLUGIN_DOMAIN);
+                          echo '<br>'.__('Never include the protocol, domain or port prefixes of the full URL.', LJMM_PLUGIN_DOMAIN);
+                          echo '<br>'.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[REQUEST_URI]</a>';
+                          $request_uri = isset( $_SERVER['REQUEST_URI'] ) ? $_SERVER['REQUEST_URI'] : '';
+                          $request_uri_question_offset = strpos($request_uri, '?');
+                          if ($request_uri_question_offset !== false) {
+                              $request_uri = substr($request_uri, 0, $request_uri_question_offset);
+                          }
+                          if (!empty($request_uri)) {
+                              echo ' '.__('and the value for this loaded page is:', LJMM_PLUGIN_DOMAIN).' <strong>'.$request_uri.'</strong>';
+                          }
+                          ?>
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr valign="middle">
+                    <th scope="row"><?php _e('Allowed Query Strings (Contains)', LJMM_PLUGIN_DOMAIN); ?></th>
+                    <td>
+                      <textarea name="ljmm-allow_request_query_string" id="ljmm-allow_request_query_string" placeholder="<?php echo "doing_wp_cron\ndoing_wp_cron&qUhYNCrdHSHOPwPgrdyY19yi0"; ?>" style="width:100%;height:150px;"><?php echo esc_attr(get_option('ljmm-allow_request_query_string')); ?></textarea>
+                      <p class="description">
+                          <?php
+                          echo __('Can be any sub-string value after the (?) in the URI, when doing a contains match.', LJMM_PLUGIN_DOMAIN);
+                          echo '<br>'.__('Enter sub-string values that conform to output by', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/function.urldecode" target="_blank">urldecode()</a>.';
+                          echo '<br>'.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[QUERY_STRING]</a>';
+                          $request_query_string = isset( $_SERVER['QUERY_STRING'] ) ? urldecode($_SERVER['QUERY_STRING']) : '';
+                          if (!empty($request_query_string)) {
+                              echo ' '.__('and the value for this loaded page is:', LJMM_PLUGIN_DOMAIN).' <strong>'.$request_query_string.'</strong>';
+                          }
+                          echo '<br><strong>Tip:</strong> <a href="https://make.wordpress.org/core/2019/04/16/fatal-error-recovery-mode-in-5-2/" target="_blank">action=enter_recovery_mode&rm_token=</a> '.__('will always by-pass the maintenance mode page.', LJMM_PLUGIN_DOMAIN);
+                          ?>
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr valign="middle">
+                    <th scope="row"><?php _e('Allowed Referers (Contains)', LJMM_PLUGIN_DOMAIN); ?></th>
+                    <td>
+                      <textarea name="ljmm-allow_request_referer" id="ljmm-allow_request_referer" placeholder="<?php echo "camo\ngo-camo\ngithub-camo\nwww.mydomain.com\nnews.google.com"; ?>" style="width:100%;height:150px;"><?php echo esc_attr(get_option('ljmm-allow_request_referer')); ?></textarea>
+                      <p class="description">
+                          <?php
+                          echo __('Can be any sub-string contained within the URI, when doing a contains match.', LJMM_PLUGIN_DOMAIN);
+                          echo '<br>'.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[HTTP_REFERER]</a>';
+                          $request_referer = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : '';
+                          if (!empty($request_referer)) {
+                              echo ' '.__('and the value for this loaded page is:', LJMM_PLUGIN_DOMAIN).' <strong>'.$request_referer.'</strong>';
+                          }
+                          ?>
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr valign="middle">
+                    <th scope="row"><?php _e('Allowed User Agents (Contains)', LJMM_PLUGIN_DOMAIN); ?></th>
+                    <td>
+                      <textarea name="ljmm-allow_request_user_agent" id="ljmm-allow_request_user_agent" placeholder="<?php echo "android\nhtc one\niPhone\nwindows phone"; ?>" style="width:100%;height:150px;"><?php echo esc_attr(get_option('ljmm-allow_request_user_agent')); ?></textarea>
+                      <p class="description">
+                          <?php
+                          echo __('Can be any sub-string contained within the URI, when doing a contains match.', LJMM_PLUGIN_DOMAIN);
+                          echo '<br>'.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[HTTP_USER_AGENT]</a>';
+                          $request_user_agent = isset( $_SERVER['HTTP_USER_AGENT'] ) ? $_SERVER['HTTP_USER_AGENT'] : '';
+                          if (!empty($request_user_agent)) {
+                              echo ' '.__('and the value for this loaded page is:', LJMM_PLUGIN_DOMAIN).' <strong>'.$request_user_agent.'</strong>';
+                          }
+                          ?>
+                      </p>
+                    </td>
+                  </tr>
+
+                  <?php
                         // do we have Analytify installed and linked to google?
                         wp_cache_delete('analytify_ua_code', 'options'); // see https://wordpress.stackexchange.com/questions/100040/can-i-force-get-option-to-go-back-to-the-db-instead-of-cache
                         $ua_code = get_option('analytify_ua_code'); ?>
@@ -382,15 +534,27 @@ class ljMaintenanceMode
                                 <p>
                                     <span style="line-height: 1.3; font-weight: 600; color: green;">You are currently using custom stylesheet.</span>
                                     <span class="description">(<?php _e("'$ljmm_stlylesheet_filename' file in your theme folder", LJMM_PLUGIN_DOMAIN); ?>)</span>
-                                </p>
                             <?php else : ?>
-                                <p class="description"><?php _e("For custom stylesheet, add '$ljmm_stlylesheet_filename' file to your theme folder. If your custom stylesheet file is picked up by the Maintenance Mode, it will be indicated here.", LJMM_PLUGIN_DOMAIN); ?></p>
+                                <p class="description"><?php _e("For custom stylesheet, add '$ljmm_stlylesheet_filename' file to your theme folder. If your custom stylesheet file is picked up by the Maintenance Mode, it will be indicated here.", LJMM_PLUGIN_DOMAIN); ?>
                             <?php endif; ?>
+                            <?php
+                            echo '<br><strong>Tip:</strong> The maintenance mode page DOM structure is:';
+                            echo '<br>'.htmlspecialchars('<body id="error-page">');
+                            echo '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.htmlspecialchars('<div class="wp-die-message">');
+                            echo '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.htmlspecialchars('<script type="application/javascript">...</script>');
+                            echo '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.htmlspecialchars('<style type="text/css">...</style>').'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<-- '.$ljmm_stlylesheet_filename;
+                            echo '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.htmlspecialchars('<div class="ljmm-wrapper">');
+                            echo '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.htmlspecialchars('<div class="ljmm-content">');
+                            echo '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.htmlspecialchars('<div id="block-#" class="widget widget_block ...">...</div>');
+                            echo '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.htmlspecialchars('... the "maintenance mode page content" is here ...');
+                            echo '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.htmlspecialchars('<div id="block-#" class="widget widget_block ...">...</div>');
+                            ?>
+                            </p>
                         </td>
                     </tr>
 
                     <tr valign="middle">
-                        <th scope="row"><?php _e('Custom Stylesheet', LJMM_PLUGIN_DOMAIN); ?></th>
+                        <th scope="row"><?php _e('Custom Frontend Stylesheet', LJMM_PLUGIN_DOMAIN); ?></th>
                         <td>
                             <?php $ljmm_stlylesheet_frontend_filename = $this->get_css_frontend_filename(); ?>
                             <?php $ljmm_has_custom_frontend_stylsheet = (bool) $this->get_custom_frontend_stylesheet_url(); ?>
@@ -405,18 +569,38 @@ class ljMaintenanceMode
                         </td>
                     </tr>
 
-                    <tr valign="top">
+                  <tr valign="middle">
+                    <th scope="row"><?php _e('Custom Login Stylesheet', LJMM_PLUGIN_DOMAIN); ?></th>
+                    <td>
+                        <?php $ljmm_stlylesheet_login_filename = $this->get_css_login_filename(); ?>
+                        <?php $ljmm_has_custom_login_stylsheet = (bool) $this->get_custom_login_stylesheet_url(); ?>
+                        <?php if ($ljmm_has_custom_login_stylsheet) : ?>
+                          <p>
+                            <span style="line-height: 1.3; font-weight: 600; color: green;">You are currently using custom login stylesheet.</span>
+                            <span class="description">(<?php _e("'$ljmm_stlylesheet_login_filename' file in your theme folder", LJMM_PLUGIN_DOMAIN); ?>)</span>
+                          </p>
+                        <?php else : ?>
+                          <p class="description"><?php _e("For custom stylesheet, add '$ljmm_stlylesheet_login_filename' file to your theme folder. If your custom stylesheet file is picked up by the Maintenance Mode, it will be indicated here.", LJMM_PLUGIN_DOMAIN); ?></p>
+                        <?php endif; ?>
+                    </td>
+                  </tr>
+
+                  <tr valign="top">
                         <th scope="row">
                             <label for="ljmm_code_snippet"><?php _e('Inject code snippet', LJMM_PLUGIN_DOMAIN); ?></label>
                         </th>
                         <td>
                             <textarea id="ljmm_code_snippet" name="ljmm_code_snippet" style="width:100%;height:150px"><?php echo esc_attr(get_option('ljmm_code_snippet')); ?></textarea>
                             <p class="description">
-				                <?php _e('This is useful to add a Javascript snippet to the maintenance page.', LJMM_PLUGIN_DOMAIN); ?>
-				                <?php
+				                    <?php
+				                        _e('This is useful to add a Javascript snippet to the maintenance page.', LJMM_PLUGIN_DOMAIN);
+                               echo '<br><strong>Tip:</strong> Do include the surrounding <strong>'.htmlspecialchars('<script type="application/javascript">...</script><noscript>...</noscript>').'</strong>';
+                            ?>
+    				                <?php
                                 if ($ua_code) {
                                     _e('NOTE: if you are using the option above to add Google Analytics code, do NOT paste GA tracking code here.', LJMM_PLUGIN_DOMAIN);
-                                } ?>
+                                }
+                            ?>
                             </p>
                         </td>
                     </tr>
@@ -573,6 +757,7 @@ class ljMaintenanceMode
         $content = (!empty($get_content)) ? $get_content : ljmm_get_defaults('maintenance_message');
         $content = apply_filters('wptexturize', $content);
         $content = apply_filters('wpautop', $content);
+        // $content = nl2br($content); /* Do NOT implement. It generates <p></p><br> which messes with spacing & presentations of all existing installations. */
         $content = apply_filters('shortcode_unautop', $content);
         $content = apply_filters('prepend_attachment', $content);
         $content = apply_filters('wp_make_content_images_responsive', $content);
@@ -592,7 +777,7 @@ class ljMaintenanceMode
         // add custom stylesheet
         $stylesheet = $this->custom_stylesheet();
 
-        return $analytify . $code . $stylesheet . $widget_before . $content . $widget_after;
+        return $analytify . $code . $stylesheet . '<div class="ljmm-wrapper"><div class="ljmm-content">' . $widget_before . $content . $widget_after . '</div></div>';
     }
 
     /**
@@ -619,7 +804,7 @@ class ljMaintenanceMode
     }
 
     /**
-     * Get CSS front-end file name
+     * Get CSS frontend file name
      *
      * @since 2.5
      * @return string
@@ -627,6 +812,17 @@ class ljMaintenanceMode
     public function get_css_frontend_filename()
     {
         return apply_filters('ljmm_css_frontend_filename', 'maintenance.min.frontend.css');
+    }
+
+    /**
+     * Get CSS login file name
+     *
+     * @since 2.5.1
+     * @return string
+     */
+    public function get_css_login_filename()
+    {
+        return apply_filters('ljmm_css_login_filename', 'maintenance.min.login.css');
     }
 
     /**
@@ -712,6 +908,47 @@ class ljMaintenanceMode
     }
 
     /**
+     * Custom login stylsheet
+     *
+     * @since 2.5.1
+     * @return string
+     */
+    public function custom_login_stylesheet()
+    {
+        $stylesheet = '';
+        $url = $this->get_custom_login_stylesheet_url();
+
+        if ($url) {
+            $stylesheet = '<style type="text/css">' . file_get_contents($url) . '</style>';
+        }
+
+        return $stylesheet;
+    }
+
+    /**
+     * Check for custom login stylesheet
+     *
+     * @since 2.5.1
+     * @return boolean
+     */
+    public function get_custom_login_stylesheet_url()
+    {
+        $stylesheet_url = false;
+
+        $url_filename = $this->get_css_login_filename();
+
+        if (!validate_file($url_filename)) {
+            $url = apply_filters('ljmm_css_login_url', get_stylesheet_directory() . '/' . $url_filename);
+
+            if (file_exists($url)) {
+                $stylesheet_url = $url;
+            }
+        }
+
+        return $stylesheet_url;
+    }
+
+    /**
      * Editor content
      *
      * @since 2.4
@@ -770,89 +1007,146 @@ class ljMaintenanceMode
             }
         }
 
-        if (!(current_user_can(LJMM_VIEW_SITE_CAP) || current_user_can('super admin')) || (isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview')) {
+        if (!(current_user_can(LJMM_VIEW_SITE_CAP) || current_user_can('super admin') || current_user_can('administrator')) || (isset($_GET['ljmm']) && $_GET['ljmm'] == 'preview')) {
 
+            // Allowable exceptions list processing to by-pass the maintenance mode page.
+            // Acceptance Criteria 1: All comparisons must be case-insensitive.
+            // Acceptance Criteria 2: Trim whitespace and '/' suffix for better matching comparisons.
+            // Acceptance Criteria 3: All URL values function from a relative path perspective '/______'; handle missing '/' prefix cleanly.
+            // Acceptance Criteria 4: A strict URI comparison should ignore query string parameters; everythign from the '?'.
+            // Acceptance Criteria 5: Decode values, allowing user input to be the human friendly values.
             // Reference: https://www.php.net/manual/en/reserved.variables.server.php
-            $remote_ip = isset( $_SERVER['REMOTE_ADDR'] ) ? $_SERVER['REMOTE_ADDR'] : '';
-            $request_uri = isset( $_SERVER['REQUEST_URI'] ) ? rawurldecode( $_SERVER['REQUEST_URI'] ) : '';
-            $request_uri = ltrim($request_uri);  // [REQUEST_URI] always starts with '/'.
-            $request_uri = rtrim($request_uri);
-            $request_uri = rtrim($request_uri, '/');
-            $request_referer = isset( $_SERVER['REQUEST_REFERER'] ) ? $_SERVER['REQUEST_REFERER'] : '';
+            // Reference: https://www.php.net/manual/en/function.rawurldecode.php
+            // Reference: https://www.php.net/manual/en/function.urldecode.php
+            // $_SERVER['REMOTE_ADDR'] will always be only IPv4 or IPv6; it all depends upon how the connection to the server was made.
 
-            // $_SERVER['REMOTE_ADDR'] will always be only IPv6 or IPv4; it all depends upon how the connection to the server was made.
-            // $allow_remote_ip_txt = '192.168.0.10
-            //                         127.0.0.1
-            //                         2001:8004:5110:1d97:61e6:4c30:1a0c:7ecc
-            //                         203.214.74.111';
-            // $allow_request_uri_strictly_txt = 'products
-            //                                    member/
-            //                                    /about
-            //                                    /courses/
-            //                                    /wp-admin';
-            // $allow_request_uri_contains_txt = 'blog
-            //                                    /tags
-            //                                    /categories/';
-            // $allow_request_referer_txt = 'camo
-            //                               go-camo
-            //                               github-camo';
-            $allow_remote_ip_txt = '';
-            $allow_request_uri_strictly_txt = '/wp-admin/';  // Handy default rule for alternative login.
-            $allow_request_uri_contains_txt = '';
-            $allow_request_referer_txt = '';
-
-            // Convert from multi-line string to an array of strings.
-            $allow_remote_ip_list = preg_split("/[\f\r\n]+/", $allow_remote_ip_txt);
-            $allow_request_uri_strictly_list = preg_split("/[\f\r\n]+/", $allow_request_uri_strictly_txt);
-            $allow_request_uri_contains_list = preg_split("/[\f\r\n]+/", $allow_request_uri_contains_txt);
-            $allow_request_referer_list = preg_split("/[\f\r\n]+/", $allow_request_referer_txt);
-
-            // Validate current request against list of allowed IPs.
-            if (!empty($remote_ip) && is_array($allow_remote_ip_list) === true) {
-                foreach ($allow_remote_ip_list as $needle) {
-                    $needle = trim($needle);
-                    if (!empty($needle) && !stristr($remote_ip, $needle) === false) {
-                        // Could add a filter for 'Yes, it is allowed' here.
-                        return false;
+            // Allowed list of IPs (contains/sloppy match) ... allows for whole subnets to be identified.
+            $allow_remote_ip_text = get_option('ljmm-allow_remote_ip');
+            $allow_remote_ip_text = trim($allow_remote_ip_text);
+            if (!empty($allow_remote_ip_text)) {
+                $allow_remote_ip_list = preg_split("/[\f\r\n]+/", $allow_remote_ip_text);
+                $remote_ip = isset( $_SERVER['REMOTE_ADDR'] ) ? $_SERVER['REMOTE_ADDR'] : '';
+                if (!empty($remote_ip) && is_array($allow_remote_ip_list) === true) {
+                    $remote_ip = strtolower($remote_ip);
+                    foreach ($allow_remote_ip_list as $needle) {
+                        $needle = trim($needle);
+                        if (!empty($needle)) {
+                            $needle = strtolower($needle);
+                            if (strpos($remote_ip, $needle) === 0) {
+                                // Could add a filter for 'Yes, it is allowed' here.
+                                return false;
+                            }
+                        }
                     }
                 }
             }
 
-            // Validate current request against list of URIs (strict matching) ... blocking access to child pages.
-            if (!empty($request_uri) && is_array($allow_request_uri_strictly_list) === true) {
-                foreach ($allow_request_uri_strictly_list as $needle) {
-                    $needle = ltrim($needle);
-                    $needle = '/'.ltrim($needle, '/'); // Ensure prefix is '/', always.
-                    $needle = rtrim($needle);
-                    $needle = rtrim($needle, '/');     // Remove suffix of '/'.
-                    if (!empty($needle) && $request_uri === $needle) {
-                        // Could add a filter for 'Yes, it is allowed' here.
-                        return false;
+            // Allowed list of URIs (strict match) ... does not allow access to child pages.
+            $allow_request_uri_strictly_text = "/wp-login.php\n";  // Due to 'wp_loaded' hook triggering quite early.
+
+            $allow_request_uri_strictly_text .= get_option('ljmm-allow_request_uri_strictly');
+            $allow_request_uri_strictly_text = trim($allow_request_uri_strictly_text);
+            // if (!empty($allow_request_uri_strictly_text)) {
+                $allow_request_uri_strictly_list = preg_split("/[\f\r\n]+/", $allow_request_uri_strictly_text);
+                $request_uri = isset($_SERVER['REQUEST_URI']) ? rawurldecode($_SERVER['REQUEST_URI']) : '';
+                $request_uri_question_offset = strpos($request_uri, '?');
+                if ($request_uri_question_offset !== false) {
+                    $request_uri = substr($request_uri, 0, $request_uri_question_offset);
+                }
+                $request_uri = ltrim($request_uri);  // [REQUEST_URI] always starts with '/'.
+                $request_uri = rtrim($request_uri);
+                $request_uri = rtrim($request_uri, '/');
+                if (!empty($request_uri) && is_array($allow_request_uri_strictly_list) === true) {
+                    foreach ($allow_request_uri_strictly_list as $needle) {
+                        $needle = ltrim($needle);
+                        $needle = '/' . ltrim($needle, '/'); // Ensure prefix is '/', always.
+                        $needle = rtrim($needle);
+                        $needle = rtrim($needle, '/');     // Remove suffix of '/'.
+                        if (!empty($needle) && strcasecmp($request_uri, $needle) == 0) {
+                            // Could add a filter for 'Yes, it is allowed' here.
+                            return false;
+                        }
+                    }
+                }
+            // }
+
+            // Allowed list of URIs (contains/sloppy match) ... allowing child pages to show.
+            $allow_request_uri_contains_text = get_option('ljmm-allow_request_uri_contains');
+            $allow_request_uri_contains_text = trim($allow_request_uri_contains_text);
+            if (!empty($allow_request_uri_contains_text)) {
+                $allow_request_uri_contains_list = preg_split("/[\f\r\n]+/", $allow_request_uri_contains_text);
+                $request_uri = isset( $_SERVER['REQUEST_URI'] ) ? rawurldecode( $_SERVER['REQUEST_URI'] ) : '';
+                $request_uri_question_offset = strpos($request_uri, '?');
+                if ($request_uri_question_offset !== false) {
+                    $request_uri = substr($request_uri, 0, $request_uri_question_offset);
+                }
+                $request_uri = ltrim($request_uri);  // [REQUEST_URI] always starts with '/'.
+                $request_uri = rtrim($request_uri);
+                $request_uri = rtrim($request_uri, '/');
+                if (!empty($request_uri) && is_array($allow_request_uri_contains_list) === true) {
+                    foreach ($allow_request_uri_contains_list as $needle) {
+                        $needle = trim($needle);
+                        if (!empty($needle) && !stristr($request_uri, $needle) === false) {
+                            // Could add a filter for 'Yes, it is allowed' here.
+                            return false;
+                        }
                     }
                 }
             }
 
-            // Validate current request against list of URIs (contains/sloppy matching) ... allowing child pages to show.
-            if (!empty($request_uri) && is_array($allow_request_uri_contains_list) === true) {
-                foreach ($allow_request_uri_contains_list as $needle) {
-                    $needle = trim($needle);
-                    if (!empty($needle) && !stristr($request_uri, $needle) === false) {
-                        // Could add a filter for 'Yes, it is allowed' here.
-                        return false;
+            // Allowed list of referers (contains/sloppy matching).
+            $allow_request_referer_text = get_option('ljmm-allow_request_referer');
+            $allow_request_referer_text = trim($allow_request_referer_text);
+            if (!empty($allow_request_referer_text)) {
+                $allow_request_referer_list = preg_split("/[\f\r\n]+/", $allow_request_referer_text);
+                $request_referer = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : '';
+                if (!empty($request_referer) && is_array($allow_request_referer_list) === true) {
+                    foreach ($allow_request_referer_list as $needle) {
+                        $needle = trim($needle);
+                        if (!empty($needle) && !stristr($request_referer, $needle) === false) {
+                            // Could add a filter for 'Yes, it is allowed' here.
+                            return false;
+                        }
                     }
                 }
             }
 
-            // Validate current request against list of referers (contains/sloppy matching) ... allowing child pages to show.
-            if (!empty($request_referer) && is_array($allow_request_referer_list) === true) {
-                foreach ($allow_request_referer_list as $needle) {
-                    $needle = trim($needle);
-                    if (!empty($needle) && !stristr($request_referer, $needle) === false) {
-                        // Could add a filter for 'Yes, it is allowed' here.
-                        return false;
+            // Allowed list of user agents (contains/sloppy matching).
+            $allow_request_user_agent_text = get_option('ljmm-allow_request_user_agent');
+            $allow_request_user_agent_text = trim($allow_request_user_agent_text);
+            if (!empty($allow_request_user_agent_text)) {
+                $allow_request_user_agent_list = preg_split("/[\f\r\n]+/", $allow_request_user_agent_text);
+                $request_user_agent = isset( $_SERVER['HTTP_USER_AGENT'] ) ? $_SERVER['HTTP_USER_AGENT'] : '';
+                if (!empty($request_user_agent) && is_array($allow_request_user_agent_list) === true) {
+                    foreach ($allow_request_user_agent_list as $needle) {
+                        $needle = trim($needle);
+                        if (!empty($needle) && !stristr($request_user_agent, $needle) === false) {
+                            // Could add a filter for 'Yes, it is allowed' here.
+                            return false;
+                        }
                     }
                 }
             }
+
+            // Allowed list in query string (contains/sloppy matching).
+            $allow_request_query_string_text = "action=enter_recovery_mode&rm_token=\n";  // We never want to interfere with 'WordPress Recovery Mode'.
+
+            $allow_request_query_string_text .= get_option('ljmm-allow_request_query_string');
+            $allow_request_query_string_text = trim($allow_request_query_string_text);
+            // if (!empty($allow_request_query_string_text)) {
+                $allow_request_query_string_list = preg_split("/[\f\r\n]+/", $allow_request_query_string_text);
+                $request_query_string = isset( $_SERVER['QUERY_STRING'] ) ? urldecode($_SERVER['QUERY_STRING']) : '';
+                if (!empty($request_query_string) && is_array($allow_request_query_string_list) === true) {
+                    foreach ($allow_request_query_string_list as $needle) {
+                        $needle = urldecode($needle);
+                        $needle = trim($needle);
+                        if (!empty($needle) && !stristr($request_query_string, $needle) === false) {
+                            // Could add a filter for 'Yes, it is allowed' here.
+                            return false;
+                        }
+                    }
+                }
+            // }
 
             wp_die($this->get_content(), $this->get_title(), ['response' => $this->get_mode()]);
         }
@@ -1012,6 +1306,12 @@ EOD;
         // add WP Rocket support
         if (in_array('wp-rocket/wp-rocket.php', apply_filters('active_plugins', get_option('active_plugins')))) {
             $message = ljmm_get_defaults('warning_wp_rocket_cache');
+        }
+
+        // add Autoptimize support ... which can be running in parallel to the cache plugins listed above.
+        if (in_array('autoptimize/autoptimize.php', apply_filters('active_plugins', get_option('active_plugins')))) {
+            $message .= empty($message) ? '' : '<br>';
+            $message .= ljmm_get_defaults('warning_autoptimize_cache');
         }
 
         return $message;

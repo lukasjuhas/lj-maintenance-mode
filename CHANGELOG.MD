@@ -1,25 +1,29 @@
 # Changelog
 
+## 2.5.1.1
+* Fix john-lang-86/lj-maintenance-mode#1 to improve trailing slash cmoparisons. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Fix john-lang-86/lj-maintenance-mode#13 to allow a strict comparison for the site home page. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Improved helpful messages to advanced setting options. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+
 ## 2.5.1
 * Added Autoptimize message. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
 * Added "maintenance.min.login.css" feature. When detected in theme directory, this CSS file will be loaded in the standard login page to show users that maintenance mode is active. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
   1. Added filter "ljmm_css_login_filename".
   2. Added filter "ljmm_css_login_url".
-* Fix Issue 37 by adding 6 "Allowed" setting lists; match one on a list and maintenance mode lets the request proceed. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Resolve lukasjuhas/lj-maintenance-mode#37 by adding 6 "Allowed" setting lists; match one on a list and maintenance mode lets the request proceed. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
   1. Added "Allowed IPs (Contains)" setting, where $_SERVER[REMOTE_ADDR] matching requests will by-pass maintenance mode page.
   2. Added "Allowed URIs (Strict)" setting, where $_SERVER[REQUEST_URI] matching requests will by-pass maintenance mode page.
   3. Added "Allowed URIs (Contains)" setting, where $_SERVER[REQUEST_URI] matching requests will by-pass maintenance mode page.
   4. Added "Allowed Query Strings (Contains)" setting, where $_SERVER[QUERY_STRING] matching requests will by-pass maintenance mode page.
   5. Added "Allowed Referers (Contains)" setting, where $_SERVER[HTTP_REFERER] matching requests will by-pass maintenance mode page.
   6. Added "Allowed User Agents (Contains)" setting, where $_SERVER[HTTP_USER_AGENT] matching requests will by-pass maintenance mode page.
-* Fix Issue 43 by switching from 'get_header' to 'wp_loaded' hook/action. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Resolve lukasjuhas/lj-maintenance-mode#43 by switching from 'get_header' to 'wp_loaded' hook/action. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
   1. Always allow '/wp-login.php' URI access requests.
   2. Always allow 'action=enter_recovery_mode&rm_token=' query string access requests.
-* Fix Issue 44 by always allowing access when "current_user_can('administrator')" check passes. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
-* Fix Issue 47 by adding 2 DIVs to maintenance mode page (wrapper and content); for more flexible CSS options. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Fix lukasjuhas/lj-maintenance-mode#44 by always allowing access when "current_user_can('administrator')" check passes. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Resolve lukasjuhas/lj-maintenance-mode#47 by adding 2 DIVs to maintenance mode page (wrapper and content); for more flexible CSS options. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
 * Add helpful messages to advanced setting options. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
 * Add screenshot-4-2-5-1.png of settings page for 2.5.1.
-* Missing language translations for new strings added in the settings page in 2.5 & 2.5.1.
 
 ## 2.5
 * Added WP Rocket message. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))

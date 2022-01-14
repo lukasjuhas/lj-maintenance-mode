@@ -386,15 +386,15 @@ class ljMaintenanceMode
                             <p class="description">
                                 <?php
                                 _e('Enter IPv4 or IPv6 values, one per line.', LJMM_PLUGIN_DOMAIN);
-                                echo '<br>'.__('Which IP specification gets used? That all depends upon how the remote caller established the connection.', LJMM_PLUGIN_DOMAIN);
+                                echo '<br>'.__('Which IP specification gets used? That all depends upon how the remote caller established the connection; you will never know until they say hello.', LJMM_PLUGIN_DOMAIN);
                                 echo '<br>'.__('Partial IP values are ok; especially, when you want to identify a whole subnet.', LJMM_PLUGIN_DOMAIN);
                                 $remote_ip = isset( $_SERVER['REMOTE_ADDR'] ) ? $_SERVER['REMOTE_ADDR'] : '';
                                 if (!empty($remote_ip)) {
-                                    echo '<br>'.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[REMOTE_ADDR]</a> '.__('which identifies the current Remote IP:', LJMM_PLUGIN_DOMAIN).' <strong>'.$remote_ip.'</strong>';
+                                    echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).':</strong> '.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[REMOTE_ADDR]</a> '.__('which identifies the current Remote IP:', LJMM_PLUGIN_DOMAIN).' <strong>'.$remote_ip.'</strong>';
                                 }
                                 $server_ip = isset( $_SERVER['SERVER_ADDR'] ) ? $_SERVER['SERVER_ADDR'] : '';
                                 if (!empty($server_ip)) {
-                                    echo '<br><strong>'.__('Tip:', LJMM_PLUGIN_DOMAIN).'</strong> <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[SERVER_ADDR]</a> '.__('identifies this server is at Server IP:', LJMM_PLUGIN_DOMAIN).' <strong>'.$server_ip.'</strong>';
+                                    echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).':</strong> <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[SERVER_ADDR]</a> '.__('identifies this server is at Server IP:', LJMM_PLUGIN_DOMAIN).' <strong>'.$server_ip.'</strong>';
                                 }
                                 ?>
                             </p>
@@ -411,7 +411,9 @@ class ljMaintenanceMode
                           echo '<br>'.__('Ignores the trailing slash (/) when doing a strict match.', LJMM_PLUGIN_DOMAIN);
                           echo '<br>'.__('Ignores the entire query string (?) when doing a strict match.', LJMM_PLUGIN_DOMAIN);
                           echo '<br>'.__('Never include the protocol, domain or port prefixes of the full URL.', LJMM_PLUGIN_DOMAIN);
-                          echo '<br>'.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[REQUEST_URI]</a>';
+                          echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).':</strong> '.__('Enter <strong>/</strong> on its own line to allow the sites home page to always by-pass the maintenance mode page.', LJMM_PLUGIN_DOMAIN);
+                          echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).': /wp-login.php</strong> '.__('will always by-pass the maintenance mode page.', LJMM_PLUGIN_DOMAIN);
+                          echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).':</strong> '.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[REQUEST_URI]</a>';
                           $request_uri = isset( $_SERVER['REQUEST_URI'] ) ? $_SERVER['REQUEST_URI'] : '';
                           $request_uri_question_offset = strpos($request_uri, '?');
                           if ($request_uri_question_offset !== false) {
@@ -420,7 +422,6 @@ class ljMaintenanceMode
                           if (!empty($request_uri)) {
                               echo ' '.__('and the value for this loaded page is:', LJMM_PLUGIN_DOMAIN).' <strong>'.$request_uri.'</strong>';
                           }
-                          echo '<br><strong>Tip: /wp-login.php</strong> '.__('will always by-pass the maintenance mode page.', LJMM_PLUGIN_DOMAIN);
                           ?>
                       </p>
                     </td>
@@ -436,7 +437,7 @@ class ljMaintenanceMode
                           echo '<br>'.__('Ignores the trailing slash (/) when doing a contains match.', LJMM_PLUGIN_DOMAIN);
                           echo '<br>'.__('Ignores the entire query string (?) when doing a contains match.', LJMM_PLUGIN_DOMAIN);
                           echo '<br>'.__('Never include the protocol, domain or port prefixes of the full URL.', LJMM_PLUGIN_DOMAIN);
-                          echo '<br>'.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[REQUEST_URI]</a>';
+                          echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).':</strong> '.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[REQUEST_URI]</a>';
                           $request_uri = isset( $_SERVER['REQUEST_URI'] ) ? $_SERVER['REQUEST_URI'] : '';
                           $request_uri_question_offset = strpos($request_uri, '?');
                           if ($request_uri_question_offset !== false) {
@@ -458,12 +459,12 @@ class ljMaintenanceMode
                           <?php
                           echo __('Can be any sub-string value after the (?) in the URI, when doing a contains match.', LJMM_PLUGIN_DOMAIN);
                           echo '<br>'.__('Enter sub-string values that conform to output by', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/function.urldecode" target="_blank">urldecode()</a>.';
-                          echo '<br>'.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[QUERY_STRING]</a>';
+                          echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).':</strong> <a href="https://make.wordpress.org/core/2019/04/16/fatal-error-recovery-mode-in-5-2/" target="_blank">action=enter_recovery_mode&rm_token=</a> '.__('will always by-pass the maintenance mode page.', LJMM_PLUGIN_DOMAIN);
+                          echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).':</strong> '.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[QUERY_STRING]</a>';
                           $request_query_string = isset( $_SERVER['QUERY_STRING'] ) ? urldecode($_SERVER['QUERY_STRING']) : '';
                           if (!empty($request_query_string)) {
                               echo ' '.__('and the value for this loaded page is:', LJMM_PLUGIN_DOMAIN).' <strong>'.$request_query_string.'</strong>';
                           }
-                          echo '<br><strong>Tip:</strong> <a href="https://make.wordpress.org/core/2019/04/16/fatal-error-recovery-mode-in-5-2/" target="_blank">action=enter_recovery_mode&rm_token=</a> '.__('will always by-pass the maintenance mode page.', LJMM_PLUGIN_DOMAIN);
                           ?>
                       </p>
                     </td>
@@ -476,7 +477,7 @@ class ljMaintenanceMode
                       <p class="description">
                           <?php
                           echo __('Can be any sub-string contained within the URI, when doing a contains match.', LJMM_PLUGIN_DOMAIN);
-                          echo '<br>'.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[HTTP_REFERER]</a>';
+                          echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).':</strong> '.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[HTTP_REFERER]</a>';
                           $request_referer = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : '';
                           if (!empty($request_referer)) {
                               echo ' '.__('and the value for this loaded page is:', LJMM_PLUGIN_DOMAIN).' <strong>'.$request_referer.'</strong>';
@@ -493,7 +494,7 @@ class ljMaintenanceMode
                       <p class="description">
                           <?php
                           echo __('Can be any sub-string contained within the URI, when doing a contains match.', LJMM_PLUGIN_DOMAIN);
-                          echo '<br>'.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[HTTP_USER_AGENT]</a>';
+                          echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).':</strong> '.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[HTTP_USER_AGENT]</a>';
                           $request_user_agent = isset( $_SERVER['HTTP_USER_AGENT'] ) ? $_SERVER['HTTP_USER_AGENT'] : '';
                           if (!empty($request_user_agent)) {
                               echo ' '.__('and the value for this loaded page is:', LJMM_PLUGIN_DOMAIN).' <strong>'.$request_user_agent.'</strong>';
@@ -1013,7 +1014,7 @@ class ljMaintenanceMode
             // Acceptance Criteria 1: All comparisons must be case-insensitive.
             // Acceptance Criteria 2: Trim whitespace and '/' suffix for better matching comparisons.
             // Acceptance Criteria 3: All URL values function from a relative path perspective '/______'; handle missing '/' prefix cleanly.
-            // Acceptance Criteria 4: A strict URI comparison should ignore query string parameters; everythign from the '?'.
+            // Acceptance Criteria 4: A strict URI comparison should ignore query string parameters; everything from-n-beyond the '?'.
             // Acceptance Criteria 5: Decode values, allowing user input to be the human friendly values.
             // Reference: https://www.php.net/manual/en/reserved.variables.server.php
             // Reference: https://www.php.net/manual/en/function.rawurldecode.php
@@ -1046,29 +1047,31 @@ class ljMaintenanceMode
 
             $allow_request_uri_strictly_text .= get_option('ljmm-allow_request_uri_strictly');
             $allow_request_uri_strictly_text = trim($allow_request_uri_strictly_text);
-            // if (!empty($allow_request_uri_strictly_text)) {
-                $allow_request_uri_strictly_list = preg_split("/[\f\r\n]+/", $allow_request_uri_strictly_text);
-                $request_uri = isset($_SERVER['REQUEST_URI']) ? rawurldecode($_SERVER['REQUEST_URI']) : '';
-                $request_uri_question_offset = strpos($request_uri, '?');
-                if ($request_uri_question_offset !== false) {
-                    $request_uri = substr($request_uri, 0, $request_uri_question_offset);
-                }
-                $request_uri = ltrim($request_uri);  // [REQUEST_URI] always starts with '/'.
-                $request_uri = rtrim($request_uri);
+
+            $allow_request_uri_strictly_list = preg_split("/[\f\r\n]+/", $allow_request_uri_strictly_text);
+            $request_uri = isset($_SERVER['REQUEST_URI']) ? rawurldecode($_SERVER['REQUEST_URI']) : '';
+            $request_uri_question_offset = strpos($request_uri, '?');
+            if ($request_uri_question_offset !== false) {
+                $request_uri = substr($request_uri, 0, $request_uri_question_offset);
+            }
+            $request_uri = ltrim($request_uri);  // [REQUEST_URI] always starts with '/'.
+            $request_uri = rtrim($request_uri);
+            if ( !(strpos($request_uri, '/') === 0 && strlen($request_uri) == 1) ) { // Not the home page?
                 $request_uri = rtrim($request_uri, '/');
-                if (!empty($request_uri) && is_array($allow_request_uri_strictly_list) === true) {
-                    foreach ($allow_request_uri_strictly_list as $needle) {
-                        $needle = ltrim($needle);
+            }
+            if (!empty($request_uri) && is_array($allow_request_uri_strictly_list) === true) {
+                foreach ($allow_request_uri_strictly_list as $needle) {
+                    $needle = trim($needle);
+                    if ( !(strpos($needle, '/') === 0 && strlen($needle) == 1) ) { // Not the home page?
                         $needle = '/' . ltrim($needle, '/'); // Ensure prefix is '/', always.
-                        $needle = rtrim($needle);
                         $needle = rtrim($needle, '/');     // Remove suffix of '/'.
-                        if (!empty($needle) && strcasecmp($request_uri, $needle) == 0) {
-                            // Could add a filter for 'Yes, it is allowed' here.
-                            return false;
-                        }
+                    }
+                    if (!empty($needle) && strcasecmp($request_uri, $needle) == 0) {
+                        // Could add a filter for 'Yes, it is allowed' here.
+                        return false;
                     }
                 }
-            // }
+            }
 
             // Allowed list of URIs (contains/sloppy match) ... allowing child pages to show.
             $allow_request_uri_contains_text = get_option('ljmm-allow_request_uri_contains');
@@ -1086,6 +1089,7 @@ class ljMaintenanceMode
                 if (!empty($request_uri) && is_array($allow_request_uri_contains_list) === true) {
                     foreach ($allow_request_uri_contains_list as $needle) {
                         $needle = trim($needle);
+                        $needle = rtrim($needle, '/');     // Remove suffix of '/'.
                         if (!empty($needle) && !stristr($request_uri, $needle) === false) {
                             // Could add a filter for 'Yes, it is allowed' here.
                             return false;
@@ -1133,20 +1137,19 @@ class ljMaintenanceMode
 
             $allow_request_query_string_text .= get_option('ljmm-allow_request_query_string');
             $allow_request_query_string_text = trim($allow_request_query_string_text);
-            // if (!empty($allow_request_query_string_text)) {
-                $allow_request_query_string_list = preg_split("/[\f\r\n]+/", $allow_request_query_string_text);
-                $request_query_string = isset( $_SERVER['QUERY_STRING'] ) ? urldecode($_SERVER['QUERY_STRING']) : '';
-                if (!empty($request_query_string) && is_array($allow_request_query_string_list) === true) {
-                    foreach ($allow_request_query_string_list as $needle) {
-                        $needle = urldecode($needle);
-                        $needle = trim($needle);
-                        if (!empty($needle) && !stristr($request_query_string, $needle) === false) {
-                            // Could add a filter for 'Yes, it is allowed' here.
-                            return false;
-                        }
+
+            $allow_request_query_string_list = preg_split("/[\f\r\n]+/", $allow_request_query_string_text);
+            $request_query_string = isset( $_SERVER['QUERY_STRING'] ) ? urldecode($_SERVER['QUERY_STRING']) : '';
+            if (!empty($request_query_string) && is_array($allow_request_query_string_list) === true) {
+                foreach ($allow_request_query_string_list as $needle) {
+                    $needle = urldecode($needle);
+                    $needle = trim($needle);
+                    if (!empty($needle) && !stristr($request_query_string, $needle) === false) {
+                        // Could add a filter for 'Yes, it is allowed' here.
+                        return false;
                     }
                 }
-            // }
+            }
 
             wp_die($this->get_content(), $this->get_title(), ['response' => $this->get_mode()]);
         }

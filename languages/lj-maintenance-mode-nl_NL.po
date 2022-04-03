@@ -2,27 +2,31 @@
 # This file is distributed under the same license as the Maintenance Mode package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Maintenance Mode 2.2.3\n"
+"Project-Id-Version: Maintenance Mode 2.5.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
 "mode\n"
-"POT-Creation-Date: 2018-04-01 11:25+0000\n"
+"POT-Creation-Date: 2022-01-30 15:17+1100\n"
+"PO-Revision-Date: 2022-01-30 16:05+1100\n"
+"Last-Translator: John Lang <john@johnlang.com.au>\n"
+"Language-Team: Dutch\n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-04-01 11:34+0000\n"
-"Last-Translator: Edward Dekker <sitemaster@edwarddekker.nl>\n"
-"Language-Team: Dutch\n"
-"X-Generator: Loco https://localise.biz/\n"
-"Language: nl_NL\n"
-"Plural-Forms: nplurals=2; plural=n != 1;"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: lj-maintenance-mode.php:66 lj-maintenance-mode.php:724
+msgid "Website Under Maintenance"
+msgstr "Website in onderhoud"
 
 #: lj-maintenance-mode.php:66
 msgid ""
-"<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing "
-"scheduled maintenance. Please check back soon.</p>"
+"Our Website is currently undergoing scheduled maintenance. Please check back "
+"soon."
 msgstr ""
-"<h1>Website in Onderhoud</h1><p>Onze Website ondergaat momenteel een \"\n"
-"\"geplande onderhoudsbeurt. Kom snel weer terug.</p>"
+"Onze Website ondergaat momenteel een geplande onderhoudsbeurt. Kom snel weer "
+"terug."
 
 #: lj-maintenance-mode.php:69
 msgid ""
@@ -32,7 +36,7 @@ msgstr ""
 "Belangrijk: Vergeet niet de cache op te schonen als je onderhoudsmodus aan "
 "of uit zet in combinatie met WP Super Cache."
 
-#: lj-maintenance-mode.php:69 lj-maintenance-mode.php:72
+#: lj-maintenance-mode.php:72
 msgid ""
 "Important: Don't forget to flush your cache using W3 Total Cache when "
 "enabling or disabling Maintenance Mode."
@@ -40,7 +44,7 @@ msgstr ""
 "Belangrijk: Vergeet niet de cache op te schonen als je onderhoudsmodus aan "
 "of uit zet in combinatie met W3 Total Cache."
 
-#: lj-maintenance-mode.php:69 lj-maintenance-mode.php:72
+#: lj-maintenance-mode.php:75
 msgid ""
 "Important: Don't forget to flush your cache using Comet Cache when enabling "
 "or disabling Maintenance Mode."
@@ -48,7 +52,25 @@ msgstr ""
 "Belangrijk: Vergeet niet de cache op te schonen als je onderhoudsmodus aan "
 "of uit zet in combinatie met Comet Cache."
 
-#: lj-maintenance-mode.php:75
+#: lj-maintenance-mode.php:78
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Rocket when enabling or "
+"disabling Maintenance Mode."
+msgstr ""
+"Belangrijk: Vergeet niet om je cache te flushen met WP Rocket wanneer je de "
+"onderhoudsmodus in- of uitschakelt."
+
+#: lj-maintenance-mode.php:81
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Autoptimize when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Belangrijk: Vergeet niet uw cache te spoelen met Autoptimize wanneer u de "
+"onderhoudsmodus in- of uitschakelt."
+
+#: lj-maintenance-mode.php:84
 msgid ""
 "Maintenance Mode is currently active. To make sure that it works, open your "
 "web page in either private / incognito mode, different browser or simply log "
@@ -57,127 +79,20 @@ msgstr ""
 "Onderhoudsmodus is momenteel actief, Om te controleren of het ook werkt moet "
 "je webpagina in privé- of incognitomodus zetten, gebruik een andere "
 "webbrowser of log simpelweg uit. Ingelogde gebruikers merken niets van de "
-"\"Onderhoudsmodus\""
+"\"Onderhoudsmodus”."
 
-#. Plugin Name of the plugin/theme
-#: lj-maintenance-mode.php:161 lj-maintenance-mode.php:199
+#: lj-maintenance-mode.php:87
+#, fuzzy
+msgid "You can add widgets in \"Appearance -> Widgets\" section."
+msgstr "U kunt widgets toevoegen in \"Appearance -> Widgets\" sectie."
+
+#: lj-maintenance-mode.php:211 lj-maintenance-mode.php:300
+msgctxt "Plugin Name"
 msgid "Maintenance Mode"
 msgstr "Onderhoudsmodus"
 
-#: lj-maintenance-mode.php:209
-msgid "Enabled"
-msgstr "Aan"
-
-#: lj-maintenance-mode.php:221
-msgid "Preview"
-msgstr "Voorbeeld"
-
-#: lj-maintenance-mode.php:222
-msgid "Support"
-msgstr "Ondersteuning"
-
-#: lj-maintenance-mode.php:236
-msgid "Advanced Settings"
-msgstr "Geavanceerde instellingen"
-
-#: lj-maintenance-mode.php:244
-msgid "Site Title"
-msgstr "Websitetitel"
-
-#: lj-maintenance-mode.php:248
-msgid "Overrides default site meta title."
-msgstr "Overschrijf de normale websitenaam"
-
-#: lj-maintenance-mode.php:252
-msgid "Mode"
-msgstr "Staat"
-
-#: lj-maintenance-mode.php:259
-msgid "Default"
-msgstr "Standaard"
-
-#: lj-maintenance-mode.php:263
-msgid "Coming Soon Page"
-msgstr "Kom snel terug pagina"
-
-#: lj-maintenance-mode.php:265
-msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
-msgstr ""
-"Standaard staat de instelling op HTTP code 503. En geeft HTTP code 200 door "
-"als je een \"kom snel terug pagina\" maakt."
-
-#: lj-maintenance-mode.php
-msgid ""
-"If you are putting your site into maintenance mode for a longer period of "
-"time, you should set this to \"Coming Soon Page\". Otherwise use "
-"\"Maintenance Mode\"."
-msgstr ""
-"Als je je site voor langere tijd in Onderhoudsmodus plaatst, gebruik de "
-"\"Kom snel terug pagina\". In overige gevallen, gebruik dan "
-"\"Onderhoudsmodus\"\""
-
-#: lj-maintenance-mode.php:265
-msgid "Learn more."
-msgstr "Lees verder"
-
-#: lj-maintenance-mode.php:273
-msgid "User Roles"
-msgstr "Gebruikersrollen"
-
-#: lj-maintenance-mode.php:274
-msgid ""
-"Tick the ones that can access front-end of your website if maintenance mode "
-"is enabled"
-msgstr ""
-"Selecteer gebruikers die de site kunnen bezoeken als de onderhoudsmodus is "
-"geactiveerd"
-
-#: lj-maintenance-mode.php:275
-msgid "Please note that this does NOT apply to admin area"
-msgstr "Dit heeft geen toepassing op het admin-menu"
-
-#: lj-maintenance-mode.php:276
-msgid "Toggle all"
-msgstr "Alles aan/uit"
-
-#: lj-maintenance-mode.php:296
-msgid "User Role control is currently not avialable on your website. Sorry!"
-msgstr "Gebruikersrol is nu niet beschikbaar, excuses!"
-
-#: lj-maintenance-mode.php:346
-msgctxt "Admin bar indicator"
-msgid "Disabled"
-msgstr "Uit"
-
-#: lj-maintenance-mode.php:349
-msgctxt "Admin bar indicator"
-msgid "Enabled"
-msgstr "Aan"
-
-#: lj-maintenance-mode.php:360
-msgctxt "Admin bar indicator"
-msgid "Maintenance Mode"
-msgstr "Onderhoudsmodus"
-
-#: lj-maintenance-mode.php:374
-msgctxt "Plugin Settings link"
-msgid "Settings"
-msgstr "Instellingen"
-
-#: lj-maintenance-mode.php:375
-msgctxt "Plugin Support link"
-msgid "Support"
-msgstr "Help"
-
-#: lj-maintenance-mode.php:387
-msgid "Website Under Maintenance"
-msgstr "Website in onderhoud"
-
-#. Plugin URI of the plugin/theme
-msgid "https://plugins.itsluk.as/maintenance-mode/"
-msgstr "https://plugins.itsluk.as/maintenance-mode/"
-
-#. Description of the plugin/theme
+#: lj-maintenance-mode.php:212
+msgctxt "Plugin Description"
 msgid ""
 "Very simple Maintenance Mode & Coming soon page using default Wordpress "
 "markup with no ads or paid upgrades."
@@ -185,39 +100,435 @@ msgstr ""
 "Het is een heel eenvoudige onderhoudsmodus dat voor iedereen geschikt is en "
 "gemakkelijk in gebruik zonder reclame."
 
-#. Author of the plugin/theme
+#: lj-maintenance-mode.php:213
+msgctxt "Plugin Author"
 msgid "Lukas Juhas"
 msgstr "Lukas Juhas"
 
-#. Author URI of the plugin/theme
-msgid "https://plugins.itsluk.as/"
-msgstr "https://plugins.itsluk.as/"
+#: lj-maintenance-mode.php:223
+msgctxt "Page Title"
+msgid "Maintenance Mode"
+msgstr "Onderhoudsmodus"
 
+#: lj-maintenance-mode.php:223
+msgctxt "Menu Title"
+msgid "Maintenance Mode"
+msgstr "Onderhoudsmodus"
+
+#: lj-maintenance-mode.php:271
+msgid "Maintenance Mode"
+msgstr "Onderhoudsmodus"
+
+#: lj-maintenance-mode.php:281
+msgid "Enabled"
+msgstr "Aan"
+
+#: lj-maintenance-mode.php:293
+msgid "Mode"
+msgstr "Staat"
+
+#: lj-maintenance-mode.php:300
+msgid "Default"
+msgstr "Standaard"
+
+#: lj-maintenance-mode.php:304
+msgid "Coming Soon Page"
+msgstr "Kom snel terug pagina"
+
+#: lj-maintenance-mode.php:307
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"Als je je site voor langere tijd in Onderhoudsmodus plaatst, gebruik de "
+"\"Kom snel terug pagina\". In overige gevallen, gebruik dan "
+"\"Onderhoudsmodus”."
+
+#: lj-maintenance-mode.php:308
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr ""
+"Standaard staat de instelling op HTTP code 503. En geeft HTTP code 200 door "
+"als je een \"kom snel terug pagina\" maakt."
+
+#: lj-maintenance-mode.php:308
+msgid "Learn more."
+msgstr "Lees verder."
+
+#: lj-maintenance-mode.php:315
+msgid "Preview"
+msgstr "Voorbeeld"
+
+#: lj-maintenance-mode.php:316 lj-maintenance-mode.php:711
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr "Help"
+
+#: lj-maintenance-mode.php:329
+msgid "Advanced Settings"
+msgstr "Geavanceerde instellingen"
+
+#: lj-maintenance-mode.php:332
+msgid "Hide Advanced Settings"
+msgstr "Verberg geavanceerde instellingen"
+
+#: lj-maintenance-mode.php:340
+msgid "Add widget areas above and below content"
+msgstr "Voeg een widgetruimte toe boven en onder uw inhoud"
+
+#: lj-maintenance-mode.php:352
+msgid "Site Title"
+msgstr "Websitetitel"
+
+#: lj-maintenance-mode.php:356
+msgid "Overrides default site meta title."
+msgstr "Overschrijf de normale websitenaam."
+
+#: lj-maintenance-mode.php:364
+msgid "User Roles"
+msgstr "Gebruikersrollen"
+
+#: lj-maintenance-mode.php:365
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr ""
+"Selecteer gebruikers die de site kunnen bezoeken als de onderhoudsmodus is "
+"geactiveerd"
+
+#: lj-maintenance-mode.php:366
+msgid "Please note that this does NOT apply to admin area"
+msgstr "Dit heeft geen toepassing op het admin-menu"
+
+#: lj-maintenance-mode.php:367
+msgid "Toggle all"
+msgstr "Alles aan/uit"
+
+#: lj-maintenance-mode.php:387
+#, fuzzy
+msgid "User Role control is currently not available on your website. Sorry!"
+msgstr "User Role control is momenteel niet beschikbaar op uw website. Sorry!"
+
+#: lj-maintenance-mode.php:394
+#, fuzzy
+msgid "Allowed IP"
+msgstr "Toegestaan IP"
+
+#: lj-maintenance-mode.php:394 lj-maintenance-mode.php:446
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454 lj-maintenance-mode.php:472
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:493
+#: lj-maintenance-mode.php:499 lj-maintenance-mode.php:512
+#: lj-maintenance-mode.php:518
+msgctxt "include, part of, constitute"
+msgid "Contains"
+msgstr "Bevat"
+
+#: lj-maintenance-mode.php:400
+#, fuzzy
+msgid "Enter IPv4 or IPv6 values, one per line."
+msgstr "Voer IPv4- of IPv6-waarden in, één per regel."
+
+#: lj-maintenance-mode.php:401
+#, fuzzy
+msgid ""
+"Which IP specification gets used? That all depends upon how the remote "
+"caller established the connection; you will never know until they say hello."
+msgstr ""
+"Welke IP specificatie wordt gebruikt? Dat hangt allemaal af van de manier "
+"waarop de beller op afstand de verbinding tot stand heeft gebracht; je zult "
+"het nooit weten totdat ze hallo zeggen."
+
+#: lj-maintenance-mode.php:402
+#, fuzzy
+msgid ""
+"Partial IP values are ok; especially, when you want to identify a whole "
+"subnet."
+msgstr ""
+"Gedeeltelijke IP waarden zijn ok; vooral, wanneer u een heel subnet wilt "
+"identificeren."
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:409
+#: lj-maintenance-mode.php:428 lj-maintenance-mode.php:429
+#: lj-maintenance-mode.php:430 lj-maintenance-mode.php:456
+#: lj-maintenance-mode.php:480 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#: lj-maintenance-mode.php:567 lj-maintenance-mode.php:623
+msgid "Tip"
+msgstr "Tip"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:430
+#: lj-maintenance-mode.php:456 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+msgid "Uses"
+msgstr "Toepassingen"
+
+#: lj-maintenance-mode.php:405
+#, fuzzy
+msgid "which identifies the current Remote IP:"
+msgstr "die het huidige Remote IP identificeert:"
+
+#: lj-maintenance-mode.php:409
+#, fuzzy
+msgid "identifies this server is at Server IP:"
+msgstr "identificeert deze server op Server IP:"
+
+#: lj-maintenance-mode.php:418
+#, fuzzy
+msgid "Allowed URI"
+msgstr "Toegestane URI"
+
+#: lj-maintenance-mode.php:418 lj-maintenance-mode.php:424
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:426
+msgctxt "exact, stringent, precise"
+msgid "Strict"
+msgstr "Strikt"
+
+#: lj-maintenance-mode.php:424
+#, fuzzy
+msgid "The full relative path, starting with"
+msgstr "Het volledige relatieve pad, beginnend met"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454
+#, fuzzy
+msgid "when doing a"
+msgstr "wanneer je een"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:452
+#: lj-maintenance-mode.php:453 lj-maintenance-mode.php:454
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+msgid "comparison"
+msgstr "vergelijking"
+
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:453
+#, fuzzy
+msgid "Ignores the trailing slash"
+msgstr "Negeert de schuine streep achter"
+
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:454
+#, fuzzy
+msgid "Ignores the entire query string"
+msgstr "Negeert de hele querystring"
+
+#: lj-maintenance-mode.php:427 lj-maintenance-mode.php:455
+#, fuzzy
+msgid "Never include the protocol, domain or port prefixes of the full URL."
+msgstr ""
+"Voeg nooit het protocol, domein of poort voorvoegsels van de volledige URL "
+"toe."
+
+#: lj-maintenance-mode.php:428
+#, fuzzy
+msgid ""
+"Enter / on its own line to allow the sites home page to always by-pass the "
+"maintenance mode page."
+msgstr ""
+"Voer / in op een eigen regel om de startpagina van de site altijd te laten "
+"voorbijgaan aan de onderhoudsmodus pagina."
+
+#: lj-maintenance-mode.php:429 lj-maintenance-mode.php:480
+#, fuzzy
+msgid "will always by-pass the maintenance mode page."
+msgstr "zal de onderhoudsmodus pagina altijd overslaan."
+
+#: lj-maintenance-mode.php:437 lj-maintenance-mode.php:463
+#: lj-maintenance-mode.php:484 lj-maintenance-mode.php:503
+#: lj-maintenance-mode.php:522
+#, fuzzy
+msgid "and the value for this loaded page is:"
+msgstr "en de waarde voor deze geladen pagina is:"
+
+#: lj-maintenance-mode.php:446
+#, fuzzy
+msgid "Allowed URL"
+msgstr "Toegestane URL"
+
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "Can be any sub-string contained within the URI, when doing a"
+msgstr "Kan elke sub-string zijn in de URI, wanneer u een"
+
+#: lj-maintenance-mode.php:472
+#, fuzzy
+msgid "Allowed Query String"
+msgstr "Toegestane querystring"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "Can be any sub-string value after the"
+msgstr "Kan elke sub-string waarde zijn na de"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "in the URI, when doing a"
+msgstr "in de URI, wanneer u een"
+
+#: lj-maintenance-mode.php:479
+#, fuzzy
+msgid "Enter sub-string values that conform to output by"
+msgstr "Voer sub-string waarden in die overeenkomen met de uitvoer door"
+
+#: lj-maintenance-mode.php:493
+#, fuzzy
+msgid "Allowed Referer"
+msgstr "Toegestaan Referer"
+
+#: lj-maintenance-mode.php:512
+#, fuzzy
+msgid "Allowed User Agent"
+msgstr "Toegestane gebruikersagent"
+
+#: lj-maintenance-mode.php:537
+#, fuzzy
+msgid "Add Google Analytics code"
+msgstr "Google Analytics code toevoegen"
+
+#: lj-maintenance-mode.php:542
+#, fuzzy
+msgid "for Analytics profile"
+msgstr "voor Analytics profiel"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "configured in"
+msgstr "geconfigureerd in"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "Analytify"
+msgstr "Analytify"
+
+#: lj-maintenance-mode.php:546
+#, fuzzy
+msgid ""
+"Since you have the Analytify plugin installed, this will add Google "
+"Analytics tracking code to the maintenance page."
+msgstr ""
+"Aangezien u de Analytify plugin hebt geïnstalleerd, zal dit Google Analytics "
+"tracking code toevoegen aan de onderhoudspagina."
+
+#: lj-maintenance-mode.php:554
 msgid "Custom Stylesheet"
 msgstr "Aangepaste Stijlpagina"
 
-msgid "Add widget areas above and below content"
-msgstr "Voeg een widgetruimte toe boven en onder uw inhoud."
+#: lj-maintenance-mode.php:561 lj-maintenance-mode.php:589
+#: lj-maintenance-mode.php:605
+#, fuzzy
+msgid "You are currently using custom stylesheet."
+msgstr "Je gebruikt momenteel een aangepast stylesheet."
 
+#: lj-maintenance-mode.php:562 lj-maintenance-mode.php:590
+#: lj-maintenance-mode.php:606
+#, fuzzy
+msgid "file in your theme folder"
+msgstr "bestand in uw thema map"
+
+#: lj-maintenance-mode.php:564 lj-maintenance-mode.php:593
+#: lj-maintenance-mode.php:609
+#, fuzzy, php-format
 msgid ""
-"For custom stylesheet, add 'maintenance.min.css' file to your theme folder. "
-"If your custom stylesheet file is picked up by the Maintenance Mode, it will "
-"be indicated here."
+"For custom stylesheet, add %s file to your theme folder. If your custom "
+"stylesheet file is picked up by the Maintenance Mode, it will be indicated "
+"here."
 msgstr ""
-"Voor een aangepaste stijlpagina kunt u een 'maintenance.min.css' bestand "
-"toevoegen in de root van uw themafolder. Onderhoudsmodus zal dit vinden en "
-"gebruiken."
+"Voor een aangepast stylesheet, voeg het %s bestand toe aan uw thema map. Als "
+"je aangepaste stylesheet bestand wordt opgepikt door de onderhoudsmodus, zal "
+"het hier worden aangegeven."
 
+#: lj-maintenance-mode.php:567
+#, fuzzy
+msgid "The maintenance mode page DOM structure is:"
+msgstr "De DOM-structuur van de onderhoudsmoduspagina is als volgt:"
+
+#: lj-maintenance-mode.php:575
+#, fuzzy
+msgid "the maintenance mode page content is here"
+msgstr "de inhoud van de onderhoudsmodus pagina is hier"
+
+#: lj-maintenance-mode.php:583
+#, fuzzy
+msgid "Custom Frontend Stylesheet"
+msgstr "Aangepaste Frontend Stylesheet"
+
+#: lj-maintenance-mode.php:599
+#, fuzzy
+msgid "Custom Login Stylesheet"
+msgstr "Aangepaste Login Stylesheet"
+
+#: lj-maintenance-mode.php:616
 msgid "Inject code snippet"
 msgstr "Injecteer een aangepaste code"
 
+#: lj-maintenance-mode.php:622
 msgid "This is useful to add a Javascript snippet to the maintenance page."
 msgstr ""
 "Dit is handig als je een JavaScript code wilt gebruiken in de "
 "onderhoudspagina."
 
-msgid "Hide Advanced Settings"
-msgstr "Verberg geavanceerde instellingen"
+#: lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Do include the surrounding"
+msgstr "Neem ook de omliggende"
 
-msgid "You can add widgets in <strong>Appearance -> Widgets</strong>."
-msgstr "Je kunt widgets toevoegen in <strong>Instellingen -> Widgets</strong>."
+#: lj-maintenance-mode.php:627
+#, fuzzy
+msgid ""
+"NOTE: if you are using the option above to add Google Analytics code, do NOT "
+"paste GA tracking code here."
+msgstr ""
+"OPMERKING: als u de bovenstaande optie gebruikt om Google Analytics-code toe "
+"te voegen, plak hier dan GEEN GA-trackingcode."
+
+#: lj-maintenance-mode.php:679
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "Uit"
+
+#: lj-maintenance-mode.php:682
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "Aan"
+
+#: lj-maintenance-mode.php:693
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "Onderhoudsmodus"
+
+#: lj-maintenance-mode.php:710
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "Instellingen"
+
+#: lj-maintenance-mode.php:1226
+msgid "Maintenance mode - before content"
+msgstr "Onderhoudsmodus"
+
+#: lj-maintenance-mode.php:1227
+#, fuzzy
+msgid "Enter the content to appear before the maintenance mode content."
+msgstr ""
+"Voer de inhoud in die vóór de inhoud van de onderhoudsmodus moet verschijnen."
+
+#: lj-maintenance-mode.php:1234
+msgid "Maintenance mode - after content"
+msgstr "Onderhoudsmodus"
+
+#: lj-maintenance-mode.php:1235
+#, fuzzy
+msgid "Enter the content to appear after the maintenance mode content."
+msgstr ""
+"Voer de inhoud in die moet verschijnen na de inhoud van de onderhoudsmodus."
+
+#~ msgid "Support"
+#~ msgstr "Ondersteuning"
+
+#~ msgid "https://plugins.itsluk.as/maintenance-mode/"
+#~ msgstr "https://plugins.itsluk.as/maintenance-mode/"
+
+#~ msgid "https://plugins.itsluk.as/"
+#~ msgstr "https://plugins.itsluk.as/"

@@ -1,0 +1,560 @@
+# Copyright (C) 2017 Maintenance Mode
+# This file is distributed under the same license as the Maintenance Mode package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode 2.5.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
+"mode\n"
+"POT-Creation-Date: 2022-01-30 15:17+1100\n"
+"PO-Revision-Date: 2022-02-06 10:55+1100\n"
+"Last-Translator: John Lang <john@johnlang.com.au>\n"
+"Language-Team: \n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lj-maintenance-mode.php:66 lj-maintenance-mode.php:724
+msgid "Website Under Maintenance"
+msgstr "Ιστότοπος Υπό Συντήρηση"
+
+#: lj-maintenance-mode.php:66
+#, fuzzy
+msgid ""
+"Our Website is currently undergoing scheduled maintenance. Please check back "
+"soon."
+msgstr ""
+"Ο ιστότοπός μας βρίσκεται επί του παρόντος σε προγραμματισμένη συντήρηση. "
+"Παρακαλούμε επισκεφθείτε μας σύντομα."
+
+#: lj-maintenance-mode.php:69
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Σημαντικό: Όταν ενεργοποιείτε ή απενεργοποιείτε τη λειτουργία συντήρησης, "
+"μην ξεχάσετε να ξεπλύνετε την προσωρινή μνήμη σας χρησιμοποιώντας το WP "
+"Super Cache."
+
+#: lj-maintenance-mode.php:72
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Σημαντικό: Μην ξεχνάτε να ξεπλύνετε την προσωρινή μνήμη σας χρησιμοποιώντας "
+"το W3 Total Cache όταν ενεργοποιείτε ή απενεργοποιείτε τη λειτουργία "
+"συντήρησης."
+
+#: lj-maintenance-mode.php:75
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Σημαντικό: Μην ξεχάσετε να ξεπλύνετε την προσωρινή μνήμη σας χρησιμοποιώντας "
+"την Comet Cache όταν ενεργοποιείτε ή απενεργοποιείτε τη λειτουργία "
+"συντήρησης."
+
+#: lj-maintenance-mode.php:78
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Rocket when enabling or "
+"disabling Maintenance Mode."
+msgstr ""
+"Σημαντικό: Μην ξεχάσετε να ξεπλύνετε την προσωρινή μνήμη σας χρησιμοποιώντας "
+"το WP Rocket όταν ενεργοποιείτε ή απενεργοποιείτε τη λειτουργία συντήρησης."
+
+#: lj-maintenance-mode.php:81
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Autoptimize when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Σημαντικό: Όταν ενεργοποιείτε ή απενεργοποιείτε τη Λειτουργία συντήρησης, "
+"μην ξεχάσετε να ξεπλύνετε την προσωρινή μνήμη σας χρησιμοποιώντας την "
+"Αυτόματη βελτιστοποίηση."
+
+#: lj-maintenance-mode.php:84
+#, fuzzy
+msgid ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+"Η λειτουργία συντήρησης είναι ενεργή. Για να βεβαιωθείτε ότι λειτουργεί, "
+"ανοίξτε την ιστοσελίδα σας είτε σε ιδιωτική / incognito λειτουργία, είτε σε "
+"διαφορετικό πρόγραμμα περιήγησης ή απλά αποσυνδεθείτε. Οι συνδεδεμένοι "
+"χρήστες δεν επηρεάζονται από τη Λειτουργία συντήρησης."
+
+#: lj-maintenance-mode.php:87
+#, fuzzy
+msgid "You can add widgets in \"Appearance -> Widgets\" section."
+msgstr "Μπορείτε να προσθέσετε widgets στην ενότητα \"Εμφάνιση -> Widgets\"."
+
+#: lj-maintenance-mode.php:211 lj-maintenance-mode.php:300
+msgctxt "Plugin Name"
+msgid "Maintenance Mode"
+msgstr "Λειτουργία εντοπισμού σφαλμάτων"
+
+#: lj-maintenance-mode.php:212
+#, fuzzy
+msgctxt "Plugin Description"
+msgid ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+msgstr ""
+"Πολύ απλή λειτουργία συντήρησης και προσεχώς σελίδα χρησιμοποιώντας την "
+"προεπιλεγμένη σήμανση Wordpress χωρίς διαφημίσεις ή πληρωμένες αναβαθμίσεις."
+
+#: lj-maintenance-mode.php:213
+#, fuzzy
+msgctxt "Plugin Author"
+msgid "Lukas Juhas"
+msgstr "Lukas Juhas"
+
+#: lj-maintenance-mode.php:223
+msgctxt "Page Title"
+msgid "Maintenance Mode"
+msgstr "Λειτουργία εντοπισμού σφαλμάτων"
+
+#: lj-maintenance-mode.php:223
+msgctxt "Menu Title"
+msgid "Maintenance Mode"
+msgstr "Λειτουργία εντοπισμού σφαλμάτων"
+
+#: lj-maintenance-mode.php:271
+msgid "Maintenance Mode"
+msgstr "Λειτουργία εντοπισμού σφαλμάτων"
+
+#: lj-maintenance-mode.php:281
+msgid "Enabled"
+msgstr "Ενεργοποιημένο"
+
+#: lj-maintenance-mode.php:293
+msgid "Mode"
+msgstr "Λειτουργία"
+
+#: lj-maintenance-mode.php:300
+msgid "Default"
+msgstr "Προεπιλογή"
+
+#: lj-maintenance-mode.php:304
+#, fuzzy
+msgid "Coming Soon Page"
+msgstr "Σελίδα Coming Soon"
+
+#: lj-maintenance-mode.php:307
+#, fuzzy
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"Εάν θέτετε τον ιστότοπό σας σε κατάσταση συντήρησης για μεγαλύτερο χρονικό "
+"διάστημα, θα πρέπει να το ορίσετε σε \"Coming Soon Page\". Διαφορετικά, "
+"χρησιμοποιήστε τη \"Λειτουργία συντήρησης\"."
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr "Η προεπιλογή θέτει το HTTP σε 503, σύντομα θα θέσει το HTTP σε 200."
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Learn more."
+msgstr "Μάθετε περισσότερα."
+
+#: lj-maintenance-mode.php:315
+msgid "Preview"
+msgstr "Προεπισκόπηση"
+
+#: lj-maintenance-mode.php:316 lj-maintenance-mode.php:711
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr "Υποστήριξη"
+
+#: lj-maintenance-mode.php:329
+msgid "Advanced Settings"
+msgstr "Ρυθμίσεις για Προχωρημένους"
+
+#: lj-maintenance-mode.php:332
+#, fuzzy
+msgid "Hide Advanced Settings"
+msgstr "Απόκρυψη προηγμένων ρυθμίσεων"
+
+#: lj-maintenance-mode.php:340
+#, fuzzy
+msgid "Add widget areas above and below content"
+msgstr "Προσθέστε περιοχές widget πάνω και κάτω από το περιεχόμενο"
+
+#: lj-maintenance-mode.php:352
+msgid "Site Title"
+msgstr "Τίτλος Ιστότοπου"
+
+#: lj-maintenance-mode.php:356
+#, fuzzy
+msgid "Overrides default site meta title."
+msgstr "Αντικαθιστά τον προεπιλεγμένο μετα-τίτλο του ιστότοπου."
+
+#: lj-maintenance-mode.php:364
+msgid "User Roles"
+msgstr "Ρόλος χρήστη"
+
+#: lj-maintenance-mode.php:365
+#, fuzzy
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr ""
+"Σημειώστε αυτούς που μπορούν να έχουν πρόσβαση στο front-end του ιστότοπού "
+"σας εάν είναι ενεργοποιημένη η λειτουργία συντήρησης"
+
+#: lj-maintenance-mode.php:366
+#, fuzzy
+msgid "Please note that this does NOT apply to admin area"
+msgstr "Σημειώστε ότι αυτό ΔΕΝ ισχύει για την περιοχή διαχείρισης"
+
+#: lj-maintenance-mode.php:367
+#, fuzzy
+msgid "Toggle all"
+msgstr "Εναλλαγή όλων"
+
+#: lj-maintenance-mode.php:387
+#, fuzzy
+msgid "User Role control is currently not available on your website. Sorry!"
+msgstr ""
+"Ο έλεγχος του ρόλου χρήστη δεν είναι επί του παρόντος διαθέσιμος στον "
+"ιστότοπό σας. Λυπάμαι!"
+
+#: lj-maintenance-mode.php:394
+#, fuzzy
+msgid "Allowed IP"
+msgstr "Επιτρεπόμενη IP"
+
+#: lj-maintenance-mode.php:394 lj-maintenance-mode.php:446
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454 lj-maintenance-mode.php:472
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:493
+#: lj-maintenance-mode.php:499 lj-maintenance-mode.php:512
+#: lj-maintenance-mode.php:518
+msgctxt "include, part of, constitute"
+msgid "Contains"
+msgstr "Περιέχει"
+
+#: lj-maintenance-mode.php:400
+#, fuzzy
+msgid "Enter IPv4 or IPv6 values, one per line."
+msgstr "Εισάγετε τιμές IPv4 ή IPv6, μία ανά γραμμή."
+
+#: lj-maintenance-mode.php:401
+#, fuzzy
+msgid ""
+"Which IP specification gets used? That all depends upon how the remote "
+"caller established the connection; you will never know until they say hello."
+msgstr ""
+"Ποια προδιαγραφή IP χρησιμοποιείται Όλα εξαρτώνται από τον τρόπο με τον "
+"οποίο ο απομακρυσμένος καλών εγκαθίδρυσε τη σύνδεση- δεν θα το μάθετε ποτέ "
+"μέχρι να σας χαιρετήσει."
+
+#: lj-maintenance-mode.php:402
+#, fuzzy
+msgid ""
+"Partial IP values are ok; especially, when you want to identify a whole "
+"subnet."
+msgstr ""
+"Οι μερικές τιμές IP είναι εντάξει- ειδικά όταν θέλετε να προσδιορίσετε ένα "
+"ολόκληρο υποδίκτυο."
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:409
+#: lj-maintenance-mode.php:428 lj-maintenance-mode.php:429
+#: lj-maintenance-mode.php:430 lj-maintenance-mode.php:456
+#: lj-maintenance-mode.php:480 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#: lj-maintenance-mode.php:567 lj-maintenance-mode.php:623
+msgid "Tip"
+msgstr "Συμβουλή"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:430
+#: lj-maintenance-mode.php:456 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+msgid "Uses"
+msgstr "Χρήσεις"
+
+#: lj-maintenance-mode.php:405
+#, fuzzy
+msgid "which identifies the current Remote IP:"
+msgstr "η οποία προσδιορίζει την τρέχουσα απομακρυσμένη IP:"
+
+#: lj-maintenance-mode.php:409
+#, fuzzy
+msgid "identifies this server is at Server IP:"
+msgstr "προσδιορίζει αυτόν τον διακομιστή στη διεύθυνση Server IP:"
+
+#: lj-maintenance-mode.php:418
+#, fuzzy
+msgid "Allowed URI"
+msgstr "Επιτρεπόμενο URI"
+
+#: lj-maintenance-mode.php:418 lj-maintenance-mode.php:424
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:426
+#, fuzzy
+msgctxt "exact, stringent, precise"
+msgid "Strict"
+msgstr "пеҥгыде"
+
+#: lj-maintenance-mode.php:424
+#, fuzzy
+msgid "The full relative path, starting with"
+msgstr "Η πλήρης σχετική διαδρομή, ξεκινώντας με"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454
+#, fuzzy
+msgid "when doing a"
+msgstr "όταν κάνετε μια"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:452
+#: lj-maintenance-mode.php:453 lj-maintenance-mode.php:454
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+msgid "comparison"
+msgstr "σύγκριση"
+
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:453
+#, fuzzy
+msgid "Ignores the trailing slash"
+msgstr "Αγνοεί την τελική κάθετο"
+
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:454
+#, fuzzy
+msgid "Ignores the entire query string"
+msgstr "Αγνοεί ολόκληρη τη συμβολοσειρά ερωτήματος"
+
+#: lj-maintenance-mode.php:427 lj-maintenance-mode.php:455
+#, fuzzy
+msgid "Never include the protocol, domain or port prefixes of the full URL."
+msgstr ""
+"Ποτέ μην περιλαμβάνετε τα προθέματα πρωτοκόλλου, τομέα ή θύρας της πλήρους "
+"διεύθυνσης URL."
+
+#: lj-maintenance-mode.php:428
+#, fuzzy
+msgid ""
+"Enter / on its own line to allow the sites home page to always by-pass the "
+"maintenance mode page."
+msgstr ""
+"Πληκτρολογήστε το / στη δική του γραμμή για να επιτρέψετε στην αρχική σελίδα "
+"του ιστότοπου να παρακάμπτει πάντα τη σελίδα λειτουργίας συντήρησης."
+
+#: lj-maintenance-mode.php:429 lj-maintenance-mode.php:480
+#, fuzzy
+msgid "will always by-pass the maintenance mode page."
+msgstr "θα παρακάμπτει πάντα τη σελίδα λειτουργίας συντήρησης."
+
+#: lj-maintenance-mode.php:437 lj-maintenance-mode.php:463
+#: lj-maintenance-mode.php:484 lj-maintenance-mode.php:503
+#: lj-maintenance-mode.php:522
+#, fuzzy
+msgid "and the value for this loaded page is:"
+msgstr "και η τιμή για αυτή τη φορτωμένη σελίδα είναι:"
+
+#: lj-maintenance-mode.php:446
+#, fuzzy
+msgid "Allowed URL"
+msgstr "Επιτρεπόμενη διεύθυνση URL"
+
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "Can be any sub-string contained within the URI, when doing a"
+msgstr ""
+"Μπορεί να είναι οποιαδήποτε υπο-σειρά που περιέχεται στο URI, όταν γίνεται "
+"ένα"
+
+#: lj-maintenance-mode.php:472
+#, fuzzy
+msgid "Allowed Query String"
+msgstr "Επιτρεπόμενη συμβολοσειρά ερωτήματος"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "Can be any sub-string value after the"
+msgstr "Μπορεί να είναι οποιαδήποτε τιμή υπο-σειράς μετά το"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "in the URI, when doing a"
+msgstr "στο URI, κατά την εκτέλεση ενός"
+
+#: lj-maintenance-mode.php:479
+#, fuzzy
+msgid "Enter sub-string values that conform to output by"
+msgstr "Εισάγετε τιμές υποσυνόλων που συμμορφώνονται με την έξοδο από το"
+
+#: lj-maintenance-mode.php:493
+#, fuzzy
+msgid "Allowed Referer"
+msgstr "Επιτρεπόμενος παραπομπός"
+
+#: lj-maintenance-mode.php:512
+#, fuzzy
+msgid "Allowed User Agent"
+msgstr "Επιτρεπόμενος πράκτορας χρήστη"
+
+#: lj-maintenance-mode.php:537
+#, fuzzy
+msgid "Add Google Analytics code"
+msgstr "Προσθήκη κώδικα Google Analytics"
+
+#: lj-maintenance-mode.php:542
+#, fuzzy
+msgid "for Analytics profile"
+msgstr "για το προφίλ Analytics"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "configured in"
+msgstr "διαμορφωμένο σε"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "Analytify"
+msgstr "Analytify"
+
+#: lj-maintenance-mode.php:546
+#, fuzzy
+msgid ""
+"Since you have the Analytify plugin installed, this will add Google "
+"Analytics tracking code to the maintenance page."
+msgstr ""
+"Εφόσον έχετε εγκαταστήσει το πρόσθετο Analytify, αυτό θα προσθέσει τον "
+"κώδικα παρακολούθησης του Google Analytics στη σελίδα συντήρησης."
+
+#: lj-maintenance-mode.php:554
+#, fuzzy
+msgid "Custom Stylesheet"
+msgstr "Προσαρμοσμένο φύλλο στυλ"
+
+#: lj-maintenance-mode.php:561 lj-maintenance-mode.php:589
+#: lj-maintenance-mode.php:605
+#, fuzzy
+msgid "You are currently using custom stylesheet."
+msgstr "Αυτή τη στιγμή χρησιμοποιείτε προσαρμοσμένο φύλλο στυλ."
+
+#: lj-maintenance-mode.php:562 lj-maintenance-mode.php:590
+#: lj-maintenance-mode.php:606
+#, fuzzy
+msgid "file in your theme folder"
+msgstr "αρχείο στο φάκελο του θέματος σας"
+
+#: lj-maintenance-mode.php:564 lj-maintenance-mode.php:593
+#: lj-maintenance-mode.php:609
+#, fuzzy, php-format
+msgid ""
+"For custom stylesheet, add %s file to your theme folder. If your custom "
+"stylesheet file is picked up by the Maintenance Mode, it will be indicated "
+"here."
+msgstr ""
+"Για προσαρμοσμένο φύλλο στυλ, προσθέστε το αρχείο %s στο φάκελο του θέματος. "
+"Εάν το προσαρμοσμένο αρχείο φύλλου στυλ σας παραληφθεί από τη λειτουργία "
+"συντήρησης, θα υποδειχθεί εδώ."
+
+#: lj-maintenance-mode.php:567
+#, fuzzy
+msgid "The maintenance mode page DOM structure is:"
+msgstr "Η δομή DOM της σελίδας λειτουργίας συντήρησης είναι:"
+
+#: lj-maintenance-mode.php:575
+#, fuzzy
+msgid "the maintenance mode page content is here"
+msgstr "το περιεχόμενο της σελίδας λειτουργίας συντήρησης είναι εδώ"
+
+#: lj-maintenance-mode.php:583
+#, fuzzy
+msgid "Custom Frontend Stylesheet"
+msgstr "Προσαρμοσμένο φύλλο στυλ Frontend"
+
+#: lj-maintenance-mode.php:599
+#, fuzzy
+msgid "Custom Login Stylesheet"
+msgstr "Προσαρμοσμένο φύλλο στυλ σύνδεσης"
+
+#: lj-maintenance-mode.php:616
+#, fuzzy
+msgid "Inject code snippet"
+msgstr "Ενέσιμο απόσπασμα κώδικα"
+
+#: lj-maintenance-mode.php:622
+#, fuzzy
+msgid "This is useful to add a Javascript snippet to the maintenance page."
+msgstr ""
+"Αυτό είναι χρήσιμο για να προσθέσετε ένα απόσπασμα Javascript στη σελίδα "
+"συντήρησης."
+
+#: lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Do include the surrounding"
+msgstr "Συμπεριλάβετε τα γύρω"
+
+#: lj-maintenance-mode.php:627
+#, fuzzy
+msgid ""
+"NOTE: if you are using the option above to add Google Analytics code, do NOT "
+"paste GA tracking code here."
+msgstr ""
+"ΣΗΜΕΙΩΣΗ: αν χρησιμοποιείτε την παραπάνω επιλογή για να προσθέσετε κώδικα "
+"Google Analytics, ΜΗΝ επικολλήσετε τον κωδικό παρακολούθησης GA εδώ."
+
+#: lj-maintenance-mode.php:679
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "Απενεργοποιημένο"
+
+#: lj-maintenance-mode.php:682
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "Ενεργοποιημένο"
+
+#: lj-maintenance-mode.php:693
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "Λειτουργία εντοπισμού σφαλμάτων"
+
+#: lj-maintenance-mode.php:710
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: lj-maintenance-mode.php:1226
+#, fuzzy
+msgid "Maintenance mode - before content"
+msgstr "Λειτουργία συντήρησης - πριν από το περιεχόμενο"
+
+#: lj-maintenance-mode.php:1227
+#, fuzzy
+msgid "Enter the content to appear before the maintenance mode content."
+msgstr ""
+"Εισάγετε το περιεχόμενο που θα εμφανίζεται πριν από το περιεχόμενο της "
+"λειτουργίας συντήρησης."
+
+#: lj-maintenance-mode.php:1234
+#, fuzzy
+msgid "Maintenance mode - after content"
+msgstr "Λειτουργία συντήρησης - μετά το περιεχόμενο"
+
+#: lj-maintenance-mode.php:1235
+#, fuzzy
+msgid "Enter the content to appear after the maintenance mode content."
+msgstr ""
+"Εισάγετε το περιεχόμενο που θα εμφανίζεται μετά το περιεχόμενο της "
+"λειτουργίας συντήρησης."

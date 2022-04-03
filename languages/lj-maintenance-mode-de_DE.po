@@ -1,45 +1,83 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Maintenance Mode 1.4.1\n"
+"Project-Id-Version: Maintenance Mode 2.5.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
 "mode\n"
-"POT-Creation-Date: 2016-01-02 13:33:47+00:00\n"
-"PO-Revision-Date: Fri Mar 04 2016 15:37:58 GMT+0100 (Mitteleuropäische Zeit)\n"
-"Last-Translator: Sebastian Weyer <sebastian@fam-weyer.de>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: German\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
+"POT-Creation-Date: 2022-01-30 15:17+1100\n"
+"PO-Revision-Date: 2022-01-30 15:31+1100\n"
+"Last-Translator: John Lang <john@johnlang.com.au>\n"
+"Language-Team: \n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-SearchPath-0: ..\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
 "__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
 "esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Loco-Target-Locale: de_DE\n"
-"X-Generator: Loco - https://localise.biz/"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-SearchPath-0: ..\n"
 
-#: lj-maintenance-mode.php:65
+#: lj-maintenance-mode.php:66 lj-maintenance-mode.php:724
+msgid "Website Under Maintenance"
+msgstr "Webseite im Wartungsmodus"
+
+#: lj-maintenance-mode.php:66
+#, fuzzy
 msgid ""
-"<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing "
-"scheduled maintenance. Please check back soon.</p>"
+"Our Website is currently undergoing scheduled maintenance. Please check back "
+"soon."
 msgstr ""
 "<h1>Webseite im Wartungsmodus</h1><p>Unsere Webseite befindet sich momentan "
 "in einer Wartung. Bitte komme später wieder.</p>"
 
-#: lj-maintenance-mode.php:68 lj-maintenance-mode.php:71
+#: lj-maintenance-mode.php:69
 msgid ""
 "Important: Don't forget to flush your cache using WP Super Cache when "
 "enabling or disabling Maintenance Mode."
 msgstr ""
 "Wichtig: Bei der Nutzung von WP Super Cache muss nach Aktivierung oder "
-"Deaktivierung des Wartungsmodus der Cache geleert werden!"
+"Deaktivierung des Wartungsmodus der Cache geleert werden."
 
-#: lj-maintenance-mode.php:74
+#: lj-maintenance-mode.php:72
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Wichtig: Falls Sie W3 Total Cache benutzen, dürfen Sie beim Ein- oder "
+"Ausschalten von Maintenance Mode nicht vergessen, den Cache zu leeren."
+
+#: lj-maintenance-mode.php:75
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Wichtig: Falls Sie WP Super Cache benutzen, dürfen Sie beim Ein- oder "
+"Ausschalten von Maintenance Mode nicht vergessen, den Cache zu leeren."
+
+#: lj-maintenance-mode.php:78
+msgid ""
+"Important: Don't forget to flush your cache using WP Rocket when enabling or "
+"disabling Maintenance Mode."
+msgstr ""
+"Wichtig: Vergessen Sie nicht, Ihren Cache mit WP Rocket zu leeren, wenn Sie "
+"den Wartungsmodus aktivieren oder deaktivieren."
+
+#: lj-maintenance-mode.php:81
+msgid ""
+"Important: Don't forget to flush your cache using Autoptimize when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Wichtig: Vergessen Sie nicht, Ihren Cache mit Autoptimize zu leeren, wenn "
+"Sie den Wartungsmodus aktivieren oder deaktivieren."
+
+#: lj-maintenance-mode.php:84
+#, fuzzy
 msgid ""
 "Maintenance Mode is currently active. To make sure that it works, open your "
 "web page in either private / incognito mode, different browser or simply log "
@@ -47,71 +85,460 @@ msgid ""
 msgstr ""
 "Der Wartungsmodus ist momentan aktiviert. Um sicherzustellen dass er "
 "ordnungsgemäß funktioniert öffne deine Webseite in einem anderen Browser "
-"oder logge dich aus Wordpress aus. <strong>Eingeloggte Benutzer sind vom "
-"Wartungsmodus nicht betroffen.</strong>"
+"oder logge dich aus Wordpress aus. Eingeloggte Benutzer sind vom "
+"Wartungsmodus nicht betroffen."
 
-#. #-#-#-#-#  plugin.pot (Maintenance Mode 1.4.1)  #-#-#-#-#
-#. Plugin Name of the plugin/theme
-#: lj-maintenance-mode.php:144 lj-maintenance-mode.php:176
+#: lj-maintenance-mode.php:87
+#, fuzzy
+msgid "You can add widgets in \"Appearance -> Widgets\" section."
+msgstr ""
+"Sie können Widgets im Bereich \"Erscheinungsbild -> Widgets\" hinzufügen."
+
+#: lj-maintenance-mode.php:211 lj-maintenance-mode.php:300
+msgctxt "Plugin Name"
 msgid "Maintenance Mode"
 msgstr "Wartungsmodus"
 
-#: lj-maintenance-mode.php:185
+#: lj-maintenance-mode.php:212
+msgctxt "Plugin Description"
+msgid ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+msgstr ""
+"Eine ganz einfache «Wartungs-Seite». Benutzt WordPress-Formatierung. Keine "
+"Werbung, keine kostenpflichtigen Upgrades."
+
+#: lj-maintenance-mode.php:213
+msgctxt "Plugin Author"
+msgid "Lukas Juhas"
+msgstr "Lukas Juhas"
+
+#: lj-maintenance-mode.php:223
+msgctxt "Page Title"
+msgid "Maintenance Mode"
+msgstr "Wartungsmodus"
+
+#: lj-maintenance-mode.php:223
+msgctxt "Menu Title"
+msgid "Maintenance Mode"
+msgstr "Wartungsmodus"
+
+#: lj-maintenance-mode.php:271
+msgid "Maintenance Mode"
+msgstr "Wartungsmodus"
+
+#: lj-maintenance-mode.php:281
 msgid "Enabled"
 msgstr "Aktiviert"
 
-#: lj-maintenance-mode.php:196
-msgid "Content"
-msgstr "Inhalt"
+#: lj-maintenance-mode.php:293
+msgid "Mode"
+msgstr "Modus"
 
-#: lj-maintenance-mode.php:200
+#: lj-maintenance-mode.php:300
+msgid "Default"
+msgstr "Standard"
+
+#: lj-maintenance-mode.php:304
+msgid "Coming Soon Page"
+msgstr "Erscheint in Kürze Seite"
+
+#: lj-maintenance-mode.php:307
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"Wenn Sie Ihre Webseite für längere Zeit in den Wartungsmodus versetzen, "
+"sollten Sie sie auf \"Webseite in Kürze wieder verfügbar\" gehen. "
+"Andernfalls \"Wartungsmodus\" verwenden."
+
+#: lj-maintenance-mode.php:308
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr ""
+"Standard mäßig wird der HTTP Status auf 503 gesetzt: \"Webseite in Kürze "
+"wieder verfügbar\" wird HTTP auf 200 setzen."
+
+#: lj-maintenance-mode.php:308
+msgid "Learn more."
+msgstr "Mehr erfahren."
+
+#: lj-maintenance-mode.php:315
 msgid "Preview"
 msgstr "Vorschau"
 
-#: lj-maintenance-mode.php:201
+#: lj-maintenance-mode.php:316 lj-maintenance-mode.php:711
+msgctxt "Plugin Support link"
 msgid "Support"
 msgstr "Hilfe"
 
-#: lj-maintenance-mode.php:229
+#: lj-maintenance-mode.php:329
+msgid "Advanced Settings"
+msgstr "Erweiterte Einstellungen"
+
+#: lj-maintenance-mode.php:332
+msgid "Hide Advanced Settings"
+msgstr "Erweiterte Einstellungen ausblenden"
+
+#: lj-maintenance-mode.php:340
+msgid "Add widget areas above and below content"
+msgstr "Widget-Bereiche über und unter dem Inhalt hinzufügen"
+
+#: lj-maintenance-mode.php:352
+msgid "Site Title"
+msgstr "Seitentitel"
+
+#: lj-maintenance-mode.php:356
+#, fuzzy
+msgid "Overrides default site meta title."
+msgstr "Überschreibt den Standard-Meta-Titel der Website."
+
+#: lj-maintenance-mode.php:364
+msgid "User Roles"
+msgstr "Benutzerrollen"
+
+#: lj-maintenance-mode.php:365
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr ""
+"Haken Sie diejenigen an, die Zugriff auf das Frontend haben sollen, während "
+"der Wartungsmodus aktiv ist"
+
+#: lj-maintenance-mode.php:366
+msgid "Please note that this does NOT apply to admin area"
+msgstr "Bitte beachten Sie, dass sich das NICHT auf den Adminbereich auswirkt"
+
+#: lj-maintenance-mode.php:367
+msgid "Toggle all"
+msgstr "Aktiviere alle"
+
+#: lj-maintenance-mode.php:387
+#, fuzzy
+msgid "User Role control is currently not available on your website. Sorry!"
+msgstr ""
+"Die Benutzerrollensteuerung ist derzeit auf Ihrer Website nicht verfügbar. "
+"Entschuldigung!"
+
+#: lj-maintenance-mode.php:394
+#, fuzzy
+msgid "Allowed IP"
+msgstr "Erlaubte IP"
+
+#: lj-maintenance-mode.php:394 lj-maintenance-mode.php:446
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454 lj-maintenance-mode.php:472
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:493
+#: lj-maintenance-mode.php:499 lj-maintenance-mode.php:512
+#: lj-maintenance-mode.php:518
+msgctxt "include, part of, constitute"
+msgid "Contains"
+msgstr "Enthält"
+
+#: lj-maintenance-mode.php:400
+#, fuzzy
+msgid "Enter IPv4 or IPv6 values, one per line."
+msgstr "Geben Sie IPv4- oder IPv6-Werte ein, einen pro Zeile."
+
+#: lj-maintenance-mode.php:401
+#, fuzzy
+msgid ""
+"Which IP specification gets used? That all depends upon how the remote "
+"caller established the connection; you will never know until they say hello."
+msgstr ""
+"Welche IP-Spezifikation wird verwendet? Das hängt davon ab, wie der "
+"entfernte Anrufer die Verbindung hergestellt hat; Sie werden es nie wissen, "
+"bis er \"Hallo\" sagt."
+
+#: lj-maintenance-mode.php:402
+#, fuzzy
+msgid ""
+"Partial IP values are ok; especially, when you want to identify a whole "
+"subnet."
+msgstr ""
+"Teilweise IP-Werte sind in Ordnung, vor allem, wenn Sie ein ganzes Subnetz "
+"identifizieren wollen."
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:409
+#: lj-maintenance-mode.php:428 lj-maintenance-mode.php:429
+#: lj-maintenance-mode.php:430 lj-maintenance-mode.php:456
+#: lj-maintenance-mode.php:480 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#: lj-maintenance-mode.php:567 lj-maintenance-mode.php:623
+msgid "Tip"
+msgstr "Tipp"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:430
+#: lj-maintenance-mode.php:456 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+msgid "Uses"
+msgstr "Verwendet"
+
+#: lj-maintenance-mode.php:405
+#, fuzzy
+msgid "which identifies the current Remote IP:"
+msgstr "die die aktuelle Remote-IP identifiziert:"
+
+#: lj-maintenance-mode.php:409
+#, fuzzy
+msgid "identifies this server is at Server IP:"
+msgstr "identifiziert diesen Server unter Server IP:"
+
+#: lj-maintenance-mode.php:418
+#, fuzzy
+msgid "Allowed URI"
+msgstr "Erlaubte URI"
+
+#: lj-maintenance-mode.php:418 lj-maintenance-mode.php:424
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:426
+msgctxt "exact, stringent, precise"
+msgid "Strict"
+msgstr "Strikt"
+
+#: lj-maintenance-mode.php:424
+#, fuzzy
+msgid "The full relative path, starting with"
+msgstr "Der vollständige relative Pfad, beginnend mit"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454
+#, fuzzy
+msgid "when doing a"
+msgstr "wenn Sie eine"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:452
+#: lj-maintenance-mode.php:453 lj-maintenance-mode.php:454
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+msgid "comparison"
+msgstr "Vergleich"
+
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:453
+#, fuzzy
+msgid "Ignores the trailing slash"
+msgstr "Ignoriert den abschließenden Schrägstrich"
+
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:454
+#, fuzzy
+msgid "Ignores the entire query string"
+msgstr "Ignoriert den gesamten Abfrage-String"
+
+#: lj-maintenance-mode.php:427 lj-maintenance-mode.php:455
+#, fuzzy
+msgid "Never include the protocol, domain or port prefixes of the full URL."
+msgstr ""
+"Fügen Sie niemals die Protokoll-, Domänen- oder Port-Präfixe der "
+"vollständigen URL ein."
+
+#: lj-maintenance-mode.php:428
+#, fuzzy
+msgid ""
+"Enter / on its own line to allow the sites home page to always by-pass the "
+"maintenance mode page."
+msgstr ""
+"Geben Sie / in eine eigene Zeile ein, damit die Startseite der Website die "
+"Wartungsmodus-Seite immer umgeht."
+
+#: lj-maintenance-mode.php:429 lj-maintenance-mode.php:480
+#, fuzzy
+msgid "will always by-pass the maintenance mode page."
+msgstr "wird die Wartungsmodus-Seite immer umgangen."
+
+#: lj-maintenance-mode.php:437 lj-maintenance-mode.php:463
+#: lj-maintenance-mode.php:484 lj-maintenance-mode.php:503
+#: lj-maintenance-mode.php:522
+#, fuzzy
+msgid "and the value for this loaded page is:"
+msgstr "und der Wert für diese geladene Seite ist:"
+
+#: lj-maintenance-mode.php:446
+msgid "Allowed URL"
+msgstr "Zulässige URL"
+
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "Can be any sub-string contained within the URI, when doing a"
+msgstr ""
+"Kann eine beliebige Teilzeichenkette sein, die im URI enthalten ist, wenn "
+"man eine"
+
+#: lj-maintenance-mode.php:472
+#, fuzzy
+msgid "Allowed Query String"
+msgstr "Erlaubte Abfragezeichenfolge"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "Can be any sub-string value after the"
+msgstr "Kann ein beliebiger Sub-String-Wert nach der"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "in the URI, when doing a"
+msgstr "in der URI, wenn Sie eine"
+
+#: lj-maintenance-mode.php:479
+#, fuzzy
+msgid "Enter sub-string values that conform to output by"
+msgstr "Geben Sie Sub-String-Werte ein, die mit der Ausgabe von"
+
+#: lj-maintenance-mode.php:493
+#, fuzzy
+msgid "Allowed Referer"
+msgstr "Erlaubter Referent"
+
+#: lj-maintenance-mode.php:512
+#, fuzzy
+msgid "Allowed User Agent"
+msgstr "Erlaubter Benutzer-Agent"
+
+#: lj-maintenance-mode.php:537
+#, fuzzy
+msgid "Add Google Analytics code"
+msgstr "Google Analytics-Code hinzufügen"
+
+#: lj-maintenance-mode.php:542
+#, fuzzy
+msgid "for Analytics profile"
+msgstr "für das Profil Analytik"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "configured in"
+msgstr "eingestellt in"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "Analytify"
+msgstr "Analysieren"
+
+#: lj-maintenance-mode.php:546
+#, fuzzy
+msgid ""
+"Since you have the Analytify plugin installed, this will add Google "
+"Analytics tracking code to the maintenance page."
+msgstr ""
+"Da Sie das Analytify-Plugin installiert haben, wird der Tracking-Code von "
+"Google Analytics auf der Wartungsseite hinzugefügt."
+
+#: lj-maintenance-mode.php:554
+#, fuzzy
+msgid "Custom Stylesheet"
+msgstr "Benutzerdefiniertes Stylesheet"
+
+#: lj-maintenance-mode.php:561 lj-maintenance-mode.php:589
+#: lj-maintenance-mode.php:605
+#, fuzzy
+msgid "You are currently using custom stylesheet."
+msgstr "Sie verwenden derzeit ein benutzerdefiniertes Stylesheet."
+
+#: lj-maintenance-mode.php:562 lj-maintenance-mode.php:590
+#: lj-maintenance-mode.php:606
+#, fuzzy
+msgid "file in your theme folder"
+msgstr "datei in Ihrem Theme-Ordner"
+
+#: lj-maintenance-mode.php:564 lj-maintenance-mode.php:593
+#: lj-maintenance-mode.php:609
+#, fuzzy, php-format
+msgid ""
+"For custom stylesheet, add %s file to your theme folder. If your custom "
+"stylesheet file is picked up by the Maintenance Mode, it will be indicated "
+"here."
+msgstr ""
+"Für benutzerdefinierte Stylesheets fügen Sie die Datei %s zu Ihrem Theme-"
+"Ordner hinzu. Wenn Ihre benutzerdefinierte Stylesheet-Datei vom "
+"Wartungsmodus abgeholt wird, wird sie hier angezeigt."
+
+#: lj-maintenance-mode.php:567
+#, fuzzy
+msgid "The maintenance mode page DOM structure is:"
+msgstr "Die DOM-Struktur der Wartungsmodus-Seite ist wie folgt:"
+
+#: lj-maintenance-mode.php:575
+#, fuzzy
+msgid "the maintenance mode page content is here"
+msgstr "der Inhalt der Wartungsmodus-Seite ist hier"
+
+#: lj-maintenance-mode.php:583
+#, fuzzy
+msgid "Custom Frontend Stylesheet"
+msgstr "Benutzerdefiniertes Frontend-Stylesheet"
+
+#: lj-maintenance-mode.php:599
+#, fuzzy
+msgid "Custom Login Stylesheet"
+msgstr "Benutzerdefiniertes Login-Stylesheet"
+
+#: lj-maintenance-mode.php:616
+msgid "Inject code snippet"
+msgstr "Zusätzlicher Code"
+
+#: lj-maintenance-mode.php:622
+msgid "This is useful to add a Javascript snippet to the maintenance page."
+msgstr "Dies ist nützlich, um der Wartungsseite Javascript hinzuzufügen."
+
+#: lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Do include the surrounding"
+msgstr "Beziehen Sie die Umgebung mit ein"
+
+#: lj-maintenance-mode.php:627
+#, fuzzy
+msgid ""
+"NOTE: if you are using the option above to add Google Analytics code, do NOT "
+"paste GA tracking code here."
+msgstr ""
+"HINWEIS: Wenn Sie die obige Option zum Hinzufügen von Google Analytics-Code "
+"verwenden, fügen Sie den GA-Tracking-Code NICHT hier ein."
+
+#: lj-maintenance-mode.php:679
 msgctxt "Admin bar indicator"
 msgid "Disabled"
 msgstr "Deaktiviert"
 
-#: lj-maintenance-mode.php:232
+#: lj-maintenance-mode.php:682
 msgctxt "Admin bar indicator"
 msgid "Enabled"
 msgstr "Aktiviert"
 
-#: lj-maintenance-mode.php:236 lj-maintenance-mode.php:240
+#: lj-maintenance-mode.php:693
 msgctxt "Admin bar indicator"
 msgid "Maintenance Mode"
 msgstr "Wartungsmodus"
 
-#: lj-maintenance-mode.php:253
+#: lj-maintenance-mode.php:710
 msgctxt "Plugin Settings link"
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: lj-maintenance-mode.php:271
-msgid "Website Under Maintenance"
-msgstr "Webseite im Wartungsmodus"
+#: lj-maintenance-mode.php:1226
+msgid "Maintenance mode - before content"
+msgstr "Wartungsmodus"
 
-#. Plugin URI of the plugin/theme
-msgid "https://github.com/lukasjuhas/lj-maintenance-mode"
-msgstr "https://github.com/lukasjuhas/lj-maintenance-mode"
-
-#. Description of the plugin/theme
-msgid ""
-"Very simple Maintenance Mode & Coming soon page. Using default Wordpress "
-"markup, No ads, no paid upgrades."
+#: lj-maintenance-mode.php:1227
+#, fuzzy
+msgid "Enter the content to appear before the maintenance mode content."
 msgstr ""
-"Sehr einfacher Wartungsmodus. Nutzung des Standard Wordpress Markup, Keine "
-"Werbung, keine bezahlten Upgrades."
+"Geben Sie den Inhalt ein, der vor dem Inhalt des Wartungsmodus erscheinen "
+"soll."
 
-#. Author of the plugin/theme
-msgid "Lukas Juhas"
-msgstr "Lukas Juhas"
+#: lj-maintenance-mode.php:1234
+msgid "Maintenance mode - after content"
+msgstr "Wartungsmodus"
 
-#. Author URI of the plugin/theme
-msgid "http://lukasjuhas.com"
-msgstr "http://lukasjuhas.com"
+#: lj-maintenance-mode.php:1235
+#, fuzzy
+msgid "Enter the content to appear after the maintenance mode content."
+msgstr ""
+"Geben Sie den Inhalt ein, der nach dem Inhalt des Wartungsmodus erscheinen "
+"soll."
+
+#~ msgid "https://github.com/lukasjuhas/lj-maintenance-mode"
+#~ msgstr "https://github.com/lukasjuhas/lj-maintenance-mode"
+
+#~ msgid "http://lukasjuhas.com"
+#~ msgstr "http://lukasjuhas.com"

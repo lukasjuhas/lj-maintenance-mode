@@ -1,5 +1,55 @@
 # Changelog
 
+## 2.5.2
+* Add john-lang-86/lj-maintenance-mode#15 shortcodes for dynamic page content. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+  1. Add [ljmm_is_maintenance_mode_enabled] Show this content only when maintenance mode is enabled [/ljmm_is_maintenance_mode_enabled] shortcode.
+  2. Add [ljmm_is_maintenance_mode_disabled] Show this content only when maintenance mode is disabled [/ljmm_is_maintenance_mode_disabled] shortcode.
+  3. Add [ljmm_is_user_logged_in] Show this content only when the user is logged in to the website [/ljmm_is_user_logged_in] shortcode.
+  4. Add [ljmm_is_user_logged_out] Show this content only when the user is logged out of the website, they are a public user [/ljmm_is_user_logged_out] shortcode.
+* Add john-lang-86/lj-maintenance-mode#6 to expand the supported languages. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+  1. Updated source code to be primarily human native language, removing the technology aspects (like %s) from the translatable phrases. This technique significantly improved the online translation success; while intentionally leaving 1 %s in the translation string list as a 'canary in the coal mine' test to see how well the translator handled it.
+  2. Using 'PoEdit Pro' application and the DeepL/Google online ML translators. Keeping languages that had a > 98% online translation success, as anything less would be a disappointing user expectation and experience.
+  3. As-at 28 Mar 2022, 145 locales (language_region combinations) have been translated. The full [journey from RTFM to commit](https://github.com/john-lang-86/lj-maintenance-mode/issues/6) has been documented.
+      * Focus on [WordPress installation statistics](https://wordpress.org/about/stats/), in descending ranked order; then
+      * Focus on [WordPress up-to-date translations](https://make.wordpress.org/polyglots/teams/), which indicates an active community.
+      * Focus on [Stripe Payment Processor](https://support.stripe.com/questions/supported-languages-for-stripe-checkout-and-payment-links) supported languages.
+* Resolves review [feedback about Twenty Twenty-Two theme compatability](https://wordpress.org/support/topic/love-this-plugin-so-much-i-donated/) as part of ['Alternative to get_header hook/action'](https://github.com/john-lang-86/lj-maintenance-mode/issues/11) solution. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Update screenshot-4.png for the new settings page options in 2.5.2, and add screenshot-10.png
+* Update `README.md` and `readme.txt` files.
+
+## 2.5.1.1
+* Fix john-lang-86/lj-maintenance-mode#1 to improve trailing slash comparisons. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Fix john-lang-86/lj-maintenance-mode#13 to allow a strict comparison for the site home page. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Improved helpful messages to advanced setting options. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+
+## 2.5.1
+* Added Autoptimize message. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Added "maintenance.min.login.css" feature. When detected in theme directory, this CSS file will be loaded in the standard login page to show users that maintenance mode is active. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+  1. Added filter "ljmm_css_login_filename".
+  2. Added filter "ljmm_css_login_url".
+* Resolve lukasjuhas/lj-maintenance-mode#37 by adding 6 "Allowed" setting lists; match one on a list and maintenance mode lets the request proceed. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+  1. Added "Allowed IPs (Contains)" setting, where $_SERVER[REMOTE_ADDR] matching requests will by-pass maintenance mode page.
+  2. Added "Allowed URIs (Strict)" setting, where $_SERVER[REQUEST_URI] matching requests will by-pass maintenance mode page.
+  3. Added "Allowed URIs (Contains)" setting, where $_SERVER[REQUEST_URI] matching requests will by-pass maintenance mode page.
+  4. Added "Allowed Query Strings (Contains)" setting, where $_SERVER[QUERY_STRING] matching requests will by-pass maintenance mode page.
+  5. Added "Allowed Referers (Contains)" setting, where $_SERVER[HTTP_REFERER] matching requests will by-pass maintenance mode page.
+  6. Added "Allowed User Agents (Contains)" setting, where $_SERVER[HTTP_USER_AGENT] matching requests will by-pass maintenance mode page.
+* Resolve lukasjuhas/lj-maintenance-mode#43 by switching from 'get_header' to 'wp_loaded' hook/action. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+  1. Always allow '/wp-login.php' URI access requests.
+  2. Always allow 'action=enter_recovery_mode&rm_token=' query string access requests.
+* Fix lukasjuhas/lj-maintenance-mode#44 by always allowing access when "current_user_can('administrator')" check passes. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Resolve lukasjuhas/lj-maintenance-mode#47 by adding 2 DIVs to maintenance mode page (wrapper and content); for more flexible CSS options. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Add helpful messages to advanced setting options. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Add screenshot-4-2-5-1.png of settings page for 2.5.1.
+
+## 2.5
+* Added WP Rocket message. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Added "maintenance.min.frontend.css" feature. When detected in theme directory, this CSS file will be loaded in the frontend to show logged in users that maintenance mode is active. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+  1. Added filter "ljmm_css_frontend_filename".
+  2. Added filter "ljmm_css_frontend_url".
+* Commit contains unit tested (functional) core for 'an exception allow list for non-logged in access to resources' for REMOTE_ADDR, REQUEST_URI (Strict Match), REQUEST_URI (Contains/Sloppy Match) and HTTP_REFERER; but still needs a settings page implementation. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Acknowledgment: Language translations for new strings in the settings page in 2.5 are missing.
+
 ## 2.4.4
 * Bumped up "Tested up to"
 
@@ -34,7 +84,7 @@
 * Move mode up to the "main" setting area instead of advanced settings
 * From now on, `init` hook instead of `get_header` is used for maintenance mode
 * Dedicated method to check if maintenance mode is enabled to make things cleaner
-* Improve current_user_can checks. From codex: current_user_can( $capability ) will aways return true if user is Super Admin, unless specifically denied - see [inline source code](https://developer.wordpress.org/reference/classes/wp_user/has_cap/)
+* Improve current_user_can checks. From codex: current_user_can( $capability ) will always return true if user is Super Admin, unless specifically denied - see [inline source code](https://developer.wordpress.org/reference/classes/wp_user/has_cap/)
 * Update readme
 * Preview mode will now perform capabilities check. (Thanks to [@esemlabel](https://wordpress.org/support/users/esemlabel/))
 * Added Comet Cache support. (Thanks to [@doume](https://wordpress.org/support/users/doume/))

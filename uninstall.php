@@ -39,6 +39,12 @@ function ljmm_delete_plugin()
     delete_option('ljmm_add_widget_areas');
     delete_option('ljmm_analytify');
     delete_option('ljmm_code_snippet');
+    delete_option('ljmm-allow_remote_ip');
+    delete_option('ljmm-allow_request_uri_strictly');
+    delete_option('ljmm-allow_request_uri_contains');
+    delete_option('ljmm-allow_request_referer');
+    delete_option('ljmm-allow_request_user_agent');
+    delete_option('ljmm-allow_request_query_string');
 
     // remove capabilities
     ljmm_remove_capabilities();

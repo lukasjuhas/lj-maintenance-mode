@@ -1,0 +1,558 @@
+# Copyright (C) 2017 Maintenance Mode
+# This file is distributed under the same license as the Maintenance Mode package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode 2.5.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
+"mode\n"
+"POT-Creation-Date: 2022-01-30 15:17+1100\n"
+"PO-Revision-Date: 2022-02-06 20:12+1100\n"
+"Last-Translator: John Lang <john@johnlang.com.au>\n"
+"Language-Team: \n"
+"Language: ka_GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lj-maintenance-mode.php:66 lj-maintenance-mode.php:724
+#, fuzzy
+msgid "Website Under Maintenance"
+msgstr "ვებსაიტი შენარჩუნებულია"
+
+#: lj-maintenance-mode.php:66
+#, fuzzy
+msgid ""
+"Our Website is currently undergoing scheduled maintenance. Please check back "
+"soon."
+msgstr "ჩვენს ვებსაიტს ამჟამად გადის გეგმიური მოვლა. გთხოვთ, გადაამოწმოთ მალე."
+
+#: lj-maintenance-mode.php:69
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"მნიშვნელოვანია: არ დაგავიწყდეთ თქვენი ქეშის გაწმენდა WP Super Cache-ის "
+"გამოყენებით, როდესაც ჩართავს ან გამორთავს Maintenance Mode."
+
+#: lj-maintenance-mode.php:72
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"მნიშვნელოვანია: არ დაგავიწყდეთ თქვენი ქეშის გაწმენდა W3 Total Cache-ის "
+"გამოყენებით, როდესაც ჩართავს ან გამორთავს Maintenance Mode."
+
+#: lj-maintenance-mode.php:75
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"მნიშვნელოვანია: არ დაგავიწყდეთ თქვენი ქეშის გამორეცხვა Comet Cache-ის "
+"გამოყენებით Maintenance Mode-ის ჩართვის ან გამორთვისას."
+
+#: lj-maintenance-mode.php:78
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Rocket when enabling or "
+"disabling Maintenance Mode."
+msgstr ""
+"მნიშვნელოვანია: არ დაგავიწყდეთ თქვენი ქეშის გაწმენდა WP Rocket-ის "
+"გამოყენებით Maintenance Mode-ის ჩართვის ან გამორთვისას."
+
+#: lj-maintenance-mode.php:81
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Autoptimize when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"მნიშვნელოვანია: არ დაგავიწყდეთ თქვენი ქეშის გასუფთავება Autoptimize-ის "
+"გამოყენებით Maintenance Mode-ის ჩართვის ან გამორთვისას."
+
+#: lj-maintenance-mode.php:84
+#, fuzzy
+msgid ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+"მოვლის რეჟიმი ამჟამად აქტიურია. იმისათვის, რომ დარწმუნდეთ, რომ ის მუშაობს, "
+"გახსენით თქვენი ვებ გვერდი კერძო / ინკოგნიტო რეჟიმში, სხვა ბრაუზერში ან "
+"უბრალოდ გამოდით. შესული მომხმარებლების მოვლის რეჟიმი გავლენას არ ახდენს."
+
+#: lj-maintenance-mode.php:87
+#, fuzzy
+msgid "You can add widgets in \"Appearance -> Widgets\" section."
+msgstr ""
+"თქვენ შეგიძლიათ დაამატოთ ვიჯეტები \"გარეგნობა -> ვიჯეტები\" განყოფილებაში."
+
+#: lj-maintenance-mode.php:211 lj-maintenance-mode.php:300
+#, fuzzy
+msgctxt "Plugin Name"
+msgid "Maintenance Mode"
+msgstr "მოვლის რეჟიმი"
+
+#: lj-maintenance-mode.php:212
+#, fuzzy
+msgctxt "Plugin Description"
+msgid ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+msgstr ""
+"ძალიან მარტივი სარემონტო რეჟიმი და მალე გვერდი ნაგულისხმევი Wordpress "
+"მარკირების გამოყენებით რეკლამების ან ფასიანი განახლებების გარეშე."
+
+#: lj-maintenance-mode.php:213
+#, fuzzy
+msgctxt "Plugin Author"
+msgid "Lukas Juhas"
+msgstr "ლუკას იუჰასი"
+
+#: lj-maintenance-mode.php:223
+#, fuzzy
+msgctxt "Page Title"
+msgid "Maintenance Mode"
+msgstr "მოვლის რეჟიმი"
+
+#: lj-maintenance-mode.php:223
+#, fuzzy
+msgctxt "Menu Title"
+msgid "Maintenance Mode"
+msgstr "მოვლის რეჟიმი"
+
+#: lj-maintenance-mode.php:271
+#, fuzzy
+msgid "Maintenance Mode"
+msgstr "მოვლის რეჟიმი"
+
+#: lj-maintenance-mode.php:281
+msgid "Enabled"
+msgstr "ჩართული"
+
+#: lj-maintenance-mode.php:293
+#, fuzzy
+msgid "Mode"
+msgstr "რეჟიმი"
+
+#: lj-maintenance-mode.php:300
+msgid "Default"
+msgstr "ნაგულისხმევი"
+
+#: lj-maintenance-mode.php:304
+msgid "Coming Soon Page"
+msgstr "გვერდი მალე იქნება მზად"
+
+#: lj-maintenance-mode.php:307
+#, fuzzy
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"თუ თქვენ აყენებთ თქვენს საიტს შენარჩუნების რეჟიმში უფრო დიდი ხნის "
+"განმავლობაში, თქვენ უნდა დააყენოთ ეს \"მომავალი გვერდი\". წინააღმდეგ "
+"შემთხვევაში გამოიყენეთ \"Maintenance Mode\"."
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr "ნაგულისხმევად HTTP დაყენებულია 503-ზე, მალე HTTP დააყენებს 200-ზე."
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Learn more."
+msgstr "Გაიგე მეტი."
+
+#: lj-maintenance-mode.php:315
+msgid "Preview"
+msgstr "გადახედვა"
+
+#: lj-maintenance-mode.php:316 lj-maintenance-mode.php:711
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr "მხარდაჭერა"
+
+#: lj-maintenance-mode.php:329
+msgid "Advanced Settings"
+msgstr "გაფართოებული პარამეტრები"
+
+#: lj-maintenance-mode.php:332
+#, fuzzy
+msgid "Hide Advanced Settings"
+msgstr "გაფართოებული პარამეტრების დამალვა"
+
+#: lj-maintenance-mode.php:340
+#, fuzzy
+msgid "Add widget areas above and below content"
+msgstr "დაამატეთ ვიჯეტის არეები კონტენტის ზემოთ და ქვემოთ"
+
+#: lj-maintenance-mode.php:352
+msgid "Site Title"
+msgstr "საიტის სათაური"
+
+#: lj-maintenance-mode.php:356
+#, fuzzy
+msgid "Overrides default site meta title."
+msgstr "უგულებელყოფს საიტის ნაგულისხმევ მეტა სათაურს."
+
+#: lj-maintenance-mode.php:364
+#, fuzzy
+msgid "User Roles"
+msgstr "მომხმარებლის როლები"
+
+#: lj-maintenance-mode.php:365
+#, fuzzy
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr ""
+"მონიშნეთ ისინი, რომლებსაც შეუძლიათ თქვენი ვებსაიტის წინა ბოლოში წვდომა, თუ "
+"ჩართულია ტექნიკური რეჟიმი"
+
+#: lj-maintenance-mode.php:366
+#, fuzzy
+msgid "Please note that this does NOT apply to admin area"
+msgstr "გთხოვთ გაითვალისწინოთ, რომ ეს არ ეხება ადმინისტრაციულ ზონას"
+
+#: lj-maintenance-mode.php:367
+#, fuzzy
+msgid "Toggle all"
+msgstr "ყველას გადართვა"
+
+#: lj-maintenance-mode.php:387
+#, fuzzy
+msgid "User Role control is currently not available on your website. Sorry!"
+msgstr ""
+"მომხმარებლის როლის კონტროლი ამჟამად მიუწვდომელია თქვენს ვებსაიტზე. Ბოდიში!"
+
+#: lj-maintenance-mode.php:394
+#, fuzzy
+msgid "Allowed IP"
+msgstr "დაშვებული IP"
+
+#: lj-maintenance-mode.php:394 lj-maintenance-mode.php:446
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454 lj-maintenance-mode.php:472
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:493
+#: lj-maintenance-mode.php:499 lj-maintenance-mode.php:512
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgctxt "include, part of, constitute"
+msgid "Contains"
+msgstr "შეიცავს"
+
+#: lj-maintenance-mode.php:400
+#, fuzzy
+msgid "Enter IPv4 or IPv6 values, one per line."
+msgstr "შეიყვანეთ IPv4 ან IPv6 მნიშვნელობები, თითო სტრიქონზე."
+
+#: lj-maintenance-mode.php:401
+#, fuzzy
+msgid ""
+"Which IP specification gets used? That all depends upon how the remote "
+"caller established the connection; you will never know until they say hello."
+msgstr ""
+"რომელი IP სპეციფიკაცია გამოიყენება? ეს ყველაფერი დამოკიდებულია იმაზე, თუ "
+"როგორ დაამყარა კავშირი დისტანციურ აბონენტმა; ვერასოდეს გაიგებთ, სანამ არ "
+"მოგესალმებათ."
+
+#: lj-maintenance-mode.php:402
+#, fuzzy
+msgid ""
+"Partial IP values are ok; especially, when you want to identify a whole "
+"subnet."
+msgstr ""
+"ნაწილობრივი IP მნიშვნელობები ნორმალურია; განსაკუთრებით, როდესაც გსურთ მთელი "
+"ქვექსელის იდენტიფიცირება."
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:409
+#: lj-maintenance-mode.php:428 lj-maintenance-mode.php:429
+#: lj-maintenance-mode.php:430 lj-maintenance-mode.php:456
+#: lj-maintenance-mode.php:480 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#: lj-maintenance-mode.php:567 lj-maintenance-mode.php:623
+msgid "Tip"
+msgstr "რჩევა"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:430
+#: lj-maintenance-mode.php:456 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#, fuzzy
+msgid "Uses"
+msgstr "იყენებს"
+
+#: lj-maintenance-mode.php:405
+#, fuzzy
+msgid "which identifies the current Remote IP:"
+msgstr "რომელიც განსაზღვრავს მიმდინარე დისტანციურ IP-ს:"
+
+#: lj-maintenance-mode.php:409
+#, fuzzy
+msgid "identifies this server is at Server IP:"
+msgstr "განსაზღვრავს, რომ ეს სერვერი სერვერის IP-ზეა:"
+
+#: lj-maintenance-mode.php:418
+#, fuzzy
+msgid "Allowed URI"
+msgstr "დაშვებული URI"
+
+#: lj-maintenance-mode.php:418 lj-maintenance-mode.php:424
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:426
+#, fuzzy
+msgctxt "exact, stringent, precise"
+msgid "Strict"
+msgstr "მკაცრი"
+
+#: lj-maintenance-mode.php:424
+#, fuzzy
+msgid "The full relative path, starting with"
+msgstr "სრული ფარდობითი გზა, დაწყებული"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454
+#, fuzzy
+msgid "when doing a"
+msgstr "როდესაც აკეთებს ა"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:452
+#: lj-maintenance-mode.php:453 lj-maintenance-mode.php:454
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "comparison"
+msgstr "შედარება"
+
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:453
+#, fuzzy
+msgid "Ignores the trailing slash"
+msgstr "იგნორირებას უკეთებს უკანა ხაზს"
+
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:454
+#, fuzzy
+msgid "Ignores the entire query string"
+msgstr "უგულებელყოფს შეკითხვის მთელ სტრიქონს"
+
+#: lj-maintenance-mode.php:427 lj-maintenance-mode.php:455
+#, fuzzy
+msgid "Never include the protocol, domain or port prefixes of the full URL."
+msgstr ""
+"არასოდეს შეიტანოთ სრული URL-ის პროტოკოლი, დომენის ან პორტის პრეფიქსები."
+
+#: lj-maintenance-mode.php:428
+#, fuzzy
+msgid ""
+"Enter / on its own line to allow the sites home page to always by-pass the "
+"maintenance mode page."
+msgstr ""
+"შეიყვანეთ / საკუთარ ხაზზე, რათა საიტების მთავარ გვერდს ყოველთვის გადალახონ "
+"ტექნიკური რეჟიმის გვერდი."
+
+#: lj-maintenance-mode.php:429 lj-maintenance-mode.php:480
+#, fuzzy
+msgid "will always by-pass the maintenance mode page."
+msgstr "ყოველთვის გვერდის ავლით შენარჩუნების რეჟიმის გვერდს."
+
+#: lj-maintenance-mode.php:437 lj-maintenance-mode.php:463
+#: lj-maintenance-mode.php:484 lj-maintenance-mode.php:503
+#: lj-maintenance-mode.php:522
+#, fuzzy
+msgid "and the value for this loaded page is:"
+msgstr "და ამ ჩატვირთული გვერდის მნიშვნელობა არის:"
+
+#: lj-maintenance-mode.php:446
+#, fuzzy
+msgid "Allowed URL"
+msgstr "დაშვებული URL"
+
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "Can be any sub-string contained within the URI, when doing a"
+msgstr ""
+"შეიძლება იყოს ნებისმიერი ქვესტრიქონი, რომელიც შეიცავს URI-ს, როდესაც აკეთებთ "
+"a"
+
+#: lj-maintenance-mode.php:472
+#, fuzzy
+msgid "Allowed Query String"
+msgstr "დაშვებული შეკითხვის სტრიქონი"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "Can be any sub-string value after the"
+msgstr "შეიძლება იყოს ნებისმიერი ქვე-სტრიქონის მნიშვნელობა შემდეგ"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "in the URI, when doing a"
+msgstr "URI-ში, როდესაც აკეთებთ ა"
+
+#: lj-maintenance-mode.php:479
+#, fuzzy
+msgid "Enter sub-string values that conform to output by"
+msgstr ""
+"შეიყვანეთ ქვე-სტრიქონის მნიშვნელობები, რომლებიც შეესაბამება გამომავალს მიერ"
+
+#: lj-maintenance-mode.php:493
+#, fuzzy
+msgid "Allowed Referer"
+msgstr "დაშვებული რეფერენტი"
+
+#: lj-maintenance-mode.php:512
+#, fuzzy
+msgid "Allowed User Agent"
+msgstr "დაშვებული მომხმარებლის აგენტი"
+
+#: lj-maintenance-mode.php:537
+#, fuzzy
+msgid "Add Google Analytics code"
+msgstr "დაამატეთ Google Analytics კოდი"
+
+#: lj-maintenance-mode.php:542
+#, fuzzy
+msgid "for Analytics profile"
+msgstr "ანალიტიკის პროფილისთვის"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "configured in"
+msgstr "კონფიგურირებულია"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "Analytify"
+msgstr "გააანალიზეთ"
+
+#: lj-maintenance-mode.php:546
+#, fuzzy
+msgid ""
+"Since you have the Analytify plugin installed, this will add Google "
+"Analytics tracking code to the maintenance page."
+msgstr ""
+"ვინაიდან დაინსტალირებული გაქვთ Analytify მოდული, ეს დაამატებს Google "
+"Analytics თვალთვალის კოდს ტექნიკური გვერდისკენ."
+
+#: lj-maintenance-mode.php:554
+#, fuzzy
+msgid "Custom Stylesheet"
+msgstr "მორგებული სტილის ფურცელი"
+
+#: lj-maintenance-mode.php:561 lj-maintenance-mode.php:589
+#: lj-maintenance-mode.php:605
+#, fuzzy
+msgid "You are currently using custom stylesheet."
+msgstr "თქვენ ამჟამად იყენებთ მორგებულ სტილის ცხრილს."
+
+#: lj-maintenance-mode.php:562 lj-maintenance-mode.php:590
+#: lj-maintenance-mode.php:606
+#, fuzzy
+msgid "file in your theme folder"
+msgstr "ფაილი თქვენი თემის საქაღალდეში"
+
+#: lj-maintenance-mode.php:564 lj-maintenance-mode.php:593
+#: lj-maintenance-mode.php:609
+#, fuzzy, php-format
+msgid ""
+"For custom stylesheet, add %s file to your theme folder. If your custom "
+"stylesheet file is picked up by the Maintenance Mode, it will be indicated "
+"here."
+msgstr ""
+"მორგებული სტილის ფურცლისთვის დაამატეთ %s ფაილი თქვენს თემების საქაღალდეში. "
+"თუ თქვენი მორგებული stylesheet ფაილი აღებულია Maintenance Mode-ით, ის აქ "
+"იქნება მითითებული."
+
+#: lj-maintenance-mode.php:567
+#, fuzzy
+msgid "The maintenance mode page DOM structure is:"
+msgstr "შენარჩუნების რეჟიმის გვერდის DOM სტრუქტურა არის:"
+
+#: lj-maintenance-mode.php:575
+#, fuzzy
+msgid "the maintenance mode page content is here"
+msgstr "შენარჩუნების რეჟიმის გვერდის შინაარსი აქ არის"
+
+#: lj-maintenance-mode.php:583
+#, fuzzy
+msgid "Custom Frontend Stylesheet"
+msgstr "მორგებული Frontend Stylesheet"
+
+#: lj-maintenance-mode.php:599
+#, fuzzy
+msgid "Custom Login Stylesheet"
+msgstr "მორგებული შესვლის სტილის ცხრილი"
+
+#: lj-maintenance-mode.php:616
+#, fuzzy
+msgid "Inject code snippet"
+msgstr "კოდის ფრაგმენტის შეყვანა"
+
+#: lj-maintenance-mode.php:622
+#, fuzzy
+msgid "This is useful to add a Javascript snippet to the maintenance page."
+msgstr "ეს სასარგებლოა Javascript სნიპეტის დასამატებლად ტექნიკური გვერდისთვის."
+
+#: lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Do include the surrounding"
+msgstr "ჩართეთ შემოგარენი"
+
+#: lj-maintenance-mode.php:627
+#, fuzzy
+msgid ""
+"NOTE: if you are using the option above to add Google Analytics code, do NOT "
+"paste GA tracking code here."
+msgstr ""
+"შენიშვნა: თუ იყენებთ ზემოთ მოცემულ ვარიანტს Google Analytics კოდის "
+"დასამატებლად, აქ არ ჩასვათ GA თვალთვალის კოდი."
+
+#: lj-maintenance-mode.php:679
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "გამორთული"
+
+#: lj-maintenance-mode.php:682
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "ჩართული"
+
+#: lj-maintenance-mode.php:693
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "მოვლის რეჟიმი"
+
+#: lj-maintenance-mode.php:710
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "პარამეტრები"
+
+#: lj-maintenance-mode.php:1226
+#, fuzzy
+msgid "Maintenance mode - before content"
+msgstr "მოვლის რეჟიმი - კონტენტამდე"
+
+#: lj-maintenance-mode.php:1227
+#, fuzzy
+msgid "Enter the content to appear before the maintenance mode content."
+msgstr "შეიყვანეთ კონტენტი, რათა გამოჩნდეს შენარჩუნების რეჟიმის კონტენტამდე."
+
+#: lj-maintenance-mode.php:1234
+#, fuzzy
+msgid "Maintenance mode - after content"
+msgstr "მოვლის რეჟიმი - შინაარსის შემდეგ"
+
+#: lj-maintenance-mode.php:1235
+#, fuzzy
+msgid "Enter the content to appear after the maintenance mode content."
+msgstr ""
+"შეიყვანეთ კონტენტი, რომელიც გამოჩნდება შენარჩუნების რეჟიმის კონტენტის შემდეგ."

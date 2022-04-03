@@ -1,0 +1,204 @@
+# Copyright (C) 2017 Maintenance Mode
+# This file is distributed under the same license as the Maintenance Mode package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode 2.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
+"mode\n"
+"POT-Creation-Date: 2017-03-29 23:04+0200\n"
+"PO-Revision-Date: 2017-03-29 23:18+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: lj-maintenance-mode.php:66
+msgid ""
+"<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing "
+"scheduled maintenance. Please check back soon.</p>"
+msgstr ""
+"<h1>Site En Maintenance</h1><p>Notre site est actuellement en maintenance, "
+"merci de patienter.</p>"
+
+#: lj-maintenance-mode.php:69
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Important : si vous utilisez WP Super Cache, n'oubliez pas de vider le cache "
+"quand vous activez ou désactivez Mode Maintenance."
+
+#: lj-maintenance-mode.php:69 lj-maintenance-mode.php:72
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Important : si vous utilisez W3 Total Cache, n'oubliez pas de vider le cache "
+"quand vous activez ou désactivez Mode Maintenance."
+
+#: lj-maintenance-mode.php:69 lj-maintenance-mode.php:72
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Important : si vous utilisez Comet Cache, n'oubliez pas de vider le cache "
+"quand vous activez ou désactivez Maintenance Mode."
+
+#: lj-maintenance-mode.php:75
+msgid ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+"Mode Maintenance est actuellement actif. Pour vous assurer qu'il fonctionne, "
+"ouvrez au choix une page web en mode privé/incognito, un autre navigateur ou "
+"simplement déconnectez vous. Les utilisateurs connectés ne sont pas affectés "
+"par le Mode Maintenance."
+
+#. Plugin Name of the plugin/theme
+#: lj-maintenance-mode.php:161 lj-maintenance-mode.php:199
+msgid "Maintenance Mode"
+msgstr "Mode Maintenance"
+
+#: lj-maintenance-mode.php:209
+msgid "Enabled"
+msgstr "Activé"
+
+#: lj-maintenance-mode.php:221
+msgid "Preview"
+msgstr "Prévisualisation"
+
+#: lj-maintenance-mode.php:222
+msgid "Support"
+msgstr "Assistance"
+
+#: lj-maintenance-mode.php:236
+msgid "Advanced Settings"
+msgstr "Paramètres Avancés"
+
+#: lj-maintenance-mode.php:244
+msgid "Site Title"
+msgstr "Titre du site"
+
+#: lj-maintenance-mode.php:248
+msgid "Overrides default site meta title."
+msgstr "Remplace la balise meta title par défaut du site."
+
+#: lj-maintenance-mode.php:252
+msgid "Mode"
+msgstr "Mode"
+
+#: lj-maintenance-mode.php:259
+msgid "Default"
+msgstr "Défaut"
+
+#: lj-maintenance-mode.php:263
+msgid "Coming Soon Page"
+msgstr "Page Ouverture Prochaine"
+
+#: lj-maintenance-mode.php:265
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr ""
+"L'option par défaut met le code HTTP à 503, l'option Ouverture Prochaine met "
+"le code HTTP à 200."
+
+#: lj-maintenance-mode.php
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"Si vous mettez votre site en mode maintenance pour une longue période de "
+"temps, vous devriez utiliser « Ouverture Prochaine ». Sinon, utilisez « Mode "
+"Maintenance »."
+
+#: lj-maintenance-mode.php:265
+msgid "Learn more."
+msgstr "En savoir plus."
+
+#: lj-maintenance-mode.php:273
+msgid "User Roles"
+msgstr "Rôles Utilisateurs"
+
+#: lj-maintenance-mode.php:274
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr ""
+"Cochez ceux qui peuvent accéder au front-end de votre site quand Mode "
+"Maintenance est activé"
+
+#: lj-maintenance-mode.php:275
+msgid "Please note that this does NOT apply to admin area"
+msgstr "Merci de noter que cela NE S'APPLIQUE PAS au panneau d'administration"
+
+#: lj-maintenance-mode.php:276
+msgid "Toggle all"
+msgstr "Tout basculer"
+
+#: lj-maintenance-mode.php:296
+msgid "User Role control is currently not avialable on your website. Sorry!"
+msgstr ""
+"La gestion des Rôles n'est actuellement pas disponible sur votre site. "
+"Désolé !"
+
+#: lj-maintenance-mode.php:346
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "Désactivé"
+
+#: lj-maintenance-mode.php:349
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "Activé"
+
+#: lj-maintenance-mode.php:360
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "Mode Maintenance"
+
+#: lj-maintenance-mode.php:374
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "Paramètres"
+
+#: lj-maintenance-mode.php:375
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr "Assistance"
+
+#: lj-maintenance-mode.php:387
+msgid "Website Under Maintenance"
+msgstr "Site En Maintenance"
+
+#. Plugin URI of the plugin/theme
+msgid "https://plugins.itsluk.as/maintenance-mode/"
+msgstr "https://plugins.itsluk.as/maintenance-mode/"
+
+#. Description of the plugin/theme
+msgid ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+msgstr ""
+"Une page Maintenance En Cours & Ouverture Prochaine très simple qui utilise "
+"le markup par défaut de WordPress sans publicité ou mises à jour payantes."
+
+#. Author of the plugin/theme
+msgid "Lukas Juhas"
+msgstr "Lukas Juhas"
+
+#. Author URI of the plugin/theme
+msgid "https://plugins.itsluk.as/"
+msgstr "https://plugins.itsluk.as/"
+
+#~ msgid ""
+#~ "Very simple Maintenance Mode & Coming soon page. Using default Wordpress "
+#~ "markup, No ads, no paid upgrades."
+#~ msgstr ""
+#~ "Une page Maintenance En Cours & Ouverture Prochaine très simple. Utilise "
+#~ "le markup par défaut de WordPress, pas de publicités, pas de mises à jour "
+#~ "payantes."

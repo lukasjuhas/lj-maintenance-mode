@@ -1,0 +1,551 @@
+# Copyright (C) 2017 Maintenance Mode
+# This file is distributed under the same license as the Maintenance Mode package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode 2.5.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
+"mode\n"
+"POT-Creation-Date: 2022-01-30 15:17+1100\n"
+"PO-Revision-Date: 2022-03-28 21:50+1100\n"
+"Last-Translator: John Lang <john@johnlang.com.au>\n"
+"Language-Team: \n"
+"Language: bo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lj-maintenance-mode.php:66 lj-maintenance-mode.php:724
+#, fuzzy
+msgid "Website Under Maintenance"
+msgstr "སྲུང་སྐྱོང་འོག་གི་དྲ་ཚིགས།"
+
+#: lj-maintenance-mode.php:66
+#, fuzzy
+msgid ""
+"Our Website is currently undergoing scheduled maintenance. Please check back "
+"soon."
+msgstr "ང་ཚོའི་དྲ་ཚིགས་མིག་སྔར་དུས་བཀག་ལྟར་ཉམས་གསོ་བྱེད་བཞིན་ཡོད། མྱུར་དུ་ཞིབ་བཤེར་ཞིག་བྱེད་རོགས།"
+
+#: lj-maintenance-mode.php:69
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"གལ་འགངས་ཤིན་ཏུ་ཆེ་བ་སྟེ། ཉམས་གསོའི་མ་དཔེ་བཀོལ་སྤྱོད་བྱེད་པའམ་ཡང་ན་དབང་བོ་སྐྱོན་ཅན་དུ་བསྒྱུར་བའི་སྐབས་"
+"སུ་WPརིམ་འདས་Cacheབཀོལ་སྤྱོད་བྱེད་རྒྱུ་བརྗེད་མི་རུང"
+
+#: lj-maintenance-mode.php:72
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"གལ་འགངས་ཤིན་ཏུ་ཆེ་བ་སྟེ། ཉམས་གསོའི་མ་དཔེ་བཀོལ་སྤྱོད་བྱེད་པའམ་ཡང་ན་དབང་བོ་སྐྱོན་ཅན་དུ་བསྒྱུར་བའི་སྐབས་"
+"སུ་W3 Total Cacheབཀོལ་སྤྱོད་བྱེད་རྒྱུ་བརྗེད་མི་རུང་།"
+
+#: lj-maintenance-mode.php:75
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"གལ་འགངས་ཤིན་ཏུ་ཆེ་བ་ཞིག་ནི། སྲུང་སྐྱོང་བྱེད་སྟངས་ལེགས་སྒྲིག་བྱེད་པའམ་ཡང་ན་དབང་བོ་སྐྱོན་ཅན་དུ་བསྒྱུར་བའི་"
+"སྐབས་སུ་ཁྱོད་ཀྱི་cacheབཀོལ་སྤྱོད་བྱེད་རྒྱུ་བརྗེད་མི་"
+
+#: lj-maintenance-mode.php:78
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Rocket when enabling or "
+"disabling Maintenance Mode."
+msgstr ""
+"གལ་འགངས་ཤིན་ཏུ་ཆེ་བ་སྟེ། ཉམས་གསོའི་མ་དཔེ་བཀོལ་སྤྱོད་བྱེད་པའམ་ཡང་ན་དབང་བོ་སྐྱོན་ཅན་དུ་བསྒྱུར་བའི་སྐབས་"
+"སུ་WPམེ་ཤུགས་འཕུར་མདའ་བཀོལ་སྤྱོད་བྱེད་རྒྱུ་བརྗེད་"
+
+#: lj-maintenance-mode.php:81
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Autoptimize when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"གལ་འགངས་ཤིན་ཏུ་ཆེ་བ་སྟེ། ཉམས་གསོའི་དཔེ་དབྱིབས་བཀོལ་སྤྱོད་བྱེད་པའམ་ཡང་ན་དབང་བོ་སྐྱོན་ཅན་དུ་བསྒྱུར་བའི་"
+"སྐབས་སུ་རང་འགུལ་གྱིས་བཀོལ་སྤྱོད་བྱེད་པ་བརྗེད་མི་རུང་།"
+
+#: lj-maintenance-mode.php:84
+#, fuzzy
+msgid ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+"ཉམས་གསོ་བྱེད་སྟངས་མིག་སྔར་འཁྲུག་ཆ་དོད་པོ་ཡོད། དེས་ནུས་པ་ཐོན་པར་ཁག་ཐེག་བྱེད་ཆེད། སྒེར་གྱི་དྲ་ངོས་དང་མི་"
+"སྒེར་གྱི་དཔེ་དབྱིབས་དང་། ལྟ་ཀློག་ཆས་མི་འདྲ་བའམ་ཡང་ན་སྟབས་བདེའི་སྒོ་ནས་ཐོ་འགོད་བྱ་དགོས། བེད་སྤྱོད་བྱེད་"
+"མཁན་ལ་སྲུང་སྐྱོང་བྱེད་སྟངས་ཀྱི་ཤུགས་རྐྱེན་ཐེབས་མི་སྲིད།"
+
+#: lj-maintenance-mode.php:87
+#, fuzzy
+msgid "You can add widgets in \"Appearance -> Widgets\" section."
+msgstr "ཁྱོད་ཀྱིས་\"ཕྱི་ཚུལ་ནས་བལྟས་ན་>་ཆུང་\"ཞེས་པའི་དུམ་བུ་དེའི་ནང་དུ་ཞེང་ཚད་ཁ་སྣོན་བྱས་ཆོག"
+
+#: lj-maintenance-mode.php:211 lj-maintenance-mode.php:300
+#, fuzzy
+msgctxt "Plugin Name"
+msgid "Maintenance Mode"
+msgstr "ཉམས་གསོ་བྱེད་སྟངས།"
+
+#: lj-maintenance-mode.php:212
+#, fuzzy
+msgctxt "Plugin Description"
+msgid ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+msgstr ""
+"ཧ་ཅང་སྟབས་བདེའི་བདག་སྐྱོང་བྱེད་སྟངས། མགྱོགས་མྱུར་ཤོག་ངོས་སུ་ཁ་ཆད་དང་འགལ་བའི་Wordpress མཚོན་རྟགས་"
+"བཀོལ་སྤྱོད་བྱེད་པའི་མཚམས་སྦྱོར་བརྡ་ཁྱབ་དང་རིན་དོད་ཡོད་པའི་རིམ་པ"
+
+#: lj-maintenance-mode.php:213
+#, fuzzy
+msgctxt "Plugin Author"
+msgid "Lukas Juhas"
+msgstr "ལུའུ་ཁ་སི་ཅུའུ་ཧ་སི།"
+
+#: lj-maintenance-mode.php:223
+#, fuzzy
+msgctxt "Page Title"
+msgid "Maintenance Mode"
+msgstr "ཉམས་གསོ་བྱེད་སྟངས།"
+
+#: lj-maintenance-mode.php:223
+#, fuzzy
+msgctxt "Menu Title"
+msgid "Maintenance Mode"
+msgstr "ཉམས་གསོ་བྱེད་སྟངས།"
+
+#: lj-maintenance-mode.php:271
+#, fuzzy
+msgid "Maintenance Mode"
+msgstr "ཉམས་གསོ་བྱེད་སྟངས།"
+
+#: lj-maintenance-mode.php:281
+msgid "Enabled"
+msgstr "སྤྱོད་སྒོ་ཕྱེས།"
+
+#: lj-maintenance-mode.php:293
+#, fuzzy
+msgid "Mode"
+msgstr "མ་དཔེ།"
+
+#: lj-maintenance-mode.php:300
+msgid "Default"
+msgstr "རང་སོར"
+
+#: lj-maintenance-mode.php:304
+#, fuzzy
+msgid "Coming Soon Page"
+msgstr "ཡུན་རིང་མ་འགོར་བར་ཤོག་ལྷེ"
+
+#: lj-maintenance-mode.php:307
+#, fuzzy
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"གལ་ཏེ་ཁྱོད་ཀྱིས་དྲ་ཚིགས་དེ་དུས་ཡུན་ཅུང་རིང་པོ་ཞིག་ལ་སྲུང་སྐྱོང་བྱེད་སྟངས་སུ་བསྒྱུར་ན། ཁྱོད་ཀྱིས་འདི་\"མི་"
+"འགྱངས་པར་ཤོག་ལྷེ་\"ལ་གཏན་འཁེལ་བྱ་དགོས། དེ་མིན་\"སྲུང་སྐྱོང་བྱེད་སྟངས་\"སྤྱོད་དགོས།"
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr "Default set HTTP 503 བར་གཏན་འཁེལ་བྱས་ན་མྱུར་དུ་HTTP 200ལ་གཏན་འཁེལ་བྱ་རྒྱུ་རེད།"
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Learn more."
+msgstr "ཇེ་མང་སྦྱོངས།."
+
+#: lj-maintenance-mode.php:315
+#, fuzzy
+msgid "Preview"
+msgstr "སྔོན་བརྡ།"
+
+#: lj-maintenance-mode.php:316 lj-maintenance-mode.php:711
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr "རོགས་སྐྱོར།"
+
+#: lj-maintenance-mode.php:329
+#, fuzzy
+msgid "Advanced Settings"
+msgstr "སྔོན་ཐོན་གྱི་སྒྲིག་གཞི།"
+
+#: lj-maintenance-mode.php:332
+#, fuzzy
+msgid "Hide Advanced Settings"
+msgstr "སྔོན་ཐོན་གྱི་སྒྲིག་བཀོད་སྦས་སྐུང་བྱེད་"
+
+#: lj-maintenance-mode.php:340
+#, fuzzy
+msgid "Add widget areas above and below content"
+msgstr "གོང་དང་གཤམ་གྱི་ནང་དོན་ཁ་སྣོན་བྱས་ཡོད།"
+
+#: lj-maintenance-mode.php:352
+msgid "Site Title"
+msgstr "ཁ་ཡིག"
+
+#: lj-maintenance-mode.php:356
+#, fuzzy
+msgid "Overrides default site meta title."
+msgstr "ཁ་ཆད་དང་འགལ་བའི་དྲ་ཚིགས་ཀྱི་ཁ་བྱང་ལས་བརྒལ་ཡོད།"
+
+#: lj-maintenance-mode.php:364
+#, fuzzy
+msgid "User Roles"
+msgstr "སྤྱོད་མཁན་གྱི་ནུས་པ།"
+
+#: lj-maintenance-mode.php:365
+#, fuzzy
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr "གལ་ཏེ་ཉམས་གསོའི་དཔེ་དབྱིབས་བཀོལ་སྤྱོད་བྱས་ན་ཁྱོད་ཀྱི་དྲ་ཚིགས་ཀྱི་མདུན་དུ་འདྲི་རྩད་བྱེད་ཐུབ་པ་ཡིན།"
+
+#: lj-maintenance-mode.php:366
+#, fuzzy
+msgid "Please note that this does NOT apply to admin area"
+msgstr "དོ་སྣང་བྱེད་རོགས། འདི་ནི་སྲིད་འཛིན་ས་ཁོངས་ལ་སྤྱད་མི་འཐུས།"
+
+#: lj-maintenance-mode.php:367
+#, fuzzy
+msgid "Toggle all"
+msgstr "ཚང་མ་བཙན་འཛུལ་བྱས་པ།"
+
+#: lj-maintenance-mode.php:387
+#, fuzzy
+msgid "User Role control is currently not available on your website. Sorry!"
+msgstr "མིག་སྔར་ཁྱེད་ཚོའི་དྲ་ཚིགས་ཐོག་སྤྱོད་མཁན་གྱི་ནུས་པ་ཚོད་འཛིན་བྱེད་མི་ཐུབ། དགོངས་དག!"
+
+#: lj-maintenance-mode.php:394
+#, fuzzy
+msgid "Allowed IP"
+msgstr "ཤེས་བྱའི་ཐོན་དངོས་བདག་དབང་ཆོག་"
+
+#: lj-maintenance-mode.php:394 lj-maintenance-mode.php:446
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454 lj-maintenance-mode.php:472
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:493
+#: lj-maintenance-mode.php:499 lj-maintenance-mode.php:512
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgctxt "include, part of, constitute"
+msgid "Contains"
+msgstr "འདུས་པ།"
+
+#: lj-maintenance-mode.php:400
+#, fuzzy
+msgid "Enter IPv4 or IPv6 values, one per line."
+msgstr "IPv4དང་ཡང་ན་IPv6རིམ་པ་རེ་ལ་འཇུག་དགོས།"
+
+#: lj-maintenance-mode.php:401
+#, fuzzy
+msgid ""
+"Which IP specification gets used? That all depends upon how the remote "
+"caller established the connection; you will never know until they say hello."
+msgstr ""
+"ཤེས་བྱའི་ཐོན་དངོས་བདག་དབང་གི་ཚད་གཞི་གང་ཞིག་བཀོལ་སྤྱོད་ དེ་དག་ཚང་མ་རྒྱང་ཐག་རིང་བའི་འབོད་བརྡ་གཏོང་"
+"མཁན་གྱིས་ཇི་ལྟར་འབྲེལ་མཐུད་བྱེད་པར་རག་ལས་པ་ཡིན། ཁོ་ཚོས་འཚམས་འདྲི་མ་བྱས་གོང་ལ་ཁྱེད་ཀྱིས་ནམ་ཡང་ཤེས་"
+"མི་སྲིད།"
+
+#: lj-maintenance-mode.php:402
+#, fuzzy
+msgid ""
+"Partial IP values are ok; especially, when you want to identify a whole "
+"subnet."
+msgstr ""
+"ཆ་ཤས་ཀྱི་ཤེས་བྱའི་ཐོན་དངོས་བདག་དབང་གི་རིན་ཐང་ནི་ ལྷག་པར་དུ་ཁྱོད་ཀྱིས་དྲ་རྒྱ་ཧྲིལ་བོ་ཞིག་དབྱེ་འབྱེད་བྱེད་"
+"འདོད་པའི་སྐབས་སུ།"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:409
+#: lj-maintenance-mode.php:428 lj-maintenance-mode.php:429
+#: lj-maintenance-mode.php:430 lj-maintenance-mode.php:456
+#: lj-maintenance-mode.php:480 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#: lj-maintenance-mode.php:567 lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Tip"
+msgstr "གྲུ་གཟིངས།"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:430
+#: lj-maintenance-mode.php:456 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#, fuzzy
+msgid "Uses"
+msgstr "སྤྱོད་སྒོ།"
+
+#: lj-maintenance-mode.php:405
+#, fuzzy
+msgid "which identifies the current Remote IP:"
+msgstr "དེས་མིག་སྔའི་རྒྱང་རིང་གི་ཤེས་བྱའི་ཐོན་དངོས་བདག་དབང་གཏན་འཁེལ་བྱས"
+
+#: lj-maintenance-mode.php:409
+#, fuzzy
+msgid "identifies this server is at Server IP:"
+msgstr "ཞབས་ཞུའི་ཡོ་བྱད་འདི་ཞབས་ཞུའི་ཡོ་བྱད་ཀྱི་IPན་དུ་ཡོད་པ་གཏན་ཁེལ"
+
+#: lj-maintenance-mode.php:418
+#, fuzzy
+msgid "Allowed URI"
+msgstr "ཆོག་མཆན་ཐོབ་པའི་URI"
+
+#: lj-maintenance-mode.php:418 lj-maintenance-mode.php:424
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:426
+#, fuzzy
+msgctxt "exact, stringent, precise"
+msgid "Strict"
+msgstr "གཟབ་ནན།"
+
+#: lj-maintenance-mode.php:424
+#, fuzzy
+msgid "The full relative path, starting with"
+msgstr "བལྟོས་བཅས་ཀྱི་བགྲོད་ལམ་ཆ་ཚང་ནས་འགོ་བརྩམས།"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454
+#, fuzzy
+msgid "when doing a"
+msgstr "ལས་ཀ་བྱེད་སྐབས།"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:452
+#: lj-maintenance-mode.php:453 lj-maintenance-mode.php:454
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "comparison"
+msgstr "བསྡུར་བ།"
+
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:453
+#, fuzzy
+msgid "Ignores the trailing slash"
+msgstr "རྗེས་ཤུལ་ལ་སྣང་ཆུང་བྱེད་པ།"
+
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:454
+#, fuzzy
+msgid "Ignores the entire query string"
+msgstr "འདྲི་རྩད་ཀྱི་ཡིག་ཕྲེང་ཧྲིལ་པོར་སྣང་མེད་བྱས་པ"
+
+#: lj-maintenance-mode.php:427 lj-maintenance-mode.php:455
+#, fuzzy
+msgid "Never include the protocol, domain or port prefixes of the full URL."
+msgstr "དྲ་ཚིགས་ཆ་ཚང་གི་གྲོས་ཆོད་དང་། ཁོངས་སམ་ཡང་ན་གྲུ་ཁའི་སྔོན་འགྲོའི་ཆ་རྐྱེན་གཏན་ནས་ཚུད་མི་རུང་།"
+
+#: lj-maintenance-mode.php:428
+#, fuzzy
+msgid ""
+"Enter / on its own line to allow the sites home page to always by-pass the "
+"maintenance mode page."
+msgstr ""
+"རང་ཉིད་ཀྱི་ལམ་ཐིག་སྟེང་ནས་དྲ་ཚིགས་ཀྱི་ཤོག་ངོས་གཙོ་བོ་རྒྱུན་དུ་ཉམས་གསོའི་དཔེ་དབྱིབས་ཀྱི་ཤོག་ལྷེ་བརྒྱུད་ཆོག"
+
+#: lj-maintenance-mode.php:429 lj-maintenance-mode.php:480
+#, fuzzy
+msgid "will always by-pass the maintenance mode page."
+msgstr "ནམ་ཡང་ཉམས་གསོ་བྱེད་སྟངས་ཀྱི་ཤོག་ལྷེ་བརྒྱུད་དགོས།"
+
+#: lj-maintenance-mode.php:437 lj-maintenance-mode.php:463
+#: lj-maintenance-mode.php:484 lj-maintenance-mode.php:503
+#: lj-maintenance-mode.php:522
+#, fuzzy
+msgid "and the value for this loaded page is:"
+msgstr "ད་དུང་ནང་འཇུག་བྱས་པའི་ཤོག་ངོས་འདིའི་རིན་ཐང་ནི།"
+
+#: lj-maintenance-mode.php:446
+#, fuzzy
+msgid "Allowed URL"
+msgstr "ཆོག་མཆན་ཐོབ་པའི་URL"
+
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "Can be any sub-string contained within the URI, when doing a"
+msgstr "URIནང་ཁུལ་དུ་འདུས་པའི་ཡན་ལག་ཀུང་སི་གང་དང་གང་གིས་ཀྱང་སྒྲུབ་ཐུབ་པ་ཡིན།"
+
+#: lj-maintenance-mode.php:472
+#, fuzzy
+msgid "Allowed Query String"
+msgstr "འདྲི་རྩད་བྱེད་ཆོག་པ"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "Can be any sub-string value after the"
+msgstr "དེའི་རྗེས་ཀྱི་ཐིག་ཕྲེང་གི་རིན་ཐང་གང་རུང་ཞིག་ཏུ་འགྱུར་ཐུབ།"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "in the URI, when doing a"
+msgstr "རྒྱལ་སྲིད་སྤྱི་ཁྱབ་ཁང་གིས་ལས་ཀ་བྱེད་སྐབས།"
+
+#: lj-maintenance-mode.php:479
+#, fuzzy
+msgid "Enter sub-string values that conform to output by"
+msgstr "ཐོན་ཚད་དང་མཐུན་པའི་རིམ་པ་གཉིས་པའི་རིན་ཐང་ནང་འཇུག་བྱེད་པ།"
+
+#: lj-maintenance-mode.php:493
+#, fuzzy
+msgid "Allowed Referer"
+msgstr "དཔྱད་གཞིར་འཛིན་ཆོག་པ"
+
+#: lj-maintenance-mode.php:512
+#, fuzzy
+msgid "Allowed User Agent"
+msgstr "སྤྱོད་མཁན་གྱི་ངོ་ཚབ་ཆོག་མཆན་བཀོད།"
+
+#: lj-maintenance-mode.php:537
+#, fuzzy
+msgid "Add Google Analytics code"
+msgstr "ཀུའུ་ཀི་དབྱེ་ཞིབ་ཨང་གྲངས་ཁ་སྣོན་བྱས་པ"
+
+#: lj-maintenance-mode.php:542
+#, fuzzy
+msgid "for Analytics profile"
+msgstr "དབྱེ་ཞིབ་དཔྱད་ཡིག་ཆ།"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "configured in"
+msgstr "ནང་དུ་བཀོད་སྒྲིག་བྱས་པ"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "Analytify"
+msgstr "དབྱེ་ཞིབ།"
+
+#: lj-maintenance-mode.php:546
+#, fuzzy
+msgid ""
+"Since you have the Analytify plugin installed, this will add Google "
+"Analytics tracking code to the maintenance page."
+msgstr ""
+"ཁྱེད་ཚོར་དབྱེ་ཞིབ་ཀྱི་གློག་སྐུད་སྒྲིག་སྦྱོར་བྱས་ཡོད་ན། འདིས་ཀུའུ་ཀི་དབྱེ་ཞིབ་ཀྱི་རྗེས་སྙེག་ཚབ་རྟགས་དེ་ཉམས་གསོའི་"
+"ཤོག་ངོས་སུ་ཁ་སྣོན་བྱེད་སྲིད།"
+
+#: lj-maintenance-mode.php:554
+#, fuzzy
+msgid "Custom Stylesheet"
+msgstr "གོམས་སྲོལ་རེའུ་མིག"
+
+#: lj-maintenance-mode.php:561 lj-maintenance-mode.php:589
+#: lj-maintenance-mode.php:605
+#, fuzzy
+msgid "You are currently using custom stylesheet."
+msgstr "ཁྱེད་ཚོས་མིག་སྔར་ཡུལ་སྲོལ་གོམས་གཤིས་ཀྱི་རེའུ་མིག་བཀོལ་བཞིན་ཡོད།"
+
+#: lj-maintenance-mode.php:562 lj-maintenance-mode.php:590
+#: lj-maintenance-mode.php:606
+#, fuzzy
+msgid "file in your theme folder"
+msgstr "ཁྱོད་ཀྱི་བརྗོད་བྱ་གཙོ་བོའི་ཡིག་སྣོད་ནང་གི"
+
+#: lj-maintenance-mode.php:564 lj-maintenance-mode.php:593
+#: lj-maintenance-mode.php:609
+#, fuzzy, php-format
+msgid ""
+"For custom stylesheet, add %s file to your theme folder. If your custom "
+"stylesheet file is picked up by the Maintenance Mode, it will be indicated "
+"here."
+msgstr ""
+"ཡུལ་སྲོལ་གོམས་གཤིས་ཀྱི་རེའུ་མིག་ལ་མཚོན་ན་%s་ཡིག་ཆ་དེ་ཁྱོད་ཀྱི་བརྗོད་བྱ་གཙོ་བོའི་ཡིག་སྣོད་ནང་དུ་བསྣན་དགོས། "
+"གལ་ཏེ་ཁྱོད་ཀྱི་ཡུལ་སྲོལ་གོམས་གཤིས་ཀྱི་རེའུ་མིག་དེ་ཉམས་གསོ་བྱེད་སྟངས་ཀྱིས་རྙེད་པ་ཡིན་ན། འདི་ནས་གསལ་བཤད་"
+"བྱ་རྒྱུ་ཡིན།"
+
+#: lj-maintenance-mode.php:567
+#, fuzzy
+msgid "The maintenance mode page DOM structure is:"
+msgstr "སྲུང་སྐྱོང་བྱེད་སྟངས་ཀྱི་ཤོག་ལྷེ་DOMགྲུབ་ཚུལ་ནི།"
+
+#: lj-maintenance-mode.php:575
+#, fuzzy
+msgid "the maintenance mode page content is here"
+msgstr "ཉམས་གསོའི་དཔེ་དབྱིབས་ཀྱི་ཤོག་ངོས་འདིའི་ནང་དོན་ཡོད།"
+
+#: lj-maintenance-mode.php:583
+#, fuzzy
+msgid "Custom Frontend Stylesheet"
+msgstr "ཡུལ་སྲོལ་གོམས་གཤིས་ཀྱི་རེའུ་མིག"
+
+#: lj-maintenance-mode.php:599
+#, fuzzy
+msgid "Custom Login Stylesheet"
+msgstr "Custom Login Stylesheet"
+
+#: lj-maintenance-mode.php:616
+#, fuzzy
+msgid "Inject code snippet"
+msgstr "ཚབ་རྟགས་ཀྱི་ཟིན་བྲིས་ལ་ཁབ་རྒྱག་པ"
+
+#: lj-maintenance-mode.php:622
+#, fuzzy
+msgid "This is useful to add a Javascript snippet to the maintenance page."
+msgstr "འདི་ནི་ཉམས་གསོའི་ཤོག་ངོས་སུ་Javascriptཡི་ཟིན་བྲིས་ཤིག་ཁ་སྣོན་བྱེད་པར་ཕན་པ་ཡོད།"
+
+#: lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Do include the surrounding"
+msgstr "དེའི་ནང་དུ་མཐའ་འཁོར་གྱི་གནས་ཚུལ་ཚུད"
+
+#: lj-maintenance-mode.php:627
+#, fuzzy
+msgid ""
+"NOTE: if you are using the option above to add Google Analytics code, do NOT "
+"paste GA tracking code here."
+msgstr ""
+"NOTE: གལ་ཏེ་ཁྱོད་ཀྱིས་གོང་གསལ་གྱི་བསལ་འདེམས་ལ་བརྟེན་ནས་ཀུའུ་ཀི་དབྱེ་ཞིབ་ཨང་གྲངས་ཁ་སྣོན་བྱས་ན། འདིར་"
+"GAཡི་རྗེས་འདེད་ཨང་གྲངས་སྦྱར་མི་ཆོག"
+
+#: lj-maintenance-mode.php:679
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "སྤྱོད་སྒོ་བཀག"
+
+#: lj-maintenance-mode.php:682
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "སྤྱོད་སྒོ་ཕྱེས།"
+
+#: lj-maintenance-mode.php:693
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "ཉམས་གསོ་བྱེད་སྟངས།"
+
+#: lj-maintenance-mode.php:710
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "སྒྲིག་བཀོད"
+
+#: lj-maintenance-mode.php:1226
+#, fuzzy
+msgid "Maintenance mode - before content"
+msgstr "སྲུང་སྐྱོང་བྱེད་སྟངས། ནང་དོན་གྱི་སྔོན་དུ།"
+
+#: lj-maintenance-mode.php:1227
+#, fuzzy
+msgid "Enter the content to appear before the maintenance mode content."
+msgstr "ནང་དོན་ནང་འཇུག་བྱས་ནས་བདག་སྐྱོང་བྱེད་སྟངས་ཀྱི་ནང་དོན་མ་ཐོན་གོང་།"
+
+#: lj-maintenance-mode.php:1234
+#, fuzzy
+msgid "Maintenance mode - after content"
+msgstr "ཉམས་གསོ་བྱེད་སྟངས། ནང་དོན་གྱི་རྗེས་སུ།"
+
+#: lj-maintenance-mode.php:1235
+#, fuzzy
+msgid "Enter the content to appear after the maintenance mode content."
+msgstr "ཉམས་གསོའི་རྣམ་པའི་ནང་དོན་གྱི་རྗེས་སུ་བྱུང་བའི་ནང་དོན་ནང་འཇུག་བྱེད་དགོས།"

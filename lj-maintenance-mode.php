@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Maintenance Mode
- * Plugin URI: https://plugins.itsluk.as/maintenance-mode/
+ * Plugin URI: https://wordpress.org/plugins/lj-maintenance-mode/
  * Description: Very simple Maintenance Mode & Coming soon page using default Wordpress markup with no ads or paid upgrades.
- * Version: 2.5.1
+ * Version: 2.5.2
  * Author: Lukas Juhas
- * Author URI: https://plugins.itsluk.as/
+ * Author URI: https://lukasjuhas.com/
  * Text Domain: lj-maintenance-mode
  * License: GPL2
  * Domain Path: /languages/
@@ -26,16 +26,15 @@
  *
  * @package lj-maintenance-mode
  * @author Lukas Juhas
- * @version 2.5.1
+ * @version 2.5.2
  *
  */
 
 // define stuff
-define('LJMM_VERSION', '2.5.1');
+define('LJMM_VERSION', '2.5.2');
 define('LJMM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('LJMM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('LJMM_PLUGIN_BASENAME', plugin_basename(__FILE__));
-define('LJMM_PLUGIN_DOMAIN', 'lj-maintenance-mode');
 define('LJMM_VIEW_SITE_CAP', 'ljmm_view_site');
 define('LJMM_PLUGIN_CAP', 'ljmm_control');
 define('LJMM_SUPPORT_LINK', 'https://wordpress.org/support/plugin/lj-maintenance-mode');
@@ -64,28 +63,28 @@ function ljmm_get_defaults($type)
 {
     switch ($type) {
         case 'maintenance_message':
-            $default = __('<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing scheduled maintenance. Please check back soon.</p>', LJMM_PLUGIN_DOMAIN);
+            $default = '<h1>'.__('Website Under Maintenance', 'lj-maintenance-mode').'</h1><p>'.__('Our Website is currently undergoing scheduled maintenance. Please check back soon.', 'lj-maintenance-mode').'</p>';
             break;
         case 'warning_wp_super_cache':
-            $default = __("Important: Don't forget to flush your cache using WP Super Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            $default = __("Important: Don't forget to flush your cache using WP Super Cache when enabling or disabling Maintenance Mode.", 'lj-maintenance-mode');
             break;
         case 'warning_w3_total_cache':
-            $default = __("Important: Don't forget to flush your cache using W3 Total Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            $default = __("Important: Don't forget to flush your cache using W3 Total Cache when enabling or disabling Maintenance Mode.", 'lj-maintenance-mode');
             break;
         case 'warning_comet_cache':
-            $default = __("Important: Don't forget to flush your cache using Comet Cache when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            $default = __("Important: Don't forget to flush your cache using Comet Cache when enabling or disabling Maintenance Mode.", 'lj-maintenance-mode');
             break;
         case 'warning_wp_rocket_cache':
-            $default = __("Important: Don't forget to flush your cache using WP Rocket when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            $default = __("Important: Don't forget to flush your cache using WP Rocket when enabling or disabling Maintenance Mode.", 'lj-maintenance-mode');
             break;
         case 'warning_autoptimize_cache':
-            $default = __("Important: Don't forget to flush your cache using Autoptimize when enabling or disabling Maintenance Mode.", LJMM_PLUGIN_DOMAIN);
+            $default = __("Important: Don't forget to flush your cache using Autoptimize when enabling or disabling Maintenance Mode.", 'lj-maintenance-mode');
             break;
         case 'ljmm_enabled':
-            $default = __('Maintenance Mode is currently active. To make sure that it works, open your web page in either private / incognito mode, different browser or simply log out. Logged in users are not affected by the Maintenance Mode.', LJMM_PLUGIN_DOMAIN);
+            $default = __('Maintenance Mode is currently active. To make sure that it works, open your web page in either private / incognito mode, different browser or simply log out. Logged in users are not affected by the Maintenance Mode.', 'lj-maintenance-mode');
             break;
         case 'ljmm_add_widget_areas':
-            $default = __('You can add widgets in <strong>Appearance -> Widgets</strong>.', LJMM_PLUGIN_DOMAIN);
+            $default = __('You can add widgets in "Appearance -> Widgets" section.', 'lj-maintenance-mode');
             break;
         default:
             $default = false;
@@ -125,7 +124,7 @@ function ljmm_set_content()
 */
 function ljmm_load_textdomain()
 {
-    load_plugin_textdomain(LJMM_PLUGIN_DOMAIN, false, dirname(plugin_basename(__FILE__)) . '/languages/');
+    load_plugin_textdomain('lj-maintenance-mode', false, dirname(plugin_basename(__FILE__)) . '/languages/');
 }
 add_action('plugins_loaded', 'ljmm_load_textdomain');
 
@@ -196,11 +195,22 @@ class ljMaintenanceMode
 
         // add shortcode support
         add_filter('ljmm_content', 'do_shortcode', 11);
+        add_shortcode('ljmm_is_maintenance_mode_enabled', array($this, 'shortcode_is_maintenance_mode_enabled'));
+        add_shortcode('ljmm_is_maintenance_mode_disabled', array($this, 'shortcode_is_maintenance_mode_disabled'));
+        add_shortcode('ljmm_is_user_logged_in', array($this, 'shortcode_is_user_logged_in'));
+        add_shortcode('ljmm_is_user_logged_out', array($this, 'shortcode_is_user_logged_out'));
 
         // add widget areas if enabled
         if (get_option('ljmm_add_widget_areas')) {
             $this->register_widget_sidebars();
         }
+    }
+
+    public function dummy_for_additional_language_translator_strings()
+    {
+        $txt = _x('Maintenance Mode', 'Plugin Name', 'lj-maintenance-mode');
+        $txt = _x('Very simple Maintenance Mode & Coming soon page using default Wordpress markup with no ads or paid upgrades.', 'Plugin Description', 'lj-maintenance-mode');
+        $txt = _x('Lukas Juhas', 'Plugin Author', 'lj-maintenance-mode');
     }
 
     /**
@@ -210,7 +220,7 @@ class ljMaintenanceMode
     */
     public function ui()
     {
-        add_submenu_page('options-general.php', __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), __('Maintenance Mode', LJMM_PLUGIN_DOMAIN), $this->get_relevant_cap(), 'lj-maintenance-mode', array($this, 'settingsPage'));
+        add_submenu_page('options-general.php', _x('Maintenance Mode', 'Page Title', 'lj-maintenance-mode'), _x('Maintenance Mode', 'Menu Title', 'lj-maintenance-mode'), $this->get_relevant_cap(), 'lj-maintenance-mode', array($this, 'settingsPage'));
     }
 
     /**
@@ -258,7 +268,7 @@ class ljMaintenanceMode
     {
         ?>
         <div class="wrap">
-            <h2><?php _e('Maintenance Mode', LJMM_PLUGIN_DOMAIN); ?></h2>
+            <h2><?php _e('Maintenance Mode', 'Plugin Name', 'lj-maintenance-mode'); ?></h2>
             <form method="post" action="options.php">
                 <?php settings_fields('ljmm'); ?>
                 <?php do_settings_sections('ljmm'); ?>
@@ -268,7 +278,7 @@ class ljMaintenanceMode
                 <table class="form-table">
                     <tr valign="top">
                         <th scope="row">
-                            <label for="ljmm_enabled"><?php _e('Enabled', LJMM_PLUGIN_DOMAIN); ?></label>
+                            <label for="ljmm_enabled"><?php _e('Enabled', 'lj-maintenance-mode'); ?></label>
                         </th>
                         <td>
                             <?php $ljmm_enabled = esc_attr(get_option('ljmm-enabled')); ?>
@@ -280,30 +290,30 @@ class ljMaintenanceMode
                     </tr>
 
                     <tr>
-                        <th scope="row"><?php _e('Mode', LJMM_PLUGIN_DOMAIN); ?></th>
+                        <th scope="row"><?php _e('Mode', 'lj-maintenance-mode'); ?></th>
                         <td>
                             <?php $ljmm_mode = esc_attr(get_option('ljmm-mode')); ?>
                             <?php $mode_default = $ljmm_mode == 'default' ? true : false; ?>
                             <?php $mode_cs = $ljmm_mode == 'cs' ? true : false; ?>
                             <label>
                                 <input name="ljmm-mode" type="radio" value="default" <?php checked($mode_default, 1); ?>>
-                                <?php _e('Maintenance Mode', LJMM_PLUGIN_DOMAIN); ?> (<?php _e('Default', LJMM_PLUGIN_DOMAIN); ?>)
+                                <?php _ex('Maintenance Mode', 'Plugin Name', 'lj-maintenance-mode'); ?> (<?php _e('Default', 'lj-maintenance-mode'); ?>)
                             </label>
                             <label>
                                 <input name="ljmm-mode" type="radio" value="cs" <?php checked($mode_cs, 1); ?>>
-                                <?php _e('Coming Soon Page', LJMM_PLUGIN_DOMAIN); ?>
+                                <?php _e('Coming Soon Page', 'lj-maintenance-mode'); ?>
                             </label>
                             <p class="description">
-                                <?php _e('If you are putting your site into maintenance mode for a longer period of time, you should set this to "Coming Soon Page". Otherwise use "Maintenance Mode".', LJMM_PLUGIN_DOMAIN); ?><br />
-                                <?php _e('Default sets HTTP to 503, coming soon will set HTTP to 200.', LJMM_PLUGIN_DOMAIN); ?> <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="blank"><?php _e('Learn more.', LJMM_PLUGIN_DOMAIN); ?></a>
+                                <?php _e('If you are putting your site into maintenance mode for a longer period of time, you should set this to "Coming Soon Page". Otherwise use "Maintenance Mode".', 'lj-maintenance-mode'); ?><br />
+                                <?php _e('Default sets HTTP to 503, coming soon will set HTTP to 200.', 'lj-maintenance-mode'); ?> <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="blank"><?php _e('Learn more.', 'lj-maintenance-mode'); ?></a>
                             </p>
                         </td>
                     </tr>
 
                     <tr>
                         <th>
-                            <a href="<?php echo esc_url(add_query_arg('ljmm', 'preview', bloginfo('url'))); ?>" target="_blank" class="button button-secondary"><?php _e('Preview', LJMM_PLUGIN_DOMAIN); ?></a>
-                            <a class="button button-secondary support" href="<?php echo LJMM_SUPPORT_LINK ?>" target="_blank"><?php _e('Support', LJMM_PLUGIN_DOMAIN); ?></a>
+                            <a href="<?php echo esc_url(add_query_arg('ljmm', 'preview', bloginfo('url'))); ?>" target="_blank" class="button button-secondary"><?php _e('Preview', 'lj-maintenance-mode'); ?></a>
+                            <a class="button button-secondary support" href="<?php echo LJMM_SUPPORT_LINK ?>" target="_blank"><?php echo _x('Support', 'Plugin Support link', 'lj-maintenance-mode'); ?></a>
                         </th>
                     </tr>
 
@@ -316,10 +326,10 @@ class ljMaintenanceMode
 
                 <a href="#" class="ljmm-advanced-settings">
                     <span class="ljmm-advanced-settings__label-advanced">
-                        <?php _e('Advanced Settings', LJMM_PLUGIN_DOMAIN); ?>
+                        <?php _e('Advanced Settings', 'lj-maintenance-mode'); ?>
                     </span>
                     <span class="ljmm-advanced-settings__label-hide-advanced" style="display: none;">
-                        <?php _e('Hide Advanced Settings', LJMM_PLUGIN_DOMAIN); ?>
+                        <?php _e('Hide Advanced Settings', 'lj-maintenance-mode'); ?>
                     </span>
                 </a>
 
@@ -327,7 +337,7 @@ class ljMaintenanceMode
 
                     <tr valign="top">
                         <th scope="row">
-                            <label for="ljmm_add_widget_areas"><?php _e('Add widget areas above and below content', LJMM_PLUGIN_DOMAIN); ?></label>
+                            <label for="ljmm_add_widget_areas"><?php _e('Add widget areas above and below content', 'lj-maintenance-mode'); ?></label>
                         </th>
                         <td>
 			                <?php $ljmm_add_widget_areas = esc_attr(get_option('ljmm_add_widget_areas')); ?>
@@ -339,11 +349,11 @@ class ljMaintenanceMode
                     </tr>
 
                     <tr valign="middle">
-                        <th scope="row"><?php _e('Site Title', LJMM_PLUGIN_DOMAIN); ?></th>
+                        <th scope="row"><?php _e('Site Title', 'lj-maintenance-mode'); ?></th>
                         <td>
                             <?php $ljmm_site_title = esc_attr(get_option('ljmm-site-title')); ?>
                             <input name="ljmm-site-title" type="text" id="ljmm-site-title" placeholder="<?php echo $this->site_title(); ?>" value="<?php echo $ljmm_site_title; ?>" class="regular-text">
-                            <p class="description"><?php _e('Overrides default site meta title.', LJMM_PLUGIN_DOMAIN); ?></p>
+                            <p class="description"><?php _e('Overrides default site meta title.', 'lj-maintenance-mode'); ?></p>
                         </td>
                     </tr>
 
@@ -351,10 +361,10 @@ class ljMaintenanceMode
                     <?php $wp_roles = get_editable_roles(); ?>
                     <?php if ($wp_roles && is_array($wp_roles)) : ?>
                         <tr valign="top">
-                            <th scope="row"><?php _e('User Roles', LJMM_PLUGIN_DOMAIN); ?>
-                                <p class="description"><?php _e('Tick the ones that can access front-end of your website if maintenance mode is enabled', LJMM_PLUGIN_DOMAIN); ?>.</p>
-                                <p class="description"><?php _e('Please note that this does NOT apply to admin area', LJMM_PLUGIN_DOMAIN); ?>.</p>
-                                <p><a href="#" class="ljmm-toggle-all"><?php _e('Toggle all', LJMM_PLUGIN_DOMAIN); ?></a></p>
+                            <th scope="row"><?php _e('User Roles', 'lj-maintenance-mode'); ?>
+                                <p class="description"><?php _e('Tick the ones that can access front-end of your website if maintenance mode is enabled', 'lj-maintenance-mode'); ?>.</p>
+                                <p class="description"><?php _e('Please note that this does NOT apply to admin area', 'lj-maintenance-mode'); ?>.</p>
+                                <p><a href="#" class="ljmm-toggle-all"><?php _e('Toggle all', 'lj-maintenance-mode'); ?></a></p>
                             </th>
                             <td>
                                 <?php foreach ($wp_roles as $role => $role_details) :  ?>
@@ -374,27 +384,29 @@ class ljMaintenanceMode
                     <?php else: ?>
                         <tr valign="top">
                             <th scope="row" colspan="2">
-                                <p class="description"><?php _e('User Role control is currently not available on your website. Sorry!', LJMM_PLUGIN_DOMAIN); ?></p>
+                                <p class="description"><?php _e('User Role control is currently not available on your website. Sorry!', 'lj-maintenance-mode'); ?></p>
                             </th>
                         </tr>
                     <?php endif; ?>
 
                     <tr valign="middle">
-                        <th scope="row"><?php _e('Allowed IPs (Contains)', LJMM_PLUGIN_DOMAIN); ?></th>
+                        <th scope="row"><?php // Language translation has trouble with context content within suffix braces.
+                            echo __('Allowed IP', 'lj-maintenance-mode').' ('._x('Contains', 'include, part of, constitute', 'lj-maintenance-mode').')';
+                        ?></th>
                         <td>
                             <textarea name="ljmm-allow_remote_ip" id="ljmm-allow_remote_ip" placeholder="<?php echo "192.168.0.10\n127.0.0.1\n2001:8004:5110:1d97:61e6:4c30:1a0c:7ecc\n203.214.74.\n2001:8004:5110:1d97:61e6:"; ?>" style="width:100%;height:150px;"><?php echo esc_attr(get_option('ljmm-allow_remote_ip')); ?></textarea>
                             <p class="description">
                                 <?php
-                                _e('Enter IPv4 or IPv6 values, one per line.', LJMM_PLUGIN_DOMAIN);
-                                echo '<br>'.__('Which IP specification gets used? That all depends upon how the remote caller established the connection; you will never know until they say hello.', LJMM_PLUGIN_DOMAIN);
-                                echo '<br>'.__('Partial IP values are ok; especially, when you want to identify a whole subnet.', LJMM_PLUGIN_DOMAIN);
+                                _e('Enter IPv4 or IPv6 values, one per line.', 'lj-maintenance-mode');
+                                echo '<br>'.__('Which IP specification gets used? That all depends upon how the remote caller established the connection; you will never know until they say hello.', 'lj-maintenance-mode');
+                                echo '<br>'.__('Partial IP values are ok; especially, when you want to identify a whole subnet.', 'lj-maintenance-mode');
                                 $remote_ip = isset( $_SERVER['REMOTE_ADDR'] ) ? $_SERVER['REMOTE_ADDR'] : '';
                                 if (!empty($remote_ip)) {
-                                    echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).':</strong> '.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[REMOTE_ADDR]</a> '.__('which identifies the current Remote IP:', LJMM_PLUGIN_DOMAIN).' <strong>'.$remote_ip.'</strong>';
+                                    echo '<br><strong>'.__('Tip', 'lj-maintenance-mode').':</strong> '.__('Uses', 'lj-maintenance-mode').' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[REMOTE_ADDR]</a> '.__('which identifies the current Remote IP:', 'lj-maintenance-mode').' <strong>'.$remote_ip.'</strong>';
                                 }
                                 $server_ip = isset( $_SERVER['SERVER_ADDR'] ) ? $_SERVER['SERVER_ADDR'] : '';
                                 if (!empty($server_ip)) {
-                                    echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).':</strong> <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[SERVER_ADDR]</a> '.__('identifies this server is at Server IP:', LJMM_PLUGIN_DOMAIN).' <strong>'.$server_ip.'</strong>';
+                                    echo '<br><strong>'.__('Tip', 'lj-maintenance-mode').':</strong> <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[SERVER_ADDR]</a> '.__('identifies this server is at Server IP:', 'lj-maintenance-mode').' <strong>'.$server_ip.'</strong>';
                                 }
                                 ?>
                             </p>
@@ -402,25 +414,27 @@ class ljMaintenanceMode
                     </tr>
 
                   <tr valign="middle">
-                    <th scope="row"><?php _e('Allowed URIs (Strict)', LJMM_PLUGIN_DOMAIN); ?></th>
+                    <th scope="row"><?php // Language translation has trouble with context content within suffix braces.
+                        echo __('Allowed URI', 'lj-maintenance-mode').' ('._x('Strict', 'exact, stringent, precise', 'lj-maintenance-mode').')';
+                    ?></th>
                     <td>
-                      <textarea name="ljmm-allow_request_uri_strictly" id="ljmm-allow_request_uri_strictly" placeholder="<?php echo "/products\n/resources/free/\n/wp-admin/admin-ajax.php\n/wp-cron.php\n/wp-mail.php\n/xmlrpc.php"; ?>" style="width:100%;height:150px;"><?php echo esc_attr(get_option('ljmm-allow_request_uri_strictly')); ?></textarea>
+                      <textarea name="ljmm-allow_request_uri_strictly" id="ljmm-allow_request_uri_strictly" placeholder="<?php echo "/favicon.ico\n/robots.txt\n/sitemap_index.xml\n/resources/free/\n/wp-admin/admin-ajax.php\n/wp-cron.php\n/wp-mail.php\n/xmlrpc.php"; ?>" style="width:100%;height:150px;"><?php echo esc_attr(get_option('ljmm-allow_request_uri_strictly')); ?></textarea>
                       <p class="description">
                           <?php
-                          echo __('The full relative path, starting with (/) when doing a strict match.', LJMM_PLUGIN_DOMAIN);
-                          echo '<br>'.__('Ignores the trailing slash (/) when doing a strict match.', LJMM_PLUGIN_DOMAIN);
-                          echo '<br>'.__('Ignores the entire query string (?) when doing a strict match.', LJMM_PLUGIN_DOMAIN);
-                          echo '<br>'.__('Never include the protocol, domain or port prefixes of the full URL.', LJMM_PLUGIN_DOMAIN);
-                          echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).':</strong> '.__('Enter <strong>/</strong> on its own line to allow the sites home page to always by-pass the maintenance mode page.', LJMM_PLUGIN_DOMAIN);
-                          echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).': /wp-login.php</strong> '.__('will always by-pass the maintenance mode page.', LJMM_PLUGIN_DOMAIN);
-                          echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).':</strong> '.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[REQUEST_URI]</a>';
+                          echo __('The full relative path, starting with', 'lj-maintenance-mode').' (/) '.__('when doing a', 'lj-maintenance-mode').' '._x('Strict', 'exact, stringent, precise', 'lj-maintenance-mode').' '.__('comparison', 'lj-maintenance-mode').'.';
+                          echo '<br>'.__('Ignores the trailing slash', 'lj-maintenance-mode').' (/) '.__('when doing a', 'lj-maintenance-mode').' '._x('Strict', 'exact, stringent, precise', 'lj-maintenance-mode').' '.__('comparison', 'lj-maintenance-mode').'.';
+                          echo '<br>'.__('Ignores the entire query string', 'lj-maintenance-mode').' (?) '.__('when doing a', 'lj-maintenance-mode').' '._x('Strict', 'exact, stringent, precise', 'lj-maintenance-mode').' '.__('comparison', 'lj-maintenance-mode').'.';
+                          echo '<br>'.__('Never include the protocol, domain or port prefixes of the full URL.', 'lj-maintenance-mode');
+                          echo '<br><strong>'.__('Tip', 'lj-maintenance-mode').':</strong> '.__('Enter / on its own line to allow the sites home page to always by-pass the maintenance mode page.', 'lj-maintenance-mode');
+                          echo '<br><strong>'.__('Tip', 'lj-maintenance-mode').': /wp-login.php</strong> '.__('will always by-pass the maintenance mode page.', 'lj-maintenance-mode');
+                          echo '<br><strong>'.__('Tip', 'lj-maintenance-mode').':</strong> '.__('Uses', 'lj-maintenance-mode').' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[REQUEST_URI]</a>';
                           $request_uri = isset( $_SERVER['REQUEST_URI'] ) ? $_SERVER['REQUEST_URI'] : '';
                           $request_uri_question_offset = strpos($request_uri, '?');
                           if ($request_uri_question_offset !== false) {
                               $request_uri = substr($request_uri, 0, $request_uri_question_offset);
                           }
                           if (!empty($request_uri)) {
-                              echo ' '.__('and the value for this loaded page is:', LJMM_PLUGIN_DOMAIN).' <strong>'.$request_uri.'</strong>';
+                              echo ' '.__('and the value for this loaded page is:', 'lj-maintenance-mode').' <strong>'.$request_uri.'</strong>';
                           }
                           ?>
                       </p>
@@ -428,23 +442,25 @@ class ljMaintenanceMode
                   </tr>
 
                   <tr valign="middle">
-                    <th scope="row"><?php _e('Allowed URIs (Contains)', LJMM_PLUGIN_DOMAIN); ?></th>
+                    <th scope="row"><?php // Language translation has trouble with context content within suffix braces.
+                        echo __('Allowed URL', 'lj-maintenance-mode').' ('._x('Contains', 'include, part of, constitute', 'lj-maintenance-mode').')';
+                    ?></th>
                     <td>
                       <textarea name="ljmm-allow_request_uri_contains" id="ljmm-allow_request_uri_contains" placeholder="<?php echo "/blog/\n/tags/\n/categories/\n/wp-content/uploads/logo-\n/wp-admin/"; ?>" style="width:100%;height:150px;"><?php echo esc_attr(get_option('ljmm-allow_request_uri_contains')); ?></textarea>
                       <p class="description">
                           <?php
-                          echo __('Can be any sub-string contained within the URI, when doing a contains match.', LJMM_PLUGIN_DOMAIN);
-                          echo '<br>'.__('Ignores the trailing slash (/) when doing a contains match.', LJMM_PLUGIN_DOMAIN);
-                          echo '<br>'.__('Ignores the entire query string (?) when doing a contains match.', LJMM_PLUGIN_DOMAIN);
-                          echo '<br>'.__('Never include the protocol, domain or port prefixes of the full URL.', LJMM_PLUGIN_DOMAIN);
-                          echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).':</strong> '.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[REQUEST_URI]</a>';
+                          echo __('Can be any sub-string contained within the URI, when doing a', 'lj-maintenance-mode').' '._x('Contains', 'include, part of, constitute', 'lj-maintenance-mode').' '.__('comparison', 'lj-maintenance-mode').'.';
+                          echo '<br>'.__('Ignores the trailing slash', 'lj-maintenance-mode').' (/) '.__('when doing a', 'lj-maintenance-mode').' '._x('Contains', 'include, part of, constitute', 'lj-maintenance-mode').' '.__('comparison', 'lj-maintenance-mode').'.';
+                          echo '<br>'.__('Ignores the entire query string', 'lj-maintenance-mode').' (?) '.__('when doing a', 'lj-maintenance-mode').' '._x('Contains', 'include, part of, constitute', 'lj-maintenance-mode').' '.__('comparison', 'lj-maintenance-mode').'.';
+                          echo '<br>'.__('Never include the protocol, domain or port prefixes of the full URL.', 'lj-maintenance-mode');
+                          echo '<br><strong>'.__('Tip', 'lj-maintenance-mode').':</strong> '.__('Uses', 'lj-maintenance-mode').' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[REQUEST_URI]</a>';
                           $request_uri = isset( $_SERVER['REQUEST_URI'] ) ? $_SERVER['REQUEST_URI'] : '';
                           $request_uri_question_offset = strpos($request_uri, '?');
                           if ($request_uri_question_offset !== false) {
                               $request_uri = substr($request_uri, 0, $request_uri_question_offset);
                           }
                           if (!empty($request_uri)) {
-                              echo ' '.__('and the value for this loaded page is:', LJMM_PLUGIN_DOMAIN).' <strong>'.$request_uri.'</strong>';
+                              echo ' '.__('and the value for this loaded page is:', 'lj-maintenance-mode').' <strong>'.$request_uri.'</strong>';
                           }
                           ?>
                       </p>
@@ -452,18 +468,20 @@ class ljMaintenanceMode
                   </tr>
 
                   <tr valign="middle">
-                    <th scope="row"><?php _e('Allowed Query Strings (Contains)', LJMM_PLUGIN_DOMAIN); ?></th>
+                    <th scope="row"><?php // Language translation has trouble with context content within suffix braces.
+                        echo __('Allowed Query String', 'lj-maintenance-mode').' ('._x('Contains', 'include, part of, constitute', 'lj-maintenance-mode').')';
+                    ?></th>
                     <td>
                       <textarea name="ljmm-allow_request_query_string" id="ljmm-allow_request_query_string" placeholder="<?php echo "doing_wp_cron\ndoing_wp_cron&qUhYNCrdHSHOPwPgrdyY19yi0"; ?>" style="width:100%;height:150px;"><?php echo esc_attr(get_option('ljmm-allow_request_query_string')); ?></textarea>
                       <p class="description">
                           <?php
-                          echo __('Can be any sub-string value after the (?) in the URI, when doing a contains match.', LJMM_PLUGIN_DOMAIN);
-                          echo '<br>'.__('Enter sub-string values that conform to output by', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/function.urldecode" target="_blank">urldecode()</a>.';
-                          echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).':</strong> <a href="https://make.wordpress.org/core/2019/04/16/fatal-error-recovery-mode-in-5-2/" target="_blank">action=enter_recovery_mode&rm_token=</a> '.__('will always by-pass the maintenance mode page.', LJMM_PLUGIN_DOMAIN);
-                          echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).':</strong> '.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[QUERY_STRING]</a>';
+                          echo __('Can be any sub-string value after the', 'lj-maintenance-mode').' (?) '.__('in the URI, when doing a', 'lj-maintenance-mode').' '._x('Contains', 'include, part of, constitute', 'lj-maintenance-mode').' '.__('comparison', 'lj-maintenance-mode').'.';
+                          echo '<br>'.__('Enter sub-string values that conform to output by', 'lj-maintenance-mode').' <a href="https://www.php.net/manual/en/function.urldecode" target="_blank">urldecode()</a>.';
+                          echo '<br><strong>'.__('Tip', 'lj-maintenance-mode').':</strong> <a href="https://make.wordpress.org/core/2019/04/16/fatal-error-recovery-mode-in-5-2/" target="_blank">action=enter_recovery_mode&rm_token=</a> '.__('will always by-pass the maintenance mode page.', 'lj-maintenance-mode');
+                          echo '<br><strong>'.__('Tip', 'lj-maintenance-mode').':</strong> '.__('Uses', 'lj-maintenance-mode').' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[QUERY_STRING]</a>';
                           $request_query_string = isset( $_SERVER['QUERY_STRING'] ) ? urldecode($_SERVER['QUERY_STRING']) : '';
                           if (!empty($request_query_string)) {
-                              echo ' '.__('and the value for this loaded page is:', LJMM_PLUGIN_DOMAIN).' <strong>'.$request_query_string.'</strong>';
+                              echo ' '.__('and the value for this loaded page is:', 'lj-maintenance-mode').' <strong>'.$request_query_string.'</strong>';
                           }
                           ?>
                       </p>
@@ -471,16 +489,18 @@ class ljMaintenanceMode
                   </tr>
 
                   <tr valign="middle">
-                    <th scope="row"><?php _e('Allowed Referers (Contains)', LJMM_PLUGIN_DOMAIN); ?></th>
+                    <th scope="row"><?php // Language translation has trouble with context content within suffix braces.
+                        echo __('Allowed Referer', 'lj-maintenance-mode').' ('._x('Contains', 'include, part of, constitute', 'lj-maintenance-mode').')';
+                    ?></th>
                     <td>
                       <textarea name="ljmm-allow_request_referer" id="ljmm-allow_request_referer" placeholder="<?php echo "camo\ngo-camo\ngithub-camo\nwww.mydomain.com\nnews.google.com"; ?>" style="width:100%;height:150px;"><?php echo esc_attr(get_option('ljmm-allow_request_referer')); ?></textarea>
                       <p class="description">
                           <?php
-                          echo __('Can be any sub-string contained within the URI, when doing a contains match.', LJMM_PLUGIN_DOMAIN);
-                          echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).':</strong> '.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[HTTP_REFERER]</a>';
+                          echo __('Can be any sub-string contained within the URI, when doing a', 'lj-maintenance-mode').' '._x('Contains', 'include, part of, constitute', 'lj-maintenance-mode').' '.__('comparison', 'lj-maintenance-mode').'.';
+                          echo '<br><strong>'.__('Tip', 'lj-maintenance-mode').':</strong> '.__('Uses', 'lj-maintenance-mode').' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[HTTP_REFERER]</a>';
                           $request_referer = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : '';
                           if (!empty($request_referer)) {
-                              echo ' '.__('and the value for this loaded page is:', LJMM_PLUGIN_DOMAIN).' <strong>'.$request_referer.'</strong>';
+                              echo ' '.__('and the value for this loaded page is:', 'lj-maintenance-mode').' <strong>'.$request_referer.'</strong>';
                           }
                           ?>
                       </p>
@@ -488,16 +508,18 @@ class ljMaintenanceMode
                   </tr>
 
                   <tr valign="middle">
-                    <th scope="row"><?php _e('Allowed User Agents (Contains)', LJMM_PLUGIN_DOMAIN); ?></th>
+                    <th scope="row"><?php // Language translation has trouble with context content within suffix braces.
+                        echo __('Allowed User Agent', 'lj-maintenance-mode').' ('._x('Contains', 'include, part of, constitute', 'lj-maintenance-mode').')';
+                    ?></th>
                     <td>
                       <textarea name="ljmm-allow_request_user_agent" id="ljmm-allow_request_user_agent" placeholder="<?php echo "android\nhtc one\niPhone\nwindows phone"; ?>" style="width:100%;height:150px;"><?php echo esc_attr(get_option('ljmm-allow_request_user_agent')); ?></textarea>
                       <p class="description">
                           <?php
-                          echo __('Can be any sub-string contained within the URI, when doing a contains match.', LJMM_PLUGIN_DOMAIN);
-                          echo '<br><strong>'.__('Tip', LJMM_PLUGIN_DOMAIN).':</strong> '.__('Uses', LJMM_PLUGIN_DOMAIN).' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[HTTP_USER_AGENT]</a>';
+                          echo __('Can be any sub-string contained within the URI, when doing a', 'lj-maintenance-mode').' '._x('Contains', 'include, part of, constitute', 'lj-maintenance-mode').' '.__('comparison', 'lj-maintenance-mode').'.';
+                          echo '<br><strong>'.__('Tip', 'lj-maintenance-mode').':</strong> '.__('Uses', 'lj-maintenance-mode').' <a href="https://www.php.net/manual/en/reserved.variables.server.php" target="_blank">$_SERVER[HTTP_USER_AGENT]</a>';
                           $request_user_agent = isset( $_SERVER['HTTP_USER_AGENT'] ) ? $_SERVER['HTTP_USER_AGENT'] : '';
                           if (!empty($request_user_agent)) {
-                              echo ' '.__('and the value for this loaded page is:', LJMM_PLUGIN_DOMAIN).' <strong>'.$request_user_agent.'</strong>';
+                              echo ' '.__('and the value for this loaded page is:', 'lj-maintenance-mode').' <strong>'.$request_user_agent.'</strong>';
                           }
                           ?>
                       </p>
@@ -512,13 +534,16 @@ class ljMaintenanceMode
                             $ljmm_analytify = esc_attr(get_option('ljmm_analytify')); ?>
                             <tr valign="top">
                                 <th scope="row">
-                                    <label for="ljmm_analytify"><?php echo sprintf(__('Add Google Analytics code', LJMM_PLUGIN_DOMAIN)); ?></label>
+                                    <label for="ljmm_analytify"><?php echo sprintf(__('Add Google Analytics code', 'lj-maintenance-mode')); ?></label>
                                 </th>
                                 <td>
                                     <input type="checkbox" id="ljmm_analytify" name="ljmm_analytify" value="1" <?php checked($ljmm_analytify, 1); ?>>
-                                    <?php echo sprintf(__('for Analytics profile <b>%s</b> (<a href="/wp-admin/admin.php?page=analytify-settings">configured in Analytify</a>)', LJMM_PLUGIN_DOMAIN), $ua_code); ?>
+                                    <?php // Allow language translation and the <A> tag to play nice with eachother.
+                                        echo __('for Analytics profile', 'lj-maintenance-mode').' <b>'.$ua_code.'</b> (<a href="/wp-admin/admin.php?page=analytify-settings">';
+                                        echo __('configured in', 'lj-maintenance-mode').' '.__('Analytify', 'WordPress Plugin', 'lj-maintenance-mode').'</a>)';
+                                    ?>
                                     <p class="description">
-				                        <?php _e('Since you have the Analytify plugin installed, this will add Google Analytics tracking code to the maintenance page.', LJMM_PLUGIN_DOMAIN); ?>
+        				                        <?php _e('Since you have the Analytify plugin installed, this will add Google Analytics tracking code to the maintenance page.', 'lj-maintenance-mode'); ?>
                                     </p>
                                 </td>
                             </tr>
@@ -526,20 +551,20 @@ class ljMaintenanceMode
                         } ?>
 
                     <tr valign="middle">
-                        <th scope="row"><?php _e('Custom Stylesheet', LJMM_PLUGIN_DOMAIN); ?></th>
+                        <th scope="row"><?php _e('Custom Stylesheet', 'lj-maintenance-mode'); ?></th>
                         <td>
                             <?php /* $ljmm_site_title = esc_attr(get_option('ljmm-site-title')); // Variable not used. */ ?>
                             <?php $ljmm_stlylesheet_filename = $this->get_css_filename(); ?>
                             <?php $ljmm_has_custom_stylsheet = (bool) $this->get_custom_stylesheet_url(); ?>
                             <?php if ($ljmm_has_custom_stylsheet) : ?>
                                 <p>
-                                    <span style="line-height: 1.3; font-weight: 600; color: green;">You are currently using custom stylesheet.</span>
-                                    <span class="description">(<?php _e("'$ljmm_stlylesheet_filename' file in your theme folder", LJMM_PLUGIN_DOMAIN); ?>)</span>
+                                    <span style="line-height: 1.3; font-weight: 600; color: green;"><?php _e('You are currently using custom stylesheet.', 'lj-maintenance-mode'); ?></span>
+                                    <span class="description">(<?php echo "'$ljmm_stlylesheet_filename' ".__('file in your theme folder', 'lj-maintenance-mode'); ?>)</span>
                             <?php else : ?>
-                                <p class="description"><?php _e("For custom stylesheet, add '$ljmm_stlylesheet_filename' file to your theme folder. If your custom stylesheet file is picked up by the Maintenance Mode, it will be indicated here.", LJMM_PLUGIN_DOMAIN); ?>
+                                <p class="description"><?php echo sprintf(__('For custom stylesheet, add %s file to your theme folder. If your custom stylesheet file is picked up by the Maintenance Mode, it will be indicated here.', 'lj-maintenance-mode'), "'".$ljmm_stlylesheet_filename."'"); ?>
                             <?php endif; ?>
                             <?php
-                            echo '<br><strong>Tip:</strong> The maintenance mode page DOM structure is:';
+                            echo '<br><strong>'.__('Tip', 'lj-maintenance-mode').':</strong> '.__('The maintenance mode page DOM structure is:', 'lj-maintenance-mode');
                             echo '<br>'.htmlspecialchars('<body id="error-page">');
                             echo '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.htmlspecialchars('<div class="wp-die-message">');
                             echo '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.htmlspecialchars('<script type="application/javascript">...</script>');
@@ -547,7 +572,7 @@ class ljMaintenanceMode
                             echo '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.htmlspecialchars('<div class="ljmm-wrapper">');
                             echo '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.htmlspecialchars('<div class="ljmm-content">');
                             echo '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.htmlspecialchars('<div id="block-#" class="widget widget_block ...">...</div>');
-                            echo '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.htmlspecialchars('... the "maintenance mode page content" is here ...');
+                            echo '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.htmlspecialchars('... '.__('the maintenance mode page content is here', 'lj-maintenance-mode').' ...' );
                             echo '<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.htmlspecialchars('<div id="block-#" class="widget widget_block ...">...</div>');
                             ?>
                             </p>
@@ -555,51 +580,51 @@ class ljMaintenanceMode
                     </tr>
 
                     <tr valign="middle">
-                        <th scope="row"><?php _e('Custom Frontend Stylesheet', LJMM_PLUGIN_DOMAIN); ?></th>
+                        <th scope="row"><?php _e('Custom Frontend Stylesheet', 'lj-maintenance-mode'); ?></th>
                         <td>
                             <?php $ljmm_stlylesheet_frontend_filename = $this->get_css_frontend_filename(); ?>
                             <?php $ljmm_has_custom_frontend_stylsheet = (bool) $this->get_custom_frontend_stylesheet_url(); ?>
                             <?php if ($ljmm_has_custom_frontend_stylsheet) : ?>
                                 <p>
-                                <span style="line-height: 1.3; font-weight: 600; color: green;">You are currently using custom frontend stylesheet.</span>
-                                <span class="description">(<?php _e("'$ljmm_stlylesheet_frontend_filename' file in your theme folder", LJMM_PLUGIN_DOMAIN); ?>)</span>
+                                <span style="line-height: 1.3; font-weight: 600; color: green;"><?php _e('You are currently using custom stylesheet.', 'lj-maintenance-mode'); ?></span>
+                                <span class="description">(<?php echo "'$ljmm_stlylesheet_frontend_filename' ".__('file in your theme folder', 'lj-maintenance-mode'); ?>)</span>
                                 </p>
                             <?php else : ?>
-                                <p class="description"><?php _e("For custom stylesheet, add '$ljmm_stlylesheet_frontend_filename' file to your theme folder. If your custom stylesheet file is picked up by the Maintenance Mode, it will be indicated here.", LJMM_PLUGIN_DOMAIN); ?></p>
+                                <p class="description"><?php echo sprintf(__('For custom stylesheet, add %s file to your theme folder. If your custom stylesheet file is picked up by the Maintenance Mode, it will be indicated here.', 'lj-maintenance-mode'), "'".$ljmm_stlylesheet_frontend_filename."'"); ?></p>
                             <?php endif; ?>
                         </td>
                     </tr>
 
                   <tr valign="middle">
-                    <th scope="row"><?php _e('Custom Login Stylesheet', LJMM_PLUGIN_DOMAIN); ?></th>
+                    <th scope="row"><?php _e('Custom Login Stylesheet', 'lj-maintenance-mode'); ?></th>
                     <td>
                         <?php $ljmm_stlylesheet_login_filename = $this->get_css_login_filename(); ?>
                         <?php $ljmm_has_custom_login_stylsheet = (bool) $this->get_custom_login_stylesheet_url(); ?>
                         <?php if ($ljmm_has_custom_login_stylsheet) : ?>
                           <p>
-                            <span style="line-height: 1.3; font-weight: 600; color: green;">You are currently using custom login stylesheet.</span>
-                            <span class="description">(<?php _e("'$ljmm_stlylesheet_login_filename' file in your theme folder", LJMM_PLUGIN_DOMAIN); ?>)</span>
+                            <span style="line-height: 1.3; font-weight: 600; color: green;"><?php _e('You are currently using custom stylesheet.', 'lj-maintenance-mode'); ?></span>
+                            <span class="description">(<?php echo "'$ljmm_stlylesheet_login_filename' ".__('file in your theme folder', 'lj-maintenance-mode'); ?>)</span>
                           </p>
                         <?php else : ?>
-                          <p class="description"><?php _e("For custom stylesheet, add '$ljmm_stlylesheet_login_filename' file to your theme folder. If your custom stylesheet file is picked up by the Maintenance Mode, it will be indicated here.", LJMM_PLUGIN_DOMAIN); ?></p>
+                          <p class="description"><?php echo sprintf(__('For custom stylesheet, add %s file to your theme folder. If your custom stylesheet file is picked up by the Maintenance Mode, it will be indicated here.', 'lj-maintenance-mode'), "'".$ljmm_stlylesheet_login_filename."'"); ?></p>
                         <?php endif; ?>
                     </td>
                   </tr>
 
                   <tr valign="top">
                         <th scope="row">
-                            <label for="ljmm_code_snippet"><?php _e('Inject code snippet', LJMM_PLUGIN_DOMAIN); ?></label>
+                            <label for="ljmm_code_snippet"><?php _e('Inject code snippet', 'lj-maintenance-mode'); ?></label>
                         </th>
                         <td>
                             <textarea id="ljmm_code_snippet" name="ljmm_code_snippet" style="width:100%;height:150px"><?php echo esc_attr(get_option('ljmm_code_snippet')); ?></textarea>
                             <p class="description">
 				                    <?php
-				                        _e('This is useful to add a Javascript snippet to the maintenance page.', LJMM_PLUGIN_DOMAIN);
-                               echo '<br><strong>Tip:</strong> Do include the surrounding <strong>'.htmlspecialchars('<script type="application/javascript">...</script><noscript>...</noscript>').'</strong>';
+				                        _e('This is useful to add a Javascript snippet to the maintenance page.', 'lj-maintenance-mode');
+                               echo '<br><strong>'.__('Tip', 'lj-maintenance-mode').':</strong> '.__('Do include the surrounding', 'lj-maintenance-mode').' <strong>'.htmlspecialchars('<script type="application/javascript">...</script><noscript>...</noscript>').'</strong>';
                             ?>
     				                <?php
                                 if ($ua_code) {
-                                    _e('NOTE: if you are using the option above to add Google Analytics code, do NOT paste GA tracking code here.', LJMM_PLUGIN_DOMAIN);
+                                    _e('NOTE: if you are using the option above to add Google Analytics code, do NOT paste GA tracking code here.', 'lj-maintenance-mode');
                                 }
                             ?>
                             </p>
@@ -651,10 +676,10 @@ class ljMaintenanceMode
         }
 
         $is_enabled = get_option('ljmm-enabled');
-        $status = _x('Disabled', 'Admin bar indicator', LJMM_PLUGIN_DOMAIN);
+        $status = _x('Disabled', 'Admin bar indicator', 'lj-maintenance-mode');
 
         if ($is_enabled) {
-            $status = _x('Enabled', 'Admin bar indicator', LJMM_PLUGIN_DOMAIN);
+            $status = _x('Enabled', 'Admin bar indicator', 'lj-maintenance-mode');
         }
 
         $indicatorClasses = $is_enabled ? 'ljmm-indicator ljmm-indicator--enabled' : 'ljmm-indicator';
@@ -665,7 +690,7 @@ class ljMaintenanceMode
             'parent' => false,
             'href' => get_admin_url(null, 'options-general.php?page=lj-maintenance-mode'),
             'meta' => [
-                'title' => _x('Maintenance Mode', 'Admin bar indicator', LJMM_PLUGIN_DOMAIN),
+                'title' => _x('Maintenance Mode', 'Admin bar indicator', 'lj-maintenance-mode'),
                 'class' => $indicatorClasses,
             ]
         ];
@@ -682,8 +707,8 @@ class ljMaintenanceMode
     */
     public function action_links($links)
     {
-        $links[] = '<a href="' . get_admin_url(null, 'options-general.php?page=lj-maintenance-mode') . '">' . _x('Settings', 'Plugin Settings link', LJMM_PLUGIN_DOMAIN) . '</a>';
-        $links[] = '<a target="_blank" href="' . LJMM_SUPPORT_LINK . '">' . _x('Support', 'Plugin Support link', LJMM_PLUGIN_DOMAIN) . '</a>';
+        $links[] = '<a href="' . get_admin_url(null, 'options-general.php?page=lj-maintenance-mode') . '">' . _x('Settings', 'Plugin Settings link', 'lj-maintenance-mode') . '</a>';
+        $links[] = '<a target="_blank" href="' . LJMM_SUPPORT_LINK . '">' . _x('Support', 'Plugin Support link', 'lj-maintenance-mode') . '</a>';
 
         return $links;
     }
@@ -696,7 +721,7 @@ class ljMaintenanceMode
      */
     public function site_title()
     {
-        return apply_filters('ljmm_site_title', get_bloginfo('name') . ' - ' . __('Website Under Maintenance', LJMM_PLUGIN_DOMAIN));
+        return apply_filters('ljmm_site_title', get_bloginfo('name') . ' - ' . __('Website Under Maintenance', 'lj-maintenance-mode'));
     }
 
     /**
@@ -1198,16 +1223,16 @@ class ljMaintenanceMode
         if (function_exists('register_sidebar')) {
             register_sidebar([
                 'id' => 'ljmm-before',
-                'name' => __('Maintenance mode - before content', LJMM_PLUGIN_DOMAIN),
-                'description' => __('', LJMM_PLUGIN_DOMAIN),
+                'name' => __('Maintenance mode - before content', 'lj-maintenance-mode'),
+                'description' => __('Enter the content to appear before the maintenance mode content.', 'lj-maintenance-mode'),
                 'before_widget' => "\n" . '<div id="%1$s" class="widget %2$s">',
                 'after_widget' => '</div>' . "\n",
             ]);
 
             register_sidebar([
                 'id' => 'ljmm-after',
-                'name' => __('Maintenance mode - after content', LJMM_PLUGIN_DOMAIN),
-                'description' => __('', LJMM_PLUGIN_DOMAIN),
+                'name' => __('Maintenance mode - after content', 'lj-maintenance-mode'),
+                'description' => __('Enter the content to appear after the maintenance mode content.', 'lj-maintenance-mode'),
                 'before_widget' => "\n" . '<div id="%1$s" class="widget %2$s">',
                 'after_widget' => '</div>' . "\n",
             ]);
@@ -1318,6 +1343,62 @@ EOD;
         }
 
         return $message;
+    }
+
+    /**
+     * Shortcode for maintenance mode enabled
+     *
+     * @since 2.5.2
+     * @return string
+     */
+    public function shortcode_is_maintenance_mode_enabled( $atts, $content = null )
+    {
+        if ( $this->enabled() === true ) {
+            return do_shortcode( $content );
+        }
+        return '';
+    }
+
+    /**
+     * Shortcode for maintenance mode disabled
+     *
+     * @since 2.5.2
+     * @return string
+     */
+    public function shortcode_is_maintenance_mode_disabled( $atts, $content = null )
+    {
+        if ( $this->enabled() === false ) {
+            return do_shortcode( $content );
+        }
+        return '';
+    }
+
+    /**
+     * Shortcode for wordpress user logged in
+     *
+     * @since 2.5.2
+     * @return string
+     */
+    public function shortcode_is_user_logged_in( $atts, $content = null )
+    {
+        if ( is_user_logged_in() ) {
+            return do_shortcode( $content );
+        }
+        return '';
+    }
+
+    /**
+     * Shortcode for wordpress user logged out
+     *
+     * @since 2.5.2
+     * @return string
+     */
+    public function shortcode_is_user_logged_out( $atts, $content = null )
+    {
+        if ( !is_user_logged_in() ) {
+            return do_shortcode( $content );
+        }
+        return '';
     }
 }
 

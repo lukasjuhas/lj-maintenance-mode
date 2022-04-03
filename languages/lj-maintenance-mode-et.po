@@ -1,0 +1,551 @@
+# Copyright (C) 2017 Maintenance Mode
+# This file is distributed under the same license as the Maintenance Mode package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode 2.5.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
+"mode\n"
+"POT-Creation-Date: 2022-01-30 15:17+1100\n"
+"PO-Revision-Date: 2022-03-27 15:58+1100\n"
+"Last-Translator: John Lang <john@johnlang.com.au>\n"
+"Language-Team: \n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lj-maintenance-mode.php:66 lj-maintenance-mode.php:724
+#, fuzzy
+msgid "Website Under Maintenance"
+msgstr "Veebileht on hoolduse all"
+
+#: lj-maintenance-mode.php:66
+#, fuzzy
+msgid ""
+"Our Website is currently undergoing scheduled maintenance. Please check back "
+"soon."
+msgstr ""
+"Meie veebisaidil on praegu plaanilised hooldustööd. Palun vaadake varsti "
+"tagasi."
+
+#: lj-maintenance-mode.php:69
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Oluline: Ära unusta puhastada vahemälu, kasutades WP Super Cache, kui "
+"lülitad sisse või välja hooldusrežiimi."
+
+#: lj-maintenance-mode.php:72
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Oluline: Ärge unustage hoolderežiimi sisse- või väljalülitamisel puhastada "
+"vahemälu, kasutades W3 Total Cache'i."
+
+#: lj-maintenance-mode.php:75
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Oluline: Hooldusrežiimi sisse- või väljalülitamisel ärge unustage puhastada "
+"vahemälu Comet Cache abil."
+
+#: lj-maintenance-mode.php:78
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Rocket when enabling or "
+"disabling Maintenance Mode."
+msgstr ""
+"Oluline: Ära unusta puhastada vahemälu WP Rocketi abil, kui lubad või keelad "
+"hooldusrežiimi."
+
+#: lj-maintenance-mode.php:81
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Autoptimize when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Oluline: Hooldusrežiimi sisse- või väljalülitamisel ärge unustage puhastada "
+"vahemälu, kasutades Autoptimize."
+
+#: lj-maintenance-mode.php:84
+#, fuzzy
+msgid ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+"Hooldusrežiim on praegu aktiivne. Et veenduda, et see töötab, avage oma "
+"veebileht kas privaatses/inkognito režiimis, teises brauseris või logige "
+"lihtsalt välja. Hooldusrežiim ei mõjuta sisselogitud kasutajaid."
+
+#: lj-maintenance-mode.php:87
+#, fuzzy
+msgid "You can add widgets in \"Appearance -> Widgets\" section."
+msgstr "Vidinaid saate lisada jaotises \"Välimus -> Vidinad\"."
+
+#: lj-maintenance-mode.php:211 lj-maintenance-mode.php:300
+#, fuzzy
+msgctxt "Plugin Name"
+msgid "Maintenance Mode"
+msgstr "Hooldusrežiim"
+
+#: lj-maintenance-mode.php:212
+#, fuzzy
+msgctxt "Plugin Description"
+msgid ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+msgstr ""
+"Väga lihtne hooldusrežiim ja peagi ilmuv lehekülg, kasutades vaikimisi "
+"Wordpressi märgistust ilma reklaamide või tasuliste uuendusteta."
+
+#: lj-maintenance-mode.php:213
+#, fuzzy
+msgctxt "Plugin Author"
+msgid "Lukas Juhas"
+msgstr "Lukas Juhas"
+
+#: lj-maintenance-mode.php:223
+#, fuzzy
+msgctxt "Page Title"
+msgid "Maintenance Mode"
+msgstr "Hooldusrežiim"
+
+#: lj-maintenance-mode.php:223
+#, fuzzy
+msgctxt "Menu Title"
+msgid "Maintenance Mode"
+msgstr "Hooldusrežiim"
+
+#: lj-maintenance-mode.php:271
+#, fuzzy
+msgid "Maintenance Mode"
+msgstr "Hooldusrežiim"
+
+#: lj-maintenance-mode.php:281
+msgid "Enabled"
+msgstr "Lubatud"
+
+#: lj-maintenance-mode.php:293
+msgid "Mode"
+msgstr "Režiim"
+
+#: lj-maintenance-mode.php:300
+msgid "Default"
+msgstr "Vaikimisi"
+
+#: lj-maintenance-mode.php:304
+#, fuzzy
+msgid "Coming Soon Page"
+msgstr "Tulevane leht"
+
+#: lj-maintenance-mode.php:307
+#, fuzzy
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"Kui panete oma saidi pikemaks ajaks hooldusrežiimi, peaksite selle "
+"seadistama \"Coming Soon Page\". Muul juhul kasutage \"Hooldusrežiim\"."
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr "Vaikimisi määratakse HTTP 503, peagi määratakse HTTP 200."
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Learn more."
+msgstr "Lisateave."
+
+#: lj-maintenance-mode.php:315
+msgid "Preview"
+msgstr "Eelvaade"
+
+#: lj-maintenance-mode.php:316 lj-maintenance-mode.php:711
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr "Tugi"
+
+#: lj-maintenance-mode.php:329
+msgid "Advanced Settings"
+msgstr "Täiendavad seaded"
+
+#: lj-maintenance-mode.php:332
+#, fuzzy
+msgid "Hide Advanced Settings"
+msgstr "Varjata täiustatud seaded"
+
+#: lj-maintenance-mode.php:340
+#, fuzzy
+msgid "Add widget areas above and below content"
+msgstr "Lisa vidinapinnad sisu kohal ja all"
+
+#: lj-maintenance-mode.php:352
+msgid "Site Title"
+msgstr "Lehe pealkiri"
+
+#: lj-maintenance-mode.php:356
+#, fuzzy
+msgid "Overrides default site meta title."
+msgstr "Kõrvaldab saidi vaikimisi meta pealkirja."
+
+#: lj-maintenance-mode.php:364
+msgid "User Roles"
+msgstr "Keela hinnapäringukorv kasutaja rollidele"
+
+#: lj-maintenance-mode.php:365
+#, fuzzy
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr ""
+"Märkige need, mis saavad juurdepääsu teie veebisaidi esiossa, kui "
+"hooldusrežiim on lubatud"
+
+#: lj-maintenance-mode.php:366
+#, fuzzy
+msgid "Please note that this does NOT apply to admin area"
+msgstr "Pange tähele, et see EI kehti administreerimisala kohta"
+
+#: lj-maintenance-mode.php:367
+#, fuzzy
+msgid "Toggle all"
+msgstr "Vaheta kõik"
+
+#: lj-maintenance-mode.php:387
+#, fuzzy
+msgid "User Role control is currently not available on your website. Sorry!"
+msgstr ""
+"Kasutaja rolli kontroll ei ole praegu teie veebisaidil saadaval. Vabandust!"
+
+#: lj-maintenance-mode.php:394
+#, fuzzy
+msgid "Allowed IP"
+msgstr "Lubatud IP"
+
+#: lj-maintenance-mode.php:394 lj-maintenance-mode.php:446
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454 lj-maintenance-mode.php:472
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:493
+#: lj-maintenance-mode.php:499 lj-maintenance-mode.php:512
+#: lj-maintenance-mode.php:518
+msgctxt "include, part of, constitute"
+msgid "Contains"
+msgstr "Sisaldab"
+
+#: lj-maintenance-mode.php:400
+#, fuzzy
+msgid "Enter IPv4 or IPv6 values, one per line."
+msgstr "Sisestage IPv4 või IPv6 väärtused, üks rea kohta."
+
+#: lj-maintenance-mode.php:401
+#, fuzzy
+msgid ""
+"Which IP specification gets used? That all depends upon how the remote "
+"caller established the connection; you will never know until they say hello."
+msgstr ""
+"Millist IP-spetsifikatsiooni kasutatakse? See kõik sõltub sellest, kuidas "
+"kaugkutsuja on ühenduse loonud; te ei saa seda teada enne, kui ta ütleb "
+"\"tere\"."
+
+#: lj-maintenance-mode.php:402
+#, fuzzy
+msgid ""
+"Partial IP values are ok; especially, when you want to identify a whole "
+"subnet."
+msgstr ""
+"Osalised IP-väärtused on ok; eriti kui soovite tuvastada tervet alamvõrku."
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:409
+#: lj-maintenance-mode.php:428 lj-maintenance-mode.php:429
+#: lj-maintenance-mode.php:430 lj-maintenance-mode.php:456
+#: lj-maintenance-mode.php:480 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#: lj-maintenance-mode.php:567 lj-maintenance-mode.php:623
+msgid "Tip"
+msgstr "Tip"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:430
+#: lj-maintenance-mode.php:456 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#, fuzzy
+msgid "Uses"
+msgstr "Kasutab"
+
+#: lj-maintenance-mode.php:405
+#, fuzzy
+msgid "which identifies the current Remote IP:"
+msgstr "mis identifitseerib praeguse Remote IP:"
+
+#: lj-maintenance-mode.php:409
+#, fuzzy
+msgid "identifies this server is at Server IP:"
+msgstr "identifitseerib selle serveri aadressil Server IP:"
+
+#: lj-maintenance-mode.php:418
+#, fuzzy
+msgid "Allowed URI"
+msgstr "Lubatud URI"
+
+#: lj-maintenance-mode.php:418 lj-maintenance-mode.php:424
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:426
+#, fuzzy
+msgctxt "exact, stringent, precise"
+msgid "Strict"
+msgstr "Range"
+
+#: lj-maintenance-mode.php:424
+#, fuzzy
+msgid "The full relative path, starting with"
+msgstr "Täielik suhteline tee, mis algab tähtedega"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454
+#, fuzzy
+msgid "when doing a"
+msgstr "kui teed"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:452
+#: lj-maintenance-mode.php:453 lj-maintenance-mode.php:454
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "comparison"
+msgstr "võrdlus"
+
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:453
+#, fuzzy
+msgid "Ignores the trailing slash"
+msgstr "Ignoreerib tagumise kaldkriipsu"
+
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:454
+#, fuzzy
+msgid "Ignores the entire query string"
+msgstr "Ignoreerib kogu päringustringi"
+
+#: lj-maintenance-mode.php:427 lj-maintenance-mode.php:455
+#, fuzzy
+msgid "Never include the protocol, domain or port prefixes of the full URL."
+msgstr ""
+"Ärge kunagi lisage täieliku URL-i protokolli, domeeni või pordi eesliidet."
+
+#: lj-maintenance-mode.php:428
+#, fuzzy
+msgid ""
+"Enter / on its own line to allow the sites home page to always by-pass the "
+"maintenance mode page."
+msgstr ""
+"Sisestage / oma reale, et võimaldada saitide avalehel alati hooldusrežiimi "
+"lehte mööda minna."
+
+#: lj-maintenance-mode.php:429 lj-maintenance-mode.php:480
+#, fuzzy
+msgid "will always by-pass the maintenance mode page."
+msgstr "möödub alati hooldusrežiimi lehest."
+
+#: lj-maintenance-mode.php:437 lj-maintenance-mode.php:463
+#: lj-maintenance-mode.php:484 lj-maintenance-mode.php:503
+#: lj-maintenance-mode.php:522
+#, fuzzy
+msgid "and the value for this loaded page is:"
+msgstr "ja selle laetud lehe väärtus on:"
+
+#: lj-maintenance-mode.php:446
+#, fuzzy
+msgid "Allowed URL"
+msgstr "Lubatud URL"
+
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "Can be any sub-string contained within the URI, when doing a"
+msgstr "Võib olla ükskõik milline URI-s sisalduv alamjada, kui tehakse"
+
+#: lj-maintenance-mode.php:472
+#, fuzzy
+msgid "Allowed Query String"
+msgstr "Lubatud päringu string"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "Can be any sub-string value after the"
+msgstr "Võib olla ükskõik milline alajaotuse väärtus pärast väärtust"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "in the URI, when doing a"
+msgstr "uRI-s, kui tehakse"
+
+#: lj-maintenance-mode.php:479
+#, fuzzy
+msgid "Enter sub-string values that conform to output by"
+msgstr "Sisestage all-stringi väärtused, mis vastavad väljundi poolt"
+
+#: lj-maintenance-mode.php:493
+#, fuzzy
+msgid "Allowed Referer"
+msgstr "Lubatud viitaja"
+
+#: lj-maintenance-mode.php:512
+#, fuzzy
+msgid "Allowed User Agent"
+msgstr "Lubatud kasutajaagent"
+
+#: lj-maintenance-mode.php:537
+#, fuzzy
+msgid "Add Google Analytics code"
+msgstr "Google Analyticsi koodi lisamine"
+
+#: lj-maintenance-mode.php:542
+#, fuzzy
+msgid "for Analytics profile"
+msgstr "analüütikute profiili jaoks"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "configured in"
+msgstr "konfigureeritud"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "Analytify"
+msgstr "Analytify"
+
+#: lj-maintenance-mode.php:546
+#, fuzzy
+msgid ""
+"Since you have the Analytify plugin installed, this will add Google "
+"Analytics tracking code to the maintenance page."
+msgstr ""
+"Kuna teil on paigaldatud Analytify plugin, lisab see hoolduslehele Google "
+"Analyticsi jälgimiskoodi."
+
+#: lj-maintenance-mode.php:554
+#, fuzzy
+msgid "Custom Stylesheet"
+msgstr "Kohandatud stiilileht"
+
+#: lj-maintenance-mode.php:561 lj-maintenance-mode.php:589
+#: lj-maintenance-mode.php:605
+#, fuzzy
+msgid "You are currently using custom stylesheet."
+msgstr "Te kasutate praegu kohandatud stiililehte."
+
+#: lj-maintenance-mode.php:562 lj-maintenance-mode.php:590
+#: lj-maintenance-mode.php:606
+#, fuzzy
+msgid "file in your theme folder"
+msgstr "faili oma teemakaustas"
+
+#: lj-maintenance-mode.php:564 lj-maintenance-mode.php:593
+#: lj-maintenance-mode.php:609
+#, fuzzy, php-format
+msgid ""
+"For custom stylesheet, add %s file to your theme folder. If your custom "
+"stylesheet file is picked up by the Maintenance Mode, it will be indicated "
+"here."
+msgstr ""
+"Kohandatud stiililehe jaoks lisage %s fail oma teemakausta. Kui teie "
+"kohandatud stiililehe faili võtab hooldusrežiim üles, siis kuvatakse see "
+"siin."
+
+#: lj-maintenance-mode.php:567
+#, fuzzy
+msgid "The maintenance mode page DOM structure is:"
+msgstr "Hooldusrežiimi lehekülje DOM struktuur on järgmine:"
+
+#: lj-maintenance-mode.php:575
+#, fuzzy
+msgid "the maintenance mode page content is here"
+msgstr "hooldusrežiimi lehe sisu on siin"
+
+#: lj-maintenance-mode.php:583
+#, fuzzy
+msgid "Custom Frontend Stylesheet"
+msgstr "Custom Frontend Stylesheet"
+
+#: lj-maintenance-mode.php:599
+#, fuzzy
+msgid "Custom Login Stylesheet"
+msgstr "Kohandatud sisselogimise stiilileht"
+
+#: lj-maintenance-mode.php:616
+#, fuzzy
+msgid "Inject code snippet"
+msgstr "Koodilõikude süstimine"
+
+#: lj-maintenance-mode.php:622
+#, fuzzy
+msgid "This is useful to add a Javascript snippet to the maintenance page."
+msgstr "See on kasulik, et lisada hoolduslehele Javascript'i lõik."
+
+#: lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Do include the surrounding"
+msgstr "Kaasa arvatud ümbruskonna"
+
+#: lj-maintenance-mode.php:627
+#, fuzzy
+msgid ""
+"NOTE: if you are using the option above to add Google Analytics code, do NOT "
+"paste GA tracking code here."
+msgstr ""
+"MÄRKUS: kui kasutate ülaltoodud võimalust Google Analyticsi koodi "
+"lisamiseks, ärge kleepige GA jälgimiskoodi siia."
+
+#: lj-maintenance-mode.php:679
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "Keelatud"
+
+#: lj-maintenance-mode.php:682
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "Lubatud"
+
+#: lj-maintenance-mode.php:693
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "Hooldusrežiim"
+
+#: lj-maintenance-mode.php:710
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "Seaded"
+
+#: lj-maintenance-mode.php:1226
+#, fuzzy
+msgid "Maintenance mode - before content"
+msgstr "Hooldusrežiim - enne sisu"
+
+#: lj-maintenance-mode.php:1227
+#, fuzzy
+msgid "Enter the content to appear before the maintenance mode content."
+msgstr "Sisestage sisu, mis ilmub enne hooldusrežiimi sisu."
+
+#: lj-maintenance-mode.php:1234
+#, fuzzy
+msgid "Maintenance mode - after content"
+msgstr "Hooldusrežiim - pärast sisu"
+
+#: lj-maintenance-mode.php:1235
+#, fuzzy
+msgid "Enter the content to appear after the maintenance mode content."
+msgstr "Sisestage sisu, mis ilmub pärast hooldusrežiimi sisu."

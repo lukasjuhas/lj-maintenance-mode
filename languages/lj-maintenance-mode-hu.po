@@ -1,0 +1,549 @@
+# Copyright (C) 2017 Maintenance Mode
+# This file is distributed under the same license as the Maintenance Mode package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode 2.5.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
+"mode\n"
+"POT-Creation-Date: 2022-01-30 15:17+1100\n"
+"PO-Revision-Date: 2022-02-06 11:56+1100\n"
+"Last-Translator: John Lang <john@johnlang.com.au>\n"
+"Language-Team: \n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lj-maintenance-mode.php:66 lj-maintenance-mode.php:724
+msgid "Website Under Maintenance"
+msgstr "A weboldal jelenleg karbantartás alatt áll"
+
+#: lj-maintenance-mode.php:66
+#, fuzzy
+msgid ""
+"Our Website is currently undergoing scheduled maintenance. Please check back "
+"soon."
+msgstr ""
+"Weboldalunk jelenleg tervezett karbantartás alatt áll. Kérjük, hamarosan "
+"látogasson vissza."
+
+#: lj-maintenance-mode.php:69
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Fontos: Ne felejtsd el kiüríteni a gyorsítótárat a WP Super Cache "
+"segítségével, amikor engedélyezed vagy letiltod a karbantartási módot."
+
+#: lj-maintenance-mode.php:72
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Fontos: Ne felejtse el a gyorsítótárat a W3 Total Cache segítségével "
+"kiüríteni, amikor engedélyezi vagy letiltja a karbantartási módot."
+
+#: lj-maintenance-mode.php:75
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Fontos: Ne felejtse el a gyorsítótárat a Comet Cache segítségével kiüríteni, "
+"amikor engedélyezi vagy letiltja a karbantartási módot."
+
+#: lj-maintenance-mode.php:78
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Rocket when enabling or "
+"disabling Maintenance Mode."
+msgstr ""
+"Fontos: Ne felejtsd el kiüríteni a gyorsítótárat a WP Rocket segítségével, "
+"amikor engedélyezed vagy letiltod a karbantartási módot."
+
+#: lj-maintenance-mode.php:81
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Autoptimize when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Fontos: Ne felejtse el a gyorsítótárat az Automatikus optimalizálás "
+"segítségével kiüríteni, amikor engedélyezi vagy letiltja a karbantartási "
+"módot."
+
+#: lj-maintenance-mode.php:84
+#, fuzzy
+msgid ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+"A karbantartási üzemmód jelenleg aktív. Hogy megbizonyosodjon arról, hogy "
+"működik-e, nyissa meg a weboldalt privát/inkognitó módban, másik "
+"böngészőben, vagy egyszerűen jelentkezzen ki. A bejelentkezett "
+"felhasználókat nem érinti a karbantartási mód."
+
+#: lj-maintenance-mode.php:87
+#, fuzzy
+msgid "You can add widgets in \"Appearance -> Widgets\" section."
+msgstr "Widgeteket a \"Megjelenés -> Widgetek\" szakaszban adhat hozzá."
+
+#: lj-maintenance-mode.php:211 lj-maintenance-mode.php:300
+msgctxt "Plugin Name"
+msgid "Maintenance Mode"
+msgstr "Karbantartás üzemmód"
+
+#: lj-maintenance-mode.php:212
+#, fuzzy
+msgctxt "Plugin Description"
+msgid ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+msgstr ""
+"Nagyon egyszerű Maintenance Mode & Coming soon oldal az alapértelmezett "
+"Wordpress markup használatával, hirdetések vagy fizetett frissítések nélkül."
+
+#: lj-maintenance-mode.php:213
+msgctxt "Plugin Author"
+msgid "Lukas Juhas"
+msgstr "Lukas Juhas"
+
+#: lj-maintenance-mode.php:223
+msgctxt "Page Title"
+msgid "Maintenance Mode"
+msgstr "Karbantartás üzemmód"
+
+#: lj-maintenance-mode.php:223
+msgctxt "Menu Title"
+msgid "Maintenance Mode"
+msgstr "Karbantartás üzemmód"
+
+#: lj-maintenance-mode.php:271
+msgid "Maintenance Mode"
+msgstr "Karbantartás üzemmód"
+
+#: lj-maintenance-mode.php:281
+msgid "Enabled"
+msgstr "Bekapcsolva"
+
+#: lj-maintenance-mode.php:293
+msgid "Mode"
+msgstr "Mód"
+
+#: lj-maintenance-mode.php:300
+msgid "Default"
+msgstr "Alapértelmezett"
+
+#: lj-maintenance-mode.php:304
+msgid "Coming Soon Page"
+msgstr "Hamarosan Oldal"
+
+#: lj-maintenance-mode.php:307
+#, fuzzy
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"Ha hosszabb időre karbantartási üzemmódba helyezi webhelyét, akkor ezt a "
+"\"Coming Soon Page\" (hamarosan megjelenő oldal) értékre kell beállítania. "
+"Ellenkező esetben használja a \"Karbantartási módot\"."
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr ""
+"Az alapértelmezett beállítás a HTTP-t 503-ra állítja, hamarosan a HTTP-t 200-"
+"ra állítja."
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Learn more."
+msgstr "Tudjon meg többet."
+
+#: lj-maintenance-mode.php:315
+msgid "Preview"
+msgstr "Előnézet"
+
+#: lj-maintenance-mode.php:316 lj-maintenance-mode.php:711
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr "Segítség"
+
+#: lj-maintenance-mode.php:329
+msgid "Advanced Settings"
+msgstr "Haladó beállítások"
+
+#: lj-maintenance-mode.php:332
+#, fuzzy
+msgid "Hide Advanced Settings"
+msgstr "Speciális beállítások elrejtése"
+
+#: lj-maintenance-mode.php:340
+#, fuzzy
+msgid "Add widget areas above and below content"
+msgstr "Widget területek hozzáadása a tartalom felett és alatt"
+
+#: lj-maintenance-mode.php:352
+msgid "Site Title"
+msgstr "Oldalcím"
+
+#: lj-maintenance-mode.php:356
+#, fuzzy
+msgid "Overrides default site meta title."
+msgstr "Felülírja a webhely alapértelmezett meta címét."
+
+#: lj-maintenance-mode.php:364
+msgid "User Roles"
+msgstr "Felhasználói szerepek"
+
+#: lj-maintenance-mode.php:365
+#, fuzzy
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr ""
+"Jelölje be azokat, akik hozzáférhetnek a webhely front-endjéhez, ha a "
+"karbantartási mód engedélyezve van"
+
+#: lj-maintenance-mode.php:366
+#, fuzzy
+msgid "Please note that this does NOT apply to admin area"
+msgstr "Kérjük, vegye figyelembe, hogy ez NEM vonatkozik az admin területre"
+
+#: lj-maintenance-mode.php:367
+#, fuzzy
+msgid "Toggle all"
+msgstr "Toggle all"
+
+#: lj-maintenance-mode.php:387
+#, fuzzy
+msgid "User Role control is currently not available on your website. Sorry!"
+msgstr ""
+"A felhasználói szerepkörök ellenőrzése jelenleg nem érhető el a webhelyen. "
+"Sajnálom!"
+
+#: lj-maintenance-mode.php:394
+#, fuzzy
+msgid "Allowed IP"
+msgstr "Engedélyezett IP"
+
+#: lj-maintenance-mode.php:394 lj-maintenance-mode.php:446
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454 lj-maintenance-mode.php:472
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:493
+#: lj-maintenance-mode.php:499 lj-maintenance-mode.php:512
+#: lj-maintenance-mode.php:518
+msgctxt "include, part of, constitute"
+msgid "Contains"
+msgstr "Tartalmazza"
+
+#: lj-maintenance-mode.php:400
+#, fuzzy
+msgid "Enter IPv4 or IPv6 values, one per line."
+msgstr "Adja meg az IPv4 vagy IPv6 értékeket, soronként egyet."
+
+#: lj-maintenance-mode.php:401
+#, fuzzy
+msgid ""
+"Which IP specification gets used? That all depends upon how the remote "
+"caller established the connection; you will never know until they say hello."
+msgstr ""
+"Melyik IP-specifikációt használják? Ez attól függ, hogy a távoli hívó hogyan "
+"hozta létre a kapcsolatot; ezt nem tudhatja meg, amíg nem köszönnek."
+
+#: lj-maintenance-mode.php:402
+#, fuzzy
+msgid ""
+"Partial IP values are ok; especially, when you want to identify a whole "
+"subnet."
+msgstr ""
+"A részleges IP-értékek rendben vannak; különösen akkor, ha egy egész "
+"alhálózatot akar azonosítani."
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:409
+#: lj-maintenance-mode.php:428 lj-maintenance-mode.php:429
+#: lj-maintenance-mode.php:430 lj-maintenance-mode.php:456
+#: lj-maintenance-mode.php:480 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#: lj-maintenance-mode.php:567 lj-maintenance-mode.php:623
+msgid "Tip"
+msgstr "Tipp"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:430
+#: lj-maintenance-mode.php:456 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+msgid "Uses"
+msgstr "Használat"
+
+#: lj-maintenance-mode.php:405
+#, fuzzy
+msgid "which identifies the current Remote IP:"
+msgstr "amely azonosítja az aktuális távoli IP címet:"
+
+#: lj-maintenance-mode.php:409
+#, fuzzy
+msgid "identifies this server is at Server IP:"
+msgstr "azonosítja ezt a kiszolgálót a Kiszolgáló IP címen:"
+
+#: lj-maintenance-mode.php:418
+#, fuzzy
+msgid "Allowed URI"
+msgstr "Engedélyezett URI"
+
+#: lj-maintenance-mode.php:418 lj-maintenance-mode.php:424
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:426
+msgctxt "exact, stringent, precise"
+msgid "Strict"
+msgstr "Szigorú"
+
+#: lj-maintenance-mode.php:424
+#, fuzzy
+msgid "The full relative path, starting with"
+msgstr "A teljes relatív elérési útvonal, kezdve a"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454
+#, fuzzy
+msgid "when doing a"
+msgstr "amikor egy"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:452
+#: lj-maintenance-mode.php:453 lj-maintenance-mode.php:454
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "comparison"
+msgstr "összehasonlítás"
+
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:453
+#, fuzzy
+msgid "Ignores the trailing slash"
+msgstr "Figyelmen kívül hagyja az utolsó ferdehajlatot"
+
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:454
+#, fuzzy
+msgid "Ignores the entire query string"
+msgstr "Figyelmen kívül hagyja a teljes lekérdezési karakterláncot"
+
+#: lj-maintenance-mode.php:427 lj-maintenance-mode.php:455
+#, fuzzy
+msgid "Never include the protocol, domain or port prefixes of the full URL."
+msgstr ""
+"Soha ne tartalmazza a teljes URL protokoll-, tartomány- vagy port-előtagját."
+
+#: lj-maintenance-mode.php:428
+#, fuzzy
+msgid ""
+"Enter / on its own line to allow the sites home page to always by-pass the "
+"maintenance mode page."
+msgstr ""
+"Írja be a / betűt a saját sorába, hogy a webhelyek kezdőlapja mindig "
+"megkerülhesse a karbantartási mód oldalát."
+
+#: lj-maintenance-mode.php:429 lj-maintenance-mode.php:480
+#, fuzzy
+msgid "will always by-pass the maintenance mode page."
+msgstr "mindig megkerüli a karbantartási üzemmód oldalát."
+
+#: lj-maintenance-mode.php:437 lj-maintenance-mode.php:463
+#: lj-maintenance-mode.php:484 lj-maintenance-mode.php:503
+#: lj-maintenance-mode.php:522
+#, fuzzy
+msgid "and the value for this loaded page is:"
+msgstr "és a betöltött oldal értéke:"
+
+#: lj-maintenance-mode.php:446
+#, fuzzy
+msgid "Allowed URL"
+msgstr "Engedélyezett URL"
+
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "Can be any sub-string contained within the URI, when doing a"
+msgstr "Lehet bármilyen, az URI-ban szereplő részlánc, ha a"
+
+#: lj-maintenance-mode.php:472
+#, fuzzy
+msgid "Allowed Query String"
+msgstr "Engedélyezett lekérdezési karakterlánc"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "Can be any sub-string value after the"
+msgstr "Lehet bármelyik alsztring érték a"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "in the URI, when doing a"
+msgstr "az URI-ban, amikor egy"
+
+#: lj-maintenance-mode.php:479
+#, fuzzy
+msgid "Enter sub-string values that conform to output by"
+msgstr "Adjon meg olyan részláncértékeket, amelyek megfelelnek a kimenetnek a"
+
+#: lj-maintenance-mode.php:493
+#, fuzzy
+msgid "Allowed Referer"
+msgstr "Engedélyezett Referer"
+
+#: lj-maintenance-mode.php:512
+#, fuzzy
+msgid "Allowed User Agent"
+msgstr "Engedélyezett felhasználói ügynök"
+
+#: lj-maintenance-mode.php:537
+#, fuzzy
+msgid "Add Google Analytics code"
+msgstr "Google Analytics kód hozzáadása"
+
+#: lj-maintenance-mode.php:542
+#, fuzzy
+msgid "for Analytics profile"
+msgstr "az Analytics profilhoz"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "configured in"
+msgstr "konfigurálva"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "Analytify"
+msgstr "Analytify"
+
+#: lj-maintenance-mode.php:546
+#, fuzzy
+msgid ""
+"Since you have the Analytify plugin installed, this will add Google "
+"Analytics tracking code to the maintenance page."
+msgstr ""
+"Mivel telepítve van az Analytify plugin, ez hozzáadja a Google Analytics "
+"nyomkövető kódot a karbantartási oldalhoz."
+
+#: lj-maintenance-mode.php:554
+#, fuzzy
+msgid "Custom Stylesheet"
+msgstr "Egyéni stílustábla"
+
+#: lj-maintenance-mode.php:561 lj-maintenance-mode.php:589
+#: lj-maintenance-mode.php:605
+#, fuzzy
+msgid "You are currently using custom stylesheet."
+msgstr "Ön jelenleg egyéni stíluslapot használ."
+
+#: lj-maintenance-mode.php:562 lj-maintenance-mode.php:590
+#: lj-maintenance-mode.php:606
+#, fuzzy
+msgid "file in your theme folder"
+msgstr "fájl a téma mappájában"
+
+#: lj-maintenance-mode.php:564 lj-maintenance-mode.php:593
+#: lj-maintenance-mode.php:609
+#, fuzzy, php-format
+msgid ""
+"For custom stylesheet, add %s file to your theme folder. If your custom "
+"stylesheet file is picked up by the Maintenance Mode, it will be indicated "
+"here."
+msgstr ""
+"Egyéni stíluslaphoz adjon %s fájlt a téma mappájába. Ha az egyéni "
+"stílustábla fájlját a karbantartási mód felvette, akkor az itt lesz "
+"feltüntetve."
+
+#: lj-maintenance-mode.php:567
+#, fuzzy
+msgid "The maintenance mode page DOM structure is:"
+msgstr "A karbantartási módú oldal DOM-struktúrája a következő:"
+
+#: lj-maintenance-mode.php:575
+#, fuzzy
+msgid "the maintenance mode page content is here"
+msgstr "a karbantartási üzemmódú oldal tartalma itt található"
+
+#: lj-maintenance-mode.php:583
+#, fuzzy
+msgid "Custom Frontend Stylesheet"
+msgstr "Egyéni Frontend Stylesheet"
+
+#: lj-maintenance-mode.php:599
+#, fuzzy
+msgid "Custom Login Stylesheet"
+msgstr "Egyéni bejelentkezési stíluslap"
+
+#: lj-maintenance-mode.php:616
+#, fuzzy
+msgid "Inject code snippet"
+msgstr "Kódrészlet befecskendezése"
+
+#: lj-maintenance-mode.php:622
+#, fuzzy
+msgid "This is useful to add a Javascript snippet to the maintenance page."
+msgstr ""
+"Ez hasznos, ha egy Javascript részletet szeretne hozzáadni a karbantartási "
+"oldalhoz."
+
+#: lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Do include the surrounding"
+msgstr "Tartalmazza a környező"
+
+#: lj-maintenance-mode.php:627
+#, fuzzy
+msgid ""
+"NOTE: if you are using the option above to add Google Analytics code, do NOT "
+"paste GA tracking code here."
+msgstr ""
+"MEGJEGYZÉS: ha a fenti opciót használja a Google Analytics kód hozzáadására, "
+"NE illessze be ide a GA nyomkövető kódot."
+
+#: lj-maintenance-mode.php:679
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "Kikapcsolva"
+
+#: lj-maintenance-mode.php:682
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "Bekapcsolva"
+
+#: lj-maintenance-mode.php:693
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "Karbantartás üzemmód"
+
+#: lj-maintenance-mode.php:710
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "Beállítások"
+
+#: lj-maintenance-mode.php:1226
+#, fuzzy
+msgid "Maintenance mode - before content"
+msgstr "Karbantartási üzemmód - tartalom előtt"
+
+#: lj-maintenance-mode.php:1227
+#, fuzzy
+msgid "Enter the content to appear before the maintenance mode content."
+msgstr "Adja meg a karbantartási mód tartalma előtt megjelenő tartalmat."
+
+#: lj-maintenance-mode.php:1234
+#, fuzzy
+msgid "Maintenance mode - after content"
+msgstr "Karbantartási üzemmód - tartalom után"
+
+#: lj-maintenance-mode.php:1235
+#, fuzzy
+msgid "Enter the content to appear after the maintenance mode content."
+msgstr "Adja meg a karbantartási mód tartalma után megjelenő tartalmat."

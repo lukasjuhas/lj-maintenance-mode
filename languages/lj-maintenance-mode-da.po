@@ -1,0 +1,532 @@
+# Copyright (C) 2017 Maintenance Mode
+# This file is distributed under the same license as the Maintenance Mode package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode 2.5.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
+"mode\n"
+"POT-Creation-Date: 2022-01-30 15:17+1100\n"
+"PO-Revision-Date: 2022-02-06 11:50+1100\n"
+"Last-Translator: John Lang <john@johnlang.com.au>\n"
+"Language-Team: \n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lj-maintenance-mode.php:66 lj-maintenance-mode.php:724
+msgid "Website Under Maintenance"
+msgstr "Siderne er under vedligeholdelse"
+
+#: lj-maintenance-mode.php:66
+#, fuzzy
+msgid ""
+"Our Website is currently undergoing scheduled maintenance. Please check back "
+"soon."
+msgstr ""
+"Vores websted er i øjeblikket under planlagt vedligeholdelse. Venligst "
+"tjekke tilbage snart."
+
+#: lj-maintenance-mode.php:69
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Vigtigt: Husk at tømme din cache hvis du benytter WP Super Cache når du "
+"aktiver eller deaktiver Vedligeholdelsen."
+
+#: lj-maintenance-mode.php:72
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Vigtigt: Husk at tømme din cache hvis du benytter W3 Total Cache når du "
+"aktiver eller deaktiver Vedligeholdelse tilstand."
+
+#: lj-maintenance-mode.php:75
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Vigtigt: Husk at tømme din cache hvis du benytter Comet Cache når du aktiver "
+"eller deaktiver Vedligeholdelsen."
+
+#: lj-maintenance-mode.php:78
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Rocket when enabling or "
+"disabling Maintenance Mode."
+msgstr ""
+"Vigtigt: Glem ikke at skylle din cache med WP Rocket, når du aktiverer eller "
+"deaktiverer vedligeholdelsestilstand."
+
+#: lj-maintenance-mode.php:81
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Autoptimize when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Vigtigt: Glem ikke at rense din cache ved hjælp af Autoptimize, når du "
+"aktiverer eller deaktiverer vedligeholdelsestilstand."
+
+#: lj-maintenance-mode.php:84
+msgid ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+"Vedligeholdelse er aktiv i øjeblikket. For at sikre, at det virker, skal du "
+"åbne websiden i enten privat / inkognito-tilstand, eller blot logge ud. "
+"Brugere som er logget ind påvirkes ikke af Vedligeholdelsen."
+
+#: lj-maintenance-mode.php:87
+#, fuzzy
+msgid "You can add widgets in \"Appearance -> Widgets\" section."
+msgstr "Du kan tilføje widgets i afsnittet \"Udseende -> Widgets\"."
+
+#: lj-maintenance-mode.php:211 lj-maintenance-mode.php:300
+msgctxt "Plugin Name"
+msgid "Maintenance Mode"
+msgstr "Vedligeholdelse"
+
+#: lj-maintenance-mode.php:212
+msgctxt "Plugin Description"
+msgid ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+msgstr ""
+"Et enkel Vedligeholdelse og Kommer Snart plugin ved hjælp af Wordpress "
+"standard Markup. Indeholder ingen annoncer eller betalte opgraderinger."
+
+#: lj-maintenance-mode.php:213
+#, fuzzy
+msgctxt "Plugin Author"
+msgid "Lukas Juhas"
+msgstr "Lukas Juhas"
+
+#: lj-maintenance-mode.php:223
+msgctxt "Page Title"
+msgid "Maintenance Mode"
+msgstr "Vedligeholdelse"
+
+#: lj-maintenance-mode.php:223
+msgctxt "Menu Title"
+msgid "Maintenance Mode"
+msgstr "Vedligeholdelse"
+
+#: lj-maintenance-mode.php:271
+msgid "Maintenance Mode"
+msgstr "Vedligeholdelse"
+
+#: lj-maintenance-mode.php:281
+msgid "Enabled"
+msgstr "Aktiveret"
+
+#: lj-maintenance-mode.php:293
+msgid "Mode"
+msgstr "Tilstand"
+
+#: lj-maintenance-mode.php:300
+msgid "Default"
+msgstr "Standard"
+
+#: lj-maintenance-mode.php:304
+msgid "Coming Soon Page"
+msgstr "Kommer Snart side"
+
+#: lj-maintenance-mode.php:307
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"Hvis du sætter din website til Vedligeholdelse i en længere periode, bør du "
+"sætte dette til \"Kommer Snart\". Ellers anvend \"Vedligeholdelse\"."
+
+#: lj-maintenance-mode.php:308
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr ""
+"Standard er sat til HTTP til 503, Kommer Snart vil sættes HTTP til 200."
+
+#: lj-maintenance-mode.php:308
+msgid "Learn more."
+msgstr "Lær mere."
+
+#: lj-maintenance-mode.php:315
+msgid "Preview"
+msgstr "Forhåndsvisning"
+
+#: lj-maintenance-mode.php:316 lj-maintenance-mode.php:711
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr "Support"
+
+#: lj-maintenance-mode.php:329
+msgid "Advanced Settings"
+msgstr "Avancerede indstillinger"
+
+#: lj-maintenance-mode.php:332
+msgid "Hide Advanced Settings"
+msgstr "Skjul advancerede indstillinger"
+
+#: lj-maintenance-mode.php:340
+#, fuzzy
+msgid "Add widget areas above and below content"
+msgstr "Tilføj widget-områder over og under indholdet"
+
+#: lj-maintenance-mode.php:352
+msgid "Site Title"
+msgstr "Side Titel"
+
+#: lj-maintenance-mode.php:356
+msgid "Overrides default site meta title."
+msgstr "Tilsidesætter websidens standard sidetitel."
+
+#: lj-maintenance-mode.php:364
+msgid "User Roles"
+msgstr "Bruger roller"
+
+#: lj-maintenance-mode.php:365
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr ""
+"Kryds de brugere af, der har adgang til front-end af din hjemmeside hvis "
+"Vedligeholdelse tilstand er aktiveret"
+
+#: lj-maintenance-mode.php:366
+msgid "Please note that this does NOT apply to admin area"
+msgstr "Bemærk venligst at dette ikke gælder for admin området"
+
+#: lj-maintenance-mode.php:367
+#, fuzzy
+msgid "Toggle all"
+msgstr "Skift til alle"
+
+#: lj-maintenance-mode.php:387
+#, fuzzy
+msgid "User Role control is currently not available on your website. Sorry!"
+msgstr ""
+"Kontrol af brugerroller er i øjeblikket ikke tilgængelig på dit websted. "
+"Beklager!"
+
+#: lj-maintenance-mode.php:394
+msgid "Allowed IP"
+msgstr "Tilladt IP"
+
+#: lj-maintenance-mode.php:394 lj-maintenance-mode.php:446
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454 lj-maintenance-mode.php:472
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:493
+#: lj-maintenance-mode.php:499 lj-maintenance-mode.php:512
+#: lj-maintenance-mode.php:518
+msgctxt "include, part of, constitute"
+msgid "Contains"
+msgstr "Indeholder"
+
+#: lj-maintenance-mode.php:400
+#, fuzzy
+msgid "Enter IPv4 or IPv6 values, one per line."
+msgstr "Indtast IPv4- eller IPv6-værdier, én pr. linje."
+
+#: lj-maintenance-mode.php:401
+#, fuzzy
+msgid ""
+"Which IP specification gets used? That all depends upon how the remote "
+"caller established the connection; you will never know until they say hello."
+msgstr ""
+"Hvilken IP-specifikation anvendes? Det afhænger alt sammen af, hvordan "
+"fjernopkalderen har etableret forbindelsen; du vil aldrig vide det, før de "
+"siger hej."
+
+#: lj-maintenance-mode.php:402
+#, fuzzy
+msgid ""
+"Partial IP values are ok; especially, when you want to identify a whole "
+"subnet."
+msgstr ""
+"Delvise IP-værdier er i orden, især når du vil identificere et helt undernet."
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:409
+#: lj-maintenance-mode.php:428 lj-maintenance-mode.php:429
+#: lj-maintenance-mode.php:430 lj-maintenance-mode.php:456
+#: lj-maintenance-mode.php:480 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#: lj-maintenance-mode.php:567 lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Tip"
+msgstr "Tip"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:430
+#: lj-maintenance-mode.php:456 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+msgid "Uses"
+msgstr "Benytter"
+
+#: lj-maintenance-mode.php:405
+#, fuzzy
+msgid "which identifies the current Remote IP:"
+msgstr "som identificerer den aktuelle fjern-IP:"
+
+#: lj-maintenance-mode.php:409
+#, fuzzy
+msgid "identifies this server is at Server IP:"
+msgstr "identificerer denne server på Server IP:"
+
+#: lj-maintenance-mode.php:418
+#, fuzzy
+msgid "Allowed URI"
+msgstr "Tilladt URI"
+
+#: lj-maintenance-mode.php:418 lj-maintenance-mode.php:424
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:426
+#, fuzzy
+msgctxt "exact, stringent, precise"
+msgid "Strict"
+msgstr "Strengt"
+
+#: lj-maintenance-mode.php:424
+#, fuzzy
+msgid "The full relative path, starting with"
+msgstr "Den fulde relative sti, der begynder med"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454
+#, fuzzy
+msgid "when doing a"
+msgstr "når du laver en"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:452
+#: lj-maintenance-mode.php:453 lj-maintenance-mode.php:454
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "comparison"
+msgstr "sammenligning"
+
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:453
+#, fuzzy
+msgid "Ignores the trailing slash"
+msgstr "Ignorerer den afsluttende skråstreg"
+
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:454
+#, fuzzy
+msgid "Ignores the entire query string"
+msgstr "Ignorerer hele forespørgselsstrengen"
+
+#: lj-maintenance-mode.php:427 lj-maintenance-mode.php:455
+#, fuzzy
+msgid "Never include the protocol, domain or port prefixes of the full URL."
+msgstr ""
+"Medtag aldrig protokol-, domæne- eller portpræfikser i den fulde URL-adresse."
+
+#: lj-maintenance-mode.php:428
+#, fuzzy
+msgid ""
+"Enter / on its own line to allow the sites home page to always by-pass the "
+"maintenance mode page."
+msgstr ""
+"Indtast / på sin egen linje for at lade webstedets startside altid omgå "
+"vedligeholdelsestilstandssiden."
+
+#: lj-maintenance-mode.php:429 lj-maintenance-mode.php:480
+#, fuzzy
+msgid "will always by-pass the maintenance mode page."
+msgstr "vil altid gå uden om vedligeholdelsestilstandssiden."
+
+#: lj-maintenance-mode.php:437 lj-maintenance-mode.php:463
+#: lj-maintenance-mode.php:484 lj-maintenance-mode.php:503
+#: lj-maintenance-mode.php:522
+#, fuzzy
+msgid "and the value for this loaded page is:"
+msgstr "og værdien for denne indlæste side er:"
+
+#: lj-maintenance-mode.php:446
+#, fuzzy
+msgid "Allowed URL"
+msgstr "Tilladt URL"
+
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "Can be any sub-string contained within the URI, when doing a"
+msgstr "Kan være en hvilken som helst delstreng i URI'en, når der udføres en"
+
+#: lj-maintenance-mode.php:472
+#, fuzzy
+msgid "Allowed Query String"
+msgstr "Tilladt forespørgselsstreng"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "Can be any sub-string value after the"
+msgstr "Kan være en hvilken som helst understrengsværdi efter"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "in the URI, when doing a"
+msgstr "i URI'en, når der udføres en"
+
+#: lj-maintenance-mode.php:479
+#, fuzzy
+msgid "Enter sub-string values that conform to output by"
+msgstr ""
+"Indtast værdier for understrenge, der er i overensstemmelse med output fra"
+
+#: lj-maintenance-mode.php:493
+#, fuzzy
+msgid "Allowed Referer"
+msgstr "Tilladt Referer"
+
+#: lj-maintenance-mode.php:512
+#, fuzzy
+msgid "Allowed User Agent"
+msgstr "Tilladt brugeragent"
+
+#: lj-maintenance-mode.php:537
+msgid "Add Google Analytics code"
+msgstr "Tilføj Google Analytics kode"
+
+#: lj-maintenance-mode.php:542
+#, fuzzy
+msgid "for Analytics profile"
+msgstr "til Analytics-profil"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "configured in"
+msgstr "konfigureret i"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "Analytify"
+msgstr "Analytify"
+
+#: lj-maintenance-mode.php:546
+msgid ""
+"Since you have the Analytify plugin installed, this will add Google "
+"Analytics tracking code to the maintenance page."
+msgstr ""
+"Siden du har intalleret Analytify plugin, vil dette tilføje Google Analytics "
+"sporingskoden på din Vedligeholdelses side."
+
+#: lj-maintenance-mode.php:554
+msgid "Custom Stylesheet"
+msgstr "Brugerdefineret Stylesheet"
+
+#: lj-maintenance-mode.php:561 lj-maintenance-mode.php:589
+#: lj-maintenance-mode.php:605
+#, fuzzy
+msgid "You are currently using custom stylesheet."
+msgstr "Du bruger i øjeblikket et brugerdefineret stilark."
+
+#: lj-maintenance-mode.php:562 lj-maintenance-mode.php:590
+#: lj-maintenance-mode.php:606
+#, fuzzy
+msgid "file in your theme folder"
+msgstr "fil i din temamappe"
+
+#: lj-maintenance-mode.php:564 lj-maintenance-mode.php:593
+#: lj-maintenance-mode.php:609
+#, fuzzy, php-format
+msgid ""
+"For custom stylesheet, add %s file to your theme folder. If your custom "
+"stylesheet file is picked up by the Maintenance Mode, it will be indicated "
+"here."
+msgstr ""
+"For brugerdefinerede stilark skal du tilføje filen %s til din temamappe. "
+"Hvis din brugerdefinerede stylesheet-fil bliver hentet af "
+"vedligeholdelsestilstanden, vil den blive angivet her."
+
+#: lj-maintenance-mode.php:567
+#, fuzzy
+msgid "The maintenance mode page DOM structure is:"
+msgstr "Sidens DOM-struktur i vedligeholdelsestilstand er:"
+
+#: lj-maintenance-mode.php:575
+#, fuzzy
+msgid "the maintenance mode page content is here"
+msgstr "indholdet af vedligeholdelsestilstandssiden er her"
+
+#: lj-maintenance-mode.php:583
+#, fuzzy
+msgid "Custom Frontend Stylesheet"
+msgstr "Brugerdefineret Stylesheet til frontend"
+
+#: lj-maintenance-mode.php:599
+#, fuzzy
+msgid "Custom Login Stylesheet"
+msgstr "Brugerdefineret stilark til login"
+
+#: lj-maintenance-mode.php:616
+msgid "Inject code snippet"
+msgstr "Indsæt kode stykke"
+
+#: lj-maintenance-mode.php:622
+msgid "This is useful to add a Javascript snippet to the maintenance page."
+msgstr ""
+"Dette er brugbart til at indsætte em Javascript kode til Vedligeholdelse "
+"siden."
+
+#: lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Do include the surrounding"
+msgstr "Medtag de omkringliggende områder"
+
+#: lj-maintenance-mode.php:627
+msgid ""
+"NOTE: if you are using the option above to add Google Analytics code, do NOT "
+"paste GA tracking code here."
+msgstr ""
+"Bemærk: Hvis du bruger indstillingen ovenfor for at tilføje Google Analytics-"
+"kode, skal du ikke indsætte GA-sporingskoden her."
+
+#: lj-maintenance-mode.php:679
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "Deaktiveret"
+
+#: lj-maintenance-mode.php:682
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "Aktiveret"
+
+#: lj-maintenance-mode.php:693
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "Vedligeholdelse"
+
+#: lj-maintenance-mode.php:710
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "Indstillinger"
+
+#: lj-maintenance-mode.php:1226
+msgid "Maintenance mode - before content"
+msgstr "Vedligeholdelsestilstanf - før indhold"
+
+#: lj-maintenance-mode.php:1227
+#, fuzzy
+msgid "Enter the content to appear before the maintenance mode content."
+msgstr ""
+"Indtast det indhold, der skal vises før indholdet i vedligeholdelsestilstand."
+
+#: lj-maintenance-mode.php:1234
+#, fuzzy
+msgid "Maintenance mode - after content"
+msgstr "Vedligeholdelsestilstand - efter indhold"
+
+#: lj-maintenance-mode.php:1235
+#, fuzzy
+msgid "Enter the content to appear after the maintenance mode content."
+msgstr ""
+"Indtast det indhold, der skal vises efter indholdet i "
+"vedligeholdelsestilstand."

@@ -1,0 +1,569 @@
+# Copyright (C) 2017 Maintenance Mode
+# This file is distributed under the same license as the Maintenance Mode package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode 2.5.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
+"mode\n"
+"POT-Creation-Date: 2022-01-30 15:17+1100\n"
+"PO-Revision-Date: 2022-01-30 15:57+1100\n"
+"Last-Translator: John Lang <john@johnlang.com.au>\n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: /Users/john.lang/Sync/[LOC] Content Vault/"
+"[Product] lj-maintenance-mode (WordPress Plugin)/[Content] lj-maintenance-"
+"mode [Development]/[Section] Branch 2.4.4.1 [Sync Folder]/[Step] lj-"
+"maintenance-mode [GitHub Branches]/assets\n"
+"X-Poedit-SearchPathExcluded-1: /Users/john.lang/Sync/[LOC] Content Vault/"
+"[Product] lj-maintenance-mode (WordPress Plugin)/[Content] lj-maintenance-"
+"mode [Development]/[Section] Branch 2.4.4.1 [Sync Folder]/[Step] lj-"
+"maintenance-mode [GitHub Branches]/languages\n"
+"X-Poedit-SearchPathExcluded-2: /Users/john.lang/Sync/[LOC] Content Vault/"
+"[Product] lj-maintenance-mode (WordPress Plugin)/[Content] lj-maintenance-"
+"mode [Development]/[Section] Branch 2.4.4.1 [Sync Folder]/[Step] lj-"
+"maintenance-mode [GitHub Branches]/languages-2.5.2\n"
+
+#: lj-maintenance-mode.php:66 lj-maintenance-mode.php:724
+#, fuzzy
+msgid "Website Under Maintenance"
+msgstr "メンテナンス中のウェブサイト"
+
+#: lj-maintenance-mode.php:66
+#, fuzzy
+msgid ""
+"Our Website is currently undergoing scheduled maintenance. Please check back "
+"soon."
+msgstr ""
+"現在、弊社ウェブサイトは定期メンテナンスを行っております。お手数ですが、再度"
+"ご確認ください。"
+
+#: lj-maintenance-mode.php:69
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"重要です。メンテナンスモードを有効または無効にする際は、WP Super Cacheで"
+"キャッシュをフラッシュすることを忘れないでください。"
+
+#: lj-maintenance-mode.php:72
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"重要です。メンテナンスモードを有効または無効にする際は、W3 Total Cacheを使っ"
+"てキャッシュをフラッシュすることを忘れないでください。"
+
+#: lj-maintenance-mode.php:75
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"重要です。メンテナンスモードを有効または無効にする際には、Comet Cacheを使用し"
+"てキャッシュをフラッシュすることを忘れないでください。"
+
+#: lj-maintenance-mode.php:78
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Rocket when enabling or "
+"disabling Maintenance Mode."
+msgstr ""
+"重要です。メンテナンスモードを有効または無効にする際は、WP Rocketでキャッシュ"
+"をフラッシュすることを忘れないでください。"
+
+#: lj-maintenance-mode.php:81
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Autoptimize when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"重要です。メンテナンスモードを有効または無効にする際は、Autoptimizeでキャッ"
+"シュをフラッシュすることを忘れないでください。"
+
+#: lj-maintenance-mode.php:84
+#, fuzzy
+msgid ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+"現在、メンテナンスモードが有効になっています。メンテナンスモードが有効である"
+"ことを確認するには、プライベート/シークレットモードでWebページを開くか、別の"
+"ブラウザを使用するか、単にログアウトするかしてください。ログインしているユー"
+"ザーは、メンテナンスモードの影響を受けません。"
+
+#: lj-maintenance-mode.php:87
+#, fuzzy
+msgid "You can add widgets in \"Appearance -> Widgets\" section."
+msgstr "外観」→「ウィジェット」でウィジェットを追加することができます。"
+
+#: lj-maintenance-mode.php:211 lj-maintenance-mode.php:300
+msgctxt "Plugin Name"
+msgid "Maintenance Mode"
+msgstr "メンテナンスモード"
+
+#: lj-maintenance-mode.php:212
+#, fuzzy
+msgctxt "Plugin Description"
+msgid ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+msgstr ""
+"デフォルトのWordpressマークアップを使用した非常にシンプルなメンテナンスモード"
+"とComing Soonページで、広告や有料アップグレードはありません。"
+
+#: lj-maintenance-mode.php:213
+#, fuzzy
+msgctxt "Plugin Author"
+msgid "Lukas Juhas"
+msgstr "ルーカス・ユーハス"
+
+#: lj-maintenance-mode.php:223
+msgctxt "Page Title"
+msgid "Maintenance Mode"
+msgstr "メンテナンスモード"
+
+#: lj-maintenance-mode.php:223
+msgctxt "Menu Title"
+msgid "Maintenance Mode"
+msgstr "メンテナンスモード"
+
+#: lj-maintenance-mode.php:271
+msgid "Maintenance Mode"
+msgstr "メンテナンスモード"
+
+#: lj-maintenance-mode.php:281
+msgid "Enabled"
+msgstr "有効"
+
+#: lj-maintenance-mode.php:293
+msgid "Mode"
+msgstr "モード"
+
+#: lj-maintenance-mode.php:300
+msgid "Default"
+msgstr "デフォルト"
+
+#: lj-maintenance-mode.php:304
+msgid "Coming Soon Page"
+msgstr "Coming Soon ページ"
+
+#: lj-maintenance-mode.php:307
+#, fuzzy
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"長期間メンテナンスモードにする場合は、「Coming Soon Page」に設定してくださ"
+"い。それ以外の場合は「メンテナンスモード」をご利用ください。"
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr ""
+"デフォルトではHTTPを503に設定していますが、近日中にHTTPを200に設定する予定で"
+"す。"
+
+#: lj-maintenance-mode.php:308
+msgid "Learn more."
+msgstr "もっと詳しく知る。"
+
+#: lj-maintenance-mode.php:315
+msgid "Preview"
+msgstr "プレビュー"
+
+#: lj-maintenance-mode.php:316 lj-maintenance-mode.php:711
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr "サポート"
+
+#: lj-maintenance-mode.php:329
+msgid "Advanced Settings"
+msgstr "高度な設定"
+
+#: lj-maintenance-mode.php:332
+#, fuzzy
+msgid "Hide Advanced Settings"
+msgstr "詳細設定を隠す"
+
+#: lj-maintenance-mode.php:340
+#, fuzzy
+msgid "Add widget areas above and below content"
+msgstr "コンテンツの上と下にウィジェットエリアを追加"
+
+#: lj-maintenance-mode.php:352
+msgid "Site Title"
+msgstr "サイトタイトル"
+
+#: lj-maintenance-mode.php:356
+#, fuzzy
+msgid "Overrides default site meta title."
+msgstr "デフォルトのサイトメタタイトルを上書きします。"
+
+#: lj-maintenance-mode.php:364
+msgid "User Roles"
+msgstr "ユーザー権限"
+
+#: lj-maintenance-mode.php:365
+#, fuzzy
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr ""
+"メンテナンスモードが有効な場合、ウェブサイトのフロントエンドにアクセスできる"
+"ものにチェックを入れます。"
+
+#: lj-maintenance-mode.php:366
+msgid "Please note that this does NOT apply to admin area"
+msgstr "管理画面には適用されませんのでご注意ください"
+
+#: lj-maintenance-mode.php:367
+#, fuzzy
+msgid "Toggle all"
+msgstr "すべてを表示する"
+
+#: lj-maintenance-mode.php:387
+#, fuzzy
+msgid "User Role control is currently not available on your website. Sorry!"
+msgstr ""
+"ユーザーロールコントロールは、現在あなたのウェブサイトでは利用できません。申"
+"し訳ありません。"
+
+#: lj-maintenance-mode.php:394
+#, fuzzy
+msgid "Allowed IP"
+msgstr "許可されたIP"
+
+#: lj-maintenance-mode.php:394 lj-maintenance-mode.php:446
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454 lj-maintenance-mode.php:472
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:493
+#: lj-maintenance-mode.php:499 lj-maintenance-mode.php:512
+#: lj-maintenance-mode.php:518
+msgctxt "include, part of, constitute"
+msgid "Contains"
+msgstr "含む"
+
+#: lj-maintenance-mode.php:400
+#, fuzzy
+msgid "Enter IPv4 or IPv6 values, one per line."
+msgstr "IPv4またはIPv6の値を1行に1つずつ入力します。"
+
+#: lj-maintenance-mode.php:401
+#, fuzzy
+msgid ""
+"Which IP specification gets used? That all depends upon how the remote "
+"caller established the connection; you will never know until they say hello."
+msgstr ""
+"どのIP仕様が使われるのか？それは、遠隔地の発信者がどのようにして接続を確立し"
+"たかによりますが、相手が「こんにちは」と言うまでわかりません。"
+
+#: lj-maintenance-mode.php:402
+#, fuzzy
+msgid ""
+"Partial IP values are ok; especially, when you want to identify a whole "
+"subnet."
+msgstr ""
+"特に、サブネット全体を識別したい場合には、部分的なIP値でも問題ありません。"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:409
+#: lj-maintenance-mode.php:428 lj-maintenance-mode.php:429
+#: lj-maintenance-mode.php:430 lj-maintenance-mode.php:456
+#: lj-maintenance-mode.php:480 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#: lj-maintenance-mode.php:567 lj-maintenance-mode.php:623
+msgid "Tip"
+msgstr "ヒント"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:430
+#: lj-maintenance-mode.php:456 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+msgid "Uses"
+msgstr "使用回数"
+
+#: lj-maintenance-mode.php:405
+#, fuzzy
+msgid "which identifies the current Remote IP:"
+msgstr "は、現在のリモートIPを識別するためのものです。"
+
+#: lj-maintenance-mode.php:409
+msgid "identifies this server is at Server IP:"
+msgstr "は、このサーバーが「サーバーIP」であることを示しています。:"
+
+#: lj-maintenance-mode.php:418
+#, fuzzy
+msgid "Allowed URI"
+msgstr "許容されるURI"
+
+#: lj-maintenance-mode.php:418 lj-maintenance-mode.php:424
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:426
+msgctxt "exact, stringent, precise"
+msgid "Strict"
+msgstr "厳格"
+
+#: lj-maintenance-mode.php:424
+#, fuzzy
+msgid "The full relative path, starting with"
+msgstr "で始まる完全な相対パスを指定します。"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454
+#, fuzzy
+msgid "when doing a"
+msgstr "をするときには"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:452
+#: lj-maintenance-mode.php:453 lj-maintenance-mode.php:454
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "comparison"
+msgstr "比較"
+
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:453
+#, fuzzy
+msgid "Ignores the trailing slash"
+msgstr "最後のスラッシュを無視する"
+
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:454
+#, fuzzy
+msgid "Ignores the entire query string"
+msgstr "クエリ文字列全体を無視する"
+
+#: lj-maintenance-mode.php:427 lj-maintenance-mode.php:455
+#, fuzzy
+msgid "Never include the protocol, domain or port prefixes of the full URL."
+msgstr ""
+"完全なURLのプロトコル、ドメイン、ポートの接頭辞は絶対に入れないでください。"
+
+#: lj-maintenance-mode.php:428
+#, fuzzy
+msgid ""
+"Enter / on its own line to allow the sites home page to always by-pass the "
+"maintenance mode page."
+msgstr ""
+"サイトのホームページが常にメンテナンスモードのページを通過するようにするに"
+"は、「/」を1行で入力します。"
+
+#: lj-maintenance-mode.php:429 lj-maintenance-mode.php:480
+#, fuzzy
+msgid "will always by-pass the maintenance mode page."
+msgstr "は、常にメンテナンスモードのページをバイパスします。"
+
+#: lj-maintenance-mode.php:437 lj-maintenance-mode.php:463
+#: lj-maintenance-mode.php:484 lj-maintenance-mode.php:503
+#: lj-maintenance-mode.php:522
+msgid "and the value for this loaded page is:"
+msgstr "で、この読み込まれたページの値は:"
+
+#: lj-maintenance-mode.php:446
+#, fuzzy
+msgid "Allowed URL"
+msgstr "許可されたURL"
+
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "Can be any sub-string contained within the URI, when doing a"
+msgstr "URIに含まれる任意のサブストリングを指定できます。"
+
+#: lj-maintenance-mode.php:472
+#, fuzzy
+msgid "Allowed Query String"
+msgstr "許可されたクエリ文字列"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "Can be any sub-string value after the"
+msgstr "の後の任意のサブストリングの値にすることができます。"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "in the URI, when doing a"
+msgstr "を行う際に、URIに"
+
+#: lj-maintenance-mode.php:479
+msgid "Enter sub-string values that conform to output by"
+msgstr "による出力に準拠したサブストリングの値を入力します"
+
+#: lj-maintenance-mode.php:493
+#, fuzzy
+msgid "Allowed Referer"
+msgstr "許可された参照元"
+
+#: lj-maintenance-mode.php:512
+#, fuzzy
+msgid "Allowed User Agent"
+msgstr "許可されたユーザーエージェント"
+
+#: lj-maintenance-mode.php:537
+#, fuzzy
+msgid "Add Google Analytics code"
+msgstr "Google Analyticsコードの追加"
+
+#: lj-maintenance-mode.php:542
+#, fuzzy
+msgid "for Analytics profile"
+msgstr "アナリティクス用プロファイル"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "configured in"
+msgstr "で構成されています。"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "Analytify"
+msgstr "アナリティフ"
+
+#: lj-maintenance-mode.php:546
+#, fuzzy
+msgid ""
+"Since you have the Analytify plugin installed, this will add Google "
+"Analytics tracking code to the maintenance page."
+msgstr ""
+"Analytifyプラグインをインストールしているので、これでメンテナンスページに"
+"Google Analyticsのトラッキングコードが追加されます。"
+
+#: lj-maintenance-mode.php:554
+msgid "Custom Stylesheet"
+msgstr "カスタムスタイルシート"
+
+#: lj-maintenance-mode.php:561 lj-maintenance-mode.php:589
+#: lj-maintenance-mode.php:605
+#, fuzzy
+msgid "You are currently using custom stylesheet."
+msgstr "現在、カスタムスタイルシートを使用しています。"
+
+#: lj-maintenance-mode.php:562 lj-maintenance-mode.php:590
+#: lj-maintenance-mode.php:606
+#, fuzzy
+msgid "file in your theme folder"
+msgstr "ファイルを作成してください（テーマフォルダ内"
+
+#: lj-maintenance-mode.php:564 lj-maintenance-mode.php:593
+#: lj-maintenance-mode.php:609
+#, fuzzy, php-format
+msgid ""
+"For custom stylesheet, add %s file to your theme folder. If your custom "
+"stylesheet file is picked up by the Maintenance Mode, it will be indicated "
+"here."
+msgstr ""
+"カスタムスタイルシートの場合は、%sファイルをテーマフォルダに追加してくださ"
+"い。メンテナンスモードでカスタムスタイルシートファイルがピックアップされた場"
+"合は、ここに表示されます。"
+
+#: lj-maintenance-mode.php:567
+#, fuzzy
+msgid "The maintenance mode page DOM structure is:"
+msgstr "メンテナンスモードページのDOM構造は"
+
+#: lj-maintenance-mode.php:575
+#, fuzzy
+msgid "the maintenance mode page content is here"
+msgstr "メンテナンスモードのページ内容はこちら"
+
+#: lj-maintenance-mode.php:583
+#, fuzzy
+msgid "Custom Frontend Stylesheet"
+msgstr "カスタムフロントエンドスタイルシート"
+
+#: lj-maintenance-mode.php:599
+#, fuzzy
+msgid "Custom Login Stylesheet"
+msgstr "カスタムログインスタイルシート"
+
+#: lj-maintenance-mode.php:616
+#, fuzzy
+msgid "Inject code snippet"
+msgstr "コードスニペットの注入"
+
+#: lj-maintenance-mode.php:622
+#, fuzzy
+msgid "This is useful to add a Javascript snippet to the maintenance page."
+msgstr ""
+"これは、メンテナンスページにJavascriptのスニペットを追加するのに便利です。"
+
+#: lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Do include the surrounding"
+msgstr "周辺環境も含めて"
+
+#: lj-maintenance-mode.php:627
+#, fuzzy
+msgid ""
+"NOTE: if you are using the option above to add Google Analytics code, do NOT "
+"paste GA tracking code here."
+msgstr ""
+"注：上記のオプションでGoogle Analyticsのコードを追加している場合、ここにGAト"
+"ラッキングコードを貼り付けないでください。"
+
+#: lj-maintenance-mode.php:679
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "無効"
+
+#: lj-maintenance-mode.php:682
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "有効"
+
+#: lj-maintenance-mode.php:693
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "メンテナンスモード"
+
+#: lj-maintenance-mode.php:710
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "設定"
+
+#: lj-maintenance-mode.php:1226
+#, fuzzy
+msgid "Maintenance mode - before content"
+msgstr "メンテナンスモード - コンテンツ前"
+
+#: lj-maintenance-mode.php:1227
+#, fuzzy
+msgid "Enter the content to appear before the maintenance mode content."
+msgstr "メンテナンスモードのコンテンツの前に表示するコンテンツを入力します。"
+
+#: lj-maintenance-mode.php:1234
+#, fuzzy
+msgid "Maintenance mode - after content"
+msgstr "メンテナンスモード - アフターコンテンツ"
+
+#: lj-maintenance-mode.php:1235
+#, fuzzy
+msgid "Enter the content to appear after the maintenance mode content."
+msgstr "メンテナンスモードのコンテンツの後に表示されるコンテンツを入力します。"
+
+#, fuzzy
+#~ msgid "Allowed URIs (Contains)"
+#~ msgstr "許容されるURI（Contains）"
+
+#, fuzzy
+#~ msgid "Ignores the trailing slash (/) when doing a contains match."
+#~ msgstr "含有物一致の際に末尾のスラッシュ（/）を無視します。"
+
+#, fuzzy
+#~ msgid "Ignores the entire query string (?) when doing a contains match."
+#~ msgstr "含有物一致を行う際に、クエリ文字列(?)全体を無視します。"
+
+#, php-format
+#~ msgid "for Analytics profile %s%s%sconfigured in Analytify%s"
+#~ msgstr "for Analytics profile %s%s%sConfigured in Analytify%s"

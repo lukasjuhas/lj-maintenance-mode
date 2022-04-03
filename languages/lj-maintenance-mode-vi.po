@@ -1,0 +1,543 @@
+# Copyright (C) 2017 Maintenance Mode
+# This file is distributed under the same license as the Maintenance Mode package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode 2.5.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
+"mode\n"
+"POT-Creation-Date: 2022-01-30 15:17+1100\n"
+"PO-Revision-Date: 2022-01-30 21:10+1100\n"
+"Last-Translator: John Lang <john@johnlang.com.au>\n"
+"Language-Team: \n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lj-maintenance-mode.php:66 lj-maintenance-mode.php:724
+#, fuzzy
+msgid "Website Under Maintenance"
+msgstr "Trang web đang được bảo trì"
+
+#: lj-maintenance-mode.php:66
+#, fuzzy
+msgid ""
+"Our Website is currently undergoing scheduled maintenance. Please check back "
+"soon."
+msgstr ""
+"Trang web của chúng tôi hiện đang được bảo trì theo lịch trình. Vui lòng "
+"kiểm tra lại sớm."
+
+#: lj-maintenance-mode.php:69
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Quan trọng: Đừng quên xóa bộ nhớ cache của bạn bằng WP Super Cache khi bật "
+"hoặc tắt Chế độ bảo trì."
+
+#: lj-maintenance-mode.php:72
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Quan trọng: Đừng quên xóa bộ nhớ cache của bạn bằng W3 Total Cache khi bật "
+"hoặc tắt Chế độ bảo trì."
+
+#: lj-maintenance-mode.php:75
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Quan trọng: Đừng quên xóa bộ nhớ cache của bạn bằng Comet Cache khi bật hoặc "
+"tắt Chế độ bảo trì."
+
+#: lj-maintenance-mode.php:78
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Rocket when enabling or "
+"disabling Maintenance Mode."
+msgstr ""
+"Quan trọng: Đừng quên xóa bộ nhớ cache của bạn bằng WP Rocket khi bật hoặc "
+"tắt Chế độ bảo trì."
+
+#: lj-maintenance-mode.php:81
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Autoptimize when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Quan trọng: Đừng quên xóa bộ nhớ cache của bạn bằng Tự động tối ưu hóa khi "
+"bật hoặc tắt Chế độ bảo trì."
+
+#: lj-maintenance-mode.php:84
+#, fuzzy
+msgid ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+"Chế độ Bảo trì hiện đang hoạt động. Để đảm bảo rằng nó hoạt động, hãy mở "
+"trang web của bạn ở chế độ riêng tư / ẩn danh, trình duyệt khác hoặc chỉ cần "
+"đăng xuất. Người dùng đã đăng nhập không bị ảnh hưởng bởi Chế độ bảo trì."
+
+#: lj-maintenance-mode.php:87
+#, fuzzy
+msgid "You can add widgets in \"Appearance -> Widgets\" section."
+msgstr "Bạn có thể thêm widget trong phần \"Appearance -> Widgets\"."
+
+#: lj-maintenance-mode.php:211 lj-maintenance-mode.php:300
+msgctxt "Plugin Name"
+msgid "Maintenance Mode"
+msgstr "Chế độ bảo trì"
+
+#: lj-maintenance-mode.php:212
+#, fuzzy
+msgctxt "Plugin Description"
+msgid ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+msgstr ""
+"Chế độ bảo trì rất đơn giản & Trang sắp ra mắt sử dụng đánh dấu Wordpress "
+"mặc định không có quảng cáo hoặc nâng cấp trả phí."
+
+#: lj-maintenance-mode.php:213
+#, fuzzy
+msgctxt "Plugin Author"
+msgid "Lukas Juhas"
+msgstr "Lukas Juhas"
+
+#: lj-maintenance-mode.php:223
+msgctxt "Page Title"
+msgid "Maintenance Mode"
+msgstr "Chế độ bảo trì"
+
+#: lj-maintenance-mode.php:223
+msgctxt "Menu Title"
+msgid "Maintenance Mode"
+msgstr "Chế độ bảo trì"
+
+#: lj-maintenance-mode.php:271
+msgid "Maintenance Mode"
+msgstr "Chế độ bảo trì"
+
+#: lj-maintenance-mode.php:281
+msgid "Enabled"
+msgstr "Bật"
+
+#: lj-maintenance-mode.php:293
+msgid "Mode"
+msgstr "Chế độ"
+
+#: lj-maintenance-mode.php:300
+msgid "Default"
+msgstr "Mặc định"
+
+#: lj-maintenance-mode.php:304
+msgid "Coming Soon Page"
+msgstr "Trang sắp ra mắt"
+
+#: lj-maintenance-mode.php:307
+#, fuzzy
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"Nếu bạn đang đặt trang web của mình ở chế độ bảo trì trong một thời gian dài "
+"hơn, bạn nên đặt điều này thành \"Trang sắp ra mắt\". Nếu không, hãy sử dụng "
+"\"Chế độ Bảo trì\"."
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr "Mặc định đặt HTTP thành 503, sắp tới sẽ đặt HTTP thành 200."
+
+#: lj-maintenance-mode.php:308
+msgid "Learn more."
+msgstr "Tìm hiểu thêm."
+
+#: lj-maintenance-mode.php:315
+msgid "Preview"
+msgstr "Xem trước"
+
+#: lj-maintenance-mode.php:316 lj-maintenance-mode.php:711
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr "Hỗ trợ"
+
+#: lj-maintenance-mode.php:329
+msgid "Advanced Settings"
+msgstr "Cài đặt nâng cao"
+
+#: lj-maintenance-mode.php:332
+#, fuzzy
+msgid "Hide Advanced Settings"
+msgstr "Ẩn các cài đặt nâng cao"
+
+#: lj-maintenance-mode.php:340
+#, fuzzy
+msgid "Add widget areas above and below content"
+msgstr "Thêm các khu vực tiện ích bên trên và bên dưới nội dung"
+
+#: lj-maintenance-mode.php:352
+msgid "Site Title"
+msgstr "Tiêu đề Trang"
+
+#: lj-maintenance-mode.php:356
+#, fuzzy
+msgid "Overrides default site meta title."
+msgstr "Ghi đè tiêu đề meta trang web mặc định."
+
+#: lj-maintenance-mode.php:364
+msgid "User Roles"
+msgstr "Vai trò người dùng"
+
+#: lj-maintenance-mode.php:365
+#, fuzzy
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr ""
+"Đánh dấu vào những cái có thể truy cập giao diện người dùng của trang web "
+"của bạn nếu chế độ bảo trì được bật"
+
+#: lj-maintenance-mode.php:366
+#, fuzzy
+msgid "Please note that this does NOT apply to admin area"
+msgstr "Xin lưu ý rằng điều này KHÔNG áp dụng cho khu vực quản trị"
+
+#: lj-maintenance-mode.php:367
+#, fuzzy
+msgid "Toggle all"
+msgstr "Chuyển đổi tất cả"
+
+#: lj-maintenance-mode.php:387
+#, fuzzy
+msgid "User Role control is currently not available on your website. Sorry!"
+msgstr ""
+"Kiểm soát vai trò người dùng hiện không có sẵn trên trang web của bạn. Xin "
+"lỗi!"
+
+#: lj-maintenance-mode.php:394
+msgid "Allowed IP"
+msgstr "IP được phép"
+
+#: lj-maintenance-mode.php:394 lj-maintenance-mode.php:446
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454 lj-maintenance-mode.php:472
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:493
+#: lj-maintenance-mode.php:499 lj-maintenance-mode.php:512
+#: lj-maintenance-mode.php:518
+msgctxt "include, part of, constitute"
+msgid "Contains"
+msgstr "Chứa"
+
+#: lj-maintenance-mode.php:400
+#, fuzzy
+msgid "Enter IPv4 or IPv6 values, one per line."
+msgstr "Nhập các giá trị IPv4 hoặc IPv6, một giá trị trên mỗi dòng."
+
+#: lj-maintenance-mode.php:401
+#, fuzzy
+msgid ""
+"Which IP specification gets used? That all depends upon how the remote "
+"caller established the connection; you will never know until they say hello."
+msgstr ""
+"Đặc tả IP nào được sử dụng? Tất cả điều đó phụ thuộc vào cách người gọi từ "
+"xa thiết lập kết nối; bạn sẽ không bao giờ biết cho đến khi họ nói lời chào."
+
+#: lj-maintenance-mode.php:402
+#, fuzzy
+msgid ""
+"Partial IP values are ok; especially, when you want to identify a whole "
+"subnet."
+msgstr ""
+"Giá trị IP một phần là ok; đặc biệt, khi bạn muốn xác định toàn bộ mạng con."
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:409
+#: lj-maintenance-mode.php:428 lj-maintenance-mode.php:429
+#: lj-maintenance-mode.php:430 lj-maintenance-mode.php:456
+#: lj-maintenance-mode.php:480 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#: lj-maintenance-mode.php:567 lj-maintenance-mode.php:623
+msgid "Tip"
+msgstr "Tiền boa"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:430
+#: lj-maintenance-mode.php:456 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+msgid "Uses"
+msgstr "Sử dụng"
+
+#: lj-maintenance-mode.php:405
+#, fuzzy
+msgid "which identifies the current Remote IP:"
+msgstr "xác định IP từ xa hiện tại:"
+
+#: lj-maintenance-mode.php:409
+#, fuzzy
+msgid "identifies this server is at Server IP:"
+msgstr "xác định máy chủ này ở IP Máy chủ:"
+
+#: lj-maintenance-mode.php:418
+#, fuzzy
+msgid "Allowed URI"
+msgstr "URI được phép"
+
+#: lj-maintenance-mode.php:418 lj-maintenance-mode.php:424
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:426
+msgctxt "exact, stringent, precise"
+msgid "Strict"
+msgstr "Nghiêm Ngặt"
+
+#: lj-maintenance-mode.php:424
+#, fuzzy
+msgid "The full relative path, starting with"
+msgstr "Đường dẫn tương đối đầy đủ, bắt đầu bằng"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454
+#, fuzzy
+msgid "when doing a"
+msgstr "khi làm một"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:452
+#: lj-maintenance-mode.php:453 lj-maintenance-mode.php:454
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "comparison"
+msgstr "sự so sánh"
+
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:453
+#, fuzzy
+msgid "Ignores the trailing slash"
+msgstr "Bỏ qua dấu gạch chéo"
+
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:454
+#, fuzzy
+msgid "Ignores the entire query string"
+msgstr "Bỏ qua toàn bộ chuỗi truy vấn"
+
+#: lj-maintenance-mode.php:427 lj-maintenance-mode.php:455
+#, fuzzy
+msgid "Never include the protocol, domain or port prefixes of the full URL."
+msgstr ""
+"Không bao giờ bao gồm các tiền tố giao thức, tên miền hoặc cổng của URL đầy "
+"đủ."
+
+#: lj-maintenance-mode.php:428
+#, fuzzy
+msgid ""
+"Enter / on its own line to allow the sites home page to always by-pass the "
+"maintenance mode page."
+msgstr ""
+"Nhập / vào dòng riêng của nó để cho phép trang chủ của các trang web luôn "
+"vượt qua trang chế độ bảo trì."
+
+#: lj-maintenance-mode.php:429 lj-maintenance-mode.php:480
+#, fuzzy
+msgid "will always by-pass the maintenance mode page."
+msgstr "sẽ luôn chuyển qua trang chế độ bảo trì."
+
+#: lj-maintenance-mode.php:437 lj-maintenance-mode.php:463
+#: lj-maintenance-mode.php:484 lj-maintenance-mode.php:503
+#: lj-maintenance-mode.php:522
+#, fuzzy
+msgid "and the value for this loaded page is:"
+msgstr "và giá trị cho trang đã tải này là:"
+
+#: lj-maintenance-mode.php:446
+#, fuzzy
+msgid "Allowed URL"
+msgstr "URL được phép"
+
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "Can be any sub-string contained within the URI, when doing a"
+msgstr "Có thể là bất kỳ chuỗi con nào chứa trong URI, khi thực hiện"
+
+#: lj-maintenance-mode.php:472
+#, fuzzy
+msgid "Allowed Query String"
+msgstr "Chuỗi truy vấn được phép"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "Can be any sub-string value after the"
+msgstr "Có thể là bất kỳ giá trị chuỗi con nào sau"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "in the URI, when doing a"
+msgstr "trong URI, khi thực hiện một"
+
+#: lj-maintenance-mode.php:479
+#, fuzzy
+msgid "Enter sub-string values that conform to output by"
+msgstr "Nhập các giá trị chuỗi phụ phù hợp với đầu ra của"
+
+#: lj-maintenance-mode.php:493
+#, fuzzy
+msgid "Allowed Referer"
+msgstr "Người giới thiệu được phép"
+
+#: lj-maintenance-mode.php:512
+#, fuzzy
+msgid "Allowed User Agent"
+msgstr "Tác nhân người dùng được phép"
+
+#: lj-maintenance-mode.php:537
+#, fuzzy
+msgid "Add Google Analytics code"
+msgstr "Thêm mã Google Analytics"
+
+#: lj-maintenance-mode.php:542
+#, fuzzy
+msgid "for Analytics profile"
+msgstr "cho hồ sơ Analytics"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "configured in"
+msgstr "được cấu hình trong"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "Analytify"
+msgstr "Phân tích"
+
+#: lj-maintenance-mode.php:546
+#, fuzzy
+msgid ""
+"Since you have the Analytify plugin installed, this will add Google "
+"Analytics tracking code to the maintenance page."
+msgstr ""
+"Vì bạn đã cài đặt plugin Analytify, nên plugin này sẽ thêm mã theo dõi "
+"Google Analytics vào trang bảo trì."
+
+#: lj-maintenance-mode.php:554
+#, fuzzy
+msgid "Custom Stylesheet"
+msgstr "Biểu định kiểu tùy chỉnh"
+
+#: lj-maintenance-mode.php:561 lj-maintenance-mode.php:589
+#: lj-maintenance-mode.php:605
+#, fuzzy
+msgid "You are currently using custom stylesheet."
+msgstr "Bạn hiện đang sử dụng biểu định kiểu tùy chỉnh."
+
+#: lj-maintenance-mode.php:562 lj-maintenance-mode.php:590
+#: lj-maintenance-mode.php:606
+#, fuzzy
+msgid "file in your theme folder"
+msgstr "tệp trong thư mục chủ đề của bạn"
+
+#: lj-maintenance-mode.php:564 lj-maintenance-mode.php:593
+#: lj-maintenance-mode.php:609
+#, fuzzy, php-format
+msgid ""
+"For custom stylesheet, add %s file to your theme folder. If your custom "
+"stylesheet file is picked up by the Maintenance Mode, it will be indicated "
+"here."
+msgstr ""
+"Đối với biểu định kiểu tùy chỉnh, hãy thêm tệp %s vào thư mục chủ đề của "
+"bạn. Nếu tệp biểu định kiểu tùy chỉnh của bạn được chọn bởi Chế độ bảo trì, "
+"nó sẽ được chỉ ra ở đây."
+
+#: lj-maintenance-mode.php:567
+#, fuzzy
+msgid "The maintenance mode page DOM structure is:"
+msgstr "Cấu trúc DOM của trang chế độ bảo trì là:"
+
+#: lj-maintenance-mode.php:575
+#, fuzzy
+msgid "the maintenance mode page content is here"
+msgstr "nội dung trang chế độ bảo trì ở đây"
+
+#: lj-maintenance-mode.php:583
+#, fuzzy
+msgid "Custom Frontend Stylesheet"
+msgstr "Biểu định kiểu giao diện người dùng tùy chỉnh"
+
+#: lj-maintenance-mode.php:599
+#, fuzzy
+msgid "Custom Login Stylesheet"
+msgstr "Biểu định kiểu đăng nhập tùy chỉnh"
+
+#: lj-maintenance-mode.php:616
+#, fuzzy
+msgid "Inject code snippet"
+msgstr "Chèn đoạn mã"
+
+#: lj-maintenance-mode.php:622
+#, fuzzy
+msgid "This is useful to add a Javascript snippet to the maintenance page."
+msgstr "Điều này rất hữu ích để thêm đoạn mã Javascript vào trang bảo trì."
+
+#: lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Do include the surrounding"
+msgstr "Bao gồm xung quanh"
+
+#: lj-maintenance-mode.php:627
+#, fuzzy
+msgid ""
+"NOTE: if you are using the option above to add Google Analytics code, do NOT "
+"paste GA tracking code here."
+msgstr ""
+"LƯU Ý: nếu bạn đang sử dụng tùy chọn ở trên để thêm mã Google Analytics, "
+"KHÔNG dán mã theo dõi GA tại đây."
+
+#: lj-maintenance-mode.php:679
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "Vô hiệu hóa"
+
+#: lj-maintenance-mode.php:682
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "Bật"
+
+#: lj-maintenance-mode.php:693
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "Chế độ bảo trì"
+
+#: lj-maintenance-mode.php:710
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "Cài đặt"
+
+#: lj-maintenance-mode.php:1226
+#, fuzzy
+msgid "Maintenance mode - before content"
+msgstr "Chế độ bảo trì - trước khi có nội dung"
+
+#: lj-maintenance-mode.php:1227
+#, fuzzy
+msgid "Enter the content to appear before the maintenance mode content."
+msgstr "Nhập nội dung xuất hiện trước nội dung chế độ bảo trì."
+
+#: lj-maintenance-mode.php:1234
+#, fuzzy
+msgid "Maintenance mode - after content"
+msgstr "Chế độ bảo trì - sau nội dung"
+
+#: lj-maintenance-mode.php:1235
+#, fuzzy
+msgid "Enter the content to appear after the maintenance mode content."
+msgstr "Nhập nội dung xuất hiện sau nội dung chế độ bảo trì."

@@ -1,0 +1,583 @@
+# Copyright (C) 2017 Maintenance Mode
+# This file is distributed under the same license as the Maintenance Mode package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode 2.5.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
+"mode\n"
+"POT-Creation-Date: 2022-01-30 15:17+1100\n"
+"PO-Revision-Date: 2022-03-28 21:53+1100\n"
+"Last-Translator: John Lang <john@johnlang.com.au>\n"
+"Language-Team: \n"
+"Language: to\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lj-maintenance-mode.php:66 lj-maintenance-mode.php:724
+#, fuzzy
+msgid "Website Under Maintenance"
+msgstr "Uepisaiti ʻOku Lolotonga Tokangaʻí"
+
+#: lj-maintenance-mode.php:66
+#, fuzzy
+msgid ""
+"Our Website is currently undergoing scheduled maintenance. Please check back "
+"soon."
+msgstr ""
+"ʻOku lolotonga fakahoko hono tokangaʻi ʻo ʻemau Uepisaití. Kātaki ʻo toe "
+"vakaiʻi vave mai."
+
+#: lj-maintenance-mode.php:69
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Mahuʻinga: ʻoua naʻa ngalo ke tukuange hoʻo Cache ʻo fakaʻaongaʻi ʻa eWP "
+"Super Cache ʻi he taimi ʻoku malava pe faingataʻaʻia ai ʻa e Founga "
+"tokangaʻi."
+
+#: lj-maintenance-mode.php:72
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Mahuʻinga: ʻOua naʻa ngalo ke tukuange hoʻo Cache ʻo fakaʻaongaʻi ʻa e W3 "
+"Total Cache ʻi he taimi ʻoku malava pe faingataʻaʻia ai ʻa e Founga Monomono."
+
+#: lj-maintenance-mode.php:75
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Mahuʻinga: ʻOua naʻa ngalo ke tukuange hoʻo Cache ʻo fakaʻaongaʻi ʻa e "
+"Halley Cache ʻi he taimi ʻoku malava pe faingataʻaʻia ai ʻa e Founga "
+"tokangaʻi."
+
+#: lj-maintenance-mode.php:78
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Rocket when enabling or "
+"disabling Maintenance Mode."
+msgstr ""
+"Mahuʻinga: ʻoua naʻa ngalo ke tukuange hoʻo Cache ʻo fakaʻaongaʻi ʻa e UAP "
+"misaile ʻi he taimi ʻoku malava pe faingataʻaʻia ai ʻa e founga monomono."
+
+#: lj-maintenance-mode.php:81
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Autoptimize when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Mahuʻinga: ʻOua naʻa ngalo ke tukuange hoʻo Cache ʻo fakaʻaongaʻi ʻa e "
+"Autoptimize ʻi he taimi ʻoku malava pe faingataʻaʻia ai ʻa e Founga monomono."
+
+#: lj-maintenance-mode.php:84
+#, fuzzy
+msgid ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+"ʻOku lolotonga ngāue ʻaki ʻa e Founga Tokangaʻí. Ke fakapapauʻi ʻoku ngaue, "
+"fakaava hoʻo peesi uepisaiti ʻi he founga fakatautaha/fakaʻofoʻofa, browser "
+"kehe pe hu pe ki tuʻa. ʻOku ʻikai uesia ʻa e hu ki he polokalama ʻi he "
+"polokalama ʻe he Founga Monomono."
+
+#: lj-maintenance-mode.php:87
+#, fuzzy
+msgid "You can add widgets in \"Appearance -> Widgets\" section."
+msgstr ""
+"Te ke lava ʻo tanaki atu widgets ʻi he konga ko e \"fotunga-> Widgets\"."
+
+#: lj-maintenance-mode.php:211 lj-maintenance-mode.php:300
+#, fuzzy
+msgctxt "Plugin Name"
+msgid "Maintenance Mode"
+msgstr "Founga Tokangaʻí"
+
+#: lj-maintenance-mode.php:212
+#, fuzzy
+msgctxt "Plugin Description"
+msgid ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+msgstr ""
+"ʻIkai fuoloa mei ai kuo fakaʻaongaʻi ʻe he Wordpress markup ʻoku ʻikai ke ʻi "
+"ai ha ngaahi tuʻuaki pe totongi ki hono fakaleleiʻí ʻi ha founga faingofua "
+"ʻaupito hono tokangaʻí &"
+
+#: lj-maintenance-mode.php:213
+#, fuzzy
+msgctxt "Plugin Author"
+msgid "Lukas Juhas"
+msgstr "Lukasi Sutasi"
+
+#: lj-maintenance-mode.php:223
+#, fuzzy
+msgctxt "Page Title"
+msgid "Maintenance Mode"
+msgstr "Founga Tokangaʻí"
+
+#: lj-maintenance-mode.php:223
+#, fuzzy
+msgctxt "Menu Title"
+msgid "Maintenance Mode"
+msgstr "Founga Tokangaʻí"
+
+#: lj-maintenance-mode.php:271
+#, fuzzy
+msgid "Maintenance Mode"
+msgstr "Founga Tokangaʻí"
+
+#: lj-maintenance-mode.php:281
+#, fuzzy
+msgid "Enabled"
+msgstr "Fakaʻatā"
+
+#: lj-maintenance-mode.php:293
+#, fuzzy
+msgid "Mode"
+msgstr "Mode"
+
+#: lj-maintenance-mode.php:300
+#, fuzzy
+msgid "Default"
+msgstr "Peesi Tuʻumaʻú"
+
+#: lj-maintenance-mode.php:304
+#, fuzzy
+msgid "Coming Soon Page"
+msgstr "Peesi Hoko Maí"
+
+#: lj-maintenance-mode.php:307
+#, fuzzy
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"Kapau ʻokú ke fokotuʻu hoʻo saití ki he founga monomonó ʻi ha vahaʻa taimi "
+"lōloa ange, ʻoku totonu ke ke fokotuʻu ʻeni ki he \"Coming Soon Page\". "
+"Kapau ʻe ʻikai ngāue ʻaki ʻa e \"Founga Tokangaʻí\"."
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr ""
+"Seti tuʻumaʻu HTTP ki he 503, ʻe vave ni pe haʻane fokotuʻu ʻa e HTTP ki he "
+"200."
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Learn more."
+msgstr "Ako lahi ange."
+
+#: lj-maintenance-mode.php:315
+#, fuzzy
+msgid "Preview"
+msgstr "Tomuʻa Vakaiʻí"
+
+#: lj-maintenance-mode.php:316 lj-maintenance-mode.php:711
+#, fuzzy
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr "Poupou"
+
+#: lj-maintenance-mode.php:329
+#, fuzzy
+msgid "Advanced Settings"
+msgstr "Ngaahi Fokotuʻutuʻu ʻOku Lolotongá"
+
+#: lj-maintenance-mode.php:332
+#, fuzzy
+msgid "Hide Advanced Settings"
+msgstr "Fūfuuʻi ʻa e Ngaahi Feituʻu Tōmuʻ"
+
+#: lj-maintenance-mode.php:340
+#, fuzzy
+msgid "Add widget areas above and below content"
+msgstr "Tānaki atu ha ngaahi ʻēlia widget ʻi ʻolunga mo lalo"
+
+#: lj-maintenance-mode.php:352
+#, fuzzy
+msgid "Site Title"
+msgstr "Hingoa ʻo e Saití"
+
+#: lj-maintenance-mode.php:356
+#, fuzzy
+msgid "Overrides default site meta title."
+msgstr "Liliu e hingoa ʻo e meta ʻi he siteití kuo ʻosi seti."
+
+#: lj-maintenance-mode.php:364
+#, fuzzy
+msgid "User Roles"
+msgstr "Ngaahi Fatongia ʻo e Tokotaha Ngāue ki"
+
+#: lj-maintenance-mode.php:365
+#, fuzzy
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr ""
+"Tick ʻa e niʻihi ʻe lava ke hu ki he tafaʻaki ki muʻa ʻo hoʻo uepisaiti "
+"kapau ʻoku fakaʻata ʻa e founga monomono"
+
+#: lj-maintenance-mode.php:366
+#, fuzzy
+msgid "Please note that this does NOT apply to admin area"
+msgstr "Kātaki ʻo fakatokangaʻi ange ʻoku ʻIKAI kaunga ʻeni ki he ʻēlia pulé"
+
+#: lj-maintenance-mode.php:367
+#, fuzzy
+msgid "Toggle all"
+msgstr "Fefokifokiʻaki kotoa"
+
+#: lj-maintenance-mode.php:387
+#, fuzzy
+msgid "User Role control is currently not available on your website. Sorry!"
+msgstr ""
+"ʻOku ʻikai lava ke maʻu ʻa e User Role control ʻi hoʻo uepisaití. Kataki!"
+
+#: lj-maintenance-mode.php:394
+#, fuzzy
+msgid "Allowed IP"
+msgstr "IP fakangofua"
+
+#: lj-maintenance-mode.php:394 lj-maintenance-mode.php:446
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454 lj-maintenance-mode.php:472
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:493
+#: lj-maintenance-mode.php:499 lj-maintenance-mode.php:512
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgctxt "include, part of, constitute"
+msgid "Contains"
+msgstr "ʻOku ʻi ai"
+
+#: lj-maintenance-mode.php:400
+#, fuzzy
+msgid "Enter IPv4 or IPv6 values, one per line."
+msgstr ""
+"Fakahū ʻa e ngaahi tuʻunga ʻulungaanga mahuʻinga ʻo e IPv4 pe IPv6, laine ʻe "
+"taha."
+
+#: lj-maintenance-mode.php:401
+#, fuzzy
+msgid ""
+"Which IP specification gets used? That all depends upon how the remote "
+"caller established the connection; you will never know until they say hello."
+msgstr ""
+"Ko e fe fakapapauʻi IP ʻoku fakaʻaongaʻi? ʻOku fakafalala ʻa e meʻa kotoa pē "
+"ki he founga ne fokotuʻu ai ʻe he tokotaha ʻoku ʻaʻaná ʻa e fehokotakiʻangá; "
+"he ʻikai te ke teitei ʻilo kae ʻoua kuo nau lea fakafeʻiloaki mai."
+
+#: lj-maintenance-mode.php:402
+#, fuzzy
+msgid ""
+"Partial IP values are ok; especially, when you want to identify a whole "
+"subnet."
+msgstr ""
+"ʻOku sai pē ʻa e ngaahi tuʻunga ʻulungaanga mahuʻinga ʻo e IP faka kae "
+"tautautefito ki he taimi ʻoku ke fie ʻiloʻi ai ha subnet kakato."
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:409
+#: lj-maintenance-mode.php:428 lj-maintenance-mode.php:429
+#: lj-maintenance-mode.php:430 lj-maintenance-mode.php:456
+#: lj-maintenance-mode.php:480 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#: lj-maintenance-mode.php:567 lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Tip"
+msgstr "Tokoni"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:430
+#: lj-maintenance-mode.php:456 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#, fuzzy
+msgid "Uses"
+msgstr "Fakaʻaongaʻi"
+
+#: lj-maintenance-mode.php:405
+#, fuzzy
+msgid "which identifies the current Remote IP:"
+msgstr "ʻa ia ʻoku ne fakamahinoʻi ʻa e IP mamaʻo lolotonga:"
+
+#: lj-maintenance-mode.php:409
+#, fuzzy
+msgid "identifies this server is at Server IP:"
+msgstr "ʻiloʻi ko e server ko ʻení ʻoku ʻi he Server IP:"
+
+#: lj-maintenance-mode.php:418
+#, fuzzy
+msgid "Allowed URI"
+msgstr "Fakangofua ʻa e URI"
+
+#: lj-maintenance-mode.php:418 lj-maintenance-mode.php:424
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:426
+#, fuzzy
+msgctxt "exact, stringent, precise"
+msgid "Strict"
+msgstr "Fefeka"
+
+#: lj-maintenance-mode.php:424
+#, fuzzy
+msgid "The full relative path, starting with"
+msgstr "Ko e hala ki he kainga kakato, ʻo kamata ʻi he"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454
+#, fuzzy
+msgid "when doing a"
+msgstr "ʻi he taimi ʻoku fai ai ha"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:452
+#: lj-maintenance-mode.php:453 lj-maintenance-mode.php:454
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "comparison"
+msgstr "fakafehoanaki"
+
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:453
+#, fuzzy
+msgid "Ignores the trailing slash"
+msgstr "Tukunoaʻi ʻa e slash ʻi he konga"
+
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:454
+#, fuzzy
+msgid "Ignores the entire query string"
+msgstr "ʻIkai tokanga ki he afo kotoa ʻo e fehuʻi"
+
+#: lj-maintenance-mode.php:427 lj-maintenance-mode.php:455
+#, fuzzy
+msgid "Never include the protocol, domain or port prefixes of the full URL."
+msgstr ""
+"ʻOua ʻaupito naʻa fakakau ai ʻa e protocol, kelekele pe pooti prefixes ʻo e "
+"URL kakato."
+
+#: lj-maintenance-mode.php:428
+#, fuzzy
+msgid ""
+"Enter / on its own line to allow the sites home page to always by-pass the "
+"maintenance mode page."
+msgstr ""
+"Fakahū / ʻi hono laine pē ʻoʻoná ke fakaʻatā ʻa e peesi ʻuluaki ʻo e saití "
+"ke paasi maʻu pē ʻa e peesi ki hono tokangaʻí."
+
+#: lj-maintenance-mode.php:429 lj-maintenance-mode.php:480
+#, fuzzy
+msgid "will always by-pass the maintenance mode page."
+msgstr "ʻe paasi maʻu pē ʻa e peesi ki hono tokangaʻí."
+
+#: lj-maintenance-mode.php:437 lj-maintenance-mode.php:463
+#: lj-maintenance-mode.php:484 lj-maintenance-mode.php:503
+#: lj-maintenance-mode.php:522
+#, fuzzy
+msgid "and the value for this loaded page is:"
+msgstr "pea ko e mahuʻinga ʻo e peesi ko ʻení ko e:"
+
+#: lj-maintenance-mode.php:446
+#, fuzzy
+msgid "Allowed URL"
+msgstr "URL fakangofua"
+
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "Can be any sub-string contained within the URI, when doing a"
+msgstr ""
+"ʻE lava pē ke hoko ko ha faʻahinga afo iiki pē ʻi he URI, ʻi he taimi ʻokú "
+"ke fai ai ha"
+
+#: lj-maintenance-mode.php:472
+#, fuzzy
+msgid "Allowed Query String"
+msgstr "Fakangofua e Afo ʻo e Fehuʻí"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "Can be any sub-string value after the"
+msgstr ""
+"ʻE lava pē ke hoko ko ha faʻahinga afo fakakongokonga iiki pē ʻi he hili ʻa e"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "in the URI, when doing a"
+msgstr "ʻi he URI, ʻi he taimi ʻoku fai ai ha"
+
+#: lj-maintenance-mode.php:479
+#, fuzzy
+msgid "Enter sub-string values that conform to output by"
+msgstr "Fakahū ʻa e sub-string values ʻoku fenapasi mo e output ʻaki e"
+
+#: lj-maintenance-mode.php:493
+#, fuzzy
+msgid "Allowed Referer"
+msgstr "Tokotaha ʻOku Fakangofua ke Fai ki ai e Leá"
+
+#: lj-maintenance-mode.php:512
+#, fuzzy
+msgid "Allowed User Agent"
+msgstr "Fakafofonga Fakaʻatā ʻo e Tokotaha Ngāue ki he"
+
+#: lj-maintenance-mode.php:537
+#, fuzzy
+msgid "Add Google Analytics code"
+msgstr "Tānaki atu ʻa e Google Analytics Code"
+
+#: lj-maintenance-mode.php:542
+#, fuzzy
+msgid "for Analytics profile"
+msgstr "ki he fakamatala puipuituʻa Analytics"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "configured in"
+msgstr "kuo ʻosi fakapolokalamaʻi ʻi he"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "Analytify"
+msgstr "Fakamāmaʻi"
+
+#: lj-maintenance-mode.php:546
+#, fuzzy
+msgid ""
+"Since you have the Analytify plugin installed, this will add Google "
+"Analytics tracking code to the maintenance page."
+msgstr ""
+"Koeʻuhi kuo ke maʻu ʻa e Analytify plugin kuo fokotuʻu, ʻe tanaki atu heni "
+"ʻa e Google Analytics muimuiʻi ʻo e kouti ki he peesi monomono."
+
+#: lj-maintenance-mode.php:554
+#, fuzzy
+msgid "Custom Stylesheet"
+msgstr "Sīpinga ʻo ha Faʻahinga Sīping"
+
+#: lj-maintenance-mode.php:561 lj-maintenance-mode.php:589
+#: lj-maintenance-mode.php:605
+#, fuzzy
+msgid "You are currently using custom stylesheet."
+msgstr "ʻOkú ke lolotonga ngāue ʻaki ʻa e stylesheet angamahení."
+
+#: lj-maintenance-mode.php:562 lj-maintenance-mode.php:590
+#: lj-maintenance-mode.php:606
+#, fuzzy
+msgid "file in your theme folder"
+msgstr "faile ʻi hoʻo foulutā taumuʻá"
+
+#: lj-maintenance-mode.php:564 lj-maintenance-mode.php:593
+#: lj-maintenance-mode.php:609
+#, fuzzy, php-format
+msgid ""
+"For custom stylesheet, add %s file to your theme folder. If your custom "
+"stylesheet file is picked up by the Maintenance Mode, it will be indicated "
+"here."
+msgstr ""
+"Ke maʻu ʻa e stylesheet angamahení, tānaki atu %s failé ki hoʻo foulutā "
+"taumuʻá. Kapau ʻoku toʻo hake hoʻo faile stylesheet angamaheni ʻe he Founga "
+"Monomono, ʻe fakaʻilongaʻi atu heni."
+
+#: lj-maintenance-mode.php:567
+#, fuzzy
+msgid "The maintenance mode page DOM structure is:"
+msgstr "Ko e founga hono tokangaʻi ʻo e peesi DOM ko e:"
+
+#: lj-maintenance-mode.php:575
+#, fuzzy
+msgid "the maintenance mode page content is here"
+msgstr "ʻoku ʻi heni ʻa e peesi ki hono tokangaʻí"
+
+#: lj-maintenance-mode.php:583
+#, fuzzy
+msgid "Custom Frontend Stylesheet"
+msgstr "Sīpinga ʻo e Faʻunga ʻo e Frontend Custom"
+
+#: lj-maintenance-mode.php:599
+#, fuzzy
+msgid "Custom Login Stylesheet"
+msgstr "Laʻipepa Tuʻumaʻu ʻo e Login"
+
+#: lj-maintenance-mode.php:616
+#, fuzzy
+msgid "Inject code snippet"
+msgstr "Fai fanga kouti konga"
+
+#: lj-maintenance-mode.php:622
+#, fuzzy
+msgid "This is useful to add a Javascript snippet to the maintenance page."
+msgstr ""
+"ʻOku ʻaonga ʻeni ke tānaki atu ha konga Javascript ki he peesi monomonó."
+
+#: lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Do include the surrounding"
+msgstr "Fakakau ʻa e ngaahi ʻātakai takatakaí"
+
+#: lj-maintenance-mode.php:627
+#, fuzzy
+msgid ""
+"NOTE: if you are using the option above to add Google Analytics code, do NOT "
+"paste GA tracking code here."
+msgstr ""
+"FAKATOKANGAʻI ANGE: Kapau ʻoku ke fakaʻaongaʻi ʻa e fili ʻi ʻolunga ke "
+"tanaki atu ʻa e Google Analytics kouti, ʻoua naʻa ke paste ʻa e kouti ki "
+"hono muimuiʻi ʻo e GA heni."
+
+#: lj-maintenance-mode.php:679
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "Faingataʻaʻia Fakaesino"
+
+#: lj-maintenance-mode.php:682
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "Fakaʻatā"
+
+#: lj-maintenance-mode.php:693
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "Founga Tokangaʻí"
+
+#: lj-maintenance-mode.php:710
+#, fuzzy
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "Ngaahi Feituʻú"
+
+#: lj-maintenance-mode.php:1226
+#, fuzzy
+msgid "Maintenance mode - before content"
+msgstr "Founga tokangaʻí - kimuʻa ʻi he meʻa ʻi lotó"
+
+#: lj-maintenance-mode.php:1227
+#, fuzzy
+msgid "Enter the content to appear before the maintenance mode content."
+msgstr ""
+"Fakahū ʻa e meʻa ʻi lotó ke ʻasi kimuʻa ʻi he meʻa ʻi he founga monomonó."
+
+#: lj-maintenance-mode.php:1234
+#, fuzzy
+msgid "Maintenance mode - after content"
+msgstr "Founga tokangaʻí - hili e meʻa ʻi lotó"
+
+#: lj-maintenance-mode.php:1235
+#, fuzzy
+msgid "Enter the content to appear after the maintenance mode content."
+msgstr ""
+"Fakahū ʻa e meʻa ʻi lotó ke ʻasi ʻi he hili ʻa e meʻa ʻi he founga monomonó."

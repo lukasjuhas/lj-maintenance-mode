@@ -1,0 +1,477 @@
+# Copyright (C) 2017 Maintenance Mode
+# This file is distributed under the same license as the Maintenance Mode package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode 2.5.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
+"mode\n"
+"POT-Creation-Date: 2022-01-30 15:17+1100\n"
+"PO-Revision-Date: 2022-01-30 16:14+1100\n"
+"Last-Translator: John Lang <john@johnlang.com.au>\n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lj-maintenance-mode.php:66 lj-maintenance-mode.php:724
+msgid "Website Under Maintenance"
+msgstr "Website Under Maintenance"
+
+#: lj-maintenance-mode.php:66
+msgid ""
+"Our Website is currently undergoing scheduled maintenance. Please check back "
+"soon."
+msgstr ""
+"Our Website is currently undergoing scheduled maintenance. Please check back "
+"soon."
+
+#: lj-maintenance-mode.php:69
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+
+#: lj-maintenance-mode.php:72
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+
+#: lj-maintenance-mode.php:75
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+
+#: lj-maintenance-mode.php:78
+msgid ""
+"Important: Don't forget to flush your cache using WP Rocket when enabling or "
+"disabling Maintenance Mode."
+msgstr ""
+"Important: Don't forget to flush your cache using WP Rocket when enabling or "
+"disabling Maintenance Mode."
+
+#: lj-maintenance-mode.php:81
+msgid ""
+"Important: Don't forget to flush your cache using Autoptimize when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Important: Don't forget to flush your cache using Autoptimize when enabling "
+"or disabling Maintenance Mode."
+
+#: lj-maintenance-mode.php:84
+msgid ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+
+#: lj-maintenance-mode.php:87
+msgid "You can add widgets in \"Appearance -> Widgets\" section."
+msgstr "You can add widgets in \"Appearance -> Widgets\" section."
+
+#: lj-maintenance-mode.php:211 lj-maintenance-mode.php:300
+msgctxt "Plugin Name"
+msgid "Maintenance Mode"
+msgstr "Maintenance Mode"
+
+#: lj-maintenance-mode.php:212
+msgctxt "Plugin Description"
+msgid ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+msgstr ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+
+#: lj-maintenance-mode.php:213
+msgctxt "Plugin Author"
+msgid "Lukas Juhas"
+msgstr "Lukas Juhas"
+
+#: lj-maintenance-mode.php:223
+msgctxt "Page Title"
+msgid "Maintenance Mode"
+msgstr "Maintenance Mode"
+
+#: lj-maintenance-mode.php:223
+msgctxt "Menu Title"
+msgid "Maintenance Mode"
+msgstr "Maintenance Mode"
+
+#: lj-maintenance-mode.php:271
+msgid "Maintenance Mode"
+msgstr "Maintenance Mode"
+
+#: lj-maintenance-mode.php:281
+msgid "Enabled"
+msgstr "Enabled"
+
+#: lj-maintenance-mode.php:293
+msgid "Mode"
+msgstr "Режим"
+
+#: lj-maintenance-mode.php:300
+msgid "Default"
+msgstr "Default"
+
+#: lj-maintenance-mode.php:304
+msgid "Coming Soon Page"
+msgstr "Coming Soon Page"
+
+#: lj-maintenance-mode.php:307
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+
+#: lj-maintenance-mode.php:308
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr "Default sets HTTP to 503, coming soon will set HTTP to 200."
+
+#: lj-maintenance-mode.php:308
+msgid "Learn more."
+msgstr "Learn more."
+
+#: lj-maintenance-mode.php:315
+msgid "Preview"
+msgstr "Preview"
+
+#: lj-maintenance-mode.php:316 lj-maintenance-mode.php:711
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr "Support"
+
+#: lj-maintenance-mode.php:329
+msgid "Advanced Settings"
+msgstr "Advanced Settings"
+
+#: lj-maintenance-mode.php:332
+msgid "Hide Advanced Settings"
+msgstr "Hide Advanced Settings"
+
+#: lj-maintenance-mode.php:340
+msgid "Add widget areas above and below content"
+msgstr "Add widget areas above and below content"
+
+#: lj-maintenance-mode.php:352
+msgid "Site Title"
+msgstr "Site Title"
+
+#: lj-maintenance-mode.php:356
+msgid "Overrides default site meta title."
+msgstr "Overrides default site meta title."
+
+#: lj-maintenance-mode.php:364
+msgid "User Roles"
+msgstr "User Roles"
+
+#: lj-maintenance-mode.php:365
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+
+#: lj-maintenance-mode.php:366
+msgid "Please note that this does NOT apply to admin area"
+msgstr "Please note that this does NOT apply to admin area"
+
+#: lj-maintenance-mode.php:367
+msgid "Toggle all"
+msgstr "Toggle all"
+
+#: lj-maintenance-mode.php:387
+msgid "User Role control is currently not available on your website. Sorry!"
+msgstr "User Role control is currently not available on your website. Sorry!"
+
+#: lj-maintenance-mode.php:394
+msgid "Allowed IP"
+msgstr "Allowed IP"
+
+#: lj-maintenance-mode.php:394 lj-maintenance-mode.php:446
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454 lj-maintenance-mode.php:472
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:493
+#: lj-maintenance-mode.php:499 lj-maintenance-mode.php:512
+#: lj-maintenance-mode.php:518
+msgctxt "include, part of, constitute"
+msgid "Contains"
+msgstr "Continue"
+
+#: lj-maintenance-mode.php:400
+msgid "Enter IPv4 or IPv6 values, one per line."
+msgstr "Enter IPv4 or IPv6 values, one per line."
+
+#: lj-maintenance-mode.php:401
+msgid ""
+"Which IP specification gets used? That all depends upon how the remote "
+"caller established the connection; you will never know until they say hello."
+msgstr ""
+"Which IP specification gets used? That all depends upon how the remote "
+"caller established the connection; you will never know until they say hello."
+
+#: lj-maintenance-mode.php:402
+msgid ""
+"Partial IP values are ok; especially, when you want to identify a whole "
+"subnet."
+msgstr ""
+"Partial IP values are ok; especially, when you want to identify a whole "
+"subnet."
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:409
+#: lj-maintenance-mode.php:428 lj-maintenance-mode.php:429
+#: lj-maintenance-mode.php:430 lj-maintenance-mode.php:456
+#: lj-maintenance-mode.php:480 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#: lj-maintenance-mode.php:567 lj-maintenance-mode.php:623
+msgid "Tip"
+msgstr "Tip"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:430
+#: lj-maintenance-mode.php:456 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+msgid "Uses"
+msgstr "Uses"
+
+#: lj-maintenance-mode.php:405
+msgid "which identifies the current Remote IP:"
+msgstr "which identifies the current Remote IP:"
+
+#: lj-maintenance-mode.php:409
+msgid "identifies this server is at Server IP:"
+msgstr "identifies this server is at Server IP:"
+
+#: lj-maintenance-mode.php:418
+msgid "Allowed URI"
+msgstr "Allowed URI"
+
+#: lj-maintenance-mode.php:418 lj-maintenance-mode.php:424
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:426
+msgctxt "exact, stringent, precise"
+msgid "Strict"
+msgstr "Strict"
+
+#: lj-maintenance-mode.php:424
+msgid "The full relative path, starting with"
+msgstr "The full relative path, starting with"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454
+msgid "when doing a"
+msgstr "when doing a"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:452
+#: lj-maintenance-mode.php:453 lj-maintenance-mode.php:454
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+msgid "comparison"
+msgstr "comparison"
+
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:453
+msgid "Ignores the trailing slash"
+msgstr "Ignores the trailing slash"
+
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:454
+msgid "Ignores the entire query string"
+msgstr "Ignores the entire query string"
+
+#: lj-maintenance-mode.php:427 lj-maintenance-mode.php:455
+msgid "Never include the protocol, domain or port prefixes of the full URL."
+msgstr "Never include the protocol, domain or port prefixes of the full URL."
+
+#: lj-maintenance-mode.php:428
+msgid ""
+"Enter / on its own line to allow the sites home page to always by-pass the "
+"maintenance mode page."
+msgstr ""
+"Enter / on its own line to allow the sites home page to always by-pass the "
+"maintenance mode page."
+
+#: lj-maintenance-mode.php:429 lj-maintenance-mode.php:480
+msgid "will always by-pass the maintenance mode page."
+msgstr "will always by-pass the maintenance mode page."
+
+#: lj-maintenance-mode.php:437 lj-maintenance-mode.php:463
+#: lj-maintenance-mode.php:484 lj-maintenance-mode.php:503
+#: lj-maintenance-mode.php:522
+msgid "and the value for this loaded page is:"
+msgstr "and the value for this loaded page is:"
+
+#: lj-maintenance-mode.php:446
+msgid "Allowed URL"
+msgstr "Allowed URL"
+
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+msgid "Can be any sub-string contained within the URI, when doing a"
+msgstr "Can be any sub-string contained within the URI, when doing a"
+
+#: lj-maintenance-mode.php:472
+msgid "Allowed Query String"
+msgstr "Allowed Query String"
+
+#: lj-maintenance-mode.php:478
+msgid "Can be any sub-string value after the"
+msgstr "Can be any sub-string value after the"
+
+#: lj-maintenance-mode.php:478
+msgid "in the URI, when doing a"
+msgstr "in the URI, when doing a"
+
+#: lj-maintenance-mode.php:479
+msgid "Enter sub-string values that conform to output by"
+msgstr "Enter sub-string values that conform to output by"
+
+#: lj-maintenance-mode.php:493
+msgid "Allowed Referer"
+msgstr "Allowed Referer"
+
+#: lj-maintenance-mode.php:512
+msgid "Allowed User Agent"
+msgstr "Allowed User Agent"
+
+#: lj-maintenance-mode.php:537
+msgid "Add Google Analytics code"
+msgstr "Add Google Analytics code"
+
+#: lj-maintenance-mode.php:542
+msgid "for Analytics profile"
+msgstr "for Analytics profile"
+
+#: lj-maintenance-mode.php:543
+msgid "configured in"
+msgstr "configured in"
+
+#: lj-maintenance-mode.php:543
+msgid "Analytify"
+msgstr "Analytify"
+
+#: lj-maintenance-mode.php:546
+msgid ""
+"Since you have the Analytify plugin installed, this will add Google "
+"Analytics tracking code to the maintenance page."
+msgstr ""
+"Since you have the Analytify plugin installed, this will add Google "
+"Analytics tracking code to the maintenance page."
+
+#: lj-maintenance-mode.php:554
+msgid "Custom Stylesheet"
+msgstr "Custom Stylesheet"
+
+#: lj-maintenance-mode.php:561 lj-maintenance-mode.php:589
+#: lj-maintenance-mode.php:605
+msgid "You are currently using custom stylesheet."
+msgstr "You are currently using custom stylesheet."
+
+#: lj-maintenance-mode.php:562 lj-maintenance-mode.php:590
+#: lj-maintenance-mode.php:606
+msgid "file in your theme folder"
+msgstr "file in your theme folder"
+
+#: lj-maintenance-mode.php:564 lj-maintenance-mode.php:593
+#: lj-maintenance-mode.php:609
+#, php-format
+msgid ""
+"For custom stylesheet, add %s file to your theme folder. If your custom "
+"stylesheet file is picked up by the Maintenance Mode, it will be indicated "
+"here."
+msgstr ""
+"For custom stylesheet, add %s file to your theme folder. If your custom "
+"stylesheet file is picked up by the Maintenance Mode, it will be indicated "
+"here."
+
+#: lj-maintenance-mode.php:567
+msgid "The maintenance mode page DOM structure is:"
+msgstr "The maintenance mode page DOM structure is:"
+
+#: lj-maintenance-mode.php:575
+msgid "the maintenance mode page content is here"
+msgstr "the maintenance mode page content is here"
+
+#: lj-maintenance-mode.php:583
+msgid "Custom Frontend Stylesheet"
+msgstr "Custom Frontend Stylesheet"
+
+#: lj-maintenance-mode.php:599
+msgid "Custom Login Stylesheet"
+msgstr "Custom Login Stylesheet"
+
+#: lj-maintenance-mode.php:616
+msgid "Inject code snippet"
+msgstr "Inject code snippet"
+
+#: lj-maintenance-mode.php:622
+msgid "This is useful to add a Javascript snippet to the maintenance page."
+msgstr "This is useful to add a Javascript snippet to the maintenance page."
+
+#: lj-maintenance-mode.php:623
+msgid "Do include the surrounding"
+msgstr "Do include the surrounding"
+
+#: lj-maintenance-mode.php:627
+msgid ""
+"NOTE: if you are using the option above to add Google Analytics code, do NOT "
+"paste GA tracking code here."
+msgstr ""
+"NOTE: if you are using the option above to add Google Analytics code, do NOT "
+"paste GA tracking code here."
+
+#: lj-maintenance-mode.php:679
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "Disabled"
+
+#: lj-maintenance-mode.php:682
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "Enabled"
+
+#: lj-maintenance-mode.php:693
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "Maintenance Mode"
+
+#: lj-maintenance-mode.php:710
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "Settings"
+
+#: lj-maintenance-mode.php:1226
+msgid "Maintenance mode - before content"
+msgstr "Maintenance mode - before content"
+
+#: lj-maintenance-mode.php:1227
+msgid "Enter the content to appear before the maintenance mode content."
+msgstr "Enter the content to appear before the maintenance mode content."
+
+#: lj-maintenance-mode.php:1234
+msgid "Maintenance mode - after content"
+msgstr "Maintenance mode - after content"
+
+#: lj-maintenance-mode.php:1235
+msgid "Enter the content to appear after the maintenance mode content."
+msgstr "Enter the content to appear after the maintenance mode content."

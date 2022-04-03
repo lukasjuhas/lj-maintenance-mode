@@ -1,0 +1,551 @@
+# Copyright (C) 2017 Maintenance Mode
+# This file is distributed under the same license as the Maintenance Mode package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode 2.5.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
+"mode\n"
+"POT-Creation-Date: 2022-01-30 15:17+1100\n"
+"PO-Revision-Date: 2022-03-27 18:42+1100\n"
+"Last-Translator: John Lang <john@johnlang.com.au>\n"
+"Language-Team: \n"
+"Language: my\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lj-maintenance-mode.php:66 lj-maintenance-mode.php:724
+#, fuzzy
+msgid "Website Under Maintenance"
+msgstr "ဝက်ဘ်ဆိုဒ်ကို ပြုပြင်ထိန်းသိမ်းမှုအောက်တွင်"
+
+#: lj-maintenance-mode.php:66
+#, fuzzy
+msgid ""
+"Our Website is currently undergoing scheduled maintenance. Please check back "
+"soon."
+msgstr ""
+"ကျွန်ုပ်တို့၏ ဝဘ်ဆိုဒ်သည် လက်ရှိတွင် စီစဉ်ထားသော ပြုပြင်ထိန်းသိမ်းမှုကို လုပ်ဆောင်နေပါသည်။ ကျေးဇူးပြု၍ မကြာမီ "
+"ပြန်လည်စစ်ဆေးပါ။"
+
+#: lj-maintenance-mode.php:69
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"အရေးကြီးသည်- Maintenance Mode ကိုဖွင့်သည့်အခါတွင် WP Super Cache ကိုအသုံးပြု၍ သင်၏ cache "
+"ကိုရှင်းလင်းရန်မမေ့ပါနှင့်။"
+
+#: lj-maintenance-mode.php:72
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"အရေးကြီးသည်- Maintenance Mode ကိုဖွင့်ခြင်း သို့မဟုတ် ပိတ်သည့်အခါ W3 Total Cache ကိုအသုံးပြု၍ သင်၏ "
+"cache ကိုရှင်းလင်းရန်မမေ့ပါနှင့်။"
+
+#: lj-maintenance-mode.php:75
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"အရေးကြီးသည်- Maintenance Mode ကိုဖွင့်ခြင်း သို့မဟုတ် ပိတ်သည့်အခါ Comet Cache ကို အသုံးပြု၍ "
+"သင်၏ကက်ရှ်ကို ရှင်းလင်းရန် မမေ့ပါနှင့်။"
+
+#: lj-maintenance-mode.php:78
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Rocket when enabling or "
+"disabling Maintenance Mode."
+msgstr ""
+"အရေးကြီးသည်- Maintenance Mode ကိုဖွင့်ခြင်း သို့မဟုတ် ပိတ်သည့်အခါ WP Rocket ကို အသုံးပြု၍ သင်၏ "
+"cache ကိုရှင်းလင်းရန် မမေ့ပါနှင့်။"
+
+#: lj-maintenance-mode.php:81
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Autoptimize when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"အရေးကြီးသည်- Maintenance Mode ကိုဖွင့်သည့်အခါတွင် Autoptimize ကိုအသုံးပြု၍ သင်၏ cache "
+"ကိုရှင်းလင်းရန်မမေ့ပါနှင့်။"
+
+#: lj-maintenance-mode.php:84
+#, fuzzy
+msgid ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+"ပြုပြင်ထိန်းသိမ်းမှုမုဒ်သည် လက်ရှိတွင် အသုံးပြုနေပါသည်။ ၎င်းအလုပ်လုပ်ကြောင်းသေချာစေရန်၊ ကိုယ်ပိုင်/ကိုယ်ဖျက်မုဒ်၊ "
+"မတူညီသောဘရောက်ဆာဖြင့် သင့်ဝဘ်စာမျက်နှာကိုဖွင့်ပါ သို့မဟုတ် ရိုးရိုးရှင်းရှင်းဖြင့် ထွက်ပါ။ "
+"အကောင့်ဝင်ထားသည့်အသုံးပြုသူများသည် ပြုပြင်ထိန်းသိမ်းမှုမုဒ်တွင် သက်ရောက်မှုမရှိပါ။"
+
+#: lj-maintenance-mode.php:87
+#, fuzzy
+msgid "You can add widgets in \"Appearance -> Widgets\" section."
+msgstr "\"ပုံပန်းသဏ္ဍာန် -> ဝစ်ဂျက်များ\" ကဏ္ဍတွင် ဝစ်ဂျက်များကို သင်ထည့်နိုင်သည်။"
+
+#: lj-maintenance-mode.php:211 lj-maintenance-mode.php:300
+#, fuzzy
+msgctxt "Plugin Name"
+msgid "Maintenance Mode"
+msgstr "ပြုပြင်ထိန်းသိမ်းမှုမုဒ်"
+
+#: lj-maintenance-mode.php:212
+#, fuzzy
+msgctxt "Plugin Description"
+msgid ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+msgstr ""
+"ရိုးရှင်းသော ပြုပြင်ထိန်းသိမ်းမှုမုဒ်နှင့် ကြော်ငြာများမပါသော ပုံသေ Wordpress markup ကို အသုံးပြု၍ "
+"မကြာမီလာမည် စာမျက်နှာ။"
+
+#: lj-maintenance-mode.php:213
+#, fuzzy
+msgctxt "Plugin Author"
+msgid "Lukas Juhas"
+msgstr "Lukas Juhas"
+
+#: lj-maintenance-mode.php:223
+#, fuzzy
+msgctxt "Page Title"
+msgid "Maintenance Mode"
+msgstr "ပြုပြင်ထိန်းသိမ်းမှုမုဒ်"
+
+#: lj-maintenance-mode.php:223
+#, fuzzy
+msgctxt "Menu Title"
+msgid "Maintenance Mode"
+msgstr "ပြုပြင်ထိန်းသိမ်းမှုမုဒ်"
+
+#: lj-maintenance-mode.php:271
+#, fuzzy
+msgid "Maintenance Mode"
+msgstr "ပြုပြင်ထိန်းသိမ်းမှုမုဒ်"
+
+#: lj-maintenance-mode.php:281
+#, fuzzy
+msgid "Enabled"
+msgstr "ဖွင့်ထားသည်။"
+
+#: lj-maintenance-mode.php:293
+msgid "Mode"
+msgstr "Mode"
+
+#: lj-maintenance-mode.php:300
+msgid "Default"
+msgstr "ပင်ကိုပုံသေသတ်မှတ်ချက်"
+
+#: lj-maintenance-mode.php:304
+#, fuzzy
+msgid "Coming Soon Page"
+msgstr "Page မကြာမီလာမည်"
+
+#: lj-maintenance-mode.php:307
+#, fuzzy
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"သင့်ဆိုဒ်ကို အချိန်ပိုကြာအောင် ပြုပြင်ထိန်းသိမ်းမှုမုဒ်တွင် ထည့်သွင်းပါက ၎င်းကို \"မကြာမီ စာမျက်နှာ\" ဟု "
+"သတ်မှတ်သင့်သည်။ မဟုတ်ပါက \"Maintenance Mode\" ကိုသုံးပါ။"
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr "မူရင်း HTTP အား 503 သို့ သတ်မှတ်ပေးသည်၊ မကြာမီလာမည့် HTTP ကို 200 သို့ သတ်မှတ်ပါမည်။"
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Learn more."
+msgstr "ပိုမိုသိရှိရန်။"
+
+#: lj-maintenance-mode.php:315
+msgid "Preview"
+msgstr "Preview"
+
+#: lj-maintenance-mode.php:316 lj-maintenance-mode.php:711
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr "အထောက်အပံ့လက်မှတ်"
+
+#: lj-maintenance-mode.php:329
+msgid "Advanced Settings"
+msgstr "ပိုကောင်းသည့်ပြင်ဆင်မှုပုံစံ"
+
+#: lj-maintenance-mode.php:332
+#, fuzzy
+msgid "Hide Advanced Settings"
+msgstr "အဆင့်မြင့် ဆက်တင်များကို ဝှက်ပါ။"
+
+#: lj-maintenance-mode.php:340
+#, fuzzy
+msgid "Add widget areas above and below content"
+msgstr "အကြောင်းအရာအပေါ်နှင့်အောက်ရှိ ဝစ်ဂျက်ဧရိယာများကို ထည့်ပါ။"
+
+#: lj-maintenance-mode.php:352
+#, fuzzy
+msgid "Site Title"
+msgstr "ဆိုက်ခေါင်းစဉ်"
+
+#: lj-maintenance-mode.php:356
+#, fuzzy
+msgid "Overrides default site meta title."
+msgstr "မူရင်းဆိုက်မက်တာခေါင်းစဉ်ကို အစားထိုးသည်။"
+
+#: lj-maintenance-mode.php:364
+#, fuzzy
+msgid "User Roles"
+msgstr "အသုံးပြုသူရာထူးများ"
+
+#: lj-maintenance-mode.php:365
+#, fuzzy
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr "ပြုပြင်ထိန်းသိမ်းမှုမုဒ်ကို ဖွင့်ထားလျှင် သင့်ဝဘ်ဆိုက်၏ ရှေ့ဆုံးသို့ ဝင်ရောက်နိုင်သည့်သူများကို အမှတ်ခြစ်ပါ။"
+
+#: lj-maintenance-mode.php:366
+#, fuzzy
+msgid "Please note that this does NOT apply to admin area"
+msgstr "၎င်းသည် စီမံခန့်ခွဲသူဧရိယာနှင့် မသက်ဆိုင်ကြောင်း သတိပြုပါ။"
+
+#: lj-maintenance-mode.php:367
+#, fuzzy
+msgid "Toggle all"
+msgstr "အားလုံးကို ပြောင်းလိုက်ပါ။"
+
+#: lj-maintenance-mode.php:387
+#, fuzzy
+msgid "User Role control is currently not available on your website. Sorry!"
+msgstr "အသုံးပြုသူ အခန်းကဏ္ဍ ထိန်းချုပ်မှုကို သင့်ဝဘ်ဆိုဒ်တွင် လောလောဆယ် မရရှိနိုင်ပါ။ ဆောရီး!"
+
+#: lj-maintenance-mode.php:394
+#, fuzzy
+msgid "Allowed IP"
+msgstr "ခွင့်ပြုထားသော IP"
+
+#: lj-maintenance-mode.php:394 lj-maintenance-mode.php:446
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454 lj-maintenance-mode.php:472
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:493
+#: lj-maintenance-mode.php:499 lj-maintenance-mode.php:512
+#: lj-maintenance-mode.php:518
+msgctxt "include, part of, constitute"
+msgid "Contains"
+msgstr "ပါဝင်သည်"
+
+#: lj-maintenance-mode.php:400
+#, fuzzy
+msgid "Enter IPv4 or IPv6 values, one per line."
+msgstr "IPv4 သို့မဟုတ် IPv6 တန်ဖိုးများကို ထည့်ပါ၊ တစ်ကြောင်းလျှင် တစ်ခု။"
+
+#: lj-maintenance-mode.php:401
+#, fuzzy
+msgid ""
+"Which IP specification gets used? That all depends upon how the remote "
+"caller established the connection; you will never know until they say hello."
+msgstr ""
+"မည်သည့် IP သတ်မှတ်ချက်ကို အသုံးပြုသနည်း။ အဝေးမှခေါ်ဆိုသူသည် ချိတ်ဆက်မှုကို မည်ကဲ့သို့တည်ဆောက်ခဲ့သည်ပေါ်တွင်မူတည်သည်။ "
+"နှုတ်ဆက်စကား မပြောမချင်း မင်းသိမှာမဟုတ်ဘူး။"
+
+#: lj-maintenance-mode.php:402
+#, fuzzy
+msgid ""
+"Partial IP values are ok; especially, when you want to identify a whole "
+"subnet."
+msgstr ""
+"တစ်စိတ်တစ်ပိုင်း IP တန်ဖိုးများသည် အဆင်ပြေပါသည်။ အထူးသဖြင့်၊ သင်သည် subnet "
+"တစ်ခုလုံးကိုခွဲခြားသတ်မှတ်လိုသောအခါ။"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:409
+#: lj-maintenance-mode.php:428 lj-maintenance-mode.php:429
+#: lj-maintenance-mode.php:430 lj-maintenance-mode.php:456
+#: lj-maintenance-mode.php:480 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#: lj-maintenance-mode.php:567 lj-maintenance-mode.php:623
+msgid "Tip"
+msgstr "အကြံပြုချက်"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:430
+#: lj-maintenance-mode.php:456 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#, fuzzy
+msgid "Uses"
+msgstr "အသုံးများသည်။"
+
+#: lj-maintenance-mode.php:405
+#, fuzzy
+msgid "which identifies the current Remote IP:"
+msgstr "လက်ရှိ အဝေးထိန်း IP ကို ခွဲခြားသတ်မှတ်ပေးသော၊"
+
+#: lj-maintenance-mode.php:409
+#, fuzzy
+msgid "identifies this server is at Server IP:"
+msgstr "ဤဆာဗာသည် ဆာဗာ IP တွင်ရှိကြောင်း ခွဲခြားသတ်မှတ်သည်-"
+
+#: lj-maintenance-mode.php:418
+#, fuzzy
+msgid "Allowed URI"
+msgstr "URI ကို ခွင့်ပြုထားသည်။"
+
+#: lj-maintenance-mode.php:418 lj-maintenance-mode.php:424
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:426
+#, fuzzy
+msgctxt "exact, stringent, precise"
+msgid "Strict"
+msgstr "မထွက်ဘူး။"
+
+#: lj-maintenance-mode.php:424
+#, fuzzy
+msgid "The full relative path, starting with"
+msgstr "ဆွေမျိုးမဂ်နှင့် ပြည့်စုံခြင်း။"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454
+#, fuzzy
+msgid "when doing a"
+msgstr "လုပ်တဲ့အခါ"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:452
+#: lj-maintenance-mode.php:453 lj-maintenance-mode.php:454
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "comparison"
+msgstr "နှိုင်းယှဉ်"
+
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:453
+#, fuzzy
+msgid "Ignores the trailing slash"
+msgstr "ကပ်နေသည့်မျဉ်းစောင်းများကို လျစ်လျူရှုပါ။"
+
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:454
+#, fuzzy
+msgid "Ignores the entire query string"
+msgstr "မေးခွန်းစာကြောင်းတစ်ခုလုံးကို လျစ်လျူရှုပါ။"
+
+#: lj-maintenance-mode.php:427 lj-maintenance-mode.php:455
+#, fuzzy
+msgid "Never include the protocol, domain or port prefixes of the full URL."
+msgstr "URL အပြည့်အစုံ၏ ပရိုတိုကော၊ ဒိုမိန်း သို့မဟုတ် ဆိပ်ကမ်းရှေ့ဆက်များ မပါဝင်ပါ။"
+
+#: lj-maintenance-mode.php:428
+#, fuzzy
+msgid ""
+"Enter / on its own line to allow the sites home page to always by-pass the "
+"maintenance mode page."
+msgstr ""
+"ဝဘ်ဆိုက်များ၏ပင်မစာမျက်နှာကို ပြုပြင်ထိန်းသိမ်းမှုမုဒ်စာမျက်နှာကို အမြဲတမ်းကျော်ဖြတ်ခွင့်ပြုရန် "
+"၎င်း၏ကိုယ်ပိုင်လိုင်းပေါ်တွင် ဝင်ရောက်ပါ။"
+
+#: lj-maintenance-mode.php:429 lj-maintenance-mode.php:480
+#, fuzzy
+msgid "will always by-pass the maintenance mode page."
+msgstr "ပြုပြင်ထိန်းသိမ်းမှုမုဒ် စာမျက်နှာကို အမြဲတမ်း ကျော်ဖြတ်နေပါလိမ့်မယ်။"
+
+#: lj-maintenance-mode.php:437 lj-maintenance-mode.php:463
+#: lj-maintenance-mode.php:484 lj-maintenance-mode.php:503
+#: lj-maintenance-mode.php:522
+#, fuzzy
+msgid "and the value for this loaded page is:"
+msgstr "နှင့် ဤတင်ပေးထားသော စာမျက်နှာအတွက် တန်ဖိုးမှာ-"
+
+#: lj-maintenance-mode.php:446
+#, fuzzy
+msgid "Allowed URL"
+msgstr "ခွင့်ပြုထားသော URL"
+
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "Can be any sub-string contained within the URI, when doing a"
+msgstr "URI တွင်ပါရှိသော မည်သည့်စာကြောင်းခွဲမဆို ဖြစ်နိုင်သည်။"
+
+#: lj-maintenance-mode.php:472
+#, fuzzy
+msgid "Allowed Query String"
+msgstr "ခွင့်ပြုထားသော Query String"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "Can be any sub-string value after the"
+msgstr "ပြီးနောက် မည်သည့် sub-string value မဆို ဖြစ်နိုင်ပါသည်။"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "in the URI, when doing a"
+msgstr "URI တွင်၊ a လုပ်သောအခါ"
+
+#: lj-maintenance-mode.php:479
+#, fuzzy
+msgid "Enter sub-string values that conform to output by"
+msgstr "အထွက်အလိုက် လိုက်လျောညီထွေဖြစ်စေသော စာကြောင်းခွဲတန်ဖိုးများကို ထည့်သွင်းပါ။"
+
+#: lj-maintenance-mode.php:493
+#, fuzzy
+msgid "Allowed Referer"
+msgstr "ကိုးကားခွင့်ပြုသည်။"
+
+#: lj-maintenance-mode.php:512
+#, fuzzy
+msgid "Allowed User Agent"
+msgstr "ခွင့်ပြုထားသော အသုံးပြုသူ အေးဂျင့်"
+
+#: lj-maintenance-mode.php:537
+#, fuzzy
+msgid "Add Google Analytics code"
+msgstr "Google Analytics ကုဒ်ထည့်ပါ။"
+
+#: lj-maintenance-mode.php:542
+#, fuzzy
+msgid "for Analytics profile"
+msgstr "Analytics ပရိုဖိုင်အတွက်"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "configured in"
+msgstr "တွင်ပြင်ဆင်ထားသည်။"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "Analytify"
+msgstr "ခွဲခြမ်းစိတ်ဖြာပါ။"
+
+#: lj-maintenance-mode.php:546
+#, fuzzy
+msgid ""
+"Since you have the Analytify plugin installed, this will add Google "
+"Analytics tracking code to the maintenance page."
+msgstr ""
+"သင့်တွင် Analytify plugin ကို ထည့်သွင်းထားသောကြောင့်၊ ၎င်းသည် ပြုပြင်ထိန်းသိမ်းမှုစာမျက်နှာသို့ Google "
+"Analytics ခြေရာခံကုဒ်ကို ပေါင်းထည့်မည်ဖြစ်သည်။"
+
+#: lj-maintenance-mode.php:554
+#, fuzzy
+msgid "Custom Stylesheet"
+msgstr "စိတ်ကြိုက်ပုံစံစာရွက်"
+
+#: lj-maintenance-mode.php:561 lj-maintenance-mode.php:589
+#: lj-maintenance-mode.php:605
+#, fuzzy
+msgid "You are currently using custom stylesheet."
+msgstr "သင်သည် လက်ရှိ စိတ်ကြိုက်စတိုင်စာရွက်ကို အသုံးပြုနေပါသည်။"
+
+#: lj-maintenance-mode.php:562 lj-maintenance-mode.php:590
+#: lj-maintenance-mode.php:606
+#, fuzzy
+msgid "file in your theme folder"
+msgstr "သင်၏အခင်းအကျင်းဖိုဒါတွင်ဖိုင်"
+
+#: lj-maintenance-mode.php:564 lj-maintenance-mode.php:593
+#: lj-maintenance-mode.php:609
+#, fuzzy, php-format
+msgid ""
+"For custom stylesheet, add %s file to your theme folder. If your custom "
+"stylesheet file is picked up by the Maintenance Mode, it will be indicated "
+"here."
+msgstr ""
+"စိတ်ကြိုက်စတိုင်စာရွက်အတွက်၊ သင့်အပြင်အဆင်ဖိုင်တွဲသို့ %s ဖိုင်ကို ထည့်ပါ။ သင့်စိတ်ကြိုက်စတိုင်စာရွက်ဖိုင်ကို "
+"ပြုပြင်ထိန်းသိမ်းမှုမုဒ်ဖြင့် ကောက်ယူပါက၊ ၎င်းကို ဤနေရာတွင် ညွှန်ပြမည်ဖြစ်သည်။"
+
+#: lj-maintenance-mode.php:567
+#, fuzzy
+msgid "The maintenance mode page DOM structure is:"
+msgstr "ပြုပြင်ထိန်းသိမ်းမှုမုဒ်စာမျက်နှာ DOM ဖွဲ့စည်းပုံမှာ-"
+
+#: lj-maintenance-mode.php:575
+#, fuzzy
+msgid "the maintenance mode page content is here"
+msgstr "ပြုပြင်ထိန်းသိမ်းမှုမုဒ် စာမျက်နှာ အကြောင်းအရာသည် ဤနေရာတွင်ဖြစ်သည်။"
+
+#: lj-maintenance-mode.php:583
+#, fuzzy
+msgid "Custom Frontend Stylesheet"
+msgstr "စိတ်ကြိုက် Frontend ပုံစံစာရွက်"
+
+#: lj-maintenance-mode.php:599
+#, fuzzy
+msgid "Custom Login Stylesheet"
+msgstr "စိတ်ကြိုက်ဝင်ရောက်မှုပုံစံစာရွက်"
+
+#: lj-maintenance-mode.php:616
+#, fuzzy
+msgid "Inject code snippet"
+msgstr "ကုဒ်အတိုအထွာကို ထိုးထည့်ပါ။"
+
+#: lj-maintenance-mode.php:622
+#, fuzzy
+msgid "This is useful to add a Javascript snippet to the maintenance page."
+msgstr "ပြုပြင်ထိန်းသိမ်းမှုစာမျက်နှာသို့ Javascript အတိုအထွာကို ထည့်ရန် ၎င်းသည် အသုံးဝင်သည်။"
+
+#: lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Do include the surrounding"
+msgstr "ပတ်​ဝန်းကျင်​ကို ထည့်​ပါ။"
+
+#: lj-maintenance-mode.php:627
+#, fuzzy
+msgid ""
+"NOTE: if you are using the option above to add Google Analytics code, do NOT "
+"paste GA tracking code here."
+msgstr ""
+"မှတ်ချက်- Google Analytics ကုဒ်ထည့်ရန် အထက်ဖော်ပြပါ ရွေးချယ်မှုကို သင်အသုံးပြုနေပါက၊ GA "
+"ခြေရာခံကုဒ်ကို ဤနေရာတွင် မကူးထည့်ပါနှင့်။"
+
+#: lj-maintenance-mode.php:679
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "မသန်စွမ်း"
+
+#: lj-maintenance-mode.php:682
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "ဖွင့်ထားသည်။"
+
+#: lj-maintenance-mode.php:693
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "ပြုပြင်ထိန်းသိမ်းမှုမုဒ်"
+
+#: lj-maintenance-mode.php:710
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "ပြင်ဆင်ချက်များ"
+
+#: lj-maintenance-mode.php:1226
+#, fuzzy
+msgid "Maintenance mode - before content"
+msgstr "ပြုပြင်ထိန်းသိမ်းမှုမုဒ် - အကြောင်းအရာမတိုင်မီ"
+
+#: lj-maintenance-mode.php:1227
+#, fuzzy
+msgid "Enter the content to appear before the maintenance mode content."
+msgstr "ပြုပြင်ထိန်းသိမ်းမှုမုဒ် အကြောင်းအရာရှေ့တွင် ပေါ်လာမည့် အကြောင်းအရာကို ထည့်သွင်းပါ။"
+
+#: lj-maintenance-mode.php:1234
+#, fuzzy
+msgid "Maintenance mode - after content"
+msgstr "ပြုပြင်ထိန်းသိမ်းမှုမုဒ် - အကြောင်းအရာပြီးနောက်"
+
+#: lj-maintenance-mode.php:1235
+#, fuzzy
+msgid "Enter the content to appear after the maintenance mode content."
+msgstr "ပြုပြင်ထိန်းသိမ်းမှုမုဒ် အကြောင်းအရာပြီးနောက် ပေါ်လာမည့် အကြောင်းအရာကို ထည့်သွင်းပါ။"

@@ -1,10 +1,10 @@
 === Maintenance Mode ===
-Contributors: LukasNeptun
+Contributors: LukasNeptun, johnlang-1
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LL6TN86CDPYQN
 Tags: maintenance, maintenance mode, website maintenance, coming soon, under construction, offline, site maintenance,
 Requires at least: 3.5
-Tested up to: 5.8
-Stable tag: 2.4.4
+Tested up to: 5.9.2
+Stable tag: 2.5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,12 +14,12 @@ Very simple Maintenance Mode & Coming soon page using default Wordpress markup w
 
 As a web developer working with Wordpress almost every day, very often I came across problem that If I wanted simple maintenance plugin to do some updates on my or client's website, I came across all these useless and overcomplicated plugins until I decided that I'll make one myself which will be the one I'll be confident and happy to use with ease.
 
-[Maintenance Mode](https://plugins.itsluk.as/maintenance-mode/) is very simple and it's using Wordpress's wp_die() function which is core function of Wordpress, which makes this plugin feel and work as a part of Wordpress core. There is settings page under "Settings" in the main wp-admin menu where you can enable maintenance mode or change content using WYSIWYG editor so you can also add pictures, links etc. When activated and logged in as admin, you can see website as usual, rest of the users / visitors can see maintenance mode. You can see the maintenance mode as admin in preview mode using preview link on the settings page or simply open website in private mode or different browser to double check if it's enabled and working. There is also indicator in admin bar that changes colour to red when maintenance mode is enabled.
+[Maintenance Mode](https://wordpress.org/plugins/lj-maintenance-mode/) is very simple and it's using Wordpress's wp_die() function which is core function of Wordpress, which makes this plugin feel and work as a part of Wordpress core. There is settings page under "Settings" in the main wp-admin menu where you can enable maintenance mode or change content using WYSIWYG editor so you can also add pictures, links etc. When activated and logged in as admin, you can see website as usual, rest of the users / visitors can see maintenance mode. You can see the maintenance mode as admin in preview mode using preview link on the settings page or simply open website in private mode or different browser to double check if it's enabled and working. There is also indicator in admin bar that changes colour to red when maintenance mode is enabled.
 
 **Features:**
 
 * **Simplicity** - Built to be as simple as possible. Easy to use.
-* **Customisable** - WYSIWYG available in full glory. You can add images and other media including links and pretty much everything you can do with WYSIWYG. Text / Code tab is available too for custom markup.
+* **Customisable** - WYSIWYG available in full glory. You can add images and other media including links and pretty much everything you can do with WYSIWYG. Text/Code tab is available too for custom markup.
 * **Works on mobile** - Because of it's simplicity, maintenance mode works very well on mobile devices.
 * **NO ADS** - No ads. Seriously.
 * **NO PAID UPGRADES** - No paid upgrades. Seriously.
@@ -27,44 +27,114 @@ As a web developer working with Wordpress almost every day, very often I came ac
 * **Support** - Support button available.
 * **Preview** - Preview button available.
 * **Compact** - It's developed to be as compact as possible.
-* **Role Control** - User Role control is available since 2.0
-* **Optional widgets** - Optionally add widgets above and/or below the content
-* **Optional style sheet** - Optionally add a custom style sheet
-* **Optional ability to add code snippet** - Optionally add a code snippet to the page.
+* **Role Control** - User Role control is available since 2.0.
+* **Never Locked Out** - 'wp-login.php' and the ['Fatal Error Recovery Mode'](https://make.wordpress.org/core/2019/04/16/fatal-error-recovery-mode-in-5-2/) requests for website administrators will always work.
+* **Search Engine Indexing** - Choose to respond with 'Ok to Index' (HTTP 200) or 'Service Unavailable; Do Not Index' (HTTP 503).
+* **Optional Widgets** - Optionally add widgets above and/or below the content.
+* **Optional Style Sheets** - Optionally add a custom style sheet for maintenance mode page, frontend pages and the login page. Visually emphasise the maintenance mode status into the rest of the website with your own custom CSS, located in your active theme.
+* **Optional ability to add Code Snippet** - Optionally add a code snippet to the page.
+* **Shortcodes for Maintenance Mode** - Dynamically show content on any page, depending upon the maintenance mode status (enabled/disabled).
+* **Shortcodes for User Login** - Dynamically show content on any page, depending upon the login status of the requesting user (logded in/logged out).
 * **Support for Analytify plugin** - If you use the Analytify plugin, you can automatically insert the Google Analytics tracking code.
+* **Allow bypass of Maintenance Mode** - Match one of these request conditions and maintenance mode page will be ignored.
+  1. Allowed IPs - Single IPV4 value, single IPV6 value or partial matches to emulate subnet matches.
+  2. Allowed URIs (Strict) - Specifically just this URI, but not any of the child pages.
+  3. Allowed URIs (Contains) - Including access to all child pages under this URI.
+  4. Allowed Query Strings.
+  5. Allowed Referers.
+  6. Allowed User Agents.
 
 > <strong>Important! Users that are using Cache plugins, please read below:</strong><br>
 > <strong>When enabling or disabling Maintenance Mode, don't forget to flush your cache!</strong>
 
+**Shortcodes**
+`[ljmm_is_maintenance_mode_enabled] ... content ... [/ljmm_is_maintenance_mode_enabled]` - Show this content only when maintenance mode is enabled.
+
+`[ljmm_is_maintenance_mode_disabled] ... content ... [/ljmm_is_maintenance_mode_disabled]` - Show this content only when maintenance mode is disabled.
+
+`[ljmm_is_user_logged_in] ... content ...[/ljmm_is_user_logged_in]` - Show this content only when the user is logged in to the website.
+
+`[ljmm_is_user_logged_out] ... content ... [/ljmm_is_user_logged_out]` - Show this content only when the user is logged out of the website, they are a public user.
+
 **Filters**
-`ljmm_site_title` - Filter page title while in maintenance mode
+`ljmm_site_title` - Filter page title while in maintenance mode.
 
-`ljmm_admin_bar_indicator_enabled` - Control visibility of admin bar indicator
+`ljmm_admin_bar_indicator_enabled` - Control visibility of admin bar indicator.
 
-`limm_css_filename` - The filename of the CSS style sheet (as found in the theme's stylesheet directory) - just the filename, for example: `maintenance.min.css`. (Note: you do not need to use this filter for a stylesheet; see FAQs below.)
+`ljmm_css_filename` - The filename of the CSS style sheet (as found in the theme's stylesheet directory) - just the filename, for example: `maintenance.min.css`. (Note: You do not need to use this filter for a stylesheet; see FAQs below.)
 
-`ljmm_css_url` - The url of the css file.
+`ljmm_css_url` - The url of the css file for the maintenance mode page.
+
+`ljmm_css_frontend_filename` - The filename of the CSS style sheet (as found in the theme's stylesheet directory) - just the filename, for example: `maintenance.min.frontend.css`. (Note: You do not need to use this filter for a stylesheet; see FAQs below.)
+
+`ljmm_css_frontend_url` - The url of the css file for the main website content.
+
+`ljmm_css_login_filename` - The filename of the CSS style sheet (as found in the theme's stylesheet directory) - just the filename, for example: `maintenance.min.login.css`. (Note: You do not need to use this filter for a stylesheet; see FAQs below.)
+
+`ljmm_css_login_url` - The url of the css file for the login page.
 
 **Actions**
+
 `ljmm_before_mm` - Runs at the beginning of core maintenance method
 
+**Support**
 
 Having trouble? Please read FAQ first, if you need any assistance, you can use support button on the settings page of the Maintenance Mode.
 
 > <strong>Development on GitHub</strong><br>
 > The development of Maintenance Mode [takes place on GitHub](https://github.com/lukasjuhas/lj-maintenance-mode). Bugs and pull requests are welcomed there.
 
+
 == Installation ==
 
-1. Upload `lj-maintenance-mode` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Navigate to Settings -> Maintenance Mode, or simply click on Admin Bar indicator for settings to enable maintenance mode.
+1. Upload `lj-maintenance-mode` to the `/wp-content/plugins/` directory.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
+3. Navigate to Settings -> Maintenance Mode, or simply click on Admin Bar indicator for settings to enable maintenance mode.
 
 == Frequently Asked Questions ==
 
-= Plugin doesn't seem to work. What should I do ? =
+= Is this plugin really ad free ? =
+Yes.
 
-First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, flush all your cache. Secondly, disable all other plugins and try enabling just Maintenance Mode and see if problem persist. This should solve most common problems. If not, don't hesitate to contact me via Support button from Settings page
+= Plugin was activated and nothing happened, now what do I do? =
+
+1. Log in as the website WordPress administrator and navigate to the 'Setting' -> 'Maintenance Mode' section.
+2. Enter a custom maintenance mode massage.
+3. Review all the other options, including the 'Advanced Settings' to configure the user experience closer to what you want for your website.
+4. Use the 'Enable' option and 'Save Changes' button to turn the maintenance mode on and off.
+5. Remember to flush any and all website caching plugins that are installed, each time you turn maintenance mode on and off.
+
+= I'm the website administrator, will I always be able to login? =
+
+Yes. The `/wp-login.php` page will always be available for website administrators to login.
+
+Yes. All [WordPress Fatal Error Recovery Mode requests](https://make.wordpress.org/core/2019/04/16/fatal-error-recovery-mode-in-5-2/) using the `action=enter_recovery_mode&rm_token=` query string, will always be allowed through.
+
+= Will the search engines index my website while maintenance mode is enabled? =
+
+It depends upon which `mode` you choose.
+
+1. Select the `Maintenance Mode (Default)` option and it will return HTTP “503 Service Temporarily Unavailable”, which should not be indexed; or
+2. Select the `Coming Soon Page` option and it will return HTTP "200 Ok", which will be available for indexing.
+
+= Can I use this plugin when I have custom login pages? =
+
+Yes. The 'Allow bypass of Maintenance Mode' capability allows the website administrator to list specific pages to always be available, even when maintenance mode is enabled.
+
+= Is it compatible with WooCommerce and other Cart plugins? =
+
+Yes. The 'Allow bypass of Maintenance Mode' capability allows the website administrator to list specific pages to always be available while maintenance mode is enabled.
+This will let you customise a list of specific pages or any valid URI, to allow the other plugins to function as expected.
+
+= Can I customise the maintenance mode page? =
+
+Yes, in the spirit of 'keep it simple', a classic WYSIWYG editor box is available for you to add text, links, pictures, etc.
+Additionally, widget area's are available to use, if you choose to add them to the maintenance mode page capability (see next FAQ).
+Additionally, you can add 3 external stylesheet files to your active theme to leverage the power of CSS to visually improve the maintenance mode page, login page and the sites frontend pages.
+
+= How do I add widgets? =
+
+Click "Advanced Settings" and mark the checkbox to add widget areas. Then you will find two new widget areas in WordPress's Widgets page, for above and below the content.
 
 = Can I change background colour? =
 
@@ -72,11 +142,30 @@ Not through the admin interface. You can use a custom stylesheet (see next FAQ) 
 
 = What is the default stylesheet? =
 
-By default, the plugin will use a stylesheet named `maintenance.min.css` in the theme's stylesheet folder. You can specify a different filename by using a Filter (above).
+By default, the plugin will use a stylesheet named `maintenance.min.css` in the theme's stylesheet folder, next to the [themes main stylesheet (style.css)](https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/).
+You can specify a different filename by using a Filter (above).
 
-= How do I add widgets? =
+= What is the frontend stylesheet? =
 
-Click "Advanced Settings" and mark the checkbox to add widget areas. Then you will find two new widget areas in WordPress's Widgets page, for above and below the content.
+By default, the plugin will use a stylesheet named `maintenance.min.frontend.css` in the theme's stylesheet folder, next to the [themes main stylesheet (style.css)](https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/).
+You can specify a different filename by using a Filter (above).
+
+= What is the login stylesheet? =
+
+By default, the plugin will use a stylesheet named `maintenance.min.login.css` in the theme's stylesheet folder, next to the [themes main stylesheet (style.css)](https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/).
+You can specify a different filename by using a Filter (above).
+
+= How can I submit translation updates or new language packs? =
+
+1. All updates and new language pack files are welcome. Please raise a [GitHub issue](https://github.com/lukasjuhas/lj-maintenance-mode/issues) and upload the .po file for review and possible inclusion in a future release.
+2. Alternatively, please visit the [plugins page](https://translate.wordpress.org/projects/wp-plugins/lj-maintenance-mode/) at WordPress Translate.
+
+= Plugin still doesn't seem to work. What should I do ? =
+
+First, if you are using Cache plugin such as WP Super Cache or W3 Total Cache, flush all your cache.
+Secondly, disable all other plugins and try enabling just Maintenance Mode and see if problem persist. This should solve most common problems.
+If not, don't hesitate to contact me via Support button from Settings page.
+
 
 == Screenshots ==
 
@@ -88,10 +177,27 @@ Click "Advanced Settings" and mark the checkbox to add widget areas. Then you wi
 6. Custom stylesheet
 7. Example: Custom stylesheet in root theme folder with sample styling
 8. Example using widgets (meta)
-9. Widgets area with two maintenance mode widget areas (before and after)
-
+9. Example of Widgets area with two maintenance mode widget areas (before and after)
+10. Example of ShortCodes for a membership registration page (Maintenance Mode, Logged-Out and Logged-In).
 
 == Changelog ==
+
+= 2.5.2 =
+* Add john-lang-86/lj-maintenance-mode#15 shortcodes for dynamic page content. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+  1. Add [ljmm_is_maintenance_mode_enabled] Show this content only when maintenance mode is enabled [/ljmm_is_maintenance_mode_enabled] shortcode.
+  2. Add [ljmm_is_maintenance_mode_disabled] Show this content only when maintenance mode is disabled [/ljmm_is_maintenance_mode_disabled] shortcode.
+  3. Add [ljmm_is_user_logged_in] Show this content only when the user is logged in to the website [/ljmm_is_user_logged_in] shortcode.
+  4. Add [ljmm_is_user_logged_out] Show this content only when the user is logged out of the website, they are a public user. [/ljmm_is_user_logged_out] shortcode.
+* Add john-lang-86/lj-maintenance-mode#6 to expand the supported languages. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+  1. Updated source code to be primarily human native language, removing the technology aspects (like %s) from the translatable phrases. This technique significantly improved the online translation success; while intentionally leaving 1 %s in the translation string list as a 'canary in the coal mine' test to see how well the translator handled it.
+  2. Using 'PoEdit Pro' application and the DeepL/Google online ML translators. Keeping languages that had a > 98% online translation success, as anything less would be a disappointing user expectation and experience.
+  3. As-at 28 Mar 2022, 145 locales (language_region combinations) have been translated. The full [journey from RTFM to commit](https://github.com/john-lang-86/lj-maintenance-mode/issues/6) has been documented.
+      * Focus on [WordPress installation statistics](https://wordpress.org/about/stats/), in descending ranked order; then
+      * Focus on [WordPress up-to-date translations](https://make.wordpress.org/polyglots/teams/), which indicates an active community.
+      * Focus on [Stripe Payment Processor](https://support.stripe.com/questions/supported-languages-for-stripe-checkout-and-payment-links) supported languages.
+* Resolves review [feedback about Twenty Twenty-Two themem compatability](https://wordpress.org/support/topic/love-this-plugin-so-much-i-donated/) as part of ['Alternative to get_header hook/action'](https://github.com/john-lang-86/lj-maintenance-mode/issues/11) solution. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
+* Update screenshot-4.png for the new settings page options in 2.5.2, and add screenshot-10.png
+* Update README.md and readme.txt files.
 
 = 2.5.1.1 =
 * Fix john-lang-86/lj-maintenance-mode#1 to improve trailing slash cmoparisons. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
@@ -116,7 +222,6 @@ Click "Advanced Settings" and mark the checkbox to add widget areas. Then you wi
 * Fix lukasjuhas/lj-maintenance-mode#44 by always allowing access when "current_user_can('administrator')" check passes. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
 * Resolve lukasjuhas/lj-maintenance-mode#47 by adding 2 DIVs to maintenance mode page (wrapper and content); for more flexible CSS options. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
 * Add helpful messages to advanced setting options. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
-* Add screenshot-4-2-5-1.png of settings page for 2.5.1.
 
 = 2.5 =
 * Added WP Rocket message. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
@@ -124,7 +229,7 @@ Click "Advanced Settings" and mark the checkbox to add widget areas. Then you wi
   1. Added filter "ljmm_css_frontend_filename".
   2. Added filter "ljmm_css_frontend_url".
 * Commit contains unit tested (functional) core for 'an exception allow list for non-logged in access to resources' for REMOTE_ADDR, REQUEST_URI (Strict Match), REQUEST_URI (Contains/Sloppy Match) and HTTP_REFERER; but still needs a settings page implementation. (Thanks to [@john-lang-86](https://github.com/john-lang-86/))
-* Missing language translations for new strings in settings page in 2.5.
+* Acknowledgment: Language translations for new strings in the settings page in 2.5 are missing.
 
 = 2.4.4 =
 * Bumped up "Tested up to"

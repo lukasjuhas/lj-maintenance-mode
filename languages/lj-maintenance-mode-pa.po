@@ -1,0 +1,560 @@
+# Copyright (C) 2017 Maintenance Mode
+# This file is distributed under the same license as the Maintenance Mode package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode 2.5.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
+"mode\n"
+"POT-Creation-Date: 2022-01-30 15:17+1100\n"
+"PO-Revision-Date: 2022-03-28 21:44+1100\n"
+"Last-Translator: John Lang <john@johnlang.com.au>\n"
+"Language-Team: \n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lj-maintenance-mode.php:66 lj-maintenance-mode.php:724
+#, fuzzy
+msgid "Website Under Maintenance"
+msgstr "ਰੱਖ-ਰਖਾਅ ਅਧੀਨ ਵੈੱਬਸਾਈਟ"
+
+#: lj-maintenance-mode.php:66
+#, fuzzy
+msgid ""
+"Our Website is currently undergoing scheduled maintenance. Please check back "
+"soon."
+msgstr ""
+"ਸਾਡੀ ਵੈੱਬਸਾਈਟ ਵਰਤਮਾਨ ਵਿੱਚ ਅਨੁਸੂਚਿਤ ਰੱਖ-ਰਖਾਅ ਦੇ ਅਧੀਨ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਜਲਦੀ ਹੀ ਦੁਬਾਰਾ ਜਾਂਚ "
+"ਕਰੋ।"
+
+#: lj-maintenance-mode.php:69
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"ਮਹੱਤਵਪੂਰਨ: ਮੇਨਟੇਨੈਂਸ ਮੋਡ ਨੂੰ ਸਮਰੱਥ ਜਾਂ ਅਯੋਗ ਕਰਦੇ ਸਮੇਂ WP ਸੁਪਰ ਕੈਸ਼ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹੋਏ ਆਪਣੇ ਕੈਸ਼ ਨੂੰ ਫਲੱਸ਼ "
+"ਕਰਨਾ ਨਾ ਭੁੱਲੋ।"
+
+#: lj-maintenance-mode.php:72
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"ਮਹੱਤਵਪੂਰਨ: ਮੇਨਟੇਨੈਂਸ ਮੋਡ ਨੂੰ ਸਮਰੱਥ ਜਾਂ ਅਸਮਰੱਥ ਕਰਦੇ ਸਮੇਂ W3 ਕੁੱਲ ਕੈਸ਼ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹੋਏ ਆਪਣੇ ਕੈਸ਼ ਨੂੰ ਫਲੱਸ਼ "
+"ਕਰਨਾ ਨਾ ਭੁੱਲੋ।"
+
+#: lj-maintenance-mode.php:75
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"ਮਹੱਤਵਪੂਰਨ: ਮੇਨਟੇਨੈਂਸ ਮੋਡ ਨੂੰ ਸਮਰੱਥ ਜਾਂ ਅਸਮਰੱਥ ਕਰਦੇ ਸਮੇਂ ਕੋਮੇਟ ਕੈਸ਼ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਆਪਣੇ ਕੈਸ਼ ਨੂੰ ਫਲੱਸ਼ ਕਰਨਾ "
+"ਨਾ ਭੁੱਲੋ।"
+
+#: lj-maintenance-mode.php:78
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Rocket when enabling or "
+"disabling Maintenance Mode."
+msgstr ""
+"ਮਹੱਤਵਪੂਰਨ: ਮੇਨਟੇਨੈਂਸ ਮੋਡ ਨੂੰ ਸਮਰੱਥ ਜਾਂ ਅਯੋਗ ਕਰਦੇ ਸਮੇਂ WP ਰਾਕੇਟ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹੋਏ ਆਪਣੇ ਕੈਸ਼ ਨੂੰ ਫਲੱਸ਼ "
+"ਕਰਨਾ ਨਾ ਭੁੱਲੋ।"
+
+#: lj-maintenance-mode.php:81
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Autoptimize when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"ਮਹੱਤਵਪੂਰਨ: ਮੇਨਟੇਨੈਂਸ ਮੋਡ ਨੂੰ ਸਮਰੱਥ ਜਾਂ ਅਸਮਰੱਥ ਬਣਾਉਣ ਵੇਲੇ ਆਟੋਪਟੀਮਾਈਜ਼ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਆਪਣੇ ਕੈਸ਼ ਨੂੰ ਫਲੱਸ਼ "
+"ਕਰਨਾ ਨਾ ਭੁੱਲੋ।"
+
+#: lj-maintenance-mode.php:84
+#, fuzzy
+msgid ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+"ਮੇਨਟੇਨੈਂਸ ਮੋਡ ਵਰਤਮਾਨ ਵਿੱਚ ਕਿਰਿਆਸ਼ੀਲ ਹੈ। ਇਹ ਯਕੀਨੀ ਬਣਾਉਣ ਲਈ ਕਿ ਇਹ ਕੰਮ ਕਰਦਾ ਹੈ, ਆਪਣੇ ਵੈਬ ਪੇਜ "
+"ਨੂੰ ਜਾਂ ਤਾਂ ਪ੍ਰਾਈਵੇਟ / ਇਨਕੋਗਨਿਟੋ ਮੋਡ, ਵੱਖਰੇ ਬ੍ਰਾਊਜ਼ਰ ਵਿੱਚ ਖੋਲ੍ਹੋ ਜਾਂ ਸਿਰਫ਼ ਲੌਗ ਆਉਟ ਕਰੋ। ਲੌਗਇਨ ਕੀਤੇ "
+"ਉਪਭੋਗਤਾ ਮੇਨਟੇਨੈਂਸ ਮੋਡ ਦੁਆਰਾ ਪ੍ਰਭਾਵਿਤ ਨਹੀਂ ਹੁੰਦੇ ਹਨ।"
+
+#: lj-maintenance-mode.php:87
+#, fuzzy
+msgid "You can add widgets in \"Appearance -> Widgets\" section."
+msgstr "ਤੁਸੀਂ \"ਦਿੱਖ -> ਵਿਜੇਟਸ\" ਭਾਗ ਵਿੱਚ ਵਿਜੇਟਸ ਸ਼ਾਮਲ ਕਰ ਸਕਦੇ ਹੋ।"
+
+#: lj-maintenance-mode.php:211 lj-maintenance-mode.php:300
+#, fuzzy
+msgctxt "Plugin Name"
+msgid "Maintenance Mode"
+msgstr "ਮੇਨਟੇਨੈਂਸ ਮੋਡ"
+
+#: lj-maintenance-mode.php:212
+#, fuzzy
+msgctxt "Plugin Description"
+msgid ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+msgstr ""
+"ਬਹੁਤ ਹੀ ਸਧਾਰਨ ਮੇਨਟੇਨੈਂਸ ਮੋਡ ਅਤੇ ਬਿਨਾਂ ਕਿਸੇ ਵਿਗਿਆਪਨ ਜਾਂ ਭੁਗਤਾਨ ਕੀਤੇ ਅੱਪਗਰੇਡਾਂ ਦੇ ਡਿਫੌਲਟ ਵਰਡਪ੍ਰੈਸ "
+"ਮਾਰਕਅੱਪ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹੋਏ ਜਲਦੀ ਹੀ ਆ ਰਿਹਾ ਪੰਨਾ।"
+
+#: lj-maintenance-mode.php:213
+#, fuzzy
+msgctxt "Plugin Author"
+msgid "Lukas Juhas"
+msgstr "ਲੁਕਾਸ ਜੁਹਾਸ"
+
+#: lj-maintenance-mode.php:223
+#, fuzzy
+msgctxt "Page Title"
+msgid "Maintenance Mode"
+msgstr "ਮੇਨਟੇਨੈਂਸ ਮੋਡ"
+
+#: lj-maintenance-mode.php:223
+#, fuzzy
+msgctxt "Menu Title"
+msgid "Maintenance Mode"
+msgstr "ਮੇਨਟੇਨੈਂਸ ਮੋਡ"
+
+#: lj-maintenance-mode.php:271
+#, fuzzy
+msgid "Maintenance Mode"
+msgstr "ਮੇਨਟੇਨੈਂਸ ਮੋਡ"
+
+#: lj-maintenance-mode.php:281
+#, fuzzy
+msgid "Enabled"
+msgstr "ਸਮਰਥਿਤ"
+
+#: lj-maintenance-mode.php:293
+#, fuzzy
+msgid "Mode"
+msgstr "ਮੋਡ"
+
+#: lj-maintenance-mode.php:300
+#, fuzzy
+msgid "Default"
+msgstr "ਡਿਫਾਲਟ"
+
+#: lj-maintenance-mode.php:304
+#, fuzzy
+msgid "Coming Soon Page"
+msgstr "ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ ਪੰਨਾ"
+
+#: lj-maintenance-mode.php:307
+#, fuzzy
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"ਜੇਕਰ ਤੁਸੀਂ ਆਪਣੀ ਸਾਈਟ ਨੂੰ ਲੰਬੇ ਸਮੇਂ ਲਈ ਰੱਖ-ਰਖਾਅ ਮੋਡ ਵਿੱਚ ਪਾ ਰਹੇ ਹੋ, ਤਾਂ ਤੁਹਾਨੂੰ ਇਸਨੂੰ \"ਜਲਦੀ ਹੀ ਆ "
+"ਰਿਹਾ ਪੰਨਾ\" 'ਤੇ ਸੈੱਟ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ। ਨਹੀਂ ਤਾਂ \"ਮੇਨਟੇਨੈਂਸ ਮੋਡ\" ਦੀ ਵਰਤੋਂ ਕਰੋ।"
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr ""
+"ਪੂਰਵ-ਨਿਰਧਾਰਤ HTTP ਨੂੰ 503 'ਤੇ ਸੈੱਟ ਕਰਦਾ ਹੈ, ਛੇਤੀ ਹੀ ਆਉਣ ਵਾਲਾ HTTP ਨੂੰ 200 'ਤੇ ਸੈੱਟ ਕਰੇਗਾ।"
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Learn more."
+msgstr "ਜਿਆਦਾ ਜਾਣੋ."
+
+#: lj-maintenance-mode.php:315
+#, fuzzy
+msgid "Preview"
+msgstr "ਝਲਕ"
+
+#: lj-maintenance-mode.php:316 lj-maintenance-mode.php:711
+#, fuzzy
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr "ਸਪੋਰਟ"
+
+#: lj-maintenance-mode.php:329
+#, fuzzy
+msgid "Advanced Settings"
+msgstr "ਉੱਨਤ ਸੈਟਿੰਗਾਂ"
+
+#: lj-maintenance-mode.php:332
+#, fuzzy
+msgid "Hide Advanced Settings"
+msgstr "ਐਡਵਾਂਸਡ ਸੈਟਿੰਗਾਂ ਨੂੰ ਲੁਕਾਓ"
+
+#: lj-maintenance-mode.php:340
+#, fuzzy
+msgid "Add widget areas above and below content"
+msgstr "ਸਮੱਗਰੀ ਦੇ ਉੱਪਰ ਅਤੇ ਹੇਠਾਂ ਵਿਜੇਟ ਖੇਤਰ ਸ਼ਾਮਲ ਕਰੋ"
+
+#: lj-maintenance-mode.php:352
+#, fuzzy
+msgid "Site Title"
+msgstr "ਸਾਈਟ ਦਾ ਸਿਰਲੇਖ"
+
+#: lj-maintenance-mode.php:356
+#, fuzzy
+msgid "Overrides default site meta title."
+msgstr "ਡਿਫੌਲਟ ਸਾਈਟ ਮੈਟਾ ਸਿਰਲੇਖ ਨੂੰ ਓਵਰਰਾਈਡ ਕਰਦਾ ਹੈ।"
+
+#: lj-maintenance-mode.php:364
+#, fuzzy
+msgid "User Roles"
+msgstr "ਉਪਭੋਗਤਾ ਰੋਲ"
+
+#: lj-maintenance-mode.php:365
+#, fuzzy
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr ""
+"ਉਹਨਾਂ 'ਤੇ ਨਿਸ਼ਾਨ ਲਗਾਓ ਜੋ ਤੁਹਾਡੀ ਵੈਬਸਾਈਟ ਦੇ ਫਰੰਟ-ਐਂਡ ਤੱਕ ਪਹੁੰਚ ਕਰ ਸਕਦੇ ਹਨ ਜੇਕਰ ਰੱਖ-ਰਖਾਅ ਮੋਡ "
+"ਸਮਰੱਥ ਹੈ"
+
+#: lj-maintenance-mode.php:366
+#, fuzzy
+msgid "Please note that this does NOT apply to admin area"
+msgstr "ਕਿਰਪਾ ਕਰਕੇ ਨੋਟ ਕਰੋ ਕਿ ਇਹ ਐਡਮਿਨ ਖੇਤਰ 'ਤੇ ਲਾਗੂ ਨਹੀਂ ਹੁੰਦਾ ਹੈ"
+
+#: lj-maintenance-mode.php:367
+#, fuzzy
+msgid "Toggle all"
+msgstr "ਸਭ ਨੂੰ ਟੌਗਲ ਕਰੋ"
+
+#: lj-maintenance-mode.php:387
+#, fuzzy
+msgid "User Role control is currently not available on your website. Sorry!"
+msgstr "ਵਰਤਮਾਨ ਵਿੱਚ ਤੁਹਾਡੀ ਵੈਬਸਾਈਟ 'ਤੇ ਉਪਭੋਗਤਾ ਭੂਮਿਕਾ ਨਿਯੰਤਰਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਮਾਫ ਕਰਨਾ!"
+
+#: lj-maintenance-mode.php:394
+#, fuzzy
+msgid "Allowed IP"
+msgstr "ਮਨਜ਼ੂਰ ਆਈ.ਪੀ"
+
+#: lj-maintenance-mode.php:394 lj-maintenance-mode.php:446
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454 lj-maintenance-mode.php:472
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:493
+#: lj-maintenance-mode.php:499 lj-maintenance-mode.php:512
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgctxt "include, part of, constitute"
+msgid "Contains"
+msgstr "ਸ਼ਾਮਿਲ ਹੈ"
+
+#: lj-maintenance-mode.php:400
+#, fuzzy
+msgid "Enter IPv4 or IPv6 values, one per line."
+msgstr "IPv4 ਜਾਂ IPv6 ਮੁੱਲ ਦਾਖਲ ਕਰੋ, ਇੱਕ ਪ੍ਰਤੀ ਲਾਈਨ।"
+
+#: lj-maintenance-mode.php:401
+#, fuzzy
+msgid ""
+"Which IP specification gets used? That all depends upon how the remote "
+"caller established the connection; you will never know until they say hello."
+msgstr ""
+"ਕਿਹੜਾ IP ਨਿਰਧਾਰਨ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ? ਇਹ ਸਭ ਇਸ ਗੱਲ 'ਤੇ ਨਿਰਭਰ ਕਰਦਾ ਹੈ ਕਿ ਰਿਮੋਟ ਕਾਲਰ ਨੇ "
+"ਕਨੈਕਸ਼ਨ ਕਿਵੇਂ ਸਥਾਪਿਤ ਕੀਤਾ; ਤੁਹਾਨੂੰ ਕਦੇ ਨਹੀਂ ਪਤਾ ਹੋਵੇਗਾ ਜਦੋਂ ਤੱਕ ਉਹ ਹੈਲੋ ਨਹੀਂ ਕਹਿੰਦੇ।"
+
+#: lj-maintenance-mode.php:402
+#, fuzzy
+msgid ""
+"Partial IP values are ok; especially, when you want to identify a whole "
+"subnet."
+msgstr "ਅੰਸ਼ਕ IP ਮੁੱਲ ਠੀਕ ਹਨ; ਖਾਸ ਕਰਕੇ, ਜਦੋਂ ਤੁਸੀਂ ਪੂਰੇ ਸਬਨੈੱਟ ਦੀ ਪਛਾਣ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ।"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:409
+#: lj-maintenance-mode.php:428 lj-maintenance-mode.php:429
+#: lj-maintenance-mode.php:430 lj-maintenance-mode.php:456
+#: lj-maintenance-mode.php:480 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#: lj-maintenance-mode.php:567 lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Tip"
+msgstr "ਟਿਪ"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:430
+#: lj-maintenance-mode.php:456 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#, fuzzy
+msgid "Uses"
+msgstr "ਵਰਤਦਾ ਹੈ"
+
+#: lj-maintenance-mode.php:405
+#, fuzzy
+msgid "which identifies the current Remote IP:"
+msgstr "ਜੋ ਮੌਜੂਦਾ ਰਿਮੋਟ IP ਦੀ ਪਛਾਣ ਕਰਦਾ ਹੈ:"
+
+#: lj-maintenance-mode.php:409
+#, fuzzy
+msgid "identifies this server is at Server IP:"
+msgstr "ਪਛਾਣ ਕਰਦਾ ਹੈ ਕਿ ਇਹ ਸਰਵਰ ਸਰਵਰ IP 'ਤੇ ਹੈ:"
+
+#: lj-maintenance-mode.php:418
+#, fuzzy
+msgid "Allowed URI"
+msgstr "ਮਨਜ਼ੂਰਸ਼ੁਦਾ URI"
+
+#: lj-maintenance-mode.php:418 lj-maintenance-mode.php:424
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:426
+#, fuzzy
+msgctxt "exact, stringent, precise"
+msgid "Strict"
+msgstr "ਸਖਤ"
+
+#: lj-maintenance-mode.php:424
+#, fuzzy
+msgid "The full relative path, starting with"
+msgstr "ਪੂਰਾ ਸੰਬੰਧਿਤ ਮਾਰਗ, ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454
+#, fuzzy
+msgid "when doing a"
+msgstr "ਜਦੋਂ ਏ"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:452
+#: lj-maintenance-mode.php:453 lj-maintenance-mode.php:454
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "comparison"
+msgstr "ਤੁਲਨਾ"
+
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:453
+#, fuzzy
+msgid "Ignores the trailing slash"
+msgstr "ਟ੍ਰੇਲਿੰਗ ਸਲੈਸ਼ ਨੂੰ ਅਣਡਿੱਠ ਕਰਦਾ ਹੈ"
+
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:454
+#, fuzzy
+msgid "Ignores the entire query string"
+msgstr "ਪੂਰੀ ਪੁੱਛਗਿੱਛ ਸਤਰ ਨੂੰ ਅਣਡਿੱਠ ਕਰਦਾ ਹੈ"
+
+#: lj-maintenance-mode.php:427 lj-maintenance-mode.php:455
+#, fuzzy
+msgid "Never include the protocol, domain or port prefixes of the full URL."
+msgstr "ਕਦੇ ਵੀ ਪੂਰੇ URL ਦੇ ਪ੍ਰੋਟੋਕੋਲ, ਡੋਮੇਨ ਜਾਂ ਪੋਰਟ ਪ੍ਰੀਫਿਕਸ ਨੂੰ ਸ਼ਾਮਲ ਨਾ ਕਰੋ।"
+
+#: lj-maintenance-mode.php:428
+#, fuzzy
+msgid ""
+"Enter / on its own line to allow the sites home page to always by-pass the "
+"maintenance mode page."
+msgstr ""
+"ਸਾਈਟਾਂ ਦੇ ਹੋਮ ਪੇਜ ਨੂੰ ਮੇਨਟੇਨੈਂਸ ਮੋਡ ਪੇਜ ਨੂੰ ਹਮੇਸ਼ਾ ਬਾਈ-ਪਾਸ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਦੇਣ ਲਈ ਇਸਦੀ ਆਪਣੀ ਲਾਈਨ "
+"'ਤੇ / ਦਰਜ ਕਰੋ।"
+
+#: lj-maintenance-mode.php:429 lj-maintenance-mode.php:480
+#, fuzzy
+msgid "will always by-pass the maintenance mode page."
+msgstr "ਮੇਨਟੇਨੈਂਸ ਮੋਡ ਪੇਜ ਨੂੰ ਹਮੇਸ਼ਾ ਬਾਈ-ਪਾਸ ਕਰੇਗਾ।"
+
+#: lj-maintenance-mode.php:437 lj-maintenance-mode.php:463
+#: lj-maintenance-mode.php:484 lj-maintenance-mode.php:503
+#: lj-maintenance-mode.php:522
+#, fuzzy
+msgid "and the value for this loaded page is:"
+msgstr "ਅਤੇ ਇਸ ਲੋਡ ਕੀਤੇ ਪੰਨੇ ਦਾ ਮੁੱਲ ਹੈ:"
+
+#: lj-maintenance-mode.php:446
+#, fuzzy
+msgid "Allowed URL"
+msgstr "ਮਨਜ਼ੂਰ URL"
+
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "Can be any sub-string contained within the URI, when doing a"
+msgstr "URI ਦੇ ਅੰਦਰ ਮੌਜੂਦ ਕੋਈ ਵੀ ਸਬ-ਸਟ੍ਰਿੰਗ ਹੋ ਸਕਦੀ ਹੈ, ਜਦੋਂ a"
+
+#: lj-maintenance-mode.php:472
+#, fuzzy
+msgid "Allowed Query String"
+msgstr "ਇਜਾਜ਼ਤ ਦਿੱਤੀ ਪੁੱਛਗਿੱਛ ਸਤਰ"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "Can be any sub-string value after the"
+msgstr "ਤੋਂ ਬਾਅਦ ਕੋਈ ਵੀ ਸਬ-ਸਟ੍ਰਿੰਗ ਮੁੱਲ ਹੋ ਸਕਦਾ ਹੈ"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "in the URI, when doing a"
+msgstr "URI ਵਿੱਚ, ਜਦੋਂ ਏ"
+
+#: lj-maintenance-mode.php:479
+#, fuzzy
+msgid "Enter sub-string values that conform to output by"
+msgstr "ਸਬ-ਸਟ੍ਰਿੰਗ ਮੁੱਲ ਦਾਖਲ ਕਰੋ ਜੋ ਇਸ ਦੁਆਰਾ ਆਉਟਪੁੱਟ ਦੇ ਅਨੁਕੂਲ ਹਨ"
+
+#: lj-maintenance-mode.php:493
+#, fuzzy
+msgid "Allowed Referer"
+msgstr "ਮਨਜ਼ੂਰ ਰੈਫ਼ਰਰ"
+
+#: lj-maintenance-mode.php:512
+#, fuzzy
+msgid "Allowed User Agent"
+msgstr "ਮਨਜ਼ੂਰ ਯੂਜ਼ਰ ਏਜੰਟ"
+
+#: lj-maintenance-mode.php:537
+#, fuzzy
+msgid "Add Google Analytics code"
+msgstr "ਗੂਗਲ ਵਿਸ਼ਲੇਸ਼ਣ ਕੋਡ ਸ਼ਾਮਲ ਕਰੋ"
+
+#: lj-maintenance-mode.php:542
+#, fuzzy
+msgid "for Analytics profile"
+msgstr "ਵਿਸ਼ਲੇਸ਼ਣ ਪ੍ਰੋਫਾਈਲ ਲਈ"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "configured in"
+msgstr "ਵਿੱਚ ਸੰਰਚਿਤ"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "Analytify"
+msgstr "ਵਿਸ਼ਲੇਸ਼ਣ ਕਰੋ"
+
+#: lj-maintenance-mode.php:546
+#, fuzzy
+msgid ""
+"Since you have the Analytify plugin installed, this will add Google "
+"Analytics tracking code to the maintenance page."
+msgstr ""
+"ਕਿਉਂਕਿ ਤੁਹਾਡੇ ਕੋਲ ਵਿਸ਼ਲੇਸ਼ਣ ਪਲੱਗਇਨ ਸਥਾਪਤ ਹੈ, ਇਹ Google ਵਿਸ਼ਲੇਸ਼ਣ ਟਰੈਕਿੰਗ ਕੋਡ ਨੂੰ ਰੱਖ-ਰਖਾਅ ਪੰਨੇ "
+"ਵਿੱਚ ਜੋੜ ਦੇਵੇਗਾ।"
+
+#: lj-maintenance-mode.php:554
+#, fuzzy
+msgid "Custom Stylesheet"
+msgstr "ਕਸਟਮ ਸਟਾਈਲਸ਼ੀਟ"
+
+#: lj-maintenance-mode.php:561 lj-maintenance-mode.php:589
+#: lj-maintenance-mode.php:605
+#, fuzzy
+msgid "You are currently using custom stylesheet."
+msgstr "ਤੁਸੀਂ ਵਰਤਮਾਨ ਵਿੱਚ ਕਸਟਮ ਸਟਾਈਲਸ਼ੀਟ ਦੀ ਵਰਤੋਂ ਕਰ ਰਹੇ ਹੋ।"
+
+#: lj-maintenance-mode.php:562 lj-maintenance-mode.php:590
+#: lj-maintenance-mode.php:606
+#, fuzzy
+msgid "file in your theme folder"
+msgstr "ਤੁਹਾਡੇ ਥੀਮ ਫੋਲਡਰ ਵਿੱਚ ਫਾਈਲ"
+
+#: lj-maintenance-mode.php:564 lj-maintenance-mode.php:593
+#: lj-maintenance-mode.php:609
+#, fuzzy, php-format
+msgid ""
+"For custom stylesheet, add %s file to your theme folder. If your custom "
+"stylesheet file is picked up by the Maintenance Mode, it will be indicated "
+"here."
+msgstr ""
+"ਕਸਟਮ ਸਟਾਈਲਸ਼ੀਟ ਲਈ, ਆਪਣੇ ਥੀਮ ਫੋਲਡਰ ਵਿੱਚ %s ਫਾਈਲ ਸ਼ਾਮਲ ਕਰੋ। ਜੇਕਰ ਤੁਹਾਡੀ ਕਸਟਮ ਸਟਾਈਲਸ਼ੀਟ "
+"ਫਾਈਲ ਨੂੰ ਮੇਨਟੇਨੈਂਸ ਮੋਡ ਦੁਆਰਾ ਚੁੱਕਿਆ ਗਿਆ ਹੈ, ਤਾਂ ਇਹ ਇੱਥੇ ਦਰਸਾਇਆ ਜਾਵੇਗਾ।"
+
+#: lj-maintenance-mode.php:567
+#, fuzzy
+msgid "The maintenance mode page DOM structure is:"
+msgstr "ਮੇਨਟੇਨੈਂਸ ਮੋਡ ਪੇਜ DOM ਬਣਤਰ ਹੈ:"
+
+#: lj-maintenance-mode.php:575
+#, fuzzy
+msgid "the maintenance mode page content is here"
+msgstr "ਮੇਨਟੇਨੈਂਸ ਮੋਡ ਪੇਜ ਦੀ ਸਮੱਗਰੀ ਇੱਥੇ ਹੈ"
+
+#: lj-maintenance-mode.php:583
+#, fuzzy
+msgid "Custom Frontend Stylesheet"
+msgstr "ਕਸਟਮ ਫਰੰਟਐਂਡ ਸਟਾਈਲਸ਼ੀਟ"
+
+#: lj-maintenance-mode.php:599
+#, fuzzy
+msgid "Custom Login Stylesheet"
+msgstr "ਕਸਟਮ ਲੌਗਇਨ ਸਟਾਈਲਸ਼ੀਟ"
+
+#: lj-maintenance-mode.php:616
+#, fuzzy
+msgid "Inject code snippet"
+msgstr "ਕੋਡ ਸਨਿੱਪਟ ਇੰਜੈਕਟ ਕਰੋ"
+
+#: lj-maintenance-mode.php:622
+#, fuzzy
+msgid "This is useful to add a Javascript snippet to the maintenance page."
+msgstr "ਇਹ ਰੱਖ-ਰਖਾਅ ਪੰਨੇ 'ਤੇ ਜਾਵਾਸਕ੍ਰਿਪਟ ਸਨਿੱਪਟ ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਲਾਭਦਾਇਕ ਹੈ।"
+
+#: lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Do include the surrounding"
+msgstr "ਆਲੇ ਦੁਆਲੇ ਨੂੰ ਸ਼ਾਮਲ ਕਰੋ"
+
+#: lj-maintenance-mode.php:627
+#, fuzzy
+msgid ""
+"NOTE: if you are using the option above to add Google Analytics code, do NOT "
+"paste GA tracking code here."
+msgstr ""
+"ਨੋਟ: ਜੇਕਰ ਤੁਸੀਂ Google ਵਿਸ਼ਲੇਸ਼ਣ ਕੋਡ ਨੂੰ ਜੋੜਨ ਲਈ ਉੱਪਰ ਦਿੱਤੇ ਵਿਕਲਪ ਦੀ ਵਰਤੋਂ ਕਰ ਰਹੇ ਹੋ, ਤਾਂ GA "
+"ਟਰੈਕਿੰਗ ਕੋਡ ਨੂੰ ਇੱਥੇ ਪੇਸਟ ਨਾ ਕਰੋ।"
+
+#: lj-maintenance-mode.php:679
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "ਅਯੋਗ"
+
+#: lj-maintenance-mode.php:682
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "ਸਮਰਥਿਤ"
+
+#: lj-maintenance-mode.php:693
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "ਮੇਨਟੇਨੈਂਸ ਮੋਡ"
+
+#: lj-maintenance-mode.php:710
+#, fuzzy
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "ਸੈਟਿੰਗਾਂ"
+
+#: lj-maintenance-mode.php:1226
+#, fuzzy
+msgid "Maintenance mode - before content"
+msgstr "ਮੇਨਟੇਨੈਂਸ ਮੋਡ - ਸਮੱਗਰੀ ਤੋਂ ਪਹਿਲਾਂ"
+
+#: lj-maintenance-mode.php:1227
+#, fuzzy
+msgid "Enter the content to appear before the maintenance mode content."
+msgstr "ਰੱਖ-ਰਖਾਅ ਮੋਡ ਸਮੱਗਰੀ ਤੋਂ ਪਹਿਲਾਂ ਪੇਸ਼ ਹੋਣ ਲਈ ਸਮੱਗਰੀ ਦਾਖਲ ਕਰੋ।"
+
+#: lj-maintenance-mode.php:1234
+#, fuzzy
+msgid "Maintenance mode - after content"
+msgstr "ਮੇਨਟੇਨੈਂਸ ਮੋਡ - ਸਮੱਗਰੀ ਤੋਂ ਬਾਅਦ"
+
+#: lj-maintenance-mode.php:1235
+#, fuzzy
+msgid "Enter the content to appear after the maintenance mode content."
+msgstr "ਰੱਖ-ਰਖਾਅ ਮੋਡ ਸਮਗਰੀ ਦੇ ਬਾਅਦ ਦਿਖਾਈ ਦੇਣ ਲਈ ਸਮੱਗਰੀ ਦਾਖਲ ਕਰੋ।"

@@ -1,0 +1,531 @@
+# Copyright (C) 2017 Maintenance Mode
+# This file is distributed under the same license as the Maintenance Mode package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode 2.5.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
+"mode\n"
+"POT-Creation-Date: 2022-01-30 15:17+1100\n"
+"PO-Revision-Date: 2022-02-06 10:57+1100\n"
+"Last-Translator: John Lang <john@johnlang.com.au>\n"
+"Language-Team: \n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lj-maintenance-mode.php:66 lj-maintenance-mode.php:724
+#, fuzzy
+msgid "Website Under Maintenance"
+msgstr "เว็บไซต์อยู่ระหว่างการบำรุงรักษา"
+
+#: lj-maintenance-mode.php:66
+#, fuzzy
+msgid ""
+"Our Website is currently undergoing scheduled maintenance. Please check back "
+"soon."
+msgstr "เว็บไซต์ของเราอยู่ระหว่างการบำรุงรักษาตามกำหนด โปรดกลับมาตรวจสอบใหม่เร็วๆ นี้"
+
+#: lj-maintenance-mode.php:69
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr "สำคัญ: อย่าลืมล้างแคชโดยใช้ WP Super Cache เมื่อเปิดหรือปิดโหมดการบำรุงรักษา"
+
+#: lj-maintenance-mode.php:72
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr "สำคัญ: อย่าลืมล้างแคชของคุณโดยใช้ W3 Total Cache เมื่อเปิดหรือปิดโหมดการบำรุงรักษา"
+
+#: lj-maintenance-mode.php:75
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+msgstr "สำคัญ: อย่าลืมล้างแคชโดยใช้ Comet Cache เมื่อเปิดหรือปิดโหมดการบำรุงรักษา"
+
+#: lj-maintenance-mode.php:78
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Rocket when enabling or "
+"disabling Maintenance Mode."
+msgstr "สำคัญ: อย่าลืมล้างแคชโดยใช้ WP Rocket เมื่อเปิดหรือปิดโหมดบำรุงรักษา"
+
+#: lj-maintenance-mode.php:81
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Autoptimize when enabling "
+"or disabling Maintenance Mode."
+msgstr "สำคัญ: อย่าลืมล้างแคชโดยใช้ Autoptimize เมื่อเปิดหรือปิดโหมดบำรุงรักษา"
+
+#: lj-maintenance-mode.php:84
+#, fuzzy
+msgid ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+"โหมดบำรุงรักษากำลังทำงานอยู่ เพื่อให้แน่ใจว่าใช้งานได้ ให้เปิดหน้าเว็บของคุณในโหมดส่วนตัว / "
+"ไม่ระบุตัวตน เบราว์เซอร์อื่น หรือเพียงแค่ออกจากระบบ "
+"ผู้ใช้ที่เข้าสู่ระบบจะไม่ได้รับผลกระทบจากโหมดการบำรุงรักษา"
+
+#: lj-maintenance-mode.php:87
+#, fuzzy
+msgid "You can add widgets in \"Appearance -> Widgets\" section."
+msgstr "คุณสามารถเพิ่มวิดเจ็ตได้ในส่วน \"ลักษณะที่ปรากฏ -> วิดเจ็ต\""
+
+#: lj-maintenance-mode.php:211 lj-maintenance-mode.php:300
+#, fuzzy
+msgctxt "Plugin Name"
+msgid "Maintenance Mode"
+msgstr "โหมดการบำรุงรักษา"
+
+#: lj-maintenance-mode.php:212
+#, fuzzy
+msgctxt "Plugin Description"
+msgid ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+msgstr ""
+"โหมดการบำรุงรักษาที่ง่ายมาก & หน้าเร็ว ๆ นี้โดยใช้มาร์กอัป Wordpress "
+"เริ่มต้นโดยไม่มีโฆษณาหรืออัปเกรดแบบชำระเงิน"
+
+#: lj-maintenance-mode.php:213
+#, fuzzy
+msgctxt "Plugin Author"
+msgid "Lukas Juhas"
+msgstr "ลูคัส จูฮาส"
+
+#: lj-maintenance-mode.php:223
+#, fuzzy
+msgctxt "Page Title"
+msgid "Maintenance Mode"
+msgstr "โหมดการบำรุงรักษา"
+
+#: lj-maintenance-mode.php:223
+#, fuzzy
+msgctxt "Menu Title"
+msgid "Maintenance Mode"
+msgstr "โหมดการบำรุงรักษา"
+
+#: lj-maintenance-mode.php:271
+#, fuzzy
+msgid "Maintenance Mode"
+msgstr "โหมดการบำรุงรักษา"
+
+#: lj-maintenance-mode.php:281
+msgid "Enabled"
+msgstr "เปิดใช้งาน"
+
+#: lj-maintenance-mode.php:293
+msgid "Mode"
+msgstr "โหมด"
+
+#: lj-maintenance-mode.php:300
+msgid "Default"
+msgstr "ค่าเริ่มต้น"
+
+#: lj-maintenance-mode.php:304
+#, fuzzy
+msgid "Coming Soon Page"
+msgstr "เร็วๆ นี้ เพจ"
+
+#: lj-maintenance-mode.php:307
+#, fuzzy
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"หากคุณกำลังกำหนดให้ไซต์ของคุณเข้าสู่โหมดการบำรุงรักษาเป็นเวลานาน คุณควรตั้งค่านี้เป็น "
+"\"หน้าเร็วๆ นี้\" มิฉะนั้น ใช้ \"โหมดบำรุงรักษา\""
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr "Default ตั้งค่า HTTP เป็น 503 เร็วๆ นี้ จะตั้งค่า HTTP เป็น 200"
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Learn more."
+msgstr "เรียนรู้เพิ่มเติม."
+
+#: lj-maintenance-mode.php:315
+msgid "Preview"
+msgstr "ดูตัวอย่าง"
+
+#: lj-maintenance-mode.php:316 lj-maintenance-mode.php:711
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr "สนับสนุน"
+
+#: lj-maintenance-mode.php:329
+msgid "Advanced Settings"
+msgstr "ตั้งค่าขั้นสูง"
+
+#: lj-maintenance-mode.php:332
+#, fuzzy
+msgid "Hide Advanced Settings"
+msgstr "ซ่อนการตั้งค่าขั้นสูง"
+
+#: lj-maintenance-mode.php:340
+#, fuzzy
+msgid "Add widget areas above and below content"
+msgstr "เพิ่มพื้นที่วิดเจ็ตด้านบนและด้านล่างของเนื้อหา"
+
+#: lj-maintenance-mode.php:352
+msgid "Site Title"
+msgstr "ชื่อเว็บไซต์"
+
+#: lj-maintenance-mode.php:356
+#, fuzzy
+msgid "Overrides default site meta title."
+msgstr "แทนที่ชื่อเมตาเริ่มต้นของไซต์"
+
+#: lj-maintenance-mode.php:364
+msgid "User Roles"
+msgstr "บทบาทผู้ใช้"
+
+#: lj-maintenance-mode.php:365
+#, fuzzy
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr "ทำเครื่องหมายที่สามารถเข้าถึงส่วนหน้าของเว็บไซต์ของคุณหากเปิดใช้งานโหมดการบำรุงรักษา"
+
+#: lj-maintenance-mode.php:366
+#, fuzzy
+msgid "Please note that this does NOT apply to admin area"
+msgstr "โปรดทราบว่าสิ่งนี้ใช้ไม่ได้กับพื้นที่ผู้ดูแลระบบ"
+
+#: lj-maintenance-mode.php:367
+#, fuzzy
+msgid "Toggle all"
+msgstr "สลับทั้งหมด"
+
+#: lj-maintenance-mode.php:387
+#, fuzzy
+msgid "User Role control is currently not available on your website. Sorry!"
+msgstr "การควบคุมบทบาทของผู้ใช้ยังไม่พร้อมใช้งานบนเว็บไซต์ของคุณ เสียใจ!"
+
+#: lj-maintenance-mode.php:394
+#, fuzzy
+msgid "Allowed IP"
+msgstr "IP ที่อนุญาต"
+
+#: lj-maintenance-mode.php:394 lj-maintenance-mode.php:446
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454 lj-maintenance-mode.php:472
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:493
+#: lj-maintenance-mode.php:499 lj-maintenance-mode.php:512
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgctxt "include, part of, constitute"
+msgid "Contains"
+msgstr "ประกอบด้วย"
+
+#: lj-maintenance-mode.php:400
+#, fuzzy
+msgid "Enter IPv4 or IPv6 values, one per line."
+msgstr "ป้อนค่า IPv4 หรือ IPv6 หนึ่งค่าต่อบรรทัด"
+
+#: lj-maintenance-mode.php:401
+#, fuzzy
+msgid ""
+"Which IP specification gets used? That all depends upon how the remote "
+"caller established the connection; you will never know until they say hello."
+msgstr ""
+"มีการใช้ข้อกำหนด IP ใด ทั้งหมดนั้นขึ้นอยู่กับว่าผู้โทรระยะไกลสร้างการเชื่อมต่ออย่างไร "
+"คุณจะไม่มีวันรู้จนกว่าพวกเขาจะทักทาย"
+
+#: lj-maintenance-mode.php:402
+#, fuzzy
+msgid ""
+"Partial IP values are ok; especially, when you want to identify a whole "
+"subnet."
+msgstr "ค่า IP บางส่วนก็โอเค โดยเฉพาะอย่างยิ่ง เมื่อคุณต้องการระบุซับเน็ตทั้งหมด"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:409
+#: lj-maintenance-mode.php:428 lj-maintenance-mode.php:429
+#: lj-maintenance-mode.php:430 lj-maintenance-mode.php:456
+#: lj-maintenance-mode.php:480 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#: lj-maintenance-mode.php:567 lj-maintenance-mode.php:623
+msgid "Tip"
+msgstr "เคล็ดลับ"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:430
+#: lj-maintenance-mode.php:456 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#, fuzzy
+msgid "Uses"
+msgstr "ใช้"
+
+#: lj-maintenance-mode.php:405
+#, fuzzy
+msgid "which identifies the current Remote IP:"
+msgstr "ซึ่งระบุ IP ระยะไกลปัจจุบัน:"
+
+#: lj-maintenance-mode.php:409
+#, fuzzy
+msgid "identifies this server is at Server IP:"
+msgstr "ระบุว่าเซิร์ฟเวอร์นี้อยู่ที่ IP ของเซิร์ฟเวอร์:"
+
+#: lj-maintenance-mode.php:418
+#, fuzzy
+msgid "Allowed URI"
+msgstr "URI ที่อนุญาต"
+
+#: lj-maintenance-mode.php:418 lj-maintenance-mode.php:424
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:426
+#, fuzzy
+msgctxt "exact, stringent, precise"
+msgid "Strict"
+msgstr "เข้มงวด"
+
+#: lj-maintenance-mode.php:424
+#, fuzzy
+msgid "The full relative path, starting with"
+msgstr "เส้นทางสัมพัทธ์แบบเต็ม เริ่มต้นด้วย"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454
+#, fuzzy
+msgid "when doing a"
+msgstr "เมื่อทำ"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:452
+#: lj-maintenance-mode.php:453 lj-maintenance-mode.php:454
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "comparison"
+msgstr "การเปรียบเทียบ"
+
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:453
+#, fuzzy
+msgid "Ignores the trailing slash"
+msgstr "ละเว้นเครื่องหมายทับ"
+
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:454
+#, fuzzy
+msgid "Ignores the entire query string"
+msgstr "ละเว้นสตริงการสืบค้นทั้งหมด"
+
+#: lj-maintenance-mode.php:427 lj-maintenance-mode.php:455
+#, fuzzy
+msgid "Never include the protocol, domain or port prefixes of the full URL."
+msgstr "ไม่รวมโปรโตคอล โดเมน หรือส่วนนำหน้าพอร์ตของ URL แบบเต็ม"
+
+#: lj-maintenance-mode.php:428
+#, fuzzy
+msgid ""
+"Enter / on its own line to allow the sites home page to always by-pass the "
+"maintenance mode page."
+msgstr ""
+"ป้อน / ในบรรทัดของตัวเองเพื่อให้โฮมเพจของไซต์สามารถเลี่ยงผ่านหน้าโหมดการบำรุงรักษาได้เสมอ"
+
+#: lj-maintenance-mode.php:429 lj-maintenance-mode.php:480
+#, fuzzy
+msgid "will always by-pass the maintenance mode page."
+msgstr "จะข้ามหน้าโหมดการบำรุงรักษาเสมอ"
+
+#: lj-maintenance-mode.php:437 lj-maintenance-mode.php:463
+#: lj-maintenance-mode.php:484 lj-maintenance-mode.php:503
+#: lj-maintenance-mode.php:522
+#, fuzzy
+msgid "and the value for this loaded page is:"
+msgstr "และค่าสำหรับหน้าที่โหลดนี้คือ:"
+
+#: lj-maintenance-mode.php:446
+#, fuzzy
+msgid "Allowed URL"
+msgstr "URL ที่อนุญาต"
+
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "Can be any sub-string contained within the URI, when doing a"
+msgstr "สามารถเป็นสตริงย่อยใดๆ ที่อยู่ใน URI เมื่อทำ a"
+
+#: lj-maintenance-mode.php:472
+#, fuzzy
+msgid "Allowed Query String"
+msgstr "สตริงการสืบค้นที่อนุญาต"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "Can be any sub-string value after the"
+msgstr "สามารถเป็นค่าสตริงย่อยใดๆ หลัง the"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "in the URI, when doing a"
+msgstr "ใน URI เมื่อทำ"
+
+#: lj-maintenance-mode.php:479
+#, fuzzy
+msgid "Enter sub-string values that conform to output by"
+msgstr "ป้อนค่าสตริงย่อยที่สอดคล้องกับเอาต์พุตโดย"
+
+#: lj-maintenance-mode.php:493
+#, fuzzy
+msgid "Allowed Referer"
+msgstr "ผู้อ้างอิงที่ได้รับอนุญาต"
+
+#: lj-maintenance-mode.php:512
+#, fuzzy
+msgid "Allowed User Agent"
+msgstr "ตัวแทนผู้ใช้ที่ได้รับอนุญาต"
+
+#: lj-maintenance-mode.php:537
+#, fuzzy
+msgid "Add Google Analytics code"
+msgstr "เพิ่มโค้ด Google Analytics"
+
+#: lj-maintenance-mode.php:542
+#, fuzzy
+msgid "for Analytics profile"
+msgstr "สำหรับโปรไฟล์ Analytics"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "configured in"
+msgstr "กำหนดค่าใน"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "Analytify"
+msgstr "วิเคราะห์"
+
+#: lj-maintenance-mode.php:546
+#, fuzzy
+msgid ""
+"Since you have the Analytify plugin installed, this will add Google "
+"Analytics tracking code to the maintenance page."
+msgstr ""
+"เนื่องจากคุณได้ติดตั้งปลั๊กอิน Analytify ไว้ การดำเนินการนี้จะเพิ่มโค้ดติดตามของ Google "
+"Analytics ลงในหน้าการบำรุงรักษา"
+
+#: lj-maintenance-mode.php:554
+#, fuzzy
+msgid "Custom Stylesheet"
+msgstr "สไตล์ชีตที่กำหนดเอง"
+
+#: lj-maintenance-mode.php:561 lj-maintenance-mode.php:589
+#: lj-maintenance-mode.php:605
+#, fuzzy
+msgid "You are currently using custom stylesheet."
+msgstr "คุณกำลังใช้สไตล์ชีตแบบกำหนดเอง"
+
+#: lj-maintenance-mode.php:562 lj-maintenance-mode.php:590
+#: lj-maintenance-mode.php:606
+#, fuzzy
+msgid "file in your theme folder"
+msgstr "ไฟล์ในโฟลเดอร์ธีมของคุณ"
+
+#: lj-maintenance-mode.php:564 lj-maintenance-mode.php:593
+#: lj-maintenance-mode.php:609
+#, fuzzy, php-format
+msgid ""
+"For custom stylesheet, add %s file to your theme folder. If your custom "
+"stylesheet file is picked up by the Maintenance Mode, it will be indicated "
+"here."
+msgstr ""
+"สำหรับสไตล์ชีตที่กำหนดเอง ให้เพิ่มไฟล์ %s ลงในโฟลเดอร์ธีมของคุณ "
+"หากไฟล์สไตล์ชีตที่กำหนดเองของคุณถูกเลือกโดยโหมดการบำรุงรักษา ไฟล์นั้นจะถูกระบุไว้ที่นี่"
+
+#: lj-maintenance-mode.php:567
+#, fuzzy
+msgid "The maintenance mode page DOM structure is:"
+msgstr "โครงสร้าง DOM ของหน้าโหมดการบำรุงรักษาคือ:"
+
+#: lj-maintenance-mode.php:575
+#, fuzzy
+msgid "the maintenance mode page content is here"
+msgstr "เนื้อหาหน้าโหมดบำรุงรักษาอยู่ที่นี่"
+
+#: lj-maintenance-mode.php:583
+#, fuzzy
+msgid "Custom Frontend Stylesheet"
+msgstr "สไตล์ชีตส่วนหน้าแบบกำหนดเอง"
+
+#: lj-maintenance-mode.php:599
+#, fuzzy
+msgid "Custom Login Stylesheet"
+msgstr "สไตล์ชีตการเข้าสู่ระบบแบบกำหนดเอง"
+
+#: lj-maintenance-mode.php:616
+#, fuzzy
+msgid "Inject code snippet"
+msgstr "แทรกข้อมูลโค้ด"
+
+#: lj-maintenance-mode.php:622
+#, fuzzy
+msgid "This is useful to add a Javascript snippet to the maintenance page."
+msgstr "สิ่งนี้มีประโยชน์ในการเพิ่มข้อมูลโค้ด Javascript ในหน้าการบำรุงรักษา"
+
+#: lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Do include the surrounding"
+msgstr "รวมถึงบริเวณโดยรอบ"
+
+#: lj-maintenance-mode.php:627
+#, fuzzy
+msgid ""
+"NOTE: if you are using the option above to add Google Analytics code, do NOT "
+"paste GA tracking code here."
+msgstr ""
+"หมายเหตุ: หากคุณใช้ตัวเลือกด้านบนเพื่อเพิ่มโค้ด Google Analytics อย่าวางโค้ดติดตาม GA ที่นี่"
+
+#: lj-maintenance-mode.php:679
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "ปิดการใช้งาน"
+
+#: lj-maintenance-mode.php:682
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "เปิดใช้งาน"
+
+#: lj-maintenance-mode.php:693
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "โหมดการบำรุงรักษา"
+
+#: lj-maintenance-mode.php:710
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "การตั้งค่า"
+
+#: lj-maintenance-mode.php:1226
+#, fuzzy
+msgid "Maintenance mode - before content"
+msgstr "โหมดการบำรุงรักษา - ก่อนเนื้อหา"
+
+#: lj-maintenance-mode.php:1227
+#, fuzzy
+msgid "Enter the content to appear before the maintenance mode content."
+msgstr "ป้อนเนื้อหาที่จะแสดงก่อนเนื้อหาโหมดการบำรุงรักษา"
+
+#: lj-maintenance-mode.php:1234
+#, fuzzy
+msgid "Maintenance mode - after content"
+msgstr "โหมดการบำรุงรักษา - หลังเนื้อหา"
+
+#: lj-maintenance-mode.php:1235
+#, fuzzy
+msgid "Enter the content to appear after the maintenance mode content."
+msgstr "ป้อนเนื้อหาที่จะปรากฏหลังจากเนื้อหาโหมดการบำรุงรักษา"

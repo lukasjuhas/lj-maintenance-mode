@@ -1,0 +1,559 @@
+# Copyright (C) 2017 Maintenance Mode
+# This file is distributed under the same license as the Maintenance Mode package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode 2.5.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
+"mode\n"
+"POT-Creation-Date: 2022-01-30 15:17+1100\n"
+"PO-Revision-Date: 2022-03-28 21:54+1100\n"
+"Last-Translator: John Lang <john@johnlang.com.au>\n"
+"Language-Team: \n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lj-maintenance-mode.php:66 lj-maintenance-mode.php:724
+#, fuzzy
+msgid "Website Under Maintenance"
+msgstr "இணையதளம் பராமரிப்பில் உள்ளது"
+
+#: lj-maintenance-mode.php:66
+#, fuzzy
+msgid ""
+"Our Website is currently undergoing scheduled maintenance. Please check back "
+"soon."
+msgstr ""
+"எங்கள் இணையதளம் தற்போது திட்டமிடப்பட்ட பராமரிப்பில் உள்ளது. விரைவில் மீண்டும் பார்க்கவும்."
+
+#: lj-maintenance-mode.php:69
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"முக்கியமானது: பராமரிப்பு பயன்முறையை இயக்கும்போது அல்லது முடக்கும்போது WP சூப்பர் கேச் "
+"ஐப் பயன்படுத்தி உங்கள் தற்காலிக சேமிப்பை பறிக்க மறக்காதீர்கள்."
+
+#: lj-maintenance-mode.php:72
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"முக்கியமானது: பராமரிப்பு பயன்முறையை இயக்கும்போது அல்லது முடக்கும்போது W3 மொத்த "
+"தற்காலிக சேமிப்பைப் பயன்படுத்தி உங்கள் தற்காலிக சேமிப்பை பறிக்க மறக்காதீர்கள்."
+
+#: lj-maintenance-mode.php:75
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"முக்கியமானது: பராமரிப்பு பயன்முறையை இயக்கும் போது அல்லது முடக்கும் போது காமெட் கேச் ஐப் "
+"பயன்படுத்தி உங்கள் தற்காலிக சேமிப்பை பறிக்க மறக்காதீர்கள்."
+
+#: lj-maintenance-mode.php:78
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Rocket when enabling or "
+"disabling Maintenance Mode."
+msgstr ""
+"முக்கியமானது: பராமரிப்பு பயன்முறையை இயக்கும்போது அல்லது முடக்கும்போது WP ராக்கெட்டைப் "
+"பயன்படுத்தி உங்கள் தற்காலிக சேமிப்பை ஃப்ளஷ் செய்ய மறக்காதீர்கள்."
+
+#: lj-maintenance-mode.php:81
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Autoptimize when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"முக்கியமானது: பராமரிப்பு பயன்முறையை இயக்கும்போது அல்லது முடக்கும்போது, "
+"தானியங்குமுறையைப் பயன்படுத்தி உங்கள் தற்காலிக சேமிப்பை ஃப்ளஷ் செய்ய மறக்காதீர்கள்."
+
+#: lj-maintenance-mode.php:84
+#, fuzzy
+msgid ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+"பராமரிப்பு முறை தற்போது செயலில் உள்ளது. இது செயல்படுகிறதா என்பதை உறுதிப்படுத்த, உங்கள் "
+"இணையப் பக்கத்தை தனிப்பட்ட / மறைநிலை பயன்முறையில், வேறு உலாவியில் திறக்கவும் அல்லது "
+"வெளியேறவும். உள்நுழைந்த பயனர்கள் பராமரிப்பு பயன்முறையால் பாதிக்கப்படுவதில்லை."
+
+#: lj-maintenance-mode.php:87
+#, fuzzy
+msgid "You can add widgets in \"Appearance -> Widgets\" section."
+msgstr "\"தோற்றம் -> விட்ஜெட்டுகள்\" பிரிவில் விட்ஜெட்களைச் சேர்க்கலாம்."
+
+#: lj-maintenance-mode.php:211 lj-maintenance-mode.php:300
+#, fuzzy
+msgctxt "Plugin Name"
+msgid "Maintenance Mode"
+msgstr "பராமரிப்பு முறை"
+
+#: lj-maintenance-mode.php:212
+#, fuzzy
+msgctxt "Plugin Description"
+msgid ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+msgstr ""
+"மிகவும் எளிமையான பராமரிப்பு முறை & விளம்பரங்கள் அல்லது கட்டண மேம்படுத்தல்கள் இல்லாமல் "
+"இயல்புநிலை வேர்ட்பிரஸ் மார்க்அப்பைப் பயன்படுத்தி விரைவில் பக்கம் வருகிறது."
+
+#: lj-maintenance-mode.php:213
+#, fuzzy
+msgctxt "Plugin Author"
+msgid "Lukas Juhas"
+msgstr "லூகாஸ் ஜுஹாஸ்"
+
+#: lj-maintenance-mode.php:223
+#, fuzzy
+msgctxt "Page Title"
+msgid "Maintenance Mode"
+msgstr "பராமரிப்பு முறை"
+
+#: lj-maintenance-mode.php:223
+#, fuzzy
+msgctxt "Menu Title"
+msgid "Maintenance Mode"
+msgstr "பராமரிப்பு முறை"
+
+#: lj-maintenance-mode.php:271
+#, fuzzy
+msgid "Maintenance Mode"
+msgstr "பராமரிப்பு முறை"
+
+#: lj-maintenance-mode.php:281
+#, fuzzy
+msgid "Enabled"
+msgstr "இயக்கப்பட்டது"
+
+#: lj-maintenance-mode.php:293
+#, fuzzy
+msgid "Mode"
+msgstr "பயன்முறை"
+
+#: lj-maintenance-mode.php:300
+#, fuzzy
+msgid "Default"
+msgstr "இயல்புநிலை"
+
+#: lj-maintenance-mode.php:304
+#, fuzzy
+msgid "Coming Soon Page"
+msgstr "விரைவில் பக்கம்"
+
+#: lj-maintenance-mode.php:307
+#, fuzzy
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"உங்கள் தளத்தை நீண்ட காலத்திற்கு பராமரிப்பு முறையில் வைத்தால், இதை \"விரைவில் வரும் பக்கம்\" "
+"என அமைக்க வேண்டும். இல்லையெனில் \"பராமரிப்பு பயன்முறை\" பயன்படுத்தவும்."
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr "இயல்புநிலை HTTP ஐ 503 ஆக அமைக்கிறது, விரைவில் HTTP 200 ஆக அமைக்கப்படும்."
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Learn more."
+msgstr "மேலும் அறிக."
+
+#: lj-maintenance-mode.php:315
+#, fuzzy
+msgid "Preview"
+msgstr "முன்னோட்ட"
+
+#: lj-maintenance-mode.php:316 lj-maintenance-mode.php:711
+#, fuzzy
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr "ஆதரவு"
+
+#: lj-maintenance-mode.php:329
+#, fuzzy
+msgid "Advanced Settings"
+msgstr "மேம்பட்ட அமைப்புகள்"
+
+#: lj-maintenance-mode.php:332
+#, fuzzy
+msgid "Hide Advanced Settings"
+msgstr "மேம்பட்ட அமைப்புகளை மறை"
+
+#: lj-maintenance-mode.php:340
+#, fuzzy
+msgid "Add widget areas above and below content"
+msgstr "உள்ளடக்கத்திற்கு மேலேயும் கீழேயும் விட்ஜெட் பகுதிகளைச் சேர்க்கவும்"
+
+#: lj-maintenance-mode.php:352
+#, fuzzy
+msgid "Site Title"
+msgstr "தளத்தின் தலைப்பு"
+
+#: lj-maintenance-mode.php:356
+#, fuzzy
+msgid "Overrides default site meta title."
+msgstr "இயல்புநிலை தள மெட்டா தலைப்பை மீறுகிறது."
+
+#: lj-maintenance-mode.php:364
+#, fuzzy
+msgid "User Roles"
+msgstr "பயனர் பாத்திரங்கள்"
+
+#: lj-maintenance-mode.php:365
+#, fuzzy
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr ""
+"பராமரிப்பு பயன்முறை இயக்கப்பட்டிருந்தால், உங்கள் இணையதளத்தின் முன்பகுதியை "
+"அணுகக்கூடியவற்றைத் தேர்வுசெய்யவும்"
+
+#: lj-maintenance-mode.php:366
+#, fuzzy
+msgid "Please note that this does NOT apply to admin area"
+msgstr "இது நிர்வாக பகுதிக்கு பொருந்தாது என்பதை நினைவில் கொள்ளவும்"
+
+#: lj-maintenance-mode.php:367
+#, fuzzy
+msgid "Toggle all"
+msgstr "அனைத்தையும் நிலைமாற்று"
+
+#: lj-maintenance-mode.php:387
+#, fuzzy
+msgid "User Role control is currently not available on your website. Sorry!"
+msgstr "பயனர் பங்கு கட்டுப்பாடு தற்போது உங்கள் இணையதளத்தில் இல்லை. மன்னிக்கவும்!"
+
+#: lj-maintenance-mode.php:394
+#, fuzzy
+msgid "Allowed IP"
+msgstr "அனுமதிக்கப்பட்ட IP"
+
+#: lj-maintenance-mode.php:394 lj-maintenance-mode.php:446
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454 lj-maintenance-mode.php:472
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:493
+#: lj-maintenance-mode.php:499 lj-maintenance-mode.php:512
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgctxt "include, part of, constitute"
+msgid "Contains"
+msgstr "கொண்டுள்ளது"
+
+#: lj-maintenance-mode.php:400
+#, fuzzy
+msgid "Enter IPv4 or IPv6 values, one per line."
+msgstr "IPv4 அல்லது IPv6 மதிப்புகளை உள்ளிடவும், வரிக்கு ஒன்று."
+
+#: lj-maintenance-mode.php:401
+#, fuzzy
+msgid ""
+"Which IP specification gets used? That all depends upon how the remote "
+"caller established the connection; you will never know until they say hello."
+msgstr ""
+"எந்த ஐபி விவரக்குறிப்பு பயன்படுத்தப்படுகிறது? தொலைநிலை அழைப்பாளர் இணைப்பை எவ்வாறு "
+"நிறுவினார் என்பதைப் பொறுத்தது; அவர்கள் ஹலோ சொல்லும் வரை உங்களுக்கு தெரியாது."
+
+#: lj-maintenance-mode.php:402
+#, fuzzy
+msgid ""
+"Partial IP values are ok; especially, when you want to identify a whole "
+"subnet."
+msgstr ""
+"பகுதி IP மதிப்புகள் சரி; குறிப்பாக, நீங்கள் முழு சப்நெட்டையும் அடையாளம் காண விரும்பினால்."
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:409
+#: lj-maintenance-mode.php:428 lj-maintenance-mode.php:429
+#: lj-maintenance-mode.php:430 lj-maintenance-mode.php:456
+#: lj-maintenance-mode.php:480 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#: lj-maintenance-mode.php:567 lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Tip"
+msgstr "உதவிக்குறிப்பு"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:430
+#: lj-maintenance-mode.php:456 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#, fuzzy
+msgid "Uses"
+msgstr "பயன்கள்"
+
+#: lj-maintenance-mode.php:405
+#, fuzzy
+msgid "which identifies the current Remote IP:"
+msgstr "இது தற்போதைய ரிமோட் ஐபியை அடையாளம் காட்டுகிறது:"
+
+#: lj-maintenance-mode.php:409
+#, fuzzy
+msgid "identifies this server is at Server IP:"
+msgstr "இந்த சர்வர் சர்வர் ஐபியில் இருப்பதை அடையாளம் காட்டுகிறது:"
+
+#: lj-maintenance-mode.php:418
+#, fuzzy
+msgid "Allowed URI"
+msgstr "அனுமதிக்கப்பட்ட URI"
+
+#: lj-maintenance-mode.php:418 lj-maintenance-mode.php:424
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:426
+#, fuzzy
+msgctxt "exact, stringent, precise"
+msgid "Strict"
+msgstr "கண்டிப்பான"
+
+#: lj-maintenance-mode.php:424
+#, fuzzy
+msgid "The full relative path, starting with"
+msgstr "முழு உறவினர் பாதை, தொடங்கி"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454
+#, fuzzy
+msgid "when doing a"
+msgstr "ஒரு செய்யும் போது"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:452
+#: lj-maintenance-mode.php:453 lj-maintenance-mode.php:454
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "comparison"
+msgstr "ஒப்பீடு"
+
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:453
+#, fuzzy
+msgid "Ignores the trailing slash"
+msgstr "ட்ரைலிங் ஸ்லாஷைப் புறக்கணிக்கிறது"
+
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:454
+#, fuzzy
+msgid "Ignores the entire query string"
+msgstr "முழு வினவல் சரத்தையும் புறக்கணிக்கிறது"
+
+#: lj-maintenance-mode.php:427 lj-maintenance-mode.php:455
+#, fuzzy
+msgid "Never include the protocol, domain or port prefixes of the full URL."
+msgstr ""
+"முழு URL இன் நெறிமுறை, டொமைன் அல்லது போர்ட் முன்னொட்டுகளை ஒருபோதும் சேர்க்க வேண்டாம்."
+
+#: lj-maintenance-mode.php:428
+#, fuzzy
+msgid ""
+"Enter / on its own line to allow the sites home page to always by-pass the "
+"maintenance mode page."
+msgstr ""
+"தளங்களின் முகப்புப் பக்கத்தை எப்பொழுதும் பராமரிப்பு முறைப் பக்கத்தைக் கடந்து செல்ல அனுமதிக்க "
+"அதன் சொந்த வரியில் / உள்ளிடவும்."
+
+#: lj-maintenance-mode.php:429 lj-maintenance-mode.php:480
+#, fuzzy
+msgid "will always by-pass the maintenance mode page."
+msgstr "எப்போதும் பராமரிப்பு முறை பக்கத்தை கடந்து செல்லும்."
+
+#: lj-maintenance-mode.php:437 lj-maintenance-mode.php:463
+#: lj-maintenance-mode.php:484 lj-maintenance-mode.php:503
+#: lj-maintenance-mode.php:522
+#, fuzzy
+msgid "and the value for this loaded page is:"
+msgstr "இந்த ஏற்றப்பட்ட பக்கத்தின் மதிப்பு:"
+
+#: lj-maintenance-mode.php:446
+#, fuzzy
+msgid "Allowed URL"
+msgstr "அனுமதிக்கப்பட்ட URL"
+
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "Can be any sub-string contained within the URI, when doing a"
+msgstr "ஒரு செய்யும் போது, URI க்குள் ஏதேனும் துணை சரமாக இருக்கலாம்"
+
+#: lj-maintenance-mode.php:472
+#, fuzzy
+msgid "Allowed Query String"
+msgstr "அனுமதிக்கப்பட்ட வினவல் சரம்"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "Can be any sub-string value after the"
+msgstr "இதற்குப் பிறகு ஏதேனும் துணைச் சரம் மதிப்பு இருக்கலாம்"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "in the URI, when doing a"
+msgstr "URI இல், ஒரு செய்யும் போது"
+
+#: lj-maintenance-mode.php:479
+#, fuzzy
+msgid "Enter sub-string values that conform to output by"
+msgstr "வெளியீட்டிற்கு இணங்க துணை சர மதிப்புகளை உள்ளிடவும்"
+
+#: lj-maintenance-mode.php:493
+#, fuzzy
+msgid "Allowed Referer"
+msgstr "அனுமதிக்கப்பட்ட பரிந்துரையாளர்"
+
+#: lj-maintenance-mode.php:512
+#, fuzzy
+msgid "Allowed User Agent"
+msgstr "அனுமதிக்கப்பட்ட பயனர் முகவர்"
+
+#: lj-maintenance-mode.php:537
+#, fuzzy
+msgid "Add Google Analytics code"
+msgstr "Google Analytics குறியீட்டைச் சேர்க்கவும்"
+
+#: lj-maintenance-mode.php:542
+#, fuzzy
+msgid "for Analytics profile"
+msgstr "Analytics சுயவிவரத்திற்கு"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "configured in"
+msgstr "உள்ளமைக்கப்பட்டது"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "Analytify"
+msgstr "பகுப்பாய்வு செய்"
+
+#: lj-maintenance-mode.php:546
+#, fuzzy
+msgid ""
+"Since you have the Analytify plugin installed, this will add Google "
+"Analytics tracking code to the maintenance page."
+msgstr ""
+"நீங்கள் Analytify செருகுநிரலை நிறுவியிருப்பதால், இது Google Analytics கண்காணிப்புக் "
+"குறியீட்டை பராமரிப்புப் பக்கத்தில் சேர்க்கும்."
+
+#: lj-maintenance-mode.php:554
+#, fuzzy
+msgid "Custom Stylesheet"
+msgstr "தனிப்பயன் ஸ்டைல்ஷீட்"
+
+#: lj-maintenance-mode.php:561 lj-maintenance-mode.php:589
+#: lj-maintenance-mode.php:605
+#, fuzzy
+msgid "You are currently using custom stylesheet."
+msgstr "நீங்கள் தற்போது தனிப்பயன் நடைத்தாளைப் பயன்படுத்துகிறீர்கள்."
+
+#: lj-maintenance-mode.php:562 lj-maintenance-mode.php:590
+#: lj-maintenance-mode.php:606
+#, fuzzy
+msgid "file in your theme folder"
+msgstr "உங்கள் தீம் கோப்புறையில் கோப்பு"
+
+#: lj-maintenance-mode.php:564 lj-maintenance-mode.php:593
+#: lj-maintenance-mode.php:609
+#, fuzzy, php-format
+msgid ""
+"For custom stylesheet, add %s file to your theme folder. If your custom "
+"stylesheet file is picked up by the Maintenance Mode, it will be indicated "
+"here."
+msgstr ""
+"தனிப்பயன் ஸ்டைல்ஷீட்டிற்கு, உங்கள் தீம் கோப்புறையில் %s கோப்பைச் சேர்க்கவும். உங்கள் தனிப்பயன் "
+"ஸ்டைல்ஷீட் கோப்பு பராமரிப்பு பயன்முறையால் எடுக்கப்பட்டால், அது இங்கே குறிப்பிடப்படும்."
+
+#: lj-maintenance-mode.php:567
+#, fuzzy
+msgid "The maintenance mode page DOM structure is:"
+msgstr "பராமரிப்பு முறை பக்க DOM அமைப்பு:"
+
+#: lj-maintenance-mode.php:575
+#, fuzzy
+msgid "the maintenance mode page content is here"
+msgstr "பராமரிப்பு முறை பக்க உள்ளடக்கம் இங்கே உள்ளது"
+
+#: lj-maintenance-mode.php:583
+#, fuzzy
+msgid "Custom Frontend Stylesheet"
+msgstr "தனிப்பயன் முன்பக்க ஸ்டைல்ஷீட்"
+
+#: lj-maintenance-mode.php:599
+#, fuzzy
+msgid "Custom Login Stylesheet"
+msgstr "தனிப்பயன் உள்நுழைவு ஸ்டைல்ஷீட்"
+
+#: lj-maintenance-mode.php:616
+#, fuzzy
+msgid "Inject code snippet"
+msgstr "குறியீட்டு துணுக்கை உட்செலுத்தவும்"
+
+#: lj-maintenance-mode.php:622
+#, fuzzy
+msgid "This is useful to add a Javascript snippet to the maintenance page."
+msgstr "பராமரிப்புப் பக்கத்தில் ஜாவாஸ்கிரிப்ட் துணுக்கைச் சேர்க்க இது பயனுள்ளதாக இருக்கும்."
+
+#: lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Do include the surrounding"
+msgstr "சுற்றுப்புறத்தையும் சேர்த்துக்கொள்ளுங்கள்"
+
+#: lj-maintenance-mode.php:627
+#, fuzzy
+msgid ""
+"NOTE: if you are using the option above to add Google Analytics code, do NOT "
+"paste GA tracking code here."
+msgstr ""
+"குறிப்பு: நீங்கள் Google Analytics குறியீட்டைச் சேர்க்க மேலே உள்ள விருப்பத்தைப் "
+"பயன்படுத்தினால், GA கண்காணிப்புக் குறியீட்டை இங்கே ஒட்ட வேண்டாம்."
+
+#: lj-maintenance-mode.php:679
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "முடக்கப்பட்டது"
+
+#: lj-maintenance-mode.php:682
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "இயக்கப்பட்டது"
+
+#: lj-maintenance-mode.php:693
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "பராமரிப்பு முறை"
+
+#: lj-maintenance-mode.php:710
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "அமைவுகள்"
+
+#: lj-maintenance-mode.php:1226
+#, fuzzy
+msgid "Maintenance mode - before content"
+msgstr "பராமரிப்பு முறை - உள்ளடக்கத்திற்கு முன்"
+
+#: lj-maintenance-mode.php:1227
+#, fuzzy
+msgid "Enter the content to appear before the maintenance mode content."
+msgstr "பராமரிப்பு பயன்முறை உள்ளடக்கத்திற்கு முன் தோன்றும் உள்ளடக்கத்தை உள்ளிடவும்."
+
+#: lj-maintenance-mode.php:1234
+#, fuzzy
+msgid "Maintenance mode - after content"
+msgstr "பராமரிப்பு முறை - உள்ளடக்கத்திற்குப் பிறகு"
+
+#: lj-maintenance-mode.php:1235
+#, fuzzy
+msgid "Enter the content to appear after the maintenance mode content."
+msgstr "பராமரிப்பு முறை உள்ளடக்கத்திற்குப் பிறகு தோன்றும் உள்ளடக்கத்தை உள்ளிடவும்."

@@ -1,0 +1,223 @@
+# Copyright (C) 2017 Maintenance Mode
+# This file is distributed under the same license as the Maintenance Mode package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode 2.2.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
+"mode\n"
+"POT-Creation-Date: 2018-04-01 11:25+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-04-01 11:34+0000\n"
+"Last-Translator: Edward Dekker <sitemaster@edwarddekker.nl>\n"
+"Language-Team: Dutch\n"
+"X-Generator: Loco https://localise.biz/\n"
+"Language: nl_NL\n"
+"Plural-Forms: nplurals=2; plural=n != 1;"
+
+#: lj-maintenance-mode.php:66
+msgid ""
+"<h1>Website Under Maintenance</h1><p>Our Website is currently undergoing "
+"scheduled maintenance. Please check back soon.</p>"
+msgstr ""
+"<h1>Website in Onderhoud</h1><p>Onze Website ondergaat momenteel een \"\n"
+"\"geplande onderhoudsbeurt. Kom snel weer terug.</p>"
+
+#: lj-maintenance-mode.php:69
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Belangrijk: Vergeet niet de cache op te schonen als je onderhoudsmodus aan "
+"of uit zet in combinatie met WP Super Cache."
+
+#: lj-maintenance-mode.php:69 lj-maintenance-mode.php:72
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"Belangrijk: Vergeet niet de cache op te schonen als je onderhoudsmodus aan "
+"of uit zet in combinatie met W3 Total Cache."
+
+#: lj-maintenance-mode.php:69 lj-maintenance-mode.php:72
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"Belangrijk: Vergeet niet de cache op te schonen als je onderhoudsmodus aan "
+"of uit zet in combinatie met Comet Cache."
+
+#: lj-maintenance-mode.php:75
+msgid ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+"Onderhoudsmodus is momenteel actief, Om te controleren of het ook werkt moet "
+"je webpagina in privé- of incognitomodus zetten, gebruik een andere "
+"webbrowser of log simpelweg uit. Ingelogde gebruikers merken niets van de "
+"\"Onderhoudsmodus\""
+
+#. Plugin Name of the plugin/theme
+#: lj-maintenance-mode.php:161 lj-maintenance-mode.php:199
+msgid "Maintenance Mode"
+msgstr "Onderhoudsmodus"
+
+#: lj-maintenance-mode.php:209
+msgid "Enabled"
+msgstr "Aan"
+
+#: lj-maintenance-mode.php:221
+msgid "Preview"
+msgstr "Voorbeeld"
+
+#: lj-maintenance-mode.php:222
+msgid "Support"
+msgstr "Ondersteuning"
+
+#: lj-maintenance-mode.php:236
+msgid "Advanced Settings"
+msgstr "Geavanceerde instellingen"
+
+#: lj-maintenance-mode.php:244
+msgid "Site Title"
+msgstr "Websitetitel"
+
+#: lj-maintenance-mode.php:248
+msgid "Overrides default site meta title."
+msgstr "Overschrijf de normale websitenaam"
+
+#: lj-maintenance-mode.php:252
+msgid "Mode"
+msgstr "Staat"
+
+#: lj-maintenance-mode.php:259
+msgid "Default"
+msgstr "Standaard"
+
+#: lj-maintenance-mode.php:263
+msgid "Coming Soon Page"
+msgstr "Kom snel terug pagina"
+
+#: lj-maintenance-mode.php:265
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr ""
+"Standaard staat de instelling op HTTP code 503. En geeft HTTP code 200 door "
+"als je een \"kom snel terug pagina\" maakt."
+
+#: lj-maintenance-mode.php
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"Als je je site voor langere tijd in Onderhoudsmodus plaatst, gebruik de "
+"\"Kom snel terug pagina\". In overige gevallen, gebruik dan "
+"\"Onderhoudsmodus\"\""
+
+#: lj-maintenance-mode.php:265
+msgid "Learn more."
+msgstr "Lees verder"
+
+#: lj-maintenance-mode.php:273
+msgid "User Roles"
+msgstr "Gebruikersrollen"
+
+#: lj-maintenance-mode.php:274
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr ""
+"Selecteer gebruikers die de site kunnen bezoeken als de onderhoudsmodus is "
+"geactiveerd"
+
+#: lj-maintenance-mode.php:275
+msgid "Please note that this does NOT apply to admin area"
+msgstr "Dit heeft geen toepassing op het admin-menu"
+
+#: lj-maintenance-mode.php:276
+msgid "Toggle all"
+msgstr "Alles aan/uit"
+
+#: lj-maintenance-mode.php:296
+msgid "User Role control is currently not avialable on your website. Sorry!"
+msgstr "Gebruikersrol is nu niet beschikbaar, excuses!"
+
+#: lj-maintenance-mode.php:346
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "Uit"
+
+#: lj-maintenance-mode.php:349
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "Aan"
+
+#: lj-maintenance-mode.php:360
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "Onderhoudsmodus"
+
+#: lj-maintenance-mode.php:374
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "Instellingen"
+
+#: lj-maintenance-mode.php:375
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr "Help"
+
+#: lj-maintenance-mode.php:387
+msgid "Website Under Maintenance"
+msgstr "Website in onderhoud"
+
+#. Plugin URI of the plugin/theme
+msgid "https://plugins.itsluk.as/maintenance-mode/"
+msgstr "https://plugins.itsluk.as/maintenance-mode/"
+
+#. Description of the plugin/theme
+msgid ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+msgstr ""
+"Het is een heel eenvoudige onderhoudsmodus dat voor iedereen geschikt is en "
+"gemakkelijk in gebruik zonder reclame."
+
+#. Author of the plugin/theme
+msgid "Lukas Juhas"
+msgstr "Lukas Juhas"
+
+#. Author URI of the plugin/theme
+msgid "https://plugins.itsluk.as/"
+msgstr "https://plugins.itsluk.as/"
+
+msgid "Custom Stylesheet"
+msgstr "Aangepaste Stijlpagina"
+
+msgid "Add widget areas above and below content"
+msgstr "Voeg een widgetruimte toe boven en onder uw inhoud."
+
+msgid ""
+"For custom stylesheet, add 'maintenance.min.css' file to your theme folder. "
+"If your custom stylesheet file is picked up by the Maintenance Mode, it will "
+"be indicated here."
+msgstr ""
+"Voor een aangepaste stijlpagina kunt u een 'maintenance.min.css' bestand "
+"toevoegen in de root van uw themafolder. Onderhoudsmodus zal dit vinden en "
+"gebruiken."
+
+msgid "Inject code snippet"
+msgstr "Injecteer een aangepaste code"
+
+msgid "This is useful to add a Javascript snippet to the maintenance page."
+msgstr ""
+"Dit is handig als je een JavaScript code wilt gebruiken in de "
+"onderhoudspagina."
+
+msgid "Hide Advanced Settings"
+msgstr "Verberg geavanceerde instellingen"
+
+msgid "You can add widgets in <strong>Appearance -> Widgets</strong>."
+msgstr "Je kunt widgets toevoegen in <strong>Instellingen -> Widgets</strong>."

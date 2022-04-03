@@ -1,0 +1,544 @@
+# Copyright (C) 2017 Maintenance Mode
+# This file is distributed under the same license as the Maintenance Mode package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance Mode 2.5.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/lj-maintenance-"
+"mode\n"
+"POT-Creation-Date: 2022-01-30 15:17+1100\n"
+"PO-Revision-Date: 2022-03-27 19:19+1100\n"
+"Last-Translator: John Lang <john@johnlang.com.au>\n"
+"Language-Team: \n"
+"Language: lao\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lj-maintenance-mode.php:66 lj-maintenance-mode.php:724
+#, fuzzy
+msgid "Website Under Maintenance"
+msgstr "ເວັບໄຊທ໌ພາຍໃຕ້ການບໍາລຸງຮັກສາ"
+
+#: lj-maintenance-mode.php:66
+#, fuzzy
+msgid ""
+"Our Website is currently undergoing scheduled maintenance. Please check back "
+"soon."
+msgstr ""
+"ເວັບໄຊທ໌ຂອງພວກເຮົາປະຈຸບັນກໍາລັງດໍາເນີນການບໍາລຸງຮັກສາຕາມກໍານົດເວລາ. ກະລຸນາກວດເບິ່ງຄືນໃນໄວໆນີ້."
+
+#: lj-maintenance-mode.php:69
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Super Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"ສິ່ງສໍາຄັນ: ຢ່າລືມລ້າງແຄດຂອງເຈົ້າໂດຍໃຊ້ WP Super Cache ເມື່ອເປີດໃຊ້ຫຼືປິດການບໍາລຸງຮັກສາໂຫມດ."
+
+#: lj-maintenance-mode.php:72
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using W3 Total Cache when "
+"enabling or disabling Maintenance Mode."
+msgstr ""
+"ສິ່ງສໍາຄັນ: ຢ່າລືມລ້າງແຄດຂອງເຈົ້າໂດຍໃຊ້ W3 Total Cache ເມື່ອເປີດ ຫຼືປິດການໃຊ້ງານໂໝດບໍາລຸງຮັກສາ."
+
+#: lj-maintenance-mode.php:75
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Comet Cache when enabling "
+"or disabling Maintenance Mode."
+msgstr "ສິ່ງສໍາຄັນ: ຢ່າລືມລ້າງແຄດຂອງເຈົ້າໂດຍໃຊ້ Comet Cache ເມື່ອເປີດໃຊ້ ຫຼືປິດໂໝດການບຳລຸງຮັກສາ."
+
+#: lj-maintenance-mode.php:78
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using WP Rocket when enabling or "
+"disabling Maintenance Mode."
+msgstr "ສິ່ງສໍາຄັນ: ຢ່າລືມລ້າງແຄດຂອງເຈົ້າໂດຍໃຊ້ WP Rocket ເມື່ອເປີດໃຊ້ຫຼືປິດການບໍາລຸງຮັກສາໂຫມດ."
+
+#: lj-maintenance-mode.php:81
+#, fuzzy
+msgid ""
+"Important: Don't forget to flush your cache using Autoptimize when enabling "
+"or disabling Maintenance Mode."
+msgstr ""
+"ສິ່ງສໍາຄັນ: ຢ່າລືມລ້າງແຄດຂອງເຈົ້າໂດຍໃຊ້ Autoptimize ເມື່ອເປີດ ຫຼືປິດການໃຊ້ງານໂໝດບໍາລຸງຮັກສາ."
+
+#: lj-maintenance-mode.php:84
+#, fuzzy
+msgid ""
+"Maintenance Mode is currently active. To make sure that it works, open your "
+"web page in either private / incognito mode, different browser or simply log "
+"out. Logged in users are not affected by the Maintenance Mode."
+msgstr ""
+"ໂໝດການບຳລຸງຮັກສາກຳລັງເຮັດວຽກຢູ່. ເພື່ອໃຫ້ແນ່ໃຈວ່າມັນເຮັດວຽກ, ເປີດຫນ້າເວັບຂອງທ່ານໃນແບບສ່ວນຕົວ / "
+"ບໍ່ເປີດເຜີຍຕົວຕົນ, ຕົວທ່ອງເວັບທີ່ແຕກຕ່າງກັນຫຼືພຽງແຕ່ອອກຈາກລະບົບ. "
+"ຜູ້ໃຊ້ເຂົ້າສູ່ລະບົບບໍ່ໄດ້ຮັບຜົນກະທົບຈາກໂຫມດບໍາລຸງຮັກສາ."
+
+#: lj-maintenance-mode.php:87
+#, fuzzy
+msgid "You can add widgets in \"Appearance -> Widgets\" section."
+msgstr "ທ່ານສາມາດເພີ່ມ widget ໃນສ່ວນ \"Appearance -> Widgets\"."
+
+#: lj-maintenance-mode.php:211 lj-maintenance-mode.php:300
+#, fuzzy
+msgctxt "Plugin Name"
+msgid "Maintenance Mode"
+msgstr "ໂໝດການບຳລຸງຮັກສາ"
+
+#: lj-maintenance-mode.php:212
+#, fuzzy
+msgctxt "Plugin Description"
+msgid ""
+"Very simple Maintenance Mode & Coming soon page using default Wordpress "
+"markup with no ads or paid upgrades."
+msgstr ""
+"ຮູບແບບການບຳລຸງຮັກສາແບບງ່າຍດາຍຫຼາຍ ແລະໜ້າຈະມາໃນໄວໆນີ້ໂດຍໃຊ້ເຄື່ອງໝາຍ Wordpress "
+"ເລີ່ມຕົ້ນໂດຍບໍ່ມີໂຄສະນາ ຫຼືການອັບເກຣດແບບເສຍເງິນ."
+
+#: lj-maintenance-mode.php:213
+#, fuzzy
+msgctxt "Plugin Author"
+msgid "Lukas Juhas"
+msgstr "Lukas Juhas"
+
+#: lj-maintenance-mode.php:223
+#, fuzzy
+msgctxt "Page Title"
+msgid "Maintenance Mode"
+msgstr "ໂໝດການບຳລຸງຮັກສາ"
+
+#: lj-maintenance-mode.php:223
+#, fuzzy
+msgctxt "Menu Title"
+msgid "Maintenance Mode"
+msgstr "ໂໝດການບຳລຸງຮັກສາ"
+
+#: lj-maintenance-mode.php:271
+#, fuzzy
+msgid "Maintenance Mode"
+msgstr "ໂໝດການບຳລຸງຮັກສາ"
+
+#: lj-maintenance-mode.php:281
+#, fuzzy
+msgid "Enabled"
+msgstr "ເປີດໃຊ້ແລ້ວ"
+
+#: lj-maintenance-mode.php:293
+#, fuzzy
+msgid "Mode"
+msgstr "ໂໝດ"
+
+#: lj-maintenance-mode.php:300
+msgid "Default"
+msgstr "ຄ່າເລີ່ມຕົ້ນ"
+
+#: lj-maintenance-mode.php:304
+#, fuzzy
+msgid "Coming Soon Page"
+msgstr "ໄວໆນີ້ໜ້າ"
+
+#: lj-maintenance-mode.php:307
+#, fuzzy
+msgid ""
+"If you are putting your site into maintenance mode for a longer period of "
+"time, you should set this to \"Coming Soon Page\". Otherwise use "
+"\"Maintenance Mode\"."
+msgstr ""
+"ຖ້າທ່ານກໍາລັງວາງເວັບໄຊທ໌ຂອງທ່ານເຂົ້າໄປໃນຮູບແບບການບໍາລຸງຮັກສາເປັນໄລຍະເວລາທີ່ຍາວນານ, "
+"ທ່ານຄວນຕັ້ງມັນເປັນ \"ຫນ້າໄວໆນີ້\". ຖ້າບໍ່ດັ່ງນັ້ນໃຊ້ \"Maintenance Mode\"."
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Default sets HTTP to 503, coming soon will set HTTP to 200."
+msgstr "ຄ່າເລີ່ມຕົ້ນຕັ້ງ HTTP ເປັນ 503, ໃນໄວໆນີ້ຈະຕັ້ງ HTTP ເປັນ 200."
+
+#: lj-maintenance-mode.php:308
+#, fuzzy
+msgid "Learn more."
+msgstr "ສຶກສາເພີ່ມເຕີມ."
+
+#: lj-maintenance-mode.php:315
+msgid "Preview"
+msgstr "ເບິ່ງຕົວຢ່າງ"
+
+#: lj-maintenance-mode.php:316 lj-maintenance-mode.php:711
+#, fuzzy
+msgctxt "Plugin Support link"
+msgid "Support"
+msgstr "ສະຫນັບສະຫນູນ"
+
+#: lj-maintenance-mode.php:329
+#, fuzzy
+msgid "Advanced Settings"
+msgstr "ຕັ້ງ​ຄ່າ​ຂັ້ນ​ສູງ"
+
+#: lj-maintenance-mode.php:332
+#, fuzzy
+msgid "Hide Advanced Settings"
+msgstr "ເຊື່ອງການຕັ້ງຄ່າຂັ້ນສູງ"
+
+#: lj-maintenance-mode.php:340
+#, fuzzy
+msgid "Add widget areas above and below content"
+msgstr "ເພີ່ມພື້ນທີ່ widget ຂ້າງເທິງແລະຂ້າງລຸ່ມນີ້ເນື້ອຫາ"
+
+#: lj-maintenance-mode.php:352
+#, fuzzy
+msgid "Site Title"
+msgstr "ຊື່ເວັບໄຊ"
+
+#: lj-maintenance-mode.php:356
+#, fuzzy
+msgid "Overrides default site meta title."
+msgstr "ລົບລ້າງຊື່ເມຕາຂອງເວັບໄຊເລີ່ມຕົ້ນ."
+
+#: lj-maintenance-mode.php:364
+#, fuzzy
+msgid "User Roles"
+msgstr "ບົດບາດຂອງຜູ້ໃຊ້"
+
+#: lj-maintenance-mode.php:365
+#, fuzzy
+msgid ""
+"Tick the ones that can access front-end of your website if maintenance mode "
+"is enabled"
+msgstr "ໝາຍຕິກທີ່ສາມາດເຂົ້າເຖິງທາງໜ້າຂອງເວັບໄຊຂອງເຈົ້າໄດ້ ຖ້າເປີດໃຊ້ໂໝດບຳລຸງຮັກສາ"
+
+#: lj-maintenance-mode.php:366
+#, fuzzy
+msgid "Please note that this does NOT apply to admin area"
+msgstr "ກະລຸນາຮັບຊາບວ່າອັນນີ້ບໍ່ນຳໃຊ້ກັບພື້ນທີ່ບໍລິຫານ"
+
+#: lj-maintenance-mode.php:367
+#, fuzzy
+msgid "Toggle all"
+msgstr "ສະຫຼັບທັງໝົດ"
+
+#: lj-maintenance-mode.php:387
+#, fuzzy
+msgid "User Role control is currently not available on your website. Sorry!"
+msgstr "ການຄວບຄຸມບົດບາດຜູ້ໃຊ້ປະຈຸບັນບໍ່ມີຢູ່ໃນເວັບໄຊທ໌ຂອງທ່ານ. ຂໍ​ໂທດ!"
+
+#: lj-maintenance-mode.php:394
+#, fuzzy
+msgid "Allowed IP"
+msgstr "IP ອະນຸຍາດ"
+
+#: lj-maintenance-mode.php:394 lj-maintenance-mode.php:446
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454 lj-maintenance-mode.php:472
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:493
+#: lj-maintenance-mode.php:499 lj-maintenance-mode.php:512
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgctxt "include, part of, constitute"
+msgid "Contains"
+msgstr "ປະກອບດ້ວຍ"
+
+#: lj-maintenance-mode.php:400
+#, fuzzy
+msgid "Enter IPv4 or IPv6 values, one per line."
+msgstr "ໃສ່ຄ່າ IPv4 ຫຼື IPv6, ຫນຶ່ງຕໍ່ແຖວ."
+
+#: lj-maintenance-mode.php:401
+#, fuzzy
+msgid ""
+"Which IP specification gets used? That all depends upon how the remote "
+"caller established the connection; you will never know until they say hello."
+msgstr ""
+"ໃຊ້ສະເພາະ IP ໃດ? ນັ້ນທັງຫມົດແມ່ນຂຶ້ນກັບວິທີທີ່ຜູ້ໂທທາງໄກໄດ້ສ້າງຕັ້ງການເຊື່ອມຕໍ່; ເຈົ້າ​ຈະ​ບໍ່​ຮູ້​ຈົນ​ກວ່າ​ເຂົາ​ເຈົ້າ​"
+"ຈະ​ເວົ້າ​ວ່າ​ສະບາຍດີ."
+
+#: lj-maintenance-mode.php:402
+#, fuzzy
+msgid ""
+"Partial IP values are ok; especially, when you want to identify a whole "
+"subnet."
+msgstr "ຄ່າ IP ບາງສ່ວນແມ່ນ ok; ໂດຍສະເພາະ, ໃນເວລາທີ່ທ່ານຕ້ອງການທີ່ຈະກໍານົດ subnet ທັງຫມົດ."
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:409
+#: lj-maintenance-mode.php:428 lj-maintenance-mode.php:429
+#: lj-maintenance-mode.php:430 lj-maintenance-mode.php:456
+#: lj-maintenance-mode.php:480 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#: lj-maintenance-mode.php:567 lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Tip"
+msgstr "ເຄັດລັບ"
+
+#: lj-maintenance-mode.php:405 lj-maintenance-mode.php:430
+#: lj-maintenance-mode.php:456 lj-maintenance-mode.php:481
+#: lj-maintenance-mode.php:500 lj-maintenance-mode.php:519
+#, fuzzy
+msgid "Uses"
+msgstr "ການນໍາໃຊ້"
+
+#: lj-maintenance-mode.php:405
+#, fuzzy
+msgid "which identifies the current Remote IP:"
+msgstr "ເຊິ່ງກໍານົດ IP ໄລຍະໄກໃນປະຈຸບັນ:"
+
+#: lj-maintenance-mode.php:409
+#, fuzzy
+msgid "identifies this server is at Server IP:"
+msgstr "ລະບຸເຊີບເວີນີ້ແມ່ນຢູ່ທີ່ Server IP:"
+
+#: lj-maintenance-mode.php:418
+#, fuzzy
+msgid "Allowed URI"
+msgstr "ອະນຸຍາດ URI"
+
+#: lj-maintenance-mode.php:418 lj-maintenance-mode.php:424
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:426
+#, fuzzy
+msgctxt "exact, stringent, precise"
+msgid "Strict"
+msgstr "ເຂັ້ມງວດ"
+
+#: lj-maintenance-mode.php:424
+#, fuzzy
+msgid "The full relative path, starting with"
+msgstr "ເສັ້ນທາງພີ່ນ້ອງຢ່າງເຕັມທີ່, ເລີ່ມຕົ້ນດ້ວຍ"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:453
+#: lj-maintenance-mode.php:454
+#, fuzzy
+msgid "when doing a"
+msgstr "ເມື່ອເຮັດ ກ"
+
+#: lj-maintenance-mode.php:424 lj-maintenance-mode.php:425
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:452
+#: lj-maintenance-mode.php:453 lj-maintenance-mode.php:454
+#: lj-maintenance-mode.php:478 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "comparison"
+msgstr "ການປຽບທຽບ"
+
+#: lj-maintenance-mode.php:425 lj-maintenance-mode.php:453
+#, fuzzy
+msgid "Ignores the trailing slash"
+msgstr "ບໍ່ສົນໃຈເຄື່ອງໝາຍທ້າຍ"
+
+#: lj-maintenance-mode.php:426 lj-maintenance-mode.php:454
+#, fuzzy
+msgid "Ignores the entire query string"
+msgstr "ບໍ່ສົນໃຈສາຍຄຳຊອກຫາທັງໝົດ"
+
+#: lj-maintenance-mode.php:427 lj-maintenance-mode.php:455
+#, fuzzy
+msgid "Never include the protocol, domain or port prefixes of the full URL."
+msgstr "ຢ່າໃສ່ໂປຣໂຕຄໍ, ໂດເມນ ຫຼືພອດຂອງ URL ເຕັມ."
+
+#: lj-maintenance-mode.php:428
+#, fuzzy
+msgid ""
+"Enter / on its own line to allow the sites home page to always by-pass the "
+"maintenance mode page."
+msgstr ""
+"ໃສ່ / ຢູ່ໃນເສັ້ນຂອງຕົນເອງເພື່ອອະນຸຍາດໃຫ້ຫນ້າທໍາອິດຂອງສະຖານທີ່ຜ່ານຫນ້າຮູບແບບການບໍາລຸງຮັກສາສະເຫມີ."
+
+#: lj-maintenance-mode.php:429 lj-maintenance-mode.php:480
+#, fuzzy
+msgid "will always by-pass the maintenance mode page."
+msgstr "ຈະຜ່ານໜ້າໂໝດການບຳລຸງຮັກສາສະເໝີ."
+
+#: lj-maintenance-mode.php:437 lj-maintenance-mode.php:463
+#: lj-maintenance-mode.php:484 lj-maintenance-mode.php:503
+#: lj-maintenance-mode.php:522
+#, fuzzy
+msgid "and the value for this loaded page is:"
+msgstr "ແລະຄ່າສໍາລັບຫນ້າທີ່ໂຫລດນີ້ແມ່ນ:"
+
+#: lj-maintenance-mode.php:446
+#, fuzzy
+msgid "Allowed URL"
+msgstr "URL ທີ່ອະນຸຍາດ"
+
+#: lj-maintenance-mode.php:452 lj-maintenance-mode.php:499
+#: lj-maintenance-mode.php:518
+#, fuzzy
+msgid "Can be any sub-string contained within the URI, when doing a"
+msgstr "ສາມາດເປັນສະຕຣິງຍ່ອຍໃດນຶ່ງທີ່ຢູ່ໃນ URI, ເມື່ອເຮັດ a"
+
+#: lj-maintenance-mode.php:472
+#, fuzzy
+msgid "Allowed Query String"
+msgstr "ແຖບສອບຖາມທີ່ອະນຸຍາດ"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "Can be any sub-string value after the"
+msgstr "ສາມາດເປັນຄ່າຍ່ອຍສະຕຣິງໃດນຶ່ງຫຼັງຈາກ"
+
+#: lj-maintenance-mode.php:478
+#, fuzzy
+msgid "in the URI, when doing a"
+msgstr "ໃນ URI, ເມື່ອເຮັດ a"
+
+#: lj-maintenance-mode.php:479
+#, fuzzy
+msgid "Enter sub-string values that conform to output by"
+msgstr "ໃສ່ຄ່າຍ່ອຍສະຕຣິງທີ່ສອດຄ້ອງກັບຜົນຜະລິດໂດຍ"
+
+#: lj-maintenance-mode.php:493
+#, fuzzy
+msgid "Allowed Referer"
+msgstr "ຜູ້ອ້າງອີງອະນຸຍາດ"
+
+#: lj-maintenance-mode.php:512
+#, fuzzy
+msgid "Allowed User Agent"
+msgstr "ຕົວແທນຜູ້ໃຊ້ທີ່ອະນຸຍາດ"
+
+#: lj-maintenance-mode.php:537
+#, fuzzy
+msgid "Add Google Analytics code"
+msgstr "ເພີ່ມລະຫັດ Google Analytics"
+
+#: lj-maintenance-mode.php:542
+#, fuzzy
+msgid "for Analytics profile"
+msgstr "ສໍາລັບໂປຣໄຟລ໌ການວິເຄາະ"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "configured in"
+msgstr "ຕັ້ງຄ່າໃນ"
+
+#: lj-maintenance-mode.php:543
+#, fuzzy
+msgid "Analytify"
+msgstr "ວິເຄາະ"
+
+#: lj-maintenance-mode.php:546
+#, fuzzy
+msgid ""
+"Since you have the Analytify plugin installed, this will add Google "
+"Analytics tracking code to the maintenance page."
+msgstr ""
+"ນັບຕັ້ງແຕ່ທ່ານມີ plugin Analytify ຕິດຕັ້ງ, ນີ້ຈະເພີ່ມລະຫັດຕິດຕາມ Google Analytics "
+"ໃນຫນ້າບໍາລຸງຮັກສາ."
+
+#: lj-maintenance-mode.php:554
+#, fuzzy
+msgid "Custom Stylesheet"
+msgstr "ຊີດແບບກຳນົດເອງ"
+
+#: lj-maintenance-mode.php:561 lj-maintenance-mode.php:589
+#: lj-maintenance-mode.php:605
+#, fuzzy
+msgid "You are currently using custom stylesheet."
+msgstr "ຕອນນີ້ທ່ານກຳລັງໃຊ້ຮູບແບບສີສັນແບບກຳນົດເອງ."
+
+#: lj-maintenance-mode.php:562 lj-maintenance-mode.php:590
+#: lj-maintenance-mode.php:606
+#, fuzzy
+msgid "file in your theme folder"
+msgstr "ໄຟລ໌ຢູ່ໃນໂຟນເດີຫົວຂໍ້ຂອງທ່ານ"
+
+#: lj-maintenance-mode.php:564 lj-maintenance-mode.php:593
+#: lj-maintenance-mode.php:609
+#, fuzzy, php-format
+msgid ""
+"For custom stylesheet, add %s file to your theme folder. If your custom "
+"stylesheet file is picked up by the Maintenance Mode, it will be indicated "
+"here."
+msgstr ""
+"ສຳລັບຊີດຮູບແບບສີສັນແບບກຳນົດເອງ, ໃຫ້ເພີ່ມໄຟລ໌ %s ໃສ່ໂຟນເດີຮູບແບບສີສັນຂອງທ່ານ. "
+"ຖ້າໄຟລ໌ສະໄຕລ໌ຊີດແບບກຳນົດເອງຂອງທ່ານຖືກເກັບຂຶ້ນໂດຍໂໝດການບຳລຸງຮັກສາ, ມັນຈະສະແດງຢູ່ບ່ອນນີ້."
+
+#: lj-maintenance-mode.php:567
+#, fuzzy
+msgid "The maintenance mode page DOM structure is:"
+msgstr "ໂຄງສ້າງ DOM ຂອງໜ້າໂໝດການບຳລຸງຮັກສາແມ່ນ:"
+
+#: lj-maintenance-mode.php:575
+#, fuzzy
+msgid "the maintenance mode page content is here"
+msgstr "ເນື້ອໃນຂອງຫນ້າຮູບແບບການບໍາລຸງຮັກສາແມ່ນຢູ່ທີ່ນີ້"
+
+#: lj-maintenance-mode.php:583
+#, fuzzy
+msgid "Custom Frontend Stylesheet"
+msgstr "Custom Frontend Stylesheet"
+
+#: lj-maintenance-mode.php:599
+#, fuzzy
+msgid "Custom Login Stylesheet"
+msgstr "ຮູບແບບການເຂົ້າສູ່ລະບົບແບບກຳນົດເອງ"
+
+#: lj-maintenance-mode.php:616
+#, fuzzy
+msgid "Inject code snippet"
+msgstr "ເຈາະລະຫັດ snippet"
+
+#: lj-maintenance-mode.php:622
+#, fuzzy
+msgid "This is useful to add a Javascript snippet to the maintenance page."
+msgstr "ນີ້ແມ່ນເປັນປະໂຫຍດທີ່ຈະເພີ່ມ snippet Javascript ໄປຫາຫນ້າບໍາລຸງຮັກສາ."
+
+#: lj-maintenance-mode.php:623
+#, fuzzy
+msgid "Do include the surrounding"
+msgstr "ລວມເອົາສິ່ງອ້ອມຂ້າງ"
+
+#: lj-maintenance-mode.php:627
+#, fuzzy
+msgid ""
+"NOTE: if you are using the option above to add Google Analytics code, do NOT "
+"paste GA tracking code here."
+msgstr ""
+"ຫມາຍເຫດ: ຖ້າທ່ານກໍາລັງໃຊ້ທາງເລືອກຂ້າງເທິງເພື່ອເພີ່ມລະຫັດ Google Analytics, ຢ່າວາງລະຫັດຕິດຕາມ "
+"GA ຢູ່ທີ່ນີ້."
+
+#: lj-maintenance-mode.php:679
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Disabled"
+msgstr "ຄົນພິການ"
+
+#: lj-maintenance-mode.php:682
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Enabled"
+msgstr "ເປີດໃຊ້ແລ້ວ"
+
+#: lj-maintenance-mode.php:693
+#, fuzzy
+msgctxt "Admin bar indicator"
+msgid "Maintenance Mode"
+msgstr "ໂໝດການບຳລຸງຮັກສາ"
+
+#: lj-maintenance-mode.php:710
+msgctxt "Plugin Settings link"
+msgid "Settings"
+msgstr "ການຕັ້ງຄ່າ"
+
+#: lj-maintenance-mode.php:1226
+#, fuzzy
+msgid "Maintenance mode - before content"
+msgstr "ຮູບແບບການບໍາລຸງຮັກສາ - ກ່ອນເນື້ອຫາ"
+
+#: lj-maintenance-mode.php:1227
+#, fuzzy
+msgid "Enter the content to appear before the maintenance mode content."
+msgstr "ໃສ່ເນື້ອຫາທີ່ຈະປາກົດກ່ອນເນື້ອຫາຂອງຮູບແບບການບໍາລຸງຮັກສາ."
+
+#: lj-maintenance-mode.php:1234
+#, fuzzy
+msgid "Maintenance mode - after content"
+msgstr "ຮູບແບບການບໍາລຸງຮັກສາ - ຫຼັງຈາກເນື້ອຫາ"
+
+#: lj-maintenance-mode.php:1235
+#, fuzzy
+msgid "Enter the content to appear after the maintenance mode content."
+msgstr "ໃສ່ເນື້ອໃນທີ່ຈະປາກົດຫຼັງຈາກເນື້ອໃນຂອງຮູບແບບການບໍາລຸງຮັກສາ."
